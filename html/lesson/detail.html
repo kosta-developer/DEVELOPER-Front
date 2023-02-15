@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- CSS  -->
+        <link rel="stylesheet" href="/css/lesson/detail.css">
+        <!-- 폰트 -->
+        <!-- 부트스트랩 -->
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+         <!-- JQuery -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+         <!-- JS -->
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <script src="/js/basic.js"></script>
+        <script src="/js/lesson/detail.js"></script>
+    </head>
+<body>
+    <div id="lessonDetail">
+        <div class="nav-container">
+            <img id="logo" src="/images/logo.png">
+            <nav>
+                <ul>
+                   <li class='lesson'>수업</li>
+                   <li class='studycafe'>스터디카페</li>
+                   <li class='community'>커뮤니티</li>
+                 <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                   <li class='signup'>회원가입</li>
+                   <li class='login'>로그인</li>
+                   <li class='logout'>로그아웃</li>
+                   <li class='tutorAdd'>튜터등록</li>
+                   <li class='myPage'>마이페이지</li>
+                </ul> 
+             </nav>
+        </div>
+        <div class="content-container">
+            <div id="detail">
+                <img id="classImg">
+                <div class="detail-container">
+                    <div class="category">카테고리</div>
+                    <div class="lessonName"></div>
+                    <div class="tutorName">강사명</div>
+                    <div class="price">금액</div>
+                    <div class="location">장소</div>
+                    <div class="people">수강인원</div>
+                    <div class="cDate">신청기간</div>
+                    <div class="date">수업기간</div>
+                    <button id="applyBtn">신청하기</button>
+                    <button id="favoritesBtn">즐겨찾기추가</button>
+                </div>  
+            </div>
+            <div class="dContent">
+                <hr>
+                <div class="btn-container">
+                    <button id="detailbtn">상세정보</button>
+                    <button id="askbtn">문의하기</button>
+                    <button id="lessonReviewbtn">수강평</button>
+                </div>
+                <div class="dContent-container">
+                    <div class="ask">문의하기</div>
+                    <div class="detail">상세정보</div>
+                    <div class="lessonReview">
+                        <div class="star">별점</div>
+                        <div class="nickname">닉네임</div>
+                        <div class="review">리뷰</div>
+                    </div>
+                </div>
+            </div>  
+        <div id="footer">
+            <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

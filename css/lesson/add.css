@@ -1,0 +1,55 @@
+#add {width: 100%; height: 1500px; color: #000000; font-size: 15px; }
+
+.nav-container {width:1000px; height: 60px; line-height: 60px; margin: 0 auto; border: 3px solid black; } 
+.content-container {width: 1000px; margin: 0 auto; border: 3px solid yellowgreen; } 
+.footer-container{width: 1000px; height: 100px; text-align:center; line-height: 100px; margin: 0 auto;  border: 3px solid orange; }
+
+/*=================== 헤더메뉴바 ===================*/
+.nav-container>nav{
+    width: 600px;
+    /* display: inline-block; */
+    float: right;
+}
+
+#add > div.nav-container > img{
+    height: 30px;
+    float: left;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px; 
+}
+
+.nav-container>nav>ul>li{
+    /* width: 100px; */
+    display: inline-block;
+    margin-left:15px;
+}
+
+.nav-container>nav>ul>li:hover{
+    background-color: #2C2A29;
+    color: #fff
+}
+
+/*=================== 등록창 ===================*/
+#header{
+    font: 30px bold;
+    margin: 50px;
+}
+
+.addForm{
+    margin: 50px;
+}
+
+.addForm > div{
+    margin-top: 10px;
+}
+
+#addBtn {
+    float: right;
+}
+

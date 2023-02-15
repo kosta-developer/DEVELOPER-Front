@@ -1,0 +1,79 @@
+#tutorInfo {width: 100%; height: 1500px; color: #000000; font-size: 15px; }
+
+.nav-container {width:1000px; height: 60px; line-height: 60px; margin: 0 auto; border: 3px solid black; } 
+.content-container {width: 1000px; margin: 0 auto; border: 3px solid yellowgreen; } 
+.footer-container{width: 1000px; height: 100px; text-align:center; line-height: 100px; margin: 0 auto;  border: 3px solid orange; }
+
+/*=================== 헤더메뉴바 ===================*/
+.nav-container>nav{
+    width: 600px;
+    /* display: inline-block; */
+    float: right;
+}
+
+#tutorInfo > div.nav-container > img{
+    height: 30px;
+    float: left;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px; 
+}
+
+.nav-container>nav>ul>li{
+    /* width: 100px; */
+    display: inline-block;
+    margin-left:15px;
+}
+
+.nav-container>nav>ul>li:hover{
+    background-color: #2C2A29;
+    color: #fff
+}
+
+/*=================== 튜터 상세정보 ===================*/
+#tutor{
+    margin: 50px 20px 30px 50px;
+    display: inline-block;
+}
+
+#tutor > #tImgPath{
+    width: 200px;
+    height: 240px;
+}
+
+#tutor > #tutor-container{
+    margin-top: 90px;
+    margin-left: 50px;
+    float: right;
+}
+
+#tutor > #tutor-container > .info{
+    width: 500px;
+}
+
+/*=================== 수업 상세정보 ===================*/
+#tutorLessonList {
+    width: 800px;
+    margin-left: 100px;
+    display: inline-block;
+    text-align: center;
+}
+
+.tutorLesson {
+    float: left;
+    margin: 50px;
+}
+
+.tutorLesson > .lImgPath > .lessonImg{
+    width: 300px;
+    height: 150px;
+}
+
+.tutorLesson > .lessonName{
+    width: 300px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- CSS  -->
+        <link rel="stylesheet" href="/css/lesson/add.css">
+        <!-- 폰트 -->
+        <!-- 부트스트랩 -->
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+         <!-- JQuery -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+         <!-- JS -->
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <script src="/js/basic.js"></script>
+        <script src="/js/lesson/add.js"></script>
+    </head>
+<body>
+    <div id="add">
+        <div class="nav-container">
+            <img id="logo" src="/images/logo.png">
+            <nav>
+                <ul>
+                   <li class='lesson'>수업</li>
+                   <li class='studycafe'>스터디카페</li>
+                   <li class='community'>커뮤니티</li>
+                 <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                   <li class='signup'>회원가입</li>
+                   <li class='login'>로그인</li>
+                   <li class='logout'>로그아웃</li>
+                   <li class='tutorAdd'>튜터등록</li>
+                   <li class='myPage'>마이페이지</li>
+                </ul> 
+             </nav>
+        </div>
+        <div class="content-container">
+            <div id="header">클래스 등록하기</div>
+            <form class="addForm">
+                <div>이미지: <input type="file"></div>
+                <div>클래스명: <input type="text" value=""></div>
+                <div>카테고리: <select>
+                                    <option>프로그래밍 언어</option>
+                                    <option>웹 개발</option>
+                                    <option>앱 개발</option>
+                                    <option>보안/네트워크</option>
+                                    <option>데이터</option>
+                                </select>
+                </div>
+                <div>모집인원: <input type="number" value=""></div>
+                <div>신청시작일: <input type="date" value=""></div>
+                <div>신청마감일: <input type="date" value=""></div>
+                <div>수업시작일: <input type="date" value=""></div>
+                <div>수업마감일: <input type="date" value=""></div>
+                <div>가격: <label>[무료] <input type="checkbox"></label>
+                         <label>[유료] <input type="number"></label>
+                </div>
+                <div>상세정보: <textarea></textarea></div>
+                <input id="addBtn" type="submit" value="등록하기"><br/>
+            </form>
+        </div>
+        <div id="footer">
+            <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

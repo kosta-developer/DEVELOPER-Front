@@ -1,0 +1,116 @@
+#lessonlist {width: 100%; height: 1500px; color: #000000; font-size: 15px; }
+
+.nav-container {width:1000px; height: 60px; line-height: 60px; margin: 0 auto; border: 3px solid black; } 
+.content-container {width: 1000px; margin: 0 auto; border: 3px solid yellowgreen; } 
+.footer-container{width: 1000px; height: 100px; text-align:center; line-height: 100px; margin: 0 auto;  border: 3px solid orange; }
+
+/*=================== 헤더메뉴바 ===================*/
+.nav-container>nav{
+    width: 600px;
+    /* display: inline-block; */
+    float: right;
+}
+
+#lessonlist > div.nav-container > img{
+    height: 30px;
+    float: left;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px; 
+}
+
+.nav-container>nav>ul>li{
+   /* width: 100px; */
+    display: inline-block;
+    margin-left:15px;
+}
+
+.nav-container>nav>ul>li:hover{
+    background-color: #2C2A29;
+    color: #fff
+}
+
+/*=================== 필터 ===================*/
+.filter-select {
+    border-width: 0px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  /*=================== 검색 ===================*/
+.search-mode {
+    position: relative;
+    width: 200px;
+    height: 30px;
+    margin: 10px auto;
+    margin-left: 680px;
+    display: inline-block;
+  }
+
+  input {
+    border: 1px solid #F1F1F1;
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .icon {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    left: 10px;
+  }
+  
+  .search {
+    color: #808080;
+  }
+
+  /* =================== 카테고리 ===================*/
+  #category{
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  #category>.nav-category{
+    width: 600px;
+  }
+  
+  .nav-category>.ul-category{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px; 
+  }
+  
+  .nav-category>.ul-category>li{
+    /* width: 100px; */
+    display: inline-block;
+    margin-left:15px;
+  }
+  
+  .nav-category>.ul-category>li:hover{
+    background-color: #2C2A29;
+    color: #fff
+  }
+
+  /* =================== 수업목록  ===================*/
+  #lessonList{
+    margin: 50px;
+    display: inline-block;
+  }
+
+  #lessonList > #lesson{
+    float: left;
+    margin: 50px;
+  }
+
+  #lesson > .img > .lessonImg{
+    width: 300px;
+    height: 150px;
+  }

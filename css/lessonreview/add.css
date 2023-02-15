@@ -1,0 +1,76 @@
+#add {width: 100%; height: 1500px; color: #000000; font-size: 15px; }
+
+.nav-container {width:1000px; height: 60px; line-height: 60px; margin: 0 auto; border: 3px solid black; } 
+.content-container {width: 1000px; margin: 0 auto; border: 3px solid yellowgreen; } 
+.footer-container{width: 1000px; height: 100px; text-align:center; line-height: 100px; margin: 0 auto;  border: 3px solid orange; }
+
+/*=================== 헤더메뉴바 ===================*/
+.nav-container>nav{
+    width: 600px;
+    /* display: inline-block; */
+    float: right;
+}
+
+#add > div.nav-container > img{
+    height: 30px;
+    float: left;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px; 
+}
+
+.nav-container>nav>ul>li{
+    /* width: 100px; */
+    display: inline-block;
+    margin-left:15px;
+}
+
+.nav-container>nav>ul>li:hover{
+    background-color: #2C2A29;
+    color: #fff
+}
+
+/*=================== 내용  ===================*/
+.content-container > .content{
+    margin: 50px;
+}
+
+/*=================== 별점 후기  ===================*/
+#myform fieldset{
+    display: inline-block; /* 하위 별점 이미지들이 있는 영역만 자리를 차지함.*/
+    border: 0; /* 필드셋 테두리 제거 */
+}
+#myform input[type=radio]{
+    display: none; /* 라디오박스 감춤 */
+}
+#myform label{
+    font-size: 20px; /* 이모지 크기 */
+    color: transparent; /* 기존 이모지 컬러 제거 */
+    text-shadow: 0 0 0 #f0f0f0; /* 새 이모지 색상 부여 */
+}
+
+#myform label:hover{
+    text-shadow: 0 0 0 yellowgreen; /* 마우스 호버 */
+}
+#myform label:hover ~ label{
+    text-shadow: 0 0 0 yellowgreen; /* 마우스 호버 뒤에오는 이모지들 */
+}
+
+#myform fieldset{
+    display: inline-block; /* 하위 별점 이미지들이 있는 영역만 자리를 차지함.*/
+    direction: rtl; /* 이모지 순서 반전 */
+    border: 0; /* 필드셋 테두리 제거 */
+}
+
+#myform fieldset legend{
+    text-align: left;
+}
+
+#myform input[type=radio]:checked ~ label{
+    text-shadow: 0 0 0 yellowgreen; /* 마우스 클릭 체크 */
+}

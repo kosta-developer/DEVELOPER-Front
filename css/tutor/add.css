@@ -1,0 +1,29 @@
+#lessonlist {width: 100%; height: 1500px; color: #000000; font-size: 15px; }
+
+.nav-container {width:1200px; height: 60px; line-height: 60px;margin: 0 auto; background-color: #a1887f; } 
+.content-container {width: 1200px; margin: 0 auto; background-color: #bfb5b1;} {width: 1300px; margin: 0 auto; background-color: #bfb5b1;}
+.footer-container{width: 1200px; height: 100px; text-align:center; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
+
+/*=================== 헤더메뉴바 ===================*/
+.nav-container>nav{
+    width: 600px;
+    /* display: inline-block; */
+    float: right;
+}
+
+.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px; 
+}
+
+.nav-container>nav>ul>li{
+   /* width: 100px; */
+    display: inline-block;
+    margin-left:15px;
+}
+
+.nav-container>nav>ul>li:hover{
+    background-color: #2C2A29;
+    color: #fff
+}
