@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+*{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
+#index-wrap {width: 100%; height: 1500px; color: #000000; font-size: 15px; }
+#nav-wrap{width: 100%; border: 1px solid rgb(187, 187, 187);}
+#banner-wrap{width: 100%; border: 1px solid rgb(187, 187, 187);}
+#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
+#footer-wrap{width: 100%; text-align:center; border: 1px solid rgb(187, 187, 187);}
+#devBanner{width: 1000px; height: 300px; border: 1px solid rgb(187, 187, 187);}
+
+#content-wrap>.content-container>div.lessonlist{ width:100%; height:800px;}
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+ width: 100%는 기본값이기 때문에 없어도 된다 */
+
+.nav-container {width:1000px; height: 100px; line-height: 60px; margin: 0 auto; border: 1px solid #c39d91; } 
+.banner-container {width: 1000px; height: 300px; line-height: 300px; margin: 0 auto; border: 1px solid #4567ff; }
+.content-container {width: 1000px; margin: 0 auto; border: 1px solid #62ff19;}
+.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
+
+
+.nav-container>nav{
+    width: 600px;
+    /* display: inline-block; */
+    float: right;
+}
+
+.nav-container>img{
+    height: 30px;
+    float: left;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px;
+    
+}
+
+.nav-container>nav>ul>li{
+   /* width: 100px; */
+    display: inline-block;
+    margin-left:15px;
+}
+
+.nav-container>nav>ul>li:hover{
+    background-color: #2C2A29;
+    color: #fff
+}
+
+/* -----------------index 전용 css START ----------------------*/
+
+.banner-container {position: relative; width: 1000px; height: 300px; margin:0 auto; padding:0; overflow: hidden;}
+.banner-container ul {position: absolute; margin: 0px; padding:0; list-style: none; }
+.banner-container ul li {float: left; width: 1000px; height: 300px; margin:0; padding:0;}
+
+.main-title{
+    font-size: 17px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    margin-left: 20px;
+    font-weight: 800;
+}
+
+.lessonlistorigin{
+    float:left;
+    /* display: inline-block; */
+    margin-right: 20px; 
+    margin-bottom: 10px;
+}
+
+.lessonSeq{
+    display: none;
+}
+
+.postSeq{
+    display: none;
+}
+
+#mainLessonImg{
+    width: 300px;
+    height: 200px;
+}
+
+.lessonimg{
+    margin-bottom: 10px;
+}
+
+#mainCommunityImg{
+    width:220px;
+    height:100px;
+    float: right;
+}
+
+#index-wrap>#content-wrap>.content-container>div.lessonlist {
+    width: 100%;
+    height: 300px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.communityList{
+    margin-left: 20px;
+}
+
+.postContent{
+    width: 450px; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display:inline-block;
+}
+
+.postTitle{
+    width:450px; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display:inline-block;
+    font-size: 17px;
+    font-weight:800;
+    margin-top:10px;
+    margin-bottom: 2px;
+}
+
+.mainCommunityLine {
+    border-top:1px solid #e9ddbc;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    
+}
+
+.communityListOrigin{
+    width: 450px;
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 12px;
+    margin-bottom: 25px;
+    font-size: 12pt;
+    line-height: 25px;
+}
+
+.postRecommend{
+    margin-left: 120px;
+}
+
+.postCnt{
+    margin-left: 20px;
+}
+
+.lessonName{
+    font-weight: 800;
+    width:200px; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display:inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.lessonPrice{
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 2px;
+}

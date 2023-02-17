@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+*{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
+#wrap {width: 100%; height: auto; font-size: 15px; }
+#wrap>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
+#wrap>#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
+#wrap>#footer-wrap{width: 100%; border: 1px solid rgb(187, 187, 187); text-align:center;}
+#wrap>#content-wrap>.hostpage-body-wrap{margin:0 auto; width: 1000px; height: 800px;  border: 1px solid rgb(187, 187, 187);}
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+width: 100%는 기본값이기 때문에 없어도 된다 */
+
+
+#wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91; } 
+#wrap>#content-wrap>.hostpage-body-wrap>.side-container {float: left; width: 19%; height: auto; margin: 0 auto; border: 1px solid #fc487b;} 
+#wrap>#content-wrap>.hostpage-body-wrap>.content-container {float: right; width: 78%; height: auto; margin: 0 auto; border: 1px solid #62ff19; margin: 18px 13px 13px 13px;}
+#wrap>#footer-wrap>.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
+
+#wrap>#nav-wrap>.nav-container>nav{
+    width: 310px;
+    /* display: inline-block; */
+    float: right;
+}
+
+#wrap>#nav-wrap>.nav-container>img{
+    height: 30px;
+    float: left;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+#wrap>#nav-wrap>.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px;
+    
+}
+
+#wrap>#nav-wrap>.nav-container>nav>ul>li{
+   /* width: 100px; */
+    display: inline-block;
+    margin-left:15px;
+}
+
+#wrap>#nav-wrap>.nav-container>nav>ul>li:hover{
+    background-color: #80d8b4;
+    color: #fff
+}
+
+#wrap>#nav-wrap>.nav-container>nav>ul>li>a{
+    text-decoration: none;
+    color: black;
+}
+
+.ref{
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+.btn{
+    width: 100px;
+    height: 100px;
+}
+.impossible {
+    width: 20px;
+    height: 20px;
+    background-color: #57f5b3
+  
+  }
+.refTable{
+    margin: auto;
+    padding-top: 20px;
+}
+
+.reservation{
+    height: 50px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+}
+.resTable{
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.possible{
+    background-color: #eaeaea;
+    width: 20px;
+    height: 20px;    
+}
+.completed{
+    background-color: #2a2de9;
+    width: 20px;
+    height: 20px;    
+
+}
+
+.resAvailable{
+    height: 100px;
+}
+.impossible1{
+    padding-right: 7px
+}
+.possible1{
+    padding-right: 7px
+}
+.completed1{
+    padding-right: 7px
+}
+.impossible2{
+    padding-right: 20px
+}
+.possible2{
+    padding-right: 20px
+}
+.checkboxTable{
+    height: 500px;
+}
+.time{
+    height: 120px;
+}
+.price{
+    width: 120px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+input:disabled {
+    background: #2ae996;
+    
+}
+.checkboxTable{
+    width: 600px;
+    margin: auto;
+}
+.checkbox {
+    appearance: none;
+    height: 50px;
+    width: 100px;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(37, 145, 251, 0.98) 0.1%, rgba(0, 7, 128, 1) 99.8%);
+    background-size: 360% 100%;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 500px, 50px, 20px, 50px;
+}
+
+.checkbox:after {
+    content: attr(data-name);
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: #3f3f3f;
+    z-index: 99;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.checkbox:before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0px;
+    height: 200%;
+    width: 200%;
+    background: #e9e9e9;
+    z-index: 0;
+    transition: all 0.2s linear;
+    transform: scale(0.6) translate(-50%, -50%);
+}
+.checkbox:hover:before,
+.checkbox:focus-visible:before {
+    background: #cacaca;
+    top: -4%;
+    left: 20%;
+}
+.checkbox:checked:before {
+    opacity: 0;
+    transform: scale(0.9);
+}
+.checkbox:checked:after {
+    color: white;
+}
+.checkbox:checked {
+    box-shadow: 0px 4px 10px -6px black;
+}
+
+.checkbox:focus-visible {
+    outline: none;
+    box-shadow: 0px 0px 0px 5px #480f5d;
+}
