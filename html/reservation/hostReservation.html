@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto"/>
+    <link rel="stylesheet" href="/css/reservation/hostReservation.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/basic.js"></script>
+    <script src="/js/reservation/hostReservation.js"></script>
+
+    <title>Title</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-wrap">
+            <div class="header-container">header</header>
+            </div>
+        </div>
+        <div id="nav-wrap">
+            <div class="nav-container">
+                <nav>
+                    <ul>
+                        <li class='lesson'>수업</li>
+                        <li class='studycafe'>스터디카페</li>
+                        <li class='community'>커뮤니티</li>
+                        <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                        <li class='signup'>회원가입</li>
+                        <li class='login'>로그인</li>
+                        <li class='logout'>로그아웃</li>
+                        <li class='tutorAdd'>튜터등록</li>
+                        <li class='myPage'>마이페이지</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="banner-wrap">
+            <div class="banner-container">Banner</div>
+        </div>
+        <div id="content-wrap">
+            <div class="content-container">
+                <div class="space"></div>
+                <form>
+                    <div class="reservation">
+                        <input type="date" id="date-input"/> 예약일을 선택해주세요
+                            
+                                
+                            
+                            
+                           
+                        
+                    </div>
+                  <!-- js ajax부분 -->
+                   <div class="checkBox">
+                    <table border="1" class="checkboxTable">
+                        <tr><td rowspan="3">
+                            <input type="checkbox" data-name="01:00" value="01:00"class="checkbox" checked disabled>
+                            <input type="checkbox" data-name="02:00" value="02:00"class="checkbox">
+                            <input type="checkbox" data-name="03:00" value="03:00"class="checkbox">
+                            <input type="checkbox" data-name="04:00" value="04:00"class="checkbox">
+                            <input type="checkbox" data-name="05:00" value="05:00"class="checkbox">
+                            <input type="checkbox" data-name="06:00" value="06:00"class="checkbox">
+                            <input type="checkbox" data-name="07:00" value="07:00"class="checkbox">
+                            <input type="checkbox" data-name="08:00" value="08:00"class="checkbox">
+                            <input type="checkbox" data-name="09:00" value="09:00"class="checkbox">
+                            <input type="checkbox" data-name="10:00" value="10:00"class="checkbox">
+                            <input type="checkbox" data-name="11:00" value="11:00"class="checkbox">
+                            <input type="checkbox" data-name="12:00" value="12:00"class="checkbox">
+                            <input type="checkbox" data-name="13:00" value="13:00"class="checkbox">
+                            <input type="checkbox" data-name="14:00" value="14:00"class="checkbox">
+                            <input type="checkbox" data-name="15:00" value="15:00"class="checkbox">
+                            <input type="checkbox" data-name="16:00" value="16:00"class="checkbox">
+                            <input type="checkbox" data-name="17:00" value="17:00"class="checkbox">
+                            <input type="checkbox" data-name="18:00" value="18:00"class="checkbox">
+                            <input type="checkbox" data-name="19:00" value="19:00"class="checkbox">
+                            <input type="checkbox" data-name="20:00" value="20:00"class="checkbox">
+                            <input type="checkbox" data-name="21:00" value="21:00"class="checkbox">
+                            <input type="checkbox" data-name="22:00" value="22:00"class="checkbox">
+                            <input type="checkbox" data-name="23:00" value="23:00"class="checkbox">
+                            <input type="checkbox" data-name="24:00" value="24:00"class="checkbox">
+     
+                        </td>
+                        <td class="time">예약시간</td></tr>
+                        <tr><td class="price">최종가격</td></tr>
+                        <tr><td class="reserve"> <button class="btn">예약하기</button></td></tr>
+                        
+                        
+                        </table>
+                   </div>
+               
+                    
+                </form>
+                <div class="ref">
+                    <table class="refTable">
+                        <tr>
+                            <td class="impossible1"><div class="impossible"></div></td><td class="impossible2">예약불가</td>
+                            <td class="possible1"> <div class="possible"></div></td><td class="possible2">예약가능</td>
+                            <td class="completed1"><div class="completed"></div></td><td>선택완료</td>
+                        
+                        </tr>
+                    </table>
+                   
+                                    
+                   
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-wrap">
+        <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>

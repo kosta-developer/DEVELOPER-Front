@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+*{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
+#edit-studycafe-wrap {width: 100%; height: auto; font-size: 15px; }
+#edit-studycafe-wrap>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
+#edit-studycafe-wrap>#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
+#edit-studycafe-wrap>#footer-wrap{width: 100%; border: 1px solid rgb(187, 187, 187); text-align:center;}
+#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap{margin:0 auto; width: 1000px; height: 780px;  border: 1px solid rgb(187, 187, 187);}
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+ width: 100%는 기본값이기 때문에 없어도 된다 */
+
+#edit-studycafe-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91; } 
+#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container {float: left; width: 19%; height: auto; margin: 0 auto; border: 1px solid #fc487b;} 
+#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container {float: right; width: 78%; height: auto; margin: 0 auto; border: 1px solid #62ff19; margin: 18px 13px 13px 13px;}
+#edit-studycafe-wrap>#footer-wrap>.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
+
+#edit-studycafe-wrap>#nav-wrap>.nav-container>nav{
+    width: 310px;
+    /* display: inline-block; */
+    float: right;
+}
+
+#edit-studycafe-wrap>#nav-wrap>.nav-container>img{
+    height: 30px;
+    float: left;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+#edit-studycafe-wrap>#nav-wrap>.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px;
+    
+}
+
+#edit-studycafe-wrap>#nav-wrap>.nav-container>nav>ul>li{
+   /* width: 100px; */
+    display: inline-block;
+    margin-left:15px;
+}
+
+#edit-studycafe-wrap>#nav-wrap>.nav-container>nav>ul>li:hover{
+    background-color: #80d8b4;
+    color: #fff
+}
+
+#edit-studycafe-wrap>#nav-wrap>.nav-container>nav>ul>li>a{
+    text-decoration: none;
+    color: black;
+}
+
+#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>div{
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul{
+    list-style-type: none;
+}
+
+#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li{
+    margin-top: 13px;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li:hover{
+    background-color: #80d8b4;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff
+}
+
+#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li>a{
+    text-decoration: none;
+    color: rgb(88, 88, 88);
+}
+
+#edit-studycafe-wrap>#content-wrap > div > div.content-container > div.detail-content-box{
+    border: 1.5px solid #bbbbbb;
+    border-radius: 15px;
+    width: 96%;
+    height: 700px;
+    margin-left: 12px;
+}
+
+#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>.title{
+    font-weight: 700;
+    margin: 20px 0px 5px 20px;
+}
+
+#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>.sub-title{
+    font-weight: 700;
+    margin: 20px 0px 0px 20px;
+}
+
+#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>.field{
+    width: 200px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>.info-button{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>.info-button>input[type=button]{
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #80d8b4;
+    margin-right: 10px;
+}
+
+#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>.info-button>input[type=submit]{
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #80d8b4;
+    margin-right: 10px;
+}
+
+#content-wrap > div > div.content-container > div.detail-content-box > form > input[type=file]:nth-child(3){
+    margin-left: 20px; 
+}
+
+#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>textarea{
+    width: 550px;
+    height: 100px;
+    resize: none;
+    margin-left: 20px;
+}
+
+#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>.textLengthWrap{
+    float: right;
+    width: 270px;
+}
+
+#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>.field>input[type=text]{
+width: 220px;
+height: 30px;
+padding-left: 7px;
+
+}
