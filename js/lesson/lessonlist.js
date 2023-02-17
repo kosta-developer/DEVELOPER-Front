@@ -4,6 +4,9 @@ $(()=>{
     let data = "category=1&priceFilter=1&starFilter=2";
 
     $.ajax({
+        xhrFields: {
+            withCredentials: true // 이 요청은 cross-origin을 허락한다. 는 뜻이다. - > 쿠키를 계속 유지할 수 있다. 
+        },
         url : url,
         data: data,
         success: function(jsonObj){

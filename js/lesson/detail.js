@@ -1,38 +1,43 @@
 //=== 기본적인 페이지 상세 내용 보여주기 START ===
 $(()=>{
-    let url = backURL + 'lesson/detail';
-    let data = "lessonSeq=1";
+    let url = backURL + 'lesson/';
+    let lessonSeq = 1;
     $('.dContent-container > .lessonReview').hide();
     $('.dContent-container > .ask').hide();
 
     $.ajax({
-        url : url,
-        data: data,
+        xhrFields: {
+            withCredentials: true // 이 요청은 cross-origin을 허락한다. 는 뜻이다. - > 쿠키를 계속 유지할 수 있다. 
+        },
+        url : url + lessonSeq,
+        method: 'GET',
         success: function(jsonObj){
-            let category = jsonObj[0].category;
-            if(category == 0){
+            console.log(jsonObj)
+            let category = jsonObj.category;
+            console.log(category)
+            if(category==0){
                 category = '프로그래밍 언어';
-            } else if(category == 1){
+            } else if(category==1){
                 category = '웹 개발 ';
-            } else if(category == 2){
+            } else if(category==2){
                 category = '앱 개발';
-            } else if(category == 3){
+            } else if(category==3){
                 category = '보안/네트워크';
-            } else if(category == 4){
+            } else if(category==4){
                 category = '데이터';
             }
 
-            $('#detail > #classImg').attr('src','/images/' + jsonObj[0].imgPath)
-            $('#detail > .detail-container > .category').html(jsonObj[0].category)
-            $('#detail > .detail-container > .lessonName').html("<h5>"+ jsonObj[0].lessonName + "</h5>")
-            $('#detail > .detail-container > .tutorName').html(jsonObj[0].tutorVO.usersVO.name)
+            $('#detail > #classImg').attr('src','/images/' + jsonObj.imgPath)
+            $('#detail > .detail-container > .category').html(jsonObj.category)
+            $('#detail > .detail-container > .lessonName').html("<h5>"+ jsonObj.lessonName + "</h5>")
+            // $('#detail > .detail-container > .tutorName').html(jsonObj.tutorVO.usersVO.name)
             $('#detail > .detail-container > .category').html(category)
-            $('#detail > .detail-container > .price').html(jsonObj[0].price)
-            $('#detail > .detail-container > .location').html(jsonObj[0].location)
-            $('#detail > .detail-container > .people').html(jsonObj[0].people)
-            $('#detail > .detail-container > .cDate').html(jsonObj[0].startCdate + " ~ " + jsonObj[0].endCdate )
-            $('#detail > .detail-container > .date').html(jsonObj[0].startDate + " ~ " + jsonObj[0].endDate)
-            $('.dContent > .dContent-container > .detail').html(jsonObj[0].content)
+            $('#detail > .detail-container > .price').html(jsonObj.price)
+            $('#detail > .detail-container > .location').html(jsonObj.location)
+            $('#detail > .detail-container > .people').html(jsonObj.people)
+            $('#detail > .detail-container > .cDate').html(jsonObj.startCdate + " ~ " + jsonObj.endCdate )
+            $('#detail > .detail-container > .date').html(jsonObj.startDate + " ~ " + jsonObj.endDate)
+            $('.dContent > .dContent-container > .detail').html(jsonObj.content)
         }, 
         error: function(xhr){
             let jsonObj = JSON.parse(xhr.responseText);
@@ -71,9 +76,9 @@ $(document).on('click', '.dContent > .btn-container >#lessonReviewbtn', function
         url : url,
         data: data,
         success: function(jsonObj){
-            $(' .dContent > div.dContent-container > div.lessonReview > div.star').html(jsonObj[0].star)
-            $(' .dContent > div.dContent-container > div.lessonReview > div.nickname').html(jsonObj[0].nickname)
-            $(' .dContent > div.dContent-container > div.lessonReview > div.review').html(jsonObj[0].review)
+            $(' .dContent > div.dContent-container > div.lessonReview > div.star').html(jsonObj.star)
+            $(' .dContent > div.dContent-container > div.lessonReview > div.nickname').html(jsonObj.nickname)
+            $(' .dContent > div.dContent-container > div.lessonReview > div.review').html(jsonObj.review)
         }, 
         error: function(xhr){
             let jsonObj = JSON.parse(xhr.responseText);
