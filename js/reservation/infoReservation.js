@@ -31,5 +31,12 @@ $(() => {
             alert(xhr.status)
         }
     })
+
+
+//--예약 취소버튼 클릭 시 할일 START--
+$('#content-wrap > div > div.content-container > div.detail-content-box > input[type=button]').click((e) => {
+    location.href = ''
+})
+//--취소버튼 클릭 시 할일 END--
     
 })

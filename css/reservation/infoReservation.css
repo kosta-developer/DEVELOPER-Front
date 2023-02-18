@@ -5,7 +5,7 @@
 #info-reservation-wrap>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
 #info-reservation-wrap>#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
 #info-reservation-wrap>#footer-wrap{width: 100%; border: 1px solid rgb(187, 187, 187); text-align:center;}
-#info-reservation-wrap>#content-wrap>.hostpage-body-wrap{margin:0 auto; width: 1000px; height: 800px;  border: 1px solid rgb(187, 187, 187);}
+#info-reservation-wrap>#content-wrap>.hostpage-body-wrap{margin:0 auto; width: 1000px; height:640px;  border: 1px solid rgb(187, 187, 187);}
 /*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
 width: 100%는 기본값이기 때문에 없어도 된다 */
 

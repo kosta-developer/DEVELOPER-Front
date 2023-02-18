@@ -108,13 +108,13 @@ width: 100%는 기본값이기 때문에 없어도 된다 */
     padding-top: 20px;
 }
 
-#apply-list-tutor-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>div.reservation-list{
+#apply-list-tutor-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>div.apply-list-tutor{
     overflow:scroll;
     overflow-x:hidden;
 }
 
 
-#apply-list-tutor-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>div.reservation-list>.reservation-list-origin{
+#apply-list-tutor-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>div.reservation-list>.apply-list-tutor-origin{
     height: 40px;
 }
 
