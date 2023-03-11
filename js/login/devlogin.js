@@ -1,7 +1,6 @@
 $(() => {
     // 일반 로그인 버튼 클릭되었을시 START
     $('#login_btn').click(function(){
-        alert('일반 로그인 클릭됨')
         let idValue = $('input[name=userId]').val()
         let pwdValue = $('input[name=pwd]').val()
         let url = backURL + 'users/login'
