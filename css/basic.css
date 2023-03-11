@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+
+header{
+    width:100%;
+    height: 100px;
+    border-bottom: 1px solid;
+}
+
+header>div.img{
+    width: 80px;
+    height : 100%;
+    background-image: url('../images/logo.png'); /*div태그의 배경에 이미지넣는것*/
+    background-repeat : no-repeat;
+    overflow:auto;
+    /* display: inline-block; */
+    float:left;
+}
+
+header>nav{
+    width: 500px;
+    /* display: inline-block; */
+    float:right;
+}
+
+header>nav>ul{
+    list-style-type: none;
+    padding-left:0px;
+}
+header>nav>ul>li{
+    /* width:150px; */
+    display: inline-block;
+}
+header>nav>ul>li:hover{
+    color:#fff;
+    background-color: black;
+}
+section{
+    width:100%;
+    height:450px;
+    overflow:auto; /*영역에들어갈 이미지?나값이 클경우자동으로 스크롤 만들어줌!*/
+}
+
+footer{
+    color:#ffff;
+    background: #2C2A29;
+    clear: both;
+    position: relative;
+    width: 100%;
+    font-size:12px;
+}

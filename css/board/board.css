@@ -1,0 +1,178 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+* { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+*{margin: 0; padding: 0;}
+#wrap {width: 1000px; height:1500px; margin: 0 auto; font-size: 15px; text-align: center; flex-direction: column;}
+#header-wrap{width: 1000px; margin: 0 auto; background-color: #eee;}
+#content-wrap{width: 80%; max-height : 1000px; overflow-y: scroll; margin: 0 auto;background-color: white;}
+#footer-wrap{width: 1000px; margin: 0 auto;background-color: #e6dcd3;}
+
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+ width: 100%는 기본값이기 때문에 없어도 된다 */
+
+.header-container {height: 100px; line-height: 100px; margin: 0 auto;} 
+.nav-container {width:100%; height: 60px; line-height: 60px;margin: 0 auto; background-color: #eee;} 
+.content-container {width: 100%; height: 100%; line-height: 20px; margin: 0 auto; background-color: white;}
+.footer-container{width: 100%; height: 100px; line-height: 100px; margin: 0 auto; background-color: #c39d91;}
+.board-container{display:flex; width:100%; margin : 0 auto;}
+
+.nav-container>nav{
+    width: 600px;
+    /* display: inline-block; */
+    float: right;
+}
+
+.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.nav-container>nav>ul>li{
+   /* width: 100px; */
+    display: inline-block;
+    color:#000;
+}
+
+.nav-container>nav>ul>li:hover{
+    background-color: #2C2A29;
+    color: white;
+}
+.board-banner{
+    font-size:30px;
+    text-align:left;
+    padding:15px;
+    border:1px solid black;
+    background-color : #343b3d;
+    color : white;
+    height:150px;
+    width:1000px;
+    margin:0 auto;
+    margin-bottom:30px;
+}
+.board-banner span{
+    font-size:20px;
+}
+.list-container{
+    border-bottom:1px solid rgb(6, 29, 175);
+    padding: 30px 20px;
+    text-align: left;
+    color : black;
+
+}
+.list-container .title{
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.list-container .content{
+    font-size: 16px;
+    color: #5d6366;
+    margin-bottom: 15px;
+    width: 100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.list-container .nickname{
+    font-size:12px;
+    color:#5d63669e;
+}
+
+.list-container .info{
+    display:flex;  
+}
+.list-container .subinfo1{
+    flex:7; 
+    display:inline-block;
+    text-align: left;
+}
+.list-container .subinfo2{
+    flex:3;
+    display:inline-block;
+    text-align: right;
+}
+
+.board-container .search{
+    /* border:1px solid black;  */
+    text-align:left;
+    margin-bottom:20px;
+
+}
+.board-container .cate{
+    flex:3;
+    width:20%;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+.board-container .cate0{
+    margin-top:20px;
+    font-size:20px;
+    background-color: white;
+    border:0px;
+    
+}
+
+.board-container .cate1{
+    margin:15px 15px;
+    font-size:20px;
+    background-color: white;
+    border:0px;
+    
+}
+
+.board-container .cate2{
+    font-size:20px;
+    background-color: white;
+    border:0px;
+}
+
+.board-container .filter{
+    /* border:1px solid black; */
+    margin-left:15px;
+    text-align: left;
+}
+
+.board-container .filter button.fitbtn::before{
+    content: " ";
+    background-color: #000;
+    margin-top: 5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%; 
+    display: block;
+    float: left;
+}
+
+.board-container .descbtn{
+    font-size:16px;
+    border:0px;
+    background-color:white;
+}
+.board-container .cntbtn{
+    margin:0px 5px;
+    font-size:16px;
+    border:0px;
+    background-color:white;
+}
+.board-container .recbtn{
+    font-size:16px;
+    border:0px;
+    background-color:white;
+}
+
+.board-container .addboard{
+    float:right;
+}
+
+.board-container .addbtn{
+    background-color: #3e4042;
+    color: #fff;
+    margin-left: 8px;
+    padding: 8px;
+    border: 0px;
+    border-radius: 4px;
+    font-size: 16px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charser="utf-8">
+        <link rel="stylesheet" href="/css/join/hostsignup.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="/js/join/hostsignup.js"></script>
+        <script src="/js/basic.js"></script>
+    </head>
+
+    <body>
+        <div class="nav_part">
+            <div class="name">
+                <h1>호스트 회원가입</h1>
+                    <h4>Developer에 당신의 장소를 공유하세요</h4>
+            </div>
+        </div>
+        
+        <br/>
+    
+        <div class="hostMember">
+
+            <div class="field">
+                <b>아이디</b>
+                <span class="placehold-text">
+                    <input type="text" id="hostId">
+                    <input type="button" value="아이디 중복체크">
+                </span>
+            </div>
+
+            <div class="field">
+                <b>비밀번호</b>
+                <input class="userpw" type="password" id="pwd" placeholder="6자리 이상">
+                <input class="userpw-confirm" type="password" id="pwd2" placeholder="6자리 이상">
+                <input type="button" value="비밀번호 일치여부">
+            </div>
+    
+            <div class="field">
+                <b>이름</b>
+                <input type="text" id="name">
+            </div>
+
+            <div class="field">
+                <b>사업자번호</b>
+                <input type="text" id="num">
+            </div>            
+        
+            <div class="field">
+                <b>이메일</b>
+                <input type="email" id="email" placeholder="선택입력" readonly>
+            </div>            
+        
+            <div class="field">
+                <b>전화번호</b>
+                <select>
+                    <option value="">대한민국 + 82</option>
+                </select>
+                <div>
+                    <input type="tel" id="tel" placeholder="전화번호 입력">                   
+                </div>
+            </div>
+            
+            <!-- 약관은 추가로 디벨롭예정 -->
+            <!-- <div class="">
+            약관
+            <div>
+            <input type="text" placeholder="개인정보 수집에 동의하여 주시기 바랍니다.">
+            </div>
+            <input type = "radio" name="ra">동의함
+            <input type = "radio" name="ra1">동의하지 않음
+            </div> -->
+    
+            
+                    <!-- 가입하기 -->
+            <div class="join">
+                <input type="button" value="가입하기" id="join" >
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

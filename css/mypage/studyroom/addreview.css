@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+*{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
+#user-index-wrap {width: 100%; height: auto; font-size: 15px; }
+#user-index-wrap>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
+#user-index-wrap>#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
+#user-index-wrap>#footer-wrap{width: 100%; border: 1px solid rgb(187, 187, 187); text-align:center;}
+#user-index-wrap>#content-wrap>.userpage-body-wrap{margin:0 auto; width: 1000px; height: 1200px;  border: 1px solid rgb(187, 187, 187);}
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+ width: 100%는 기본값이기 때문에 없어도 된다 */
+
+ #user-index-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91; } 
+ #user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container {float: left; width: 19%; height: 700px; margin: 0 auto; border: 1px solid #fc487b;} 
+ #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container {float: right; width: 78%; height: 1000px; margin: 0 auto; border: 1px solid #62ff19; margin: 18px 13px 13px 13px;}
+ #user-index-wrap>#footer-wrap>.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
+
+ #user-index-wrap>#nav-wrap>.nav-container>nav{
+    width: 200px;
+    /* display: inline-block; */
+    float: right;
+}
+
+#user-index-wrap>#nav-wrap>.nav-container>img{
+    height: 30px;
+    float: left;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+#user-index-wrap>#nav-wrap>.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px;
+    
+}
+
+#user-index-wrap>#nav-wrap>.nav-container>nav>ul>li{
+   /* width: 100px; */
+    display: inline-block;
+    margin-left:15px;
+}
+
+#user-index-wrap>#nav-wrap>.nav-container>nav>ul>li:hover{
+    background-color: #2C2A29;
+    color: #fff
+}
+
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>div{
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul>div{
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-weight: 700;
+}
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul{
+    list-style-type: none;
+}
+
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul>li{
+    margin-top: 13px;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul>li:hover{
+    background-color: #2C2A29;
+    color: #fff
+}
+
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#user-reviewRequired-box{
+    width:730px;
+    height:auto;
+    background-color: rgb(248, 246, 239);
+    border-radius: 10px;
+    margin: 30px 25px 30px 25px;
+    padding-bottom: 30px;
+}
+#review-box{
+    width:440px;
+    height:auto;
+    background-color: rgb(250, 249, 248);
+    border-radius: 10px;
+    margin: 5px 0px 0px 10px;
+    padding-bottom: 20px; 
+}
+.review-content{
+    margin: auto;
+}
+div.review{
+    text-align: left;
+}
+div.reviewTextBox{
+    top: 10%;
+    transform: translateY(-20%);
+    margin-left: 4px;
+} 
+#reviewTextBox{
+    width: 430px;
+    height: auto;
+    text-align: center;
+    resize: none;
+    margin-left: 10px;
+    
+}  
+#user-reviewDetail-box{
+    width:460px;
+    height:auto;
+    background-color: rgb(168, 167, 163);
+    border-radius: 10px;
+    margin: 1px 25px 30px 120px;
+    padding-bottom: auto;
+}
+
+.info-title{
+    font-weight: 700;
+    padding: 20px ;
+}
+.info-title2{
+    font-weight: 700;
+    padding: 10px ;
+}
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#user-review-box{
+    width:730px;
+    height:auto;
+    background-color: rgb(248, 246, 239);
+    border-radius: 10px;
+    margin: 30px 25px 60px 25px;
+    padding-bottom: 30px;
+}
+
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#studycafe-infomation-box>.imgbox{
+    float: left;
+    background-color: #8fd9c3;
+    width: 220px;
+    height: 220px;
+    margin: 15px 0px 0px 25px 
+}
+
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#studycafe-infomation-box>.textbox{
+    float: right;
+    background-color: #c39d91;
+    width: 450px;
+    height: 220px;
+    margin: 15px 25px 0px 0px
+}
+
+#table-head{
+    margin-top: 5px;
+    margin-left: 16%;
+}
+#table-body{
+    width: 600px;
+    margin-top: 5px;
+    margin-left: 18%;
+}
+
+th{
+    width: 120px;
+    height: 40px;
+}
+td{
+    margin: auto;
+    text-align: left;
+    width: 100px;
+    height: 30px;
+}
+hr{
+    height: 5px;
+}
+/*=================== 별점 후기  ===================*/
+#myform fieldset{
+    display: inline-block; /* 하위 별점 이미지들이 있는 영역만 자리를 차지함.*/
+    border: 0; /* 필드셋 테두리 제거 */
+}
+#myform input[type=radio]{
+    display: none; /* 라디오박스 감춤 */
+}
+#myform label{
+    font-size: 20px; /* 이모지 크기 */
+    color: transparent; /* 기존 이모지 컬러 제거 */
+    text-shadow: 0 0 0 #f0f0f0; /* 새 이모지 색상 부여 */
+}
+
+#myform label:hover{
+    text-shadow: 0 0 0 yellowgreen; /* 마우스 호버 */
+}
+#myform label:hover ~ label{
+    text-shadow: 0 0 0 yellowgreen; /* 마우스 호버 뒤에오는 이모지들 */
+}
+
+#myform fieldset{
+    display: inline-block; /* 하위 별점 이미지들이 있는 영역만 자리를 차지함.*/
+    direction: rtl; /* 이모지 순서 반전 */
+    border: 0; /* 필드셋 테두리 제거 */
+}
+
+#myform fieldset legend{
+    text-align: left;
+}
+
+#myform input[type=radio]:checked ~ label{
+    text-shadow: 0 0 0 yellowgreen; /* 마우스 클릭 체크 */
+}
+.content-container > .content{
+    margin: 50px;
+}
+#myform-textarea{
+    margin-top: 50px;
+    width: 680px;
+    height: 300px;
+    font-size: 20px;
+}
+.cfName{
+    width: 200px;
+}
+.SeqQuery{
+    display: none;
+}

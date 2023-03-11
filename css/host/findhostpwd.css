@@ -1,0 +1,82 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+* { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+*{margin: 0; padding: 0;}
+#wrap {width: 1000px; height: 1500px; margin: 0 auto; font-size: 15px; text-align: center; flex-direction: column;}
+#header-wrap{width: 1000px; margin: 0 auto; background-color: #eee;}
+#findHostPwd-wrap{width: 1000px; min-height : 800px; overflow-y: scroll; margin: 0 auto;background-color: white;}
+#footer-wrap{width: 1000px; margin: 0 auto;background-color: #e6dcd3;}
+
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+ width: 100%는 기본값이기 때문에 없어도 된다 */
+
+.header-container {height: 100px; line-height: 100px; margin: 0 auto;} 
+.nav-container {width:100%; height: 60px; line-height: 60px;margin: 0 auto; background-color: #eee;} 
+.findHostPwd-container {width: 80%; height: 100%; margin: 0 auto; margin-top: 100px;  background-color: white; color:black;}
+.footer-container{width: 100%; height: 100px; line-height: 100px; margin: 0 auto; background-color: #c39d91;}
+
+.nav-container>nav{
+    width: 600px;
+    /* display: inline-block; */
+    float: right;
+}
+
+.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.nav-container>nav>ul>li{
+   /* width: 100px; */
+    display: inline-block;
+    color:#000;
+}
+
+.nav-container>nav>ul>li:hover{
+    background-color: #2C2A29;
+    color: white;
+}
+
+.findHostPwd-find-text{
+    margin-top:50px;
+}
+
+.findHostPwd-description{
+    margin-top:20px;
+}
+.findHostPwd-find-content{
+    margin-top : 50px;
+}
+
+.input-email>.inputemail{
+    color: rgb(0, 0, 0);
+    display: block;
+    min-height: 32px;
+    outline: 0px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 1.35;
+    border-color: #d5dbe2;
+}
+.findHostPwd-find-content>.input-phonedesc{
+    text-align:left;
+}
+.input-email>form{
+    display: flex;
+    justify-content: center;
+}
+
+.input-email>form>.emailsubmit{
+    display:inline-block;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: #495057;
+    background-color: rgb(0, 196, 113);
+    border-radius: 8px;
+    margin-left: 20px;
+    min-width: 78px;
+    border: 1px solid transparent;
+    font-size: .875rem;
+    height: 40px;
+   
+}
