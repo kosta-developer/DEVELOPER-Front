@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/users/finduserid.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/f2754c19ed.js" crossorigin="anonymous"></script>
+        <script src="/js/basic.js"></script>
+        <script src="/js/users/finduserid.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="header-wrap" style="display:flex">
+                <div class="header-container">
+                    <a href="index.html"><img src="../images/developerlogo.png" style="height: 50px;"></a>
+                </div>
+                <div class="nav-container">
+                    <nav>
+                        <ul>
+                            <li class='lesson'>수업</li>
+                            <li class='studycafe'>스터디카페</li>
+                            <li class='community'>커뮤니티</li>
+                            <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                            <li class='signup'>회원가입</li>
+                            <li class='tutorAdd'>튜터등록</li>
+                            <li class="login">로그인</li>
+                            <li class='logout'>로그아웃</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="findUserId-wrap">
+                <div class ="findUserId-container">
+                    
+                    <div class="findUserId-find-text">
+                        <h1>아이디(이메일) 찾기</h1>
+                        <p class="findUserId-description">
+                            계정에 등록된 Email를 입력하세요.<br/>
+                        </p>
+                    </div>
+                    <div class="findUserId-find-content">
+                        <label class="input-phonedesc" for="inputphone">
+                            <p class="input-phonedesc">휴대폰 번호 <span class="Asterisk"> * </span>(숫자만 입력)</p>
+                        </label>
+                        <div class="input-phone">
+                            <form class="input-info">
+                            <input type="text" placeholder="01012341234" pattern="[0-9]{11}" title="'01012341234'와 같은 11자리 숫자로만 입력하세요!" class="inputphonenum" id="inputphonenum">
+                            <input type="submit" value="인증요청" onclick="verifyPhone()" class="phonesubmit" id="phonesubmit">
+                            </form>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            <div id="footer-wrap">
+                <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+            </div>
+        </div>
+    </body>
+
+</html>

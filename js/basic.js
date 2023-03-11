@@ -1,44 +1,41 @@
-let backURL = 'http://192.168.0.9:8888/developer/';
-let frontURL = "http://192.168.0.9:5500/html/";
+let backURL = "http://192.168.219.103:8888/developer/";
+let frontURL = "http://192.168.219.103:5500/html/"; 
+ //http://192.168.0.20 학원
+ //http://192.168.219.100 집
+ //http://192.168.0.13학원와이파이
 
 //바꿔야함 맞춰서 다시
 
 //--[회원] 로그인상태의 메뉴들 보여주기 함수 START--
     function showMenuAtMemberLogined() {
-        $('header>nav>ul>li.lesson').show()
-        $('header>nav>ul>li.studycafe').show()
-        $('header>nav>ul>li.community').show();
-        $('header>nav>ul>li.signup').hide();
-        $('header>nav>ul>li.login').hide();
-        $('header>nav>ul>li.logout').show();
-        $('header>nav>ul>li.tutorAdd').show();
-        $('header>nav>ul>li.myPage').show();
+        $('nav>ul>li.lesson').show()
+        $('nav>ul>li.studycafe').show()
+        $('nav>ul>li.community').show();
+        $('nav>ul>li.signup').hide();
+        $('nav>ul>li.login').hide();
+        $('nav>ul>li.logout').show();
+        $('nav>ul>li.tutorAdd').show();
+        $('nav>ul>li.myPage').show();
     }
 //--[회원] 로그인상태의 메뉴들 보여주기 함수 END--
 
 //--[호스트] 로그인상태의 메뉴들 보여주기 함수 START--
     function showMenuAtHostLogined() {
-        $('header>nav>ul>li.lesson').hide()
-        $('header>nav>ul>li.studycafe').show()
-        $('header>nav>ul>li.community').hide();
-        $('header>nav>ul>li.signup').hide();
-        $('header>nav>ul>li.login').hide();
-        $('header>nav>ul>li.logout').show();
-        $('header>nav>ul>li.tutorAdd').hide();
-        $('header>nav>ul>li.myPage').hide();
+        $('nav>ul>li.logout').show();
+        $('nav>ul>li.myPage').hide();
     }
 //--[호스트] 로그인상태의 메뉴들 보여주기 함수 END--
 
 //--로그아웃상태의 메뉴들 보여주기 함수 START--
     function showMenuAtLogouted() {
-        $('header>nav>ul>li.lesson').show()
-        $('header>nav>ul>li.studycafe').show()
-        $('header>nav>ul>li.community').show();
-        $('header>nav>ul>li.signup').show();
-        $('header>nav>ul>li.login').show();
-        $('header>nav>ul>li.logout').hide();
-        $('header>nav>ul>li.tutorAdd').hide();
-        $('header>nav>ul>li.myPage').hide();
+        $('nav>ul>li.lesson').show()
+        $('nav>ul>li.studycafe').show()
+        $('nav>ul>li.community').show();
+        $('nav>ul>li.signup').show();
+        $('nav>ul>li.login').show();
+        $('nav>ul>li.logout').hide();
+        $('nav>ul>li.tutorAdd').hide();
+        $('nav>ul>li.myPage').hide();
     }
 //--로그아웃상태의 메뉴들 보여주기 함수 END--
 
@@ -48,13 +45,14 @@ function userCheckLogined() {
         xhrFields: {
             withCredentials: true
         },
-        url : "http://172.30.1.15:8888/developer/users/checklogined",
-        // url: backURL + 'users/checklogined',
+        url: backURL + 'users/checklogined',
         success: function (responseObj) {
-            showMenuAtMemberLogined();
-        },error : function(xhr){
-            showMenuAtLogouted();
-        }
+            if (responseObj.status == 1) {
+                showMenuAtHostLogined();
+            } else {
+                showMenuAtLogouted();
+            }
+        },
     });
 }
 //--현재 로그인상태인지 로그아웃상태인가를 요청하는 함수 END--
@@ -85,10 +83,12 @@ function userCheckLogined() {
                 $('section').load('./community.html')
                 break;
             case 'signup':
-                $('section').load('./signup.html')
+                location.href = frontURL + 'signup/userCheckEmail.html'
+                console.log( frontURL + 'users/login.html')
                 break;   
             case 'login' :
-                $('section').load('./login.html')
+                location.href = frontURL + 'users/login.html'
+                console.log( frontURL + 'users/login.html')
                 break;     
             case 'logout':
                 alert("로그아웃클릭됨")
@@ -96,7 +96,7 @@ function userCheckLogined() {
                     xhrFields: {
                         withCredentials: true
                     },
-                    url: backURL + '우리가 만든 주소',
+                    url: backURL + 'host/logout',
                     success: function(){
                         showMenuAtLogouted()
                         location.href = frontURL

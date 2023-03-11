@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/studyroom/list.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="/js/basic.js"></script>
+  <!-- <script src="../js/index.js"></script> -->
+  <script src="/js/studyroom/list.js"></script>
+</head>
+
+<body>
+  <div id="studycafe-wrap">
+    <div id="nav-wrap">
+      <div class="nav-container">
+        <img id="logo" src="/images/logo.png">
+        <nav>
+          <ul>
+            <li class='lesson'>수업</li>
+            <li class='studycafe'>스터디카페</li>
+            <li class='community'>커뮤니티</li>
+            <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+            <li class='signup'>회원가입</li>
+            <li class='login'>로그인</li>
+            <li class='logout'>로그아웃</li>
+            <li class='tutorAdd'>튜터등록</li>
+            <li class='myPage'>마이페이지</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div id="content-wrap">
+      <!-- Todo: 로그인한 아이디명도 같이 띄우기, 섬네일 또는 용량제한-->
+      <div class="content-container">
+        <div class="studycafe">
+          <div class="searchgroup">
+            <form class="form" >
+
+              <select id="searchBy">
+                <option value="1">주소</option>
+                <option value="2">카페이름</option>
+              </select>
+              <input id="srNameAddrName" type="search" name="srNameAddrName">
+
+              <select id="person">
+
+                <option value="3" selected>3인 이상</option>
+                <option value="4">4인 이상</option>
+                <option value="5">5인 이상</option>
+                <option value="6">6인 이상</option>
+                <option value="7">7인 이상</option>
+                <option value="8">8인 이상</option>
+                <option value="9">9인 이상</option>
+                <option value="10">10인 이상</option>
+
+
+              </select>
+              <select id="orderBy">
+                <option value="1">가격 낮은순</option>
+                <option value="2">즐겨찾기 순</option>
+              </select>
+
+              <input type="button" value="검색" class="btn" id="btn">
+
+
+            </form>
+          </div>
+          <div class="studycafe-group"></div>
+          <div class="studycafeList">
+            <table class="studycafeTable" border="1">
+              <thead>
+                <tr>
+
+                  <td colspan="3" class="img">대표사진</td>
+                  
+                </tr>
+                <tr>
+                  <td colspan="3" class="name">카페이름</td>
+                </tr>
+                <tr>
+                  <td colspan="3" class="addr">주소</td>
+                </tr>
+                <tr id="studycafeTable-row3">
+                  <td class="price"></td>
+                  <td class="person">최대인원</td>
+                  <td class="favCnt">즐겨찾기수</td>
+                </tr>
+                <tr class="srSeq"><td></td></tr>
+                <tr>
+                  <td colspan="3" class="srbtn">
+
+                  </td>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="../images/장학스터디.jpg" id="cafeimg">
+  <div id="footer-wrap">
+    <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+  </div>
+  </div>
+</body>
+
+</html>
