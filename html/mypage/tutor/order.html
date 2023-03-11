@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charser="utf-8">
+            <link rel="stylesheet" href="/css/mypage/tutor/order.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+            <script src="/js/mypage/tutor/order.js"></script>
+            <!-- <script src="/js/mypage/tutor/test.js"></script> -->
+            <!-- <script src="/js/basic.js"></script> -->
+            <!-- jQuery -->
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+            <!-- iamport.payment.js -->
+            <script type="text/javascript" src="https://cdn.iamport.kr/v1/iamport.js"></script>
+
+        </head>
+
+        <body>
+            <div class="nav_part">
+                <div class="name">
+                    <h1>유료 수업 등록하기</h1>
+                </div>
+            </div>
+
+            <div class="order">
+                <div class="category">
+                    <div class="lessonName"> 수 업 이 름</div>
+                    <div class="price"> 결 제 금 액</div>
+                    <!-- <div id="card">일 반 결 제</div>
+                    <div id="kakao">카카오페이</div> -->
+                </div>
+                <div class="contents">
+                    <div id="name">김둥둥과 함께하는 페이팔</div>
+                    <div id="prcie">10,000 KWR</div>
+                    <div id="paytocard"><button id="cardbutton" type="button" onclick="payment('inicis','test','card')">일반결제하기</button></div>
+                    <div id="paytokakao"><button id="kakaobutton" type="button" onclick="payment('kakao','test','card')">카카오페이로 결제하기</button></div>
+                </div>
+            </div>
+
+            <!-- <button onclick="requestPay()">결제하기</button> 결제하기 버튼 생성 -->
+        </body>
+    
+    </html>

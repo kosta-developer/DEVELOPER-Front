@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--<link rel="stylesheet" href="../css/basic.css">-->
+    <link rel="stylesheet" href="/css/mypage/tutor/orderlist.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/basic.js"></script>
+    <script src="/js/mypage/tutor/orderlist.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--<script src="../js/mypage.js"></script>-->
+</head>
+
+<body>
+    <div id='wrap'>
+        <div id="nav-wrap">
+            <div class="nav-container">
+                <img id='logo' src='/images/logo.png'>
+                <nav>
+                    <ul>
+                        <li class='lesson'>수업</li>
+                        <li class='studycafe'>스터디카페</li>
+                        <li class='community'>커뮤니티</li>
+                        <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                        <li class='signup'>회원가입</li>
+                        <li class='login'>로그인</li>
+                        <li class='logout'>로그아웃</li>
+                        <li class='tutorAdd'>튜터등록</li>
+                        <li class='myPage'>마이페이지</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div id='content-wrap'>
+            <div class='body-wrap'>
+                <div class='side-container'>
+                    <div class='menu'>
+
+                        <div>회원정보</div>
+                        <ul>
+                            <li>회원 정보 수정</li>
+                            <li>회원 탈퇴</li>
+                        </ul>
+                        
+                        <div>클래스</div>
+                        <ul>
+                            <li>튜터
+                                <ul>
+                                    <li>진행예정 수업</li>
+                                    <li>진행중인 수업</li>
+                                    <li>진행완료 수업</li>
+                                    <li>수업 결제내역</li>
+                                </ul>
+                            </li>
+                            <li>튜티
+                                <ul>
+                                    <li>신청예정 수업</li>
+                                    <li>진행중인 수업</li>
+                                    <li>진행완료 수업</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        <div>스터디룸 예약</div>
+                        
+                        <ul>
+                            <li>예약중인 목록</li>
+                            <li>지난예약 목록</li>
+                        </ul>
+                        
+                        <div>이용후기</div>
+                        
+                        <div>즐겨찾기</div>
+                        <ul>
+                            <li>클래스</li>
+                            <li>스터디카페</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+
+                <div class='content-container'>
+                    <!--나중에 호스트id 받아오는 걸로-->
+                    <div class='top-title' style='margin-bottom: 15px;'></div>
+                    <div class='detail-content-box'>
+                        <div class='sub-title'> 수업 결제내역 </div>
+                        <hr>
+                        <div class="sell-title">
+                            <b id='b-lessonName'>수업명</b>
+                            <b id='b-price'>결제금액</b>
+                            <b id='b-orderDate'>결제일</b>
+                        </div>
+
+                        <div class="list-of-order">
+
+                            <!-- 원본 -->
+                            <div class="list-of-order-origin">
+
+                                <span class='lessonName'></span>
+                                <span class='price'></span>
+                                <span class='orderDate'></span>
+                                
+                                <!-- <hr class="list-sell-line"> -->
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- 추가될수록..세로길이는 내가 별도로 계속 지정해주긴해야되는데..우선..이상태로..-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id='footer-wrap'>
+            <div class='footer-container'>ⓒ 2023 이거맞조. All Rights Reserved.</div>
+        </div>
+    </div>
+</body>
+
+</html>

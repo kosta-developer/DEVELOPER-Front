@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* Google web font CDN*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+
+
+*{
+    box-sizing: border-box; /*전체에 박스사이징*/
+    outline: none; /*focus 했을때 테두리 나오게 */
+}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size:14px;
+    background-color: #f5f6f7;
+    line-height: 1.5em; /*브라우저에 따른 상대단위*/
+    color : #222;
+    margin: 0;
+}
+
+.member{
+    text-align: center;
+
+}
+
+.member>div>.signup{
+    margin-top: 150px;
+    margin-left: 23%;
+    width: 25%;
+    float: left;
+    font-size: large;
+    height: 300px;
+    /* font-family: ; */
+
+}
+
+#method{
+    margin-top: 60px;
+    font-size: 40px;
+    text-align: center;
+}
+
+#joinus{
+    margin-top: 70px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.member>div>.hostSignup{
+    margin-top: 150px;
+    margin-right: 23%;
+    width: 25%;
+    float: right;
+    font-size: 20px;
+    height: 300px;
+    color: black;
+    border-color: blue;
+}
+
+#hosticon{
+    margin-top: 20px;
+    font-size: 150px;
+    color: rgb(73, 129, 90);
+}
+
+#hostGo{
+    margin-top: 30px;
+}
