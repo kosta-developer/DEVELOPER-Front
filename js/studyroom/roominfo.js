@@ -1,5 +1,5 @@
 $(()=>{
-    checkIntervalLogined();
+   
     let url = backURL+'studyroom/roominfo/'
     let seq = location.search.substring(1) 
     let url2 = backURL+"favoritesstudyroom/add/"+seq //추가
@@ -148,7 +148,7 @@ $(()=>{
                     
                     srSeq = r.srseqDTO.srSeq;
                    if(srSeq ==seq)
-                   break
+                  // break
                   $("#nonebox2").html(srSeq);
                        
                   

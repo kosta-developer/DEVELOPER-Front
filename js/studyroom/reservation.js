@@ -1,5 +1,5 @@
 $(() => {
-  checkIntervalLogined();
+  userCheckIntervalLogined();
   let url = backURL + "studyroom/roominfo/reservation/";
   var postURL = decodeURI(location.href);
   var postURL2 = postURL.split("?");

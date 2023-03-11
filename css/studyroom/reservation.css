@@ -165,3 +165,6 @@ div.checkbox-pack{
 .valueStorage{
     display: none;
 }
+#input-date{
+    margin: auto;
+}
