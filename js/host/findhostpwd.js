@@ -1,7 +1,25 @@
+<<<<<<< HEAD
 $(() => {
    
     $('div.findHostPwd-find-content>div.input-email>button#email-submit').click(function () {
 
+=======
+  $(() => {
+    $('div.findHostPwd-find-content>div.input-email>button#email-submit').click(function () {
+      // --email 입력 버튼 클릭시 START
+// verifyEmail = function() {
+//   // 이메일 검증 스크립트 작성
+//   var emailVal = $("#inputemail").val();
+//   var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+//   // 검증에 사용할 정규식 변수 regExp에 저장
+//   if (emailVal.match(regExp) != null) {
+//     alert('Email 이 발송되었습니다.');
+//   }
+//   else {
+//     alert('Email 형식이 일치하지 않습니다.');
+//   }
+// };
+>>>>>>> bb2edf667f2fc98fafa74bbb82e431e25ccf4068
         let hostId = $('div.findHostPwd-find-content>div.input-email>input#hostId').val();
         let hostEmail = $('div.findHostPwd-find-content>div.input-email>input#hostEmail').val();
 
