@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <!--<link rel='stylesheet' href='../css/basic.css'>-->
+    <link rel='stylesheet' href='/css/mypage/favorites/studyroom.css'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
+    <script src='/js/basic.js'></script>
+    <script src='/js/mypage/favorites/studyroom.js'></script>
+</head>
+
+<body>
+    <div id='favorites-studyroom'>
+        <div id='nav-wrap'>
+            <div class='nav-container'>
+                <img id='logo' src='/images/logo.png'>
+                <nav>
+                    <ul>
+                        <li class='lesson'>수업</li>
+                        <li class='studycafe'>스터디카페</li>
+                        <li class='community'>커뮤니티</li>
+                        <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                        <li class='signup'>회원가입</li>
+                        <li class='login'>로그인</li>
+                        <li class='logout'>로그아웃</li>
+                        <li class='tutorAdd'>튜터등록</li>
+                        <li class='myPage'>마이페이지</li>
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+
+        <div id='content-wrap'>
+            <div class='mypage-body-wrap'>
+                <div class='side-container'>
+                    <div class='menu'>
+
+                        <div>회원정보</div>
+                        <ul>
+                            <li><a href="">회원 정보 수정</a></li>
+                            <li><a href="">회원 탈퇴</a></li>
+                        </ul>
+                        <div>수업</div>
+                        <ul>튜터
+                            <li>진행 예정 클래스</li>
+                            <li>진행 중인 클래스</li>
+                            <li>진행 완료 클래스</li>
+                        </ul>
+                        <ul>튜티
+                            <li>진행 예정 클래스</li>
+                            <li>진행 중인 클래스</li>
+                            <li>진행 완료 클래스</li>
+                        </ul>
+                        <div>스터디카페 예약</div>
+                        <ul>
+                            <li>현재 예약 목록</li>
+                            <li>지난 예약 목록</li>
+                        </ul>
+                        <div>후기</div>
+                        <ul>수업
+                            <li><a href="/html/mypage/tutee/lessonreview/add.html">후기 작성</a></li>
+                            <li><a href="/html/mypage/tutee/lessonreview/myreview.html">후기 목록</a></li>
+                        </ul>
+                        <div>즐겨찾기</div>
+                        <ul>
+                            <li><a href="/html/mypage/favorites/lesson.html">수업 즐겨찾기</a></li>
+                            <li>스터디카페 즐겨찾기</li>
+                    </div>
+                </div>
+                <div class='content-container'>
+                    <!--나중에 호스트id 받아오는 걸로-->
+                    <div class='top-title' style='margin-bottom: 15px;'>유저 ID님, 반갑습니다 ></div>
+                    <div class='detail-content-box'>
+                        <div class='sub-title'>관심있는 스터디카페 </div>
+                        <hr>
+                        <div class="sell-title">
+                            <b id='b-name'>스터디카페명</b>
+                            <b id='b-addr'>주소</b>
+                        </div>
+
+                        <div class="list-fav-studyroom">
+
+                            <!-- 원본 -->
+                            <div class="list-fav-studyroom-origin">
+                                <hr class="list-sell-line">
+                                <span id='favSrSeq' class='cafe-data'></span>
+                                <span id='favName' class='cafe-data'></span>
+                                <span id='favAddr' class='cafe-data'></span>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='footer-wrap'>
+            <div class='footer-container'>ⓒ 2023 이거맞조. All Rights Reserved.</div>
+        </div>
+</body>
+
+</html>
