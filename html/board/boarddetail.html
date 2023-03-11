@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/basic.css">
+        <link rel="stylesheet" href="/css/board/boarddetail.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/f2754c19ed.js" crossorigin="anonymous"></script>
+        <script src="/js/basic.js"></script>
+        <script src="/js/board/boarddetail.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="header-wrap"style="display:flex">
+                <div class="header-container">
+                    <a href="index.html"><img src="../images/developerlogo.png" style="height: 50px;"></a>
+                </div>
+                <div class="nav-container">
+                    <nav>
+                        <ul>
+                            <li class='lesson'>수업</li>
+                            <li class='studycafe'>스터디카페</li>
+                            <li class='community'>커뮤니티</li>
+                            <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                            <li class='signup'>회원가입</li>
+                            <li class='tutorAdd'>튜터등록</li>
+                            <li class='myPage'>마이페이지</li>
+                            <li class='login'>로그인</li>
+                            <li class='logout'>로그아웃</li>
+                            </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="board-banner">
+                        Developer Community<br/><br/>
+                        <span>함께 토론해봐요!!<i class="fa-regular fa-thumbs-up"></i>
+                        </span>
+                    </div>
+                    <div class="boarddetail-container">
+                            <button id="edit-btn">...</button>
+                            
+                            <div id="detailbtn" style="display:none;">
+                                <button type="button" id="editbtn">수정</button>
+                                <button type="button" id="delbtn">삭제</button>
+                            </div>
+                            <div class="content-container">
+                                <div class="boarddetaillist" id="boarddetaillist">
+                                    <!-- 글 상세목록 append될 곳 -->
+                                </div>
+                                <span style="text-align: left; margin-top:20px;">Comment</span>
+                                <div>
+                                <form id="addReplyForm">
+                                    <input type="text" id="content" name="content">
+                                    <button id="addRepbtn" >댓글 작성</button>
+                                    </form>
+                                </div>
+                                <div class="replist" id="replist">
+                                    <!-- 댓글목록 append 될 곳-->
+                                </div>
+                            </div>
+                    </div>
+                    <div id="footer-wrap">
+                        <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+                    </div>
+        </div>
+    </body>
+
+    </html>

@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+#wrap {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+}
+
+/* #header-wrap{width: 100%; background-color: #67615f; text-align:center;} */
+
+#nav-wrap {
+    width: 100%;
+    border: 1px solid rgb(187, 187, 187);
+}
+
+#content-wrap {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgb(187, 187, 187);
+}
+
+#footer-wrap {
+    width: 100%;
+    border: 1px solid rgb(187, 187, 187);
+    text-align: center;
+}
+
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+ width: 100%는 기본값이기 때문에 없어도 된다 */
+
+.nav-container {
+    width: 1000px;
+    height: 100px;
+    line-height: 60px;
+    margin: 0 auto;
+    border: 1px solid #c39d91;
+}
+
+.body-wrap {
+    margin: 0 auto;
+    width: 1000px;
+    height: 780px;
+    border: 1px solid rgb(187, 187, 187);
+}
+
+.side-container {
+    float: left;
+    width: 19%;
+    height: 700px;
+    margin: 0 auto;
+    border: 1px solid #fc487b;
+}
+
+.content-container {
+    float: right;
+    width: 78%;
+    height: 710px;
+    margin: 0 auto;
+    border: 1px solid #62ff19;
+    margin: 18px 13px 13px 13px;
+}
+
+.footer-container {
+    width: 1000px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    background-color: #c39d91;
+}
+
+.nav-container>nav {
+    width: 600px;
+    /* display: inline-block; */
+    float: right;
+}
+
+.nav-container>img {
+    height: 30px;
+    float: left;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+.nav-container>nav>ul {
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px;
+
+}
+
+.nav-container>nav>ul>li {
+    /* width: 100px; */
+    display: inline-block;
+    margin-left: 5px;
+}
+
+
+.nav-container>nav>ul>li:hover {
+    background-color: #80d8b4;
+    color: #fff
+}
+
+.side-container>.menu {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.side-container>.menu>div {
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.side-container>.menu>ul {
+    list-style-type: none;
+}
+
+.side-container>.menu>ul>li {
+    margin-top: 13px;
+    margin-left: 20px;
+    font-size: 16px;
+    list-style-type: none;
+}
+
+.side-container>.menu>ul>li>ul>li {
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size: 16px;
+    list-style-type: none;
+}
+
+#content-wrap>div.body-wrap>div.content-container>div.detail-content-box {
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+#content-wrap>.body-wrap>.content-container>.detail-content-box>.sub-title {
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+}
+
+
+
+#content-wrap>.body-wrap>.content-container>.detail-content-box>.sell-title {
+    background-color: #e9e9e9;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#content-wrap>.body-wrap>.content-container>.detail-content-box>div.list-of-order {
+    margin-top: 12px;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 200px;
+    font-weight: 700;
+}
+
+#content-wrap>.body-wrap>.content-container>.detail-content-box>div.list-of-order>div.list-of-order-origin {
+    margin-top: 5px;
+}
+
+b#b-lessonName {
+    width: 280px;
+    display: inline-block;
+    text-align: center;
+}
+
+.list-of-order>.list-of-order-origin>.lessonName {
+    width: 295px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    /* cursor: pointer; */
+    /* border: 1px solid #62ff19; */
+}
+
+b#b-price {
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+}
+
+.list-of-order>.list-of-order-origin>.price {
+    width: 200px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    /* border: 1px solid #62ff19; */
+}
+
+b#b-orderDate {
+    width: 250px;
+    display: inline-block;
+    text-align: center;
+}
+
+.list-of-order>.list-of-order-origin>.orderDate {
+    width: 250px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    /* border: 1px solid #62ff19; */
+}
