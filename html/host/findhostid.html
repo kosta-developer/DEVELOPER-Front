@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/host/findhostid.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/f2754c19ed.js" crossorigin="anonymous"></script>
+        <script src="/js/basic.js"></script>
+        <script src="/js/host/findhostid.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="header-wrap" style="display:flex">
+                <div class="header-container">
+                    <a href="index.html"><img src="../images/developerlogo.png" style="height: 50px;"></a>
+                </div>
+                <div class="nav-container">
+                    <nav>
+                        <ul>
+                            <li class='lesson'>수업</li>
+                            <li class='studycafe'>스터디카페</li>
+                            <li class='community'>커뮤니티</li>
+                            <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                            <li class='signup'>회원가입</li>
+                            <li class='tutorAdd'>튜터등록</li>
+                            <li class='login'>로그인</li>
+                            <li class='logout'>로그아웃</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="findHostId-wrap">
+                <div class ="findHostId-container">
+                    
+                    <div class="findHostId-find-text">
+                        <h1>호스트아이디 찾기</h1>
+                        <p class="findHostId-description">
+                            계정에 등록된 사업자번호를 입력하세요<br/>
+                        </p>
+                    </div>
+                    <div class="findHostId-find-content">
+                        <label class="numdesc" for="numsubmit">
+                            <p class="numdesc">사업자 번호 <span class="Asterisk"> * </span></p>
+                        </label>
+                        <div class="input-num">
+                            <input type="text" placeholder="123-45-67890"  pattern="^(\d{3,3})+[-]+(\d{2,2})+[-]+(\d{5,5})" , title="'123-45-67890'와 같은 양식으로 입력하세요!" class="inputnum" id="inputnum">
+                            <input type="button" value="인증요청" class="numsubmit" id="numsubmit">
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            <div id="footer-wrap">
+                <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+            </div>
+        </div>
+    </body>
+
+</html>

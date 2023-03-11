@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/basic.css">
+        <link rel="stylesheet" href="/css/board/board.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/f2754c19ed.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <!-- <html xmlns:th="http://www.thymeleaf.org"></html> -->
+        <script src="/js/basic.js"></script>
+        <script src="/js/board/boardlist.js"></script>
+        
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="header-wrap" style="display:flex">
+                <div class="header-container">
+                    <a href="index.html"><img src="../images/developerlogo.png" style="height: 50px;"></a>
+                </div>
+                <div class="nav-container">
+                    <nav>
+                        <ul>
+                            <li class='lesson'>수업</li>
+                            <li class='studycafe'>스터디카페</li>
+                            <li class='community'>커뮤니티</li>
+                            <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                            <li class='signup'>회원가입</li>
+                            <li class='tutorAdd'>튜터등록</li>
+                            <li class='myPage'>마이페이지</li>
+                            <li class='login'>로그인</li>
+                            <li class='logout'>로그아웃</li>
+                            </ul>
+                    </nav>
+                </div>
+            </div>
+                <div class="board-banner">
+                    Developer Community<br/><br/>
+                    <span>함께 토론해봐요!!<i class="fa-regular fa-thumbs-up"></i>
+                    </span>
+                </div>
+                <div class="board-container">
+                    <div class="cate">
+                        <h3>카테고리</h3>
+                        <button class="cate0" id="cate0">Q/A</button>
+                        <button class="cate1" id="cate1">자유게시판</button>
+                        <button class="cate2" id="cate2">스터디모집</button>
+                    </div>
+                    <div id="content-wrap">
+                        <div class="search">
+                            <formm id="searchtitle">
+                                <input
+                                    type="text"
+                                    placeholder="제목으로 검색하세요"
+                                    style="width: 400px; height:48px; font: size 10px;"
+                                    name="title">
+                                <button id="searchbtn" style="width:90px; height:48px;">검색</button>
+                            </form>
+                        </div>
+                        <div class="filter">
+                            <button class="descbtn fitbtn" id="descbtn" onclick="select_orderby('c_date')">최신순</button>
+                            <button class="cntbtn fitbtn" id="cntbtn" onclick="select_orderby('cnt')">조회순</button>
+                            <button class="recbtn fitbtn" id="recbtn" onclick="select_orderby('recommend')">추천순</button>
+                            <div class="addboard">
+                                <button class="addbtn" id="addbtn">
+                                    <i class="fa-solid fa-pen"></i>글쓰기</button>
+                            </div>
+                        </div>
+                        <div class="content-container">
+                            <div class="list" id="list">
+                                <!-- 본문내용 append 될 부분 -->
+                            </div>
+                               
+                            <div class="pagegroup">
+                                 <!-- 페이지 버튼 부분 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div id="footer-wrap">
+                    <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+                </div>
+        
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        </body>
+
+    </html>
