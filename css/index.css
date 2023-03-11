@@ -15,8 +15,11 @@
 .nav-container {width:1000px; height: 100px; line-height: 60px; margin: 0 auto; border: 1px solid #c39d91; } 
 .banner-container {width: 1000px; height: 300px; line-height: 300px; margin: 0 auto; border: 1px solid #4567ff; }
 .content-container {width: 1000px; margin: 0 auto; border: 1px solid #62ff19;}
-.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
+.footer-container{ height: 400px; line-height: 100px; margin: 0 auto;  }
 
+img#footer{
+   height: 435px;
+}
 
 .nav-container>nav{
     width: 600px;

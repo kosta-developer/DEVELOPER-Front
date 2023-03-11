@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="/css/admin/memberlist.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/basic.js"></script>
+    <script src="/js/admin/Memberlist.js"></script>
+</head>
+<title>관리자페이지</title>
+<body>
+    <div id="user-index-wrap">
+        <div id="nav-wrap">
+            <div class="nav-container">
+                <img id="logo" src="/images/logo.png">
+                <nav>
+                    <ul>
+                        <li class='studycafe'>스터디카페</li>
+                        <li class='logout'>로그아웃</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div id="content-wrap">
+            <div class="userpage-body-wrap">
+                <div class="side-container">
+                    <div class="menu">
+
+                        <div>회원정보</div>
+                        <ul>
+                            <li>회원 정보 수정</li>
+                            <li>회원 탈퇴</li>
+                        </ul>
+                        <div>클래스</div>
+                        <ul>
+                            <div>튜터</div>
+                            <li>진행 예정 클래스</li>
+                            <li>진행 중인 클래스</li>
+                            <li>진행 완료 클래스</li>
+                        </ul>
+                        <ul>
+                            <div>튜티</div>
+                            <li>신청 예정 클래스</li>
+                            <li>진행 중인 클래스</li>
+                            <li>진행 완료 클래스</li>
+                        </ul>
+                        <div>스터디룸 예약</div>
+                        <ul>
+                            <li>현재예약 목록</li>
+                            <li>지난예약 목록록</li>
+
+                        </ul>
+                        <div>후기</div>
+                        <ul>
+                            <li>클래스 후기</li>
+                            <li>스터디룸 후기</li>
+
+                        </ul>
+                        <div>즐겨찾기</div>
+                        <ul>
+                            <li>클래스 즐겨찾기</li>
+                            <li>스터디카페 즐겨찾기</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-container">
+                    <div class="searchpackage">
+                    
+                    </select><input id="textbox" type="search" placeholder="찾으시는 유저의 정보를 입력해주세요"  ><input type="button" id="search-btn" value="찾기" >
+                    </div>
+                    <table>
+                    <table border="0" class="memberList-table1
+                    ">
+                    <th>번호</th><th>아이디</th><th>닉네임</th><th>연락처</th><th></th>        
+                    </table>
+                    <div class="memberList-Box">
+                    <table border="0" class="memberList-table2">
+                        
+                        <tr id="memberList-body">
+                            <td id="num">1</td>
+                            <td id="userid"></td>
+                            <td id="nickname">치즈케익</td>
+                            <td id="tel">010-1234-1234</td>
+                            <td><button id="btn">상세보기<div class="idVal"></div></button></td>
+                        </tr> 
+                     
+                       
+                    </table>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+        <div id="footer-wrap">
+            <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+        </div>
+    </div>
+</body>
+
+</html>

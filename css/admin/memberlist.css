@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+*{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
+#user-index-wrap {width: 100%; height: auto; font-size: 15px; }
+#user-index-wrap>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
+#user-index-wrap>#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
+#user-index-wrap>#footer-wrap{width: 100%; border: 1px solid rgb(187, 187, 187); text-align:center;}
+#user-index-wrap>#content-wrap>.userpage-body-wrap{margin:0 auto; width: 1000px; height: 1200px;  border: 1px solid rgb(187, 187, 187);}
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+ width: 100%는 기본값이기 때문에 없어도 된다 */
+
+ #user-index-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91; } 
+ #user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container {float: left; width: 19%; height: 700px; margin: 0 auto; border: 1px solid #fc487b;} 
+ #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container {overflow: auto float: right; width: 78%; height: 1000px; margin: 0 auto; border: 1px solid #62ff19; margin: 18px 13px 13px 13px;}
+ #user-index-wrap>#footer-wrap>.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
+
+ #user-index-wrap>#nav-wrap>.nav-container>nav{
+    width: 200px;
+    /* display: inline-block; */
+    float: right;
+}
+
+#user-index-wrap>#nav-wrap>.nav-container>img{
+    height: 30px;
+    float: left;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+#user-index-wrap>#nav-wrap>.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px;
+    
+}
+
+#user-index-wrap>#nav-wrap>.nav-container>nav>ul>li{
+   /* width: 100px; */
+    display: inline-block;
+    margin-left:15px;
+}
+
+#user-index-wrap>#nav-wrap>.nav-container>nav>ul>li:hover{
+    background-color: #2C2A29;
+    color: #fff
+}
+
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>div{
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul>div{
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-weight: 700;
+}
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul{
+    list-style-type: none;
+}
+
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul>li{
+    margin-top: 13px;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul>li:hover{
+    background-color: #2C2A29;
+    color: #fff
+}
+
+th{
+    width: 200px;
+   height: 50px;
+   
+}
+tr{
+    
+}
+td{
+    width: 200px;
+        height: 50px;
+        border-bottom: 2px solid grey;
+}
+
+.memberList-table1{
+    
+    margin-top: 20px;
+    margin-left: 20px;
+    border-bottom: 2px solid black;
+}.memberList-table2 {
+
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#memberList-body{
+    height: 40px;
+    text-align: center;
+}
+.searchpackage{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+#searchBy{
+    width: 150px;
+    height: 32px;
+    text-align: center;
+}
+#textbox{
+    width: 500px;
+    height: 30px;
+}
+#search-btn{
+    
+    width: 100px;
+    height: 32px;
+}
+.idVal{
+    display: none;
+}
