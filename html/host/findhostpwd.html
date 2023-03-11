@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/host/findhostpwd.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/f2754c19ed.js" crossorigin="anonymous"></script>
+        <script src="/js/basic.js"></script>
+        <script src="/js/host/findhostpwd.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="header-wrap" style="display:flex">
+                <div class="header-container">
+                    <a href="index.html"><img src="/images/logo.png" style="height: 50px;"></a>
+                </div>
+                <div class="nav-container">
+                    <nav>
+                        <ul>
+                            <li class='lesson'>수업</li>
+                            <li class='studycafe'>스터디카페</li>
+                            <li class='community'>커뮤니티</li>
+                            <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                            <li class='signup'>회원가입</li>
+                            <li class='tutorAdd'>튜터등록</li>
+                            <li class='myPage'>마이페이지</li>
+                            <li class='login'>로그인</li>
+                            <li class='logout'>로그아웃</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="findHostId-wrap">
+                <div class ="findHostPwd-container">
+                    
+                    <div class="findHostPwd-find-text">
+                        <h1>비밀번호 재설정 </h1>
+                        <p class="findHostPwd-description">
+                            비밀번호를 잃어버리셨나요? <br/>
+                            가입한 계정의 이메일주소을 정확히 입력하세요.<br/>
+                            이메일을 통해 변경할 비밀번호를 보내드립니다.
+                        </p>
+                    </div>
+                    <div class="findHostPwd-find-content">
+                        <div class="input-email">
+                            아이디<input type="text" id="hostId" class="inputemail">
+                            이메일<input type="text" id="hostEmail" class="inputemail" placeholder="example@gmail.com">
+                            <button type="button" id="email-submit">인증메일 전송하기</button>
+                      
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            <div id="footer-wrap">
+                <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+            </div>
+        </div>
+    </body>
+
+</html>

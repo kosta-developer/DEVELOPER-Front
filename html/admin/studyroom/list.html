@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/admin/studyroom/list.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/basic.js"></script>
+    <script src="/js/admin/studyroom/list.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-wrap">
+            <div class="header-container">
+                <div class="header-logo"><a href="index.html"><img src="../images/developerlogo.png" style="height:50px;"></a></div>
+            </div>
+        </div>
+
+        <div id="nav-wrap">
+            <div class="nav-container">
+                <nav>
+                    <ul type="none">
+                        <li class='lesson'>수업</li>
+                        <li class='studycafe'>스터디카페</li>
+                        <li class='community'>커뮤니티</li>
+                        <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                        <li class='signup'>회원가입</li>
+                        <li class='login'>로그인</li>
+                        <li class='logout'>로그아웃</li>
+                        <li class='tutorAdd'>튜터등록</li>
+                        <li class='myPage'>마이페이지</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div id="content-wrap">
+            <div class="admin-body-wrap">
+
+                <div class="side-container">
+                    <div class="menu">
+
+                        <div>회원정보</div>
+                        <ul type="none">
+                            <li>회원 정보 수정</li>
+                            <li>회원 탈퇴</li>
+                        </ul>
+
+                        <div>클래스</div>
+                        <ul type="none">
+                            <li>튜터
+                                <ul type="none">
+                                    <li>진행예정 클래스</li>
+                                    <li>진행중인 클래스</li>
+                                    <li>진행완료 클래스</li>
+                                </ul>
+                            </li>
+                            <li>튜티
+                                <ul type="none">
+                                    <li>신청예정 클래스</li>
+                                    <li>진행중인 클래스</li>
+                                    <li>진행완료 클래스</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div>스터디카페</div>
+
+                        <ul type="none">
+                            <li>예약중인 목록</li>
+                            <li>지난예약 목록</li>
+                        </ul>
+
+                        <div>이용후기</div>
+
+                        <div>즐겨찾기</div>
+                        <ul type="none">
+                            <li>클래스</li>
+                            <li>스터디카페</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="content-container">
+                    <div class="adminInfo"><h2>@@@님 환영합니다.</h2></div>
+                    <div class="studyroomlist">
+                        <div id="admin_studyroom">
+                            <div class="studyroom_tab"style="display:flex">
+                                <div>호스트</div>
+                                <div>룸이름</div>
+                                <div>시작시간</div>
+                                <div>종료시간</div>
+                            </div>
+                            <div id="studyroom_info" style="display:flex">
+                                <div class="host_id"></div>
+                                <div class="name"></div>
+                                <div class="open_time"></div>
+                                <div class="end_time"></div>
+                                <div class="srSeq" style="display:none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="footer-wrap">
+            <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+        </div>
+    </div>
+</body>
+
+</html>

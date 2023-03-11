@@ -1,0 +1,62 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+* { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+*{margin: 0; padding: 0;}
+#wrap {width: 1000px; height: 1500px; margin: 0 auto; font-size: 15px; text-align: center; flex-direction: column;}
+#header-wrap{width: 1000px; margin: 0 auto; background-color: #eee;}
+#findHostId-wrap{width: 1000px; min-height : 800px; overflow-y: scroll; margin: 0 auto;background-color: white;}
+#footer-wrap{width: 1000px; margin: 0 auto;background-color: #e6dcd3;}
+
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+ width: 100%는 기본값이기 때문에 없어도 된다 */
+
+.header-container {height: 100px; line-height: 100px; margin: 0 auto;} 
+.nav-container {width:100%; height: 60px; line-height: 60px;margin: 0 auto; background-color: #eee;} 
+.findHostId-container {width: 80%; height: 100%; margin: 0 auto; margin-top: 100px;  background-color: white; color:black;}
+.footer-container{width: 100%; height: 100px; line-height: 100px; margin: 0 auto; background-color: #c39d91;}
+
+.nav-container>nav{width: 600px; float: right;}
+
+.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.nav-container>nav>ul>li{
+    display: inline-block;
+    color:#000;
+}
+
+.nav-container>nav>ul>li:hover{
+    background-color: #2C2A29;
+    color: white;
+}
+
+.findHostId-find-text{margin-top:50px;}
+.findHostId-description{margin-top:20px;}
+.findHostId-find-content{margin-top : 50px;}
+.findHostId-container #inputNumForm{height : 50px; margin-top : 20px; display: flex; justify-content: center;}
+
+.findHostId-container .input-num .inputnum{
+    height : 100%;
+    display: block;
+    color: #495057;
+    display: block;
+    min-height: 32px;
+    font-size: 24px;
+    line-height: 1.35;
+    border-color: #d5dbe2;
+}
+.findHostId-container .Asterisk{color: #e5503c;}
+.findHostId-container .input-num .numsubmit{
+    box-sizing: border-box;
+    border-color: #d5dbe2;
+    display:inline-block;
+    cursor: pointer;
+    border-radius: 8px;
+    color: #495057;
+    background-color: #fff; 
+    margin-left: 20px;
+    height : 100%;
+    min-width: 78px;
+}
