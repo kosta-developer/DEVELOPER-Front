@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+#wrap {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+}
+
+/* #header-wrap{width: 100%; background-color: #67615f; text-align:center;} */
+
+#nav-wrap {
+    width: 100%;
+    border: 1px solid rgb(187, 187, 187);
+}
+
+#content-wrap {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgb(187, 187, 187);
+}
+
+#footer-wrap {
+    width: 100%;
+    border: 1px solid rgb(187, 187, 187);
+    text-align: center;
+}
+
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+ width: 100%는 기본값이기 때문에 없어도 된다 */
+
+
+.header-container {
+    width: 1000px;
+    height: 100px;
+    line-height: 60px;
+    margin: 0 auto;
+    border: 1px solid #c39d91;
+}
+
+.nav-container {
+    width: 1000px;
+    height: 100px;
+    line-height: 60px;
+    margin: 0 auto;
+    border: 1px solid #c39d91;
+}
+
+.mypage-body-wrap {
+    margin: 0 auto;
+    width: 1000px;
+    height: 780px;
+    border: 1px solid rgb(187, 187, 187);
+}
+
+.side-container {
+    float: left;
+    width: 19%;
+    height: 700px;
+    margin: 0 auto;
+    border: 1px solid #fc487b;
+}
+
+.content-container {
+    float: right;
+    width: 78%;
+    height: 710px;
+    margin: 0 auto;
+    border: 1px solid #62ff19;
+    margin: 18px 13px 13px 13px;
+}
+
+.footer-container {
+    width: 1000px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    background-color: #c39d91;
+}
+
+
+.nav-container>nav {
+    width: 600px;
+    /* display: inline-block; */
+    float: right;
+}
+
+.nav-container>img {
+    height: 30px;
+    float: left;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+.nav-container>nav>ul {
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px;
+
+}
+
+.nav-container>nav>ul>li {
+    /* width: 100px; */
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.nav-container>nav>ul>li:hover {
+    background-color: #80d8b4;
+    color: #fff
+}
+
+.side-container>.menu {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.side-container>.menu>div {
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.side-container>.menu>ul {
+    list-style-type: none;
+}
+
+.side-container>.menu>ul>li {
+    margin-top: 13px;
+    margin-left: 20px;
+    font-size: 16px;
+    list-style-type: none;
+}
+
+.side-container>.menu>ul>li>ul>li {
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size: 16px;
+    list-style-type: none;
+}
+
+.content-container>.ongoingDetail>div {
+    background-color: rgb(248, 246, 239);
+    margin-top: 15px;
+    width: 95%;
+    height: 156px;
+    float: right;
+    position: relative;
+    left: -2.5%;
+}
+
+.content-container>.ongoingDetail>.classlist {
+    width: 95%;
+    float: right;
+    position: relative;
+    left: -2.5%;
+    height: 300px;
+}
+
+.content-container>.ongoingDetail>.classlist>.classThumbnail {
+    float: left;
+    width: 40%;
+    margin-left: 20px;
+}
+
+/* .content-container>.ongoingDetail>.classlist>.classThumbnail>.imgbox{
+    width: 230px;
+    height: 150px;
+} */
+
+.content-container>.ongoingDetail>.classlist>.classThumbnail>.classDetailButton>input {
+    margin-top: 15px;
+    margin-left: 8px;
+    font-size: 17px;
+}
+
+.content-container>.ongoingDetail>.classlist>.classDetail {
+    margin-top: 25px;
+    float: right;
+    width: 45%;
+    margin-right: 20px;
+}
+
+.content-container>.ongoingDetail>.classlist>.classDetail>ul>li {
+    margin: 13px;
+}
+
+.content-container>.ongoingDetail>.classlist>.classDetail>.classButton>input {
+    margin-top: 35px;
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+.content-container>.ongoingDetail>.tuteelist {
+    float: right;
+    width: 95%;
+    margin-right: 0px;
+}
+
+.content-container>.ongoingDetail>.tuteelist>h4 {
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.content-container>.ongoingDetail>.tuteelist>.completed {
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 70%;
+    font-size: 17px;
+}
+
+/* .content-container>.ongoingDetail>.completed>.tuteelist>ul>li>input{
+    font-size: 16px;
+    float: right;
+    margin-right: 10px;
+} */

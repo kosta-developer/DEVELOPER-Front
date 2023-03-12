@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+*{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
+#edit-host-wrap {width: 100%; height: auto; font-size: 15px; }
+#edit-host-wrap>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
+#edit-host-wrap>#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
+#edit-host-wrap>#footer-wrap{width: 100%; border: 1px solid rgb(187, 187, 187); text-align:center;}
+#edit-host-wrap>#content-wrap>.hostpage-body-wrap{margin:0 auto; width: 1000px; height: 650px;  border: 1px solid rgb(187, 187, 187);}
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+ width: 100%는 기본값이기 때문에 없어도 된다 */
+
+ #edit-host-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91; } 
+ #edit-host-wrap>#content-wrap>.hostpage-body-wrap>.side-container {float: left; width: 19%; height: auto; margin: 0 auto; border: 1px solid #fc487b;} 
+ #edit-host-wrap>#content-wrap>.hostpage-body-wrap>.content-container {float: right; width: 78%; height: auto; margin: 0 auto; border: 1px solid #62ff19; margin: 18px 13px 13px 13px;}
+ #edit-host-wrap>#footer-wrap>.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
+
+ #edit-host-wrap>#nav-wrap>.nav-container>nav{
+    width: 310px;
+    /* display: inline-block; */
+    float: right;
+}
+
+#edit-host-wrap>#nav-wrap>.nav-container>img{
+    height: 30px;
+    float: left;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+#edit-host-wrap>#nav-wrap>.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px;
+    
+}
+
+#edit-host-wrap>#nav-wrap>.nav-container>nav>ul>li{
+   /* width: 100px; */
+    display: inline-block;
+    margin-left:15px;
+}
+
+#edit-host-wrap>#nav-wrap>.nav-container>nav>ul>li:hover{
+    background-color: #80d8b4;
+    color: #fff
+}
+
+#edit-host-wrap>#nav-wrap>.nav-container>nav>ul>li>a{
+    text-decoration: none;
+    color: black;
+}
+
+#edit-host-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#edit-host-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>div{
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+#edit-host-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul{
+    list-style-type: none;
+}
+
+#edit-host-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li{
+    margin-top: 13px;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+
+#edit-host-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li:hover{
+    background-color: #80d8b4;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff
+}
+
+#edit-host-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li>a{
+    text-decoration: none;
+    color: rgb(88, 88, 88);
+}
+#edit-host-wrap>#content-wrap > div > div.content-container > div.detail-content-box{
+    border: 1.5px solid #bbbbbb;
+    border-radius: 15px;
+    width: 96%;
+    height: 570px;
+    margin-left: 12px;
+}
+
+#edit-host-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>.sub-title{
+    font-weight: 700;
+    margin: 20px 0px 5px 20px;
+}
+
+#edit-host-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>.title{
+    font-weight: 700;
+    margin: 20px 0px 5px 270px;
+}
+
+
+#edit-host-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>input[type=text]{
+    width: 200px;
+    height: 30px;
+    margin-left: 270px;
+}
+
+#edit-host-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>input[type=password]{
+    width: 200px;
+    height: 30px;
+    margin-left: 270px;
+}
+
+#edit-host-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>.info-button{
+    
+    margin: 20px 0px 5px 295px;
+
+}
+
+#edit-host-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>.info-button>input[type=button]{
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #80d8b4;
+    margin-right: 10px;
+}
+
+#edit-host-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>.info-button>button#out{
+margin-left: 190px;
+width: 70px;
+height: 30px;
+border-radius: 5px;
+background-color: #a5a5a5;
+}
+
+
+
+#edit-host-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>.info-button>input[type=button]:hover{
+    font-weight: 700;
+    border-width: 2px;
+    box-shadow: 0 4px 2px -2px rgba(72, 72, 72, 0.7);
+    /* box-shadow: 0 5px 18px -7px rgba(0,0,0,1); */
+}
+
+#edit-host-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>.info-button>button#out:hover{
+    font-weight: 700;
+    border-width: 2px;
+    box-shadow: 0 4px 2px -2px rgba(72, 72, 72, 0.7);
+    /* box-shadow: 0 5px 18px -7px rgba(0,0,0,1); */
+}

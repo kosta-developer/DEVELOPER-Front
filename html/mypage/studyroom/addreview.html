@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--<link rel="stylesheet" href="../css/basic.css">-->
+    <link rel="stylesheet" href="/css/mypage/studyroom/addreview.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/basic.js"></script>
+    <script src="/js/mypage/studyroom/addreview.js"></script>
+</head>
+
+<body>
+    <div id="user-index-wrap">
+        <div id="nav-wrap">
+            <div class="nav-container">
+                <img id="logo" src="">
+                <nav>
+                    <ul>
+                        <li class='studycafe'>스터디카페</li>
+                        <li class='logout'>로그아웃</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div id="content-wrap">
+            <div class="userpage-body-wrap">
+                <div class="side-container">
+                    <div class="menu">
+
+                        <div>회원정보</div>
+                        <ul>
+                            <li>회원 정보 수정</li>
+                            <li>회원 탈퇴</li>
+                        </ul>
+                        <div>클래스</div>
+                        <ul>
+                            <div>튜터</div>
+                            <li>진행 예정 클래스</li>
+                            <li>진행 중인 클래스</li>
+                            <li>진행 완료 클래스</li>
+                        </ul>
+                        <ul>
+                            <div>튜티</div>
+                            <li>신청 예정 클래스</li>
+                            <li>진행 중인 클래스</li>
+                            <li>진행 완료 클래스</li>
+                        </ul>
+                        <div>스터디룸 예약</div>
+                        <ul>
+                            <li>현재예약 목록</li>
+                            <li>지난예약 목록록</li>
+
+                        </ul>
+                        <div>후기</div>
+                        <ul>
+                            <li>클래스 후기</li>
+                            <li>스터디룸 후기</li>
+
+                        </ul>
+                        <div>즐겨찾기</div>
+                        <ul>
+                            <li>클래스 즐겨찾기</li>
+                            <li>스터디카페 즐겨찾기</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <div class="content">
+                        
+                        <div>후기를 기다리는 스터디룸</div>
+                    </div>
+                    <div class="content">
+                        <div>
+                            <table>
+                                <tr><td>스터디카페명:</td><td class="cfName">xx스터디카페</td></tr>
+                                <tr><td>스터디룸명:</td><td class="rName">1인실</td></tr>
+                                
+                            </table>
+                        </div> 
+                        <form id="myform">
+                            <fieldset>
+                                <input type="radio" name="rating" value="5" id="rate1"><label for="rate1">⭐</label>
+                                <input type="radio" name="rating" value="4" id="rate2"><label for="rate2">⭐</label>
+                                <input type="radio" name="rating" value="3" id="rate3"><label for="rate3">⭐</label>
+                                <input type="radio" name="rating" value="2" id="rate4"><label for="rate4">⭐</label>
+                                <input type="radio" name="rating" value="1" id="rate5"><label for="rate5">⭐</label>
+                            </fieldset>
+                            <div class="SeqQuery"></div>
+                            <textarea id="myform-textarea"></textarea>
+                        </form>
+                        <input type="submit" value="후기작성" class="btn">
+                    </div>
+                </div>                    
+            </div>
+        </div>
+        <div id="footer-wrap">
+            <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+        </div>
+    </div>
+</body>
+
+</html>
