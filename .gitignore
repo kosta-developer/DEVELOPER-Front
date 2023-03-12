@@ -8,10 +8,6 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/*.code-snippets
-basic.js
-hostbasic.js 
-index.js
-.gitignore
 
 # Local History for Visual Studio Code
 .history/
