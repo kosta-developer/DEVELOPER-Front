@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- AJAX  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- CSS  -->
+    <link rel="stylesheet" href="/css/tutor/add.css">
+    <!-- 폰트 -->
+    <!-- JS -->
+    <script src="/js/basic.js"></script>
+    <script src="/js/tutor/add.js"></script>
+    <!-- include summernote css/js -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+</head>
+
+<body>
+    <div id="add">
+        <div class="nav-container">
+            <img id="logo" src="/images/logo.png">
+            <nav>
+                <ul>
+                    <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
+                    <li class='studycafe'><a href="">스터디카페</a></li>
+                    <li class='community'><a href="">커뮤니티</a></li>
+                    <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                    <li class='signup'><a href="">회원가입</a></li>
+                    <li class='login'><a href="/html/users/devlogin.html">로그인</a></li>
+                    <li class='logout'><a href="">로그아웃</a></li>
+                    <li class='tutorAdd'><a href="/html/tutor/add.html">튜터등록</a></li>
+                    <li class='myPage'><a href="/html/mypage/dashboard.html">마이페이지</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content-container">
+            <div id="header">튜터 등록하기</div>
+            <form id="addForm" enctype="multipart/form-data">
+                <div id="img"> 튜터 대표 이미지
+                    <input  class="content-value"
+                                type="file"
+                                name="f"
+                                multiple="multiple"
+                                accept="image/jpeg, image/png, image/gif">
+                </div>
+                <div id="career">이력 
+                    <textarea id="summernote" name="info"></textarea>
+                </div>
+                <input type="submit" id="submit" value="신청하기">
+            </form>
+        </div>
+        <div id="footer">
+            <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

@@ -1,6 +1,7 @@
 $(() => {
     // 일반 로그인 버튼 클릭되었을시 START
     $('#login_btn').click(function(){
+        alert('일반 로그인 클릭됨')
         let idValue = $('input[name=userId]').val()
         let pwdValue = $('input[name=pwd]').val()
         let url = backURL + 'users/login'
@@ -16,7 +17,8 @@ $(() => {
             success: function (jsonObj) {
                 alert('로그인 성공 !')
                 console.log(jsonObj)
-                location.href = frontURL
+                sessionStorage.setItem("logined", jsonObj.userId);
+                location.href = frontURL + 'index.html'
             },
             error: function (xhr) {
                 alert(xhr.responseText)
@@ -41,7 +43,7 @@ $(() => {
             success: function (jsonObj) {
                 alert('로그인 성공 !')
                 console.log(jsonObj)
-                location.href = frontURL + 'hostindex.html'
+                location.href = frontURL
             },
             error: function (xhr) {
                 alert(xhr.responseText)
@@ -53,7 +55,7 @@ $(() => {
 
     // 회원가입 버튼 클릭되었을시 START
     $('.login_btn1').on("click", function () {
-        location.href = frontURL 
+        location.href = frontURL + "회원가입html";
     });
 
     //체크 박스 선택시 START
