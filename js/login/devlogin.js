@@ -14,6 +14,8 @@ $(() => {
             method: 'post',
             data: data,
             success: function (jsonObj) {
+                let sessionData = "data";
+                console.log(jsonObj);
                 alert('로그인 성공 !')
                 console.log(jsonObj)
                 location.href = frontURL+'board/boardlist.html'
