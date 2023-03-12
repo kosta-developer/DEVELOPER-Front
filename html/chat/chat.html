@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS  -->
+    <link rel="stylesheet" href="/css/chat/chat.css">
+    <!-- 폰트 -->
+    <!-- 부트스트랩 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div id="myChat">
+        <div id="username-page">
+            <div class="username-page-container">
+                <h1 class="title">채팅 닉네임을 입력하세요</h1>
+                <form id="usernameForm" name="usernameForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Username" autocomplete="off" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="accent username-submit">채팅 시작하기</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="chat-page" class="hidden">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2>채팅</h2>
+                    <!-- ***************** 여기도 주소 바꾸기 ***************** -->
+                    <div style=" cursor: pointer;" onclick="location.href='http://192.168.0.28:5500/html/index.html';">
+                        채팅방을 나가시려면 여기를 눌러주세요 </div>
+                </div>
+                <div class="connecting">
+                    연결중...
+                </div>
+                <ul id="messageArea">
+
+                </ul>
+                <form id="messageForm" name="messageForm">
+                    <div class="form-group">
+                        <div class="input-group clearfix">
+                            <input type="text" id="message" placeholder="Type a message..." autocomplete="off"
+                                class="form-control" />
+                            <button type="submit" class="primary">보내기</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+<script src="/js/basic.js"></script>
+<script src="/js/chat/chat.js"></script>
+<!-- webSocket -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+
+</html>

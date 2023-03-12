@@ -1,4 +1,4 @@
-#detail {width: 100%; height: auto; color: #000000; font-size: 15px; }
+#detail {width: 100%; height: 1500px; color: #000000; font-size: 15px; }
 
 .nav-container {width:1000px; height: 100px; line-height: 60px; margin: 0 auto; border: 3px solid black; } 
 .content-container {width: 1000px; margin: 0 auto; border: 3px solid yellowgreen; } 
@@ -11,7 +11,7 @@
     float: right;
 }
 
-#lessonDetail > div.nav-container > img{
+#detail > #nav-wrap >div.nav-container > img{
     height: 30px;
     float: left;
     margin-top: 13px;
@@ -35,6 +35,11 @@
     color: #fff
 }
 
+#nav-wrap > div > nav > ul > li > a{
+    text-decoration: none;
+    color: black;
+}
+
 /*===================  상세정보 ===================*/
 .content-container > .dContent{
     margin: 50px;
@@ -44,6 +49,7 @@
 #detail {
     display: inline-block;
     margin-top: 50px;
+    height: auto;
 }
 
 #detail > #classImg{
@@ -55,11 +61,19 @@
 
 #detail > div.detail-container{
     float: right;
-    margin: 0px 50px 50px 50px;
+    margin-left: 50px;
+    margin-right: 200px;
 }
 
+#applyBtn{
+    margin-top: 15px;
+}
+
+#favoritesBtn{
+    background-color: greenyellow;
+}
 
 /*=================== 하단 상세정보 ===================*/
-#lessonDetail > div.content-container > div.dContent > div.dContent-container {
+#detail > div.content-container > div.dContent > div.dContent-container {
     margin-top: 30px;
 }

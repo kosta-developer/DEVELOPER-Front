@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- CSS  -->
-    <link rel="stylesheet" href="/css/lesson/detail.css">
+    <link rel="stylesheet" href="/css/mypage/tutee/lessonreview/myreview.css">
     <!-- 폰트 -->
     <!-- 부트스트랩 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -18,11 +18,11 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
     <script src="/js/basic.js"></script>
-    <script src="/js/lesson/detail.js"></script>
+    <script src="/js/mypage/tutee/lessonreview/myreview.js"></script>
 </head>
 
 <body>
-    <div id="detail">
+    <div id="myreview">
         <div id="nav-wrap">
             <div class="nav-container">
                 <img id="logo" src="/images/logo.png">
@@ -42,43 +42,55 @@
             </div>
         </div>
         <div class="content-container">
-            <div id="detail">
-                <img id="classImg">
-                <div class="detail-container">
-                    <div class="category">카테고리</div>
-                    <div class="lessonName"></div>
-                    <div class="tutorName">강사명</div>
-                    <div class="tutorId" style="display: none;">강사아이디</div>
-                    <div class="price">금액</div>
-                    <div class="location">장소</div>
-                    <div class="people">수강인원</div>
-                    <div class="cDate">신청기간</div>
-                    <div class="date">수업기간</div>
-                    <button id="applyBtn">신청하기</button>
-                    <button id="favoritesBtn">즐겨찾기</button>
+            <div class="container">
+                <div class="menu">
+                    <div>회원정보</div>
+                    <ul>
+                        <li><a href="">회원 정보 수정</a></li>
+                        <li><a href="">회원 탈퇴</a></li>
+                    </ul>
+                    <div>수업</div>
+                    <ul>튜터
+                        <li>진행 예정 클래스</li>
+                        <li>진행 중인 클래스</li>
+                        <li>진행 완료 클래스</li>
+                    </ul>
+                    <ul>튜티
+                        <li>진행 예정 클래스</li>
+                        <li>진행 중인 클래스</li>
+                        <li>진행 완료 클래스</li>
+                    </ul>
+                    <div>스터디카페 예약</div>
+                    <ul>
+                        <li>현재 예약 목록</li>
+                        <li>지난 예약 목록</li>
+                    </ul>
+                    <div>후기</div>
+                    <ul>수업
+                        <li><a href="/html/mypage/tutee/lessonreview/add.html">후기 작성</a></li>
+                        <li><a href="/html/mypage/tutee/lessonreview/myreview.html">후기 목록</a></li>
+                    </ul>
+                    <div>즐겨찾기</div>
+                    <ul>
+                        <li><a href="/html/mypage/favorites/lesson.html">수업 즐겨찾기</a></li>
+                        <li>스터디카페 즐겨찾기</li>
                 </div>
-            </div>
-            <div class="dContent">
-                <hr>
-                <div class="btn-container">
-                    <button id="detailbtn">상세정보</button>
-                    <button id="lessonReviewbtn">수강평</button>
-                </div>
-                <div class="dContent-container">
-                    <div class="detail">상세정보</div>
-                    <div class="lessonReview">
-                        <div class="star">별점</div>
-                        <div class="nickname">닉네임</div>
-                        <div class="writeDate">작성일</div>
-                        <div class="review">리뷰</div>
+                <div class="main">
+                    <h3>작성한 후기 목록</h3>
+                    <div id="myreview-list">
+                        <div id="review">
+                            <div id="lessonName">수업명</div>
+                            <div id="name">작성자</div>
+                            <div id="star">별점</div>
+                            <div id="review">후기내용</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="footer">
+            <footer>
                 <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
-            </div>
+            </footer>
         </div>
-    </div>
 </body>
 
 </html>
