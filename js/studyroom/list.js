@@ -26,7 +26,7 @@ $(()=>{
 
             let $copy=$origin.clone()
             let $imgObj=$('<img id="cafeimg">') 
-            $imgObj.attr('src', '../images/' + imgPath+ '.jpeg')
+            $imgObj.attr('src', '../../images/' + imgPath+ '.jpeg')
             
             $copy.find(".srSeq").html(srSeq)
             $copy.find(".img").html($imgObj)

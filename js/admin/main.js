@@ -1,4 +1,5 @@
 $(()=>{
+   userCheckLogined()
   //--최신 스터디룸 리스트 5개 출력 START--
   $.ajax({
     xhrFields: {

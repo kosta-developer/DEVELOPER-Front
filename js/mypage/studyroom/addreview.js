@@ -29,7 +29,7 @@ $(()=>{
       xhrFields: {
         withCredentials: true,
       },
-      url: frontURL + "mypage/roomreview/add",
+      url: backURL + "mypage/roomreview/add",
       method: "POST",
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(params),

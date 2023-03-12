@@ -208,7 +208,13 @@ $(() => {
           }
           $(".time").html("예약시간: " + first + "시 ~ " + second + "시");
           let totalprice = 0;
-
+          console.log("퍼스트"+firstNum+"세컨드"+secondNum)
+          changeColor1=secondNum+1
+          changeColor2=firstNum-1
+          for(i= changeColor1;i<=changeColor2; i++ ){
+            
+            $("#"+i).css('background-color','#2a2de9')
+          }
           for (i = 0; i <= gap; i++) {
             totalprice += price;
           }
@@ -270,7 +276,7 @@ $(() => {
            xhrFields: {
              withCredentials: true,
            },
-           url: "http://localhost:8888/developer/studyroom/roominfo/reservation",
+           url: backURL+"studyroom/roominfo/reservation",
            method: "POST",
            contentType: "application/json; charset=utf-8",
            data: JSON.stringify(rDTO),

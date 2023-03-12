@@ -1,4 +1,5 @@
 $(()=>{
+   userCheckLogined()
     let $memberList = $("#memberList-body");
     //원본
      let $origin = $memberList.first();

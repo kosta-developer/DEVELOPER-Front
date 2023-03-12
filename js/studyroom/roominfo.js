@@ -34,7 +34,7 @@ $(()=>{
                 endTime=d.studyroomDTO.endTime;
 
                 let $imgObj=$('<img id="cafeimg">') 
-                $imgObj.attr('src', '../images/' + imgPath+ '.jpeg')
+                $imgObj.attr('src', '../../images/' + imgPath+ '.jpeg')
                 $head.find(".img").html($imgObj)
                 $head.find(".cfName").html(cfName);
                 $head.find(".info").html(info);
@@ -60,7 +60,7 @@ $(()=>{
         success: function(jsonObj){
             let $origin = $('div.content-container>div.studycafeInfo>div.studyroomList').first()
              let $parent = $origin.parent()
-//--------------이미지 부분은 토요일 병합이후 세란님 룸 섬네일 다운로드 이미지로 변경예정-----------------             
+
             $(jsonObj.roominfoDTO).each((index,a)=>{
                 let roomSeq = a.roomSeq;
                 let roomName = a.name;
@@ -73,7 +73,7 @@ $(()=>{
                 let $copy=$origin.clone()
 
                 let $imgObj=$('<img id="roomimg">') 
-                $imgObj.attr('src', '../images/' + imgPath+ '.jpeg')
+                $imgObj.attr('src', '../../images/' + imgPath+ '.jpeg')
                 $copy.find(".roomImg").html($imgObj)
                 $copy.find(".roomSeq").html(roomSeq)
                 $copy.find(".hostId").html(hostId)
