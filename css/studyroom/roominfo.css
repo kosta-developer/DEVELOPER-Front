@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+div.studycafeDetail{
+    display: table;
+    width: 1000px;
+    height: auto;
+    
+   
+    
+}
+div.roomReview{
+    display: table;
+    width: 1000px;
+    height: auto;
+   
+    margin-top: 50px;
+  
+}
+.roomImg{
+    width: 200px;
+    height: 50px;
+    background-size: 10%;
+    }
+.favStudy{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.img{
+ width: 400px; 
+ height: 300px;  
+}
+.cfName{
+    height: 80px;
+}
+.info{
+    height: 200px;
+    word-break: normal;
+    letter-spacing: normal;
+    line-height: 25px;
+}
+.addr{
+    height: 50px;
+}
+.openTime{
+    height: 50px;
+}
+.roomName{
+    width: 400px;
+    height: 200px;
+}
+.roomInfo{
+    width: 400px;
+    height: 400px;
+    
+}
+.person{
+width: 400px;
+}
+.sfDetail{
+    width: 800px;
+    
+    margin: auto;
+}
+.roomPrice{
+    width: 400px;
+}
+.sfDetail{
+    height: 200px;
+}
+.detail{
+    height: 100px;
+}
+.studyroomTable{
+    width: 800px;
+  
+    margin: auto;
+}
+.roomReviewTable{
+    
+    width: 800px;
+    height: 60px;
+    margin: auto;
+}
+.roomName{
+    height: 50px;
+}
+.person{
+    height: 30px;
+}
+.roomInfo{
+    height: 70px;
+}
+div.studyroomList{
+    display: table;
+    width: 1000px;
+    margin-top: 50px;
+    
+}
+div.content{
+    display: table, inline-block;
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    margin-left: 40px;
+    margin-top: 100px;
+    
+}
+div.img{
+    display: table;
+    width: 300px;
+    height: 250px;
+    border: 1px solid black;
+    margin-right: 10px;
+    float: right;
+}
+div.studycafeReview{
+    display: table;
+    width: 1000px;
+    height: 400px;
+    border: 1px solid black;
+    margin: auto;
+}
+div.scName{
+    display:table-row;
+
+}
+div.scDetail{
+    display: table-row;
+}
+
+div.addr{
+    display: table-row
+}
+div.opTime{
+    display: table-row
+}
+div.studycafeInfo{
+    max-height: 1000px;
+}
+.roomReviewTable{
+    margin-bottom: -50px;
+}
+.nickname{
+    width: 250px;
+}
+.rmname{
+    width: 150px;
+}
+.star{
+    width: 200px;
+}
+.roomSeq{
+    display: none;
+}
+.hostId{
+    display: none;
+}
+#nonebox {
+    display: none;
+}
+#nonebox2 {
+    display: none;
+}

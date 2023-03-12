@@ -18,7 +18,7 @@ $(() => {
                 console.log(jsonObj);
                 alert('로그인 성공 !')
                 console.log(jsonObj)
-                location.href = frontURL+'board/boardlist.html'
+                location.href = frontURL
             },
             error: function (xhr) {
                 alert(xhr.responseText)
@@ -43,7 +43,7 @@ $(() => {
             success: function (jsonObj) {
                 alert('로그인 성공 !')
                 console.log(jsonObj)
-                location.href = frontURL+hostindex.html
+                location.href = frontURL + 'hostindex.html'
             },
             error: function (xhr) {
                 alert(xhr.responseText)
@@ -55,7 +55,7 @@ $(() => {
 
     // 회원가입 버튼 클릭되었을시 START
     $('.login_btn1').on("click", function () {
-        location.href = frontURL + "회원가입html";
+        location.href = frontURL 
     });
 
     //체크 박스 선택시 START

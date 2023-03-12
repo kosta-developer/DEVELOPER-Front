@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto" />
+    <link rel="stylesheet" href="/css/host/hostreservation.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/hostbasic.js"></script>
+    <script src="/js/host/hostreservation.js"></script>
+
+    <title>Title</title>
+</head>
+
+<body>
+    <div id="wrap"></div>
+    <div class='nav-container'>
+        <img id='logo' src='/images/logo.png'>
+        <nav>
+            <ul>
+                <li class='navbar'><a href='hostIndex.html'>마이페이지</a></li>
+                <li class='navbar'><a href='index.html'>로그아웃</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--동수님 여기 아래부터는 전체 복붙하셔도 무방합니다-->
+    <div id="content-wrap">
+        <div class="content-container">
+            <div class="space"></div>
+            <div class="reservation">
+                <input type="date" id="input-date" "> <button class=" reroad" style="display: none;">다시 하기</button>
+                <div class="guide">
+                    <p>예약하실 날짜를 선택해주세요</p>
+                </div>
+
+            </div>
+            <!-- js ajax부분 -->
+            <div class="checkBox">
+                <table border="1" class="checkboxTable">
+                    <tr>
+                        <td rowspan="3" id="heightcontrol">
+                            <div class="checkbox-pack">
+                                <input type="checkbox" data-name="01:00 ~ 02:00" value="01:00" id="1" name="1"
+                                    class="checkbox">
+                                <div class="valueStorage"></div>
+                                <input type="checkbox" data-name="02:00 ~ 03:00" value="02:00" id="2" name="2"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="03:00 ~ 04:00" value="03:00" id="3" name="3"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="04:00 ~ 05:00" value="04:00" id="4" name="4"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="05:00 ~ 06:00" value="05:00" id="5" name="5"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="06:00 ~ 07:00" value="06:00" id="6" name="6"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="07:00 ~ 08:00" value="07:00" id="7" name="7"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="08:00 ~ 09:00" value="08:00" id="8" name="8"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="09:00 ~ 10:00" value="09:00" id="9" name="9"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="10:00 ~ 11:00" value="10:00" id="10" name="10"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="11:00 ~ 12:00" value="11:00" id="11" name="11"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="12:00 ~ 13:00" value="12:00" id="12" name="12"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="13:00 ~ 14:00" value="13:00" id="13" name="13"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="14:00 ~ 15:00" value="14:00" id="14" name="14"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="15:00 ~ 16:00" value="15:00" id="15" name="15"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="16:00 ~ 17:00" value="16:00" id="16" name="16"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="17:00 ~ 18:00" value="17:00" id="17" name="17"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="18:00 ~ 19:00" value="18:00" id="18" name="18"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="19:00 ~ 20:00" value="19:00" id="19" name="19"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="20:00 ~ 21:00" value="20:00" id="20" name="20"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="21:00 ~ 22:00" value="21:00" id="21" name="21"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="22:00 ~ 23:00" value="22:00" id="22" name="22"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="23:00 ~ 24:00" value="23:00" id="23" name="23"
+                                    class="checkbox">
+                                <input type="checkbox" data-name="24:00 ~ 01:00" value="24:00" id="24" name="24"
+                                    class="checkbox">
+                            </div>
+                        </td>
+                        <td class="time">예약시간: </td>
+                    </tr>
+                    <!-- 버튼 네이밍은 수정하시면됩니다 -->
+                    <tr>
+                        <td class="reserve"> <button class="btn">예약막기</button></td>
+                    </tr>
+
+
+                </table>
+            </div>
+
+            <div class="ref">
+                <table class="refTable">
+                    <tr>
+                        <td class="impossible1">
+                            <div class="impossible"></div>
+                        </td>
+                        <td class="impossible2">예약불가</td>
+                        <td class="possible1">
+                            <div class="possible"></div>
+                        </td>
+                        <td class="possible2">예약가능</td>
+                        <td class="completed1">
+                            <div class="completed"></div>
+                        </td>
+                        <td>선택완료</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="footer-wrap">
+        <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>

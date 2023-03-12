@@ -7,6 +7,9 @@ $(()=>{
     // let url = backURL + 'mypage/tutor/upcoming/detail/1';
     function lessondetail() {
         $.ajax({
+            xhrFields: {
+            withCredentials: true
+            },   
             url : url,
             // data: data,
             success: function(jsonObj){
@@ -87,9 +90,12 @@ $(()=>{
         
     }
 
-    $(document).on('click','#classUpdate', ()=>{
-        location.href = 'http://172.30.1.15:5500/html/mypage/tutor/update.html';
+    //----수업수정버튼 클릭시 START----
+    $(document).on('click','#classUpdate', (e)=>{
+        let lessonSeq = $(e.target).parents('div.classDetail').find('div#lessonSeq').text();
+        location.href = 'http://172.30.1.15:5500/html/mypage/tutor/update.html?lessonSeq='+lessonSeq;
     })
+    //----수업수정버튼 클릭시 END----
 
     //----수업삭제버튼 클릭 시 START----
     $(document).on('click','div.classButton>#classdelete', (e)=>{
@@ -170,13 +176,17 @@ $(()=>{
             }
         })
     })
+    // ----거절버튼 클릭 시 END---
 
+    //----수업 상세정보 클릭시 START
     $(document).on('click','#classDetail', (e)=>{
         console.log(lessonSeq)
-        // location.href = 'http://172.30.1.15:5500/html/lesson/detail.html?lessonSeq=' + lessonSeq;
-        location.href = frontURL + 'lesson/detail.html?lessonSeq=' + lessonSeq;
+        location.href = 'http://172.30.1.15:5500/html/lesson/detail.html?lessonSeq=' + lessonSeq;
+        // location.href = frontURL + 'lesson/detail.html?lessonSeq=' + lessonSeq;
     })
-    //----거절버튼 클릭 시 END---
+    //----수업 상세정보 클릭시 END
+
+
 
     lessondetail();
     

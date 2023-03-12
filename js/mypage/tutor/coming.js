@@ -1,5 +1,4 @@
 $(()=>{
-    // let url = backURL+'lesson/lessonbyuser1';
         
         let url = 'http://172.30.1.15:8888/developer/mypage/tutor/upcoming';
 
