@@ -1,0 +1,126 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+* { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+*{margin: 0; padding: 0;}
+#wrap {width: 1000px; height: 1000px; margin: 0 auto; font-size: 15px; text-align: center; flex-direction: column;}
+#header-wrap{width: 1000px; margin: 0 auto; background-color: #eee;}
+#nav-wrap{width: 1000px;margin: 0 auto;}
+#banner-wrap{width: 1000px; margin: 0 auto;background-color: #aaa5a2;}
+#content-wrap{width: 1000px; min-height : 1000px; overflow-y: scroll; margin: 0 auto;background-color: white;}
+#footer-wrap{width: 1000px; margin: 0 auto;background-color: #e6dcd3;}
+
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+ width: 100%는 기본값이기 때문에 없어도 된다 */
+
+.header-container {height: 100px; line-height: 100px; margin: 0 auto;} 
+.nav-container {width:100%; height: 60px; line-height: 60px;margin: 0 auto; background-color: #eee;} 
+.content-container {width: 100%; height: 100%; line-height: 20px; margin: 0 auto; background-color: white;}
+.footer-container{width: 100%; height: 100px; line-height: 100px; margin: 0 auto; background-color: #c39d91;}
+
+.nav-container>nav{
+    width: 600px;
+    /* display: inline-block; */
+    float: right;
+}
+
+.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.nav-container>nav>ul>li{
+   /* width: 100px; */
+    display: inline-block;
+    color:#000;
+}
+
+.nav-container>nav>ul>li:hover{
+    background-color: #2C2A29;
+    color: white;
+}
+.board-banner{
+    font-size:30px;
+    text-align:left;
+    padding:15px;
+    border:1px solid black;
+    background-color : #343b3d;
+    color : white;
+    height:150px;
+    width:1000px;
+    margin:0 auto;
+    margin-bottom:30px;
+}
+.board-banner span{
+    font-size:20px;
+}
+
+.boarddetail-container{
+    display:flex;
+    flex-direction: column;
+    width:1000px;
+    margin : 0 auto;
+}
+
+.boarddetail-container #edit-btn{
+    text-align:right;
+    border:white;
+    background-color: white;
+    border-radius: 10%;
+}
+.boarddetail-container #detailbtn{
+    text-align:right;
+}
+
+.boarddetail-container #editbtn{
+    
+}
+.boarddetail-container #delbtn{
+   
+}
+
+.boarddetaillist-container{
+    border-bottom:1px solid rgb(6, 29, 175);
+    padding: 30px 20px;
+    text-align: left;
+    color : black;
+
+}
+.replist-container{
+    border:1px solid black;
+    margin-top:10px;
+}
+.boarddetaillist .title{
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+
+.boarddetaillist .content{
+    font-size: 22px;
+    color: #5d6366;
+    margin-bottom: 50px;
+    width: 1000px;
+    /* overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap; */
+}
+
+.boarddetaillist .nickname{
+    font-size:12px;
+    color:#5d63669e;
+}
+
+.boarddetaillist .info{
+    display:flex;  
+}
+
+.boarddetaillist .subinfo1{
+    flex:7; 
+    display:inline-block;
+    text-align: left;
+}
+.boarddetaillist .subinfo2{
+    flex:3;
+    display:inline-block;
+    text-align: right;
+}
