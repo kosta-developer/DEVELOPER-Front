@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/admin/studyroom/detail.css">
+    <link rel="stylesheet" href="/css/admin/studyroomlist.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="/js/basic.js"></script>
-    <script src="/js/admin/studyroom/detail.js"></script>
+    <script src="/js/admin/studyroomlist.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -83,32 +83,23 @@
                     </div>
                 </div>
                 <div class="content-container">
-                    <div class="adminInfo"><h2>@@@님 환영합니다.</h2><br/></div>
-                    <h2>스터디카페 상세정보</h2><br/>
-                        <div class="studyDetail">
-                            <div id="studyroomDetail">
+                    <div class="adminInfo"><h2>@@@님 환영합니다.</h2></div>
+                    <div class="studyroomlist">
+                        <div id="admin_studyroom">
+                            <div class="studyroom_tab"style="display:flex">
+                                <div>호스트</div>
+                                <div>룸이름</div>
+                                <div>시작시간</div>
+                                <div>종료시간</div>
+                            </div>
+                            <div id="studyroom_info" style="display:flex">
+                                <div class="host_id"></div>
                                 <div class="name"></div>
-                                <div class="info"></div>
-                                <div class="addr"></div>
                                 <div class="open_time"></div>
                                 <div class="end_time"></div>
-                                <div class="imgPath"></div>
-                                <div class="oc"></div>
                                 <div class="srSeq" style="display:none"></div>
                             </div>
                         </div>
-                            <br/>
-                            <h2>예약 내역</h2><br/>
-                         <div class="reservation">
-                             <div id="reservationList">
-                                 <div class="rname"></div>
-                                 <div class="startTime"></div>
-                                 <div class="endTime"></div>
-                                 <div class="usingDate"></div>
-                                 <div class="nickname"></div>
-                            </div>
-                        </div>
-                    </div>  
                     </div>
                 </div>
 

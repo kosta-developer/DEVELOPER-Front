@@ -23,7 +23,7 @@ $(()=>{
                 let $copy_studyroom_info = $origin_studyroom_info.clone();
                 console.log(res[index].name);
                 let srSeq = res[index].srSeq;
-                  $copy_studyroom_info.find('div.host_id').html('<a href=./detail.html?srSeq='+srSeq+'>'+res[index].hostUser.hostId)
+                  $copy_studyroom_info.find('div.host_id').html('<a href=./studyroomdetail.html?srSeq='+srSeq+'>'+res[index].hostUser.hostId)
                   $copy_studyroom_info.find('div.name').html(res[index].name)
                   $copy_studyroom_info.find('div.open_time').html(res[index].openTime)
                   $copy_studyroom_info.find('div.end_time').html(res[index].endTime)
