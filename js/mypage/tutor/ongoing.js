@@ -1,6 +1,5 @@
 $(()=>{
-    // let url = backURL+'lesson/lessonbyuser2';
-        let data = "userId=111";
+
         let url = 'http://172.30.1.15:8888/developer/mypage/tutor/ongoing';
 
     $.ajax({
@@ -8,7 +7,8 @@ $(()=>{
         withCredentials: true //크로스오리진을 허용!
         },
         url: url,
-        data: data,
+        method: "GET",
+        headers : { "Content-Type" : "application/json"},
         success: function(jsonObj){
             console.log(jsonObj)
             let $origin = $('#classlist').first();
@@ -16,9 +16,20 @@ $(()=>{
             $(jsonObj).each((i)=>{
                 let $copy = $origin.clone();
                 $copy.find('div.lessonName').html("<h4>" + jsonObj[i].lessonName + "</h4>")
+                $copy.find('div.lessonSeq').html(jsonObj[i].lessonSeq)
+
                 $parent.append($copy);
             })
             $origin.hide();
+
+            $(document).on('click','div.lessonName', (e)=>{
+                // let unpaidlessonSeq = $(e.target).html()
+                let lessonSeq = $(e.currentTarget).parent().find('div.lessonSeq').html()
+                console.log('클릭한 lessonName의 시퀀스는' +lessonSeq)
+                // location.href = frontURL + 'admin/host/detail/'+hostId
+                location.href = 'http://172.30.1.15:5500/html/mypage/tutor/ongoingdetail.html?lessonSeq=' + lessonSeq;
+            })
+
 
         },
         error : function(xhr){
