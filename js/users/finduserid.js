@@ -1,74 +1,31 @@
 $(() => {
-    $('div.findUserPwd-find-content>div.input-email>button#email-submit').click(function () {
-
-        let userId = $('div.findUserPwd-find-content>div.input-email>input#userId').val();
-        let userEmail = $('div.findUserPwd-find-content>div.input-email>input#userEmail').val();
-
-        console.log(userId)
-        console.log(userEmail)
-
-        let url = backURL + 'users/searchpwd'
-
-        if (userId == "" || userEmail == "") {
-            alert('정보를 입력해주세요')
-        } else {
-
+  
+    $('input#emailsubmit').click(function(event) {
+      event.preventDefault();
+  
+      let inputEmailValue = $('#inputemail').val();
+      // 입력한 값이 변수 inputNumValue에 담김
+      console.log(inputEmailValue);
+      let url = backURL + 'users/findId'
             $.ajax({
                 xhrFields: {
                     withCredentials: true //크로스오리진을 허용!
                 },
                 url: url,
-                method: 'post',
-                data: {
-                    email: userEmail,
-                    userId: userId
-                },
-                dataType: 'json',
-                success: function (result) {
-                    console.log(result)
-                    if (result == true) {
-                        alert('임시 비밀번호가 발송되었습니다. 메일을 확인해주세요.')
-                        //window.location.reload()
-                        //location.href = frontURL + 'index.html'
-                    } else {
-                        alert('잘못된 정보입니다. 올바른 ID와 Email을 입력해주세요.')
-                    }
-                },
+                method: 'get',
+                data: {"email" : inputEmailValue},
+                //data: inputNumValue,
+                success: function (jsonObj) {
+                  alert("아이디는: "+jsonObj.userId+"입니다!")
+                  location.href = location.href;
+                }, 
                 error: function (xhr) {
-                    alert(xhr.status)
+                    alert("일치하는 아이디가 없습니다!")
+                    location.href = location.href
                 }
             })
-        }
-    })
-})
-
-
-
-// // --email 입력 버튼 클릭시 START
-// verifyEmail = function () {
-//     // 이메일 검증 스크립트 작성
-//     var emailVal = $("#inputemail").val();
-//     var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
-//     // 검증에 사용할 정규식 변수 regExp에 저장
-//     if (emailVal.match(regExp) != null) {
-//         alert('Email 이 발송되었습니다.');
-//     } else {
-//         alert('Email 형식이 일치하지 않습니다.');
-//     }
-// };
-// // --전화번호 인증요청 버튼 클릭시 START
-// verifyPhone = function() {
-//   // 전화번호 검증 스크립트 작성
-//   var phoneVal = $("#inputphonenum").val();
-//   var regExp = /^(01[016789]{1})[0-9]{3,4}[0-9]{4}$/;
-
-//   // 검증에 사용할 정규식 변수 regExp에 저장
-//   if (phoneVal.match(regExp) != null) {
-//     alert('인증메일이 발송되었습니다.');
-//   }
-//   else {
-//     alert('전화번호 형식이 일치하지 않습니다.');
-//   }
-// };
-// // --전화번호 인증요청 버튼 클릭시 END
-
+    });
+  
+  })
+  
+  

@@ -17,10 +17,12 @@ $(() => {
               data: {"num" : inputNumValue},
               //data: inputNumValue,
               success: function (jsonObj) {
-                alert(jsonObj)
-              },
+                alert("아이디는: "+jsonObj.hostId+"입니다!")
+                location.href = location.href
+              }, 
               error: function (xhr) {
-                  alert(xhr.status)
+                  alert("일치하는 아이디가 없습니다!")
+                  location.href = location.href
               }
           })
   });

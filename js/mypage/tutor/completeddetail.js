@@ -65,6 +65,6 @@ $(()=>{
     })
 
     $('#writereviewbtn').click(()=>{
-        location.href='tutorcompleteaddreview.html?lessonSeq='+ lessonSeq;
+        location.href='./completeaddreview.html?lessonSeq='+ lessonSeq;
     })
 })

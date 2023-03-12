@@ -15,7 +15,7 @@ $(()=>{
                 let lessonSeq = item.lessonSeq;
                 let tutorId = item.tutorId;
                 let classlist = `<div class='classlist-container'>
-                <div class='lessonname'><a href='mypagetutorcompleteddetail.html?lessonSeq=${lessonSeq}'>${lessonName}</div>
+                <div class='lessonname'><a href='./completeddetail.html?lessonSeq=${lessonSeq}'>${lessonName}</div>
                 <div class='lessonSeq' style='display:none'>${lessonSeq}</div>
                 <div class='tutorId' style='display:none'>${tutorId}</div>
                 </div>`;

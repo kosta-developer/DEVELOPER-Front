@@ -60,7 +60,7 @@ $(()=>{
                 success:function(response){
                     alert('후기를 등록했습니다!')
                     console.log('success:',response);
-                    location.href=backURL+'mypagetutorcompleteddetail.html?lessonSeq='+lessonSeq;
+                    location.href=backURL+'mypage/tutor/completeddetail.html?lessonSeq='+lessonSeq;
                 },
                 error:function(xhr){
                     alert(xhr.status);
