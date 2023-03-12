@@ -181,11 +181,7 @@ $(() => {
                }
              }
            }
-           let totalprice = 0;
- 
-           for (i = 0; i <= gap; i++) {
-             totalprice += price;
-           }
+         
            
            $(".time").html("예약블록시간: " + first + "시 ~ " + second + "시");
          } else {
@@ -277,7 +273,7 @@ $(() => {
          xhrFields: {
            withCredentials: true,
          },
-         url: "http://localhost:8888/developer/host/reservation/"+roomSeq,
+         url: backURL+"host/reservation/"+roomSeq,
          method: "POST",
          contentType: "application/json; charset=utf-8",
          data: JSON.stringify(rDTO),

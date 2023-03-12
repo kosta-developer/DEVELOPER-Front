@@ -2,8 +2,40 @@ $(() => {
 
     const email = localStorage.getItem("hostEmail");
     console.log(email)
-    $('div.hostMember>div.field>#email').attr('value', email);
+    $('div.hostMember>div.field>input#email').attr('value', email);
     localStorage.removeItem("hostEmail");
+
+    $('#checkHostId').click(function(){
+        let hostId = $('div.hostMember>div.field>span.placehold-text>#hostId').val();
+
+        console.log('유저아이디는'+hostId)
+        $.ajax({
+            url : backURL+'join/users/check/'+hostId,
+            type : 'get',
+            data : hostId,
+            success : function(data){
+                if(data == false ) {
+                    alert('사용 가능한 아이디')
+                } else {
+                    alert('사용 불가능한 아이디')
+                }
+
+            }
+        })
+    })
+
+
+    $('#hostPwdCheck').click(function(){
+        let pwd = $('div.hostMember>div.field>#pwd').val();
+        let pwd2 = $('div.hostMember>div.field>#pwd2').val();
+        
+        if (pwd != pwd2){
+            alert('비밀번호가 일치하지 않습니다')
+        } else {
+            alert('비밀번호가 일치합니다.')
+        }
+    })
+
 
     $('div.hostMember>div.join>#join').click(function(){
         let hostId = $('div.hostMember>div.field>span.placehold-text>#hostId').val();
@@ -63,18 +95,19 @@ $(() => {
             console.log(data)
 
             $.ajax({
+                contentType: "application/json",
                 method :'POST',
-                url : backURL+'hostuser/joinhostuser',
+                url : backURL+'join/hostuser',
                 data : JSON.stringify(data),
                 
                 success:function(){
                     console.log(data);
                     alert('회원가입이 완료되었습니다!');
-                    location.href = frontURL + 'index.hmtl';
-                    //다시 로그인창으로
+                    // window.location.href = '';
+                    location.href = frontURL+'index.html'
                 },
                 error: function(response) {
-                    alert('회원가입 실패');
+                    alert('회원가입 실패!');
                 }
             })
         }

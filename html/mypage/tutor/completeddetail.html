@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--<link rel="stylesheet" href="../css/basic.css">-->
+    <link rel="stylesheet" href="/css/mypage/tutor/completeddetail.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/basic.js"></script>
+    <script src="/js/mypage/tutor/completeddetail.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--<script src="../js/mypage.js"></script>-->
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="nav-wrap">
+            <div class="nav-container">
+                <img id='logo' src='/images/logo.png'>
+                <nav>
+                    <ul>
+                        <li class='lesson'>수업</li>
+                        <li class='studycafe'>스터디카페</li>
+                        <li class='community'>커뮤니티</li>
+                        <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                        <li class='signup'>회원가입</li>
+                        <li class='login'>로그인</li>
+                        <li class='logout'>로그아웃</li>
+                        <li class='tutorAdd'>튜터등록</li>
+                        <li class='myPage'>마이페이지</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div id="content-wrap">
+            <div class="mypage-body-wrap">
+
+                <div class="side-container">
+                    <div class="menu">
+
+                        <div>회원정보</div>
+                        <ul>
+                            <li>회원 정보 수정</li>
+                            <li>회원 탈퇴</li>
+                        </ul>
+
+                        <div>클래스</div>
+                        <ul>
+                            <li>튜터
+                                <ul>
+                                    <li>진행예정 수업</li>
+                                    <li>진행중인 수업</li>
+                                    <li>진행완료 수업</li>
+                                    <li>수업 결제내역</li>
+                                </ul>
+                            </li>
+                            <li>튜티
+                                <ul>
+                                    <li>신청예정 수업</li>
+                                    <li>진행중인 수업</li>
+                                    <li>진행완료 수업</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div>스터디룸 예약</div>
+
+                        <ul>
+                            <li>예약중인 목록</li>
+                            <li>지난예약 목록</li>
+                        </ul>
+
+                        <div>이용후기</div>
+
+                        <div>즐겨찾기</div>
+                        <ul>
+                            <li>클래스</li>
+                            <li>스터디카페</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="content-container">
+                    <div class="tutor">
+                        <div id="endclass">
+                            <h2>진행 완료된 수업</h2>
+                            <div id="endclasslist">
+                                <div class="category"></div>
+                                <div class="lessonName"></div>
+                                <div class="people"></div>
+                                <div class="startCdate"></div>
+                                <div class="endCdate"></div>
+                                <div class="tutee"></div>
+                                <div class="imgPath"></div>
+                            </div>
+                        </div>
+                        <div id="jointutee">
+                            <h2>클래스에 참여한 튜티목록</h2>
+                            <div id="tuteelist">
+                                <div class="tuteename"></div>
+                                <div class="lessonseq" style="display:none"></div>
+                            </div>                            
+                            <button id="writereviewbtn">후기 작성하기</button>
+                        </div>
+                        <div id="completedClass">
+                            <h2>클래스 후기목록 </h2>
+                            <div id="completedclassreview">
+                                <div class="completedname"></div>
+                                <div class="completedreview"></div>
+                                <div class="completedstar"></div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="footer-wrap">
+            <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+        </div>
+    </div>
+</body>
+
+</html>

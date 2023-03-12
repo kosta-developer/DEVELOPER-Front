@@ -28,12 +28,15 @@ $(() => {
                     key = data.key;
                     error = data.error;
                     if(!key){
+                        alert('내이름은 호세란')
                         alert(error);
+
                     }else {
                         //최종파일때는 지우기 테스트용으로 남겨두었다
                         //console.log('키값: ' + key);
                         alert("본인인증 메일을 발송했습니다. 이메일을 확인해주세요.");
                         $("div.member>div.field>span.check>input#emailCheck").show()
+                        $('div.member>div.field>span.placehold-text>input#sendMail').hide()
                     }
                 }
             });
@@ -60,7 +63,7 @@ $(() => {
             alert("메일 인증이 완료되지 않았습니다.");
         } else{
             localStorage.setItem("userEmail", email);
-            location.href = frontURL + 'join/usersignup.html'
+            location.href = frontURL + 'signup/userSignup.html'
         }
         $("div.member>div.check>input#sighupComplet").hide()
         return false;

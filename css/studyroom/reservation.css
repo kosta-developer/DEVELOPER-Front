@@ -2,6 +2,7 @@
     margin: auto;
     margin-top: 20px;
     text-align: center;
+    margin-bottom: 50px;
 }
 .btn{
     width: 100px;
@@ -63,9 +64,11 @@
 
 .time{
     height: 120px;
+    text-align: center
 }
 .price{
     width: 120px;
+    text-align: center
 }
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 input:disabled {
@@ -79,7 +82,9 @@ input:disabled {
     overflow-y: scroll
 }
 div.checkbox-pack{
-    overflow-y: scroll
+    overflow-y: scroll;
+    text-align: center;
+    
     
 }
 #heightcontrol{
@@ -156,7 +161,7 @@ div.checkbox-pack{
 }
 .guide{
     margin-top: 20px;
-   
+    margin-left: 40%;
     font:bold;
 }
 .time{
@@ -164,4 +169,12 @@ div.checkbox-pack{
 }
 .valueStorage{
     display: none;
+}
+#input-date{
+    width: 200px;
+    height: 20px;
+    margin-left: 40%;
+}
+.reserve{
+    text-align: center;
 }
