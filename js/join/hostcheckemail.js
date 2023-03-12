@@ -60,7 +60,7 @@ $(() => {
             alert("메일 인증이 완료되지 않았습니다.");
         } else{
             localStorage.setItem("hostEmail", email);
-            location.href = frontURL + 'join/hostsignup.html'
+            location.href = frontURL + 'signup/hostSignup.html'
         }
         $("div.host>div.check>input#sighupComplet").hide()
         return false;
