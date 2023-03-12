@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="/css/users/devlogin.css" media="all"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="/js/basic.js"></script>
+        <script src="/js/users/devlogin.js"></script>
+		
+    </head>
+    <body class="main">
+        <div id="wrap">
+            <div class="login_container">
+                <div class="login_container_wrap">
+                    <input type="radio" id="ulogin" checked="checked"> 일반로그인
+                    <input type="radio" id="hlogin" > 호스트로그인
+					<!-- <input type="radio" id="ulogin" name="uLogin" checked="checked"> 일반로그인
+                    <input type="radio" id="uLogin" name="hHogin"> 호스트로그인 -->
+                   
+                    <div class="login_contents" id="userLogin">
+                        <div class="logn_title">
+                            <h4>LOGIN</h4>
+                            <p class="login_p1">
+                                <span>디벨로퍼에 오신 것을 환영합니다.</span>
+                                <span>로그인하시면 보다 다양한 웹 서비스를 이용하실 수 있습니다.</span>
+                            </p>
+                        </div>
+                        <div class="userlogin_inpbox">
+                            <form id="userLoginform">
+                                <p class="login_inpt"><input type="text" name="userId" placeholder="아이디 입력"></p>
+                                <p class="pass_inpt"><input type="password" name="pwd" placeholder="패스워드 입력"></p>
+                                <!-- <div class="chk_id"> <label><input type="checkbox" name="id_save">
+                                아이디저장</label> </div> -->
+								<button id="login_btn" class="login_btn">로그인</button>
+                            </form>
+                        </div>
+                        <div class="member_btnlist">
+                            <p class="sign_up">
+                                <a href="signup.html">회원가입</a>
+                            </p>
+                            <p class="id_search">
+                                <a href="/html/findUserId.html">아이디 찾기</a>
+                            </p>
+                            <p class="pw_search">
+                                <a href="/html/findUserPwd.html">비밀번호 찾기</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="hostlogin_contents" id="hostLogin" style="display:none">
+                        <div class="logn_title">
+                            <h4>HOST LOGIN</h4>
+                            <p class="login_p1">
+                                <span>디벨로퍼에 오신 것을 환영합니다.</span>
+                                <span>로그인하시면 보다 다양한 웹 서비스를 이용하실 수 있습니다.</span>
+                            </p>
+                        </div>
+                        <div class="login_inpbox">
+                            <form id="hostLoginform">
+                                <p class="login_inpt"><input type="text" name="hostId" placeholder="아이디 입력"></p>
+                                <p class="pass_inpt"><input type="password" name="pwd" placeholder="패스워드 입력"></p>
+								<button id="hostlogin_btn" class="login_btn">로그인</button>
+                                <!-- <div class="chk_id"> <label><input type="checkbox" name="id_save">
+                                아이디저장</label> </div> -->
+                                <!-- <input type="submit" class="login_btn" value="로그인"> -->
+                            </form>
+                        </div>
+                        <div class="member_btnlist">
+                            <p class="sign_up">
+                                <a href="signup.html">회원가입</a>
+                            </p>
+                            <p class="id_search">
+                                <a href="/html/findHostId.html">아이디 찾기</a>
+                            </p>
+                            <p class="pw_search">
+                                <a href="/html/findHostPwd.html">비밀번호 찾기</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+
+</html>
