@@ -18,6 +18,7 @@ $(() => {
                 alert('로그인 성공 !')
                 console.log(jsonObj)
                 sessionStorage.setItem("logined", jsonObj.userId);
+                sessionStorage.setItem("role", jsonObj.role);
                 location.href = frontURL + 'index.html'
             },
             error: function (xhr) {
@@ -43,6 +44,7 @@ $(() => {
             success: function (jsonObj) {
                 alert('로그인 성공 !')
                 console.log(jsonObj)
+                sessionStorage.setItem("logined", jsonObj.hostId);
                 location.href = frontURL
             },
             error: function (xhr) {

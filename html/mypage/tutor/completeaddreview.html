@@ -90,19 +90,19 @@
                             <div class="completedclass"></div>
                             <div class="completedtutee"></div>
                             <div class="applyseq" style="display:none"></div>
-                            <div class="addReview">
-                                <form id="addReviewForm">
-                                    <fieldset>
-                                        <input type="radio" name="rating" value="5" id="rate1"><label for="rate1">⭐</label>
-                                        <input type="radio" name="rating" value="4" id="rate2"><label for="rate2">⭐</label>
-                                        <input type="radio" name="rating" value="3" id="rate3"><label for="rate3">⭐</label>
-                                        <input type="radio" name="rating" value="2" id="rate4"><label for="rate4">⭐</label>
-                                        <input type="radio" name="rating" value="1" id="rate5"><label for="rate5">⭐</label>
-                                    </fieldset><br/>
-                                    <textarea id="writeReview"></textarea>
-                                </form>
-                                <input type="submit" value="후기작성" class="writebtn">
-                            </div>
+                        </div>
+                        <div class="addReview">
+                            <form name="addReviewForm" id="addReviewForm">
+                                <fieldset>
+                                    <input type="radio" name="rating" value="5" id="rate1"><label for="rate1">⭐</label>
+                                    <input type="radio" name="rating" value="4" id="rate2"><label for="rate2">⭐</label>
+                                    <input type="radio" name="rating" value="3" id="rate3"><label for="rate3">⭐</label>
+                                    <input type="radio" name="rating" value="2" id="rate4"><label for="rate4">⭐</label>
+                                    <input type="radio" name="rating" value="1" id="rate5"><label for="rate5">⭐</label>
+                                </fieldset><br/>
+                                <textarea id="writeReview"></textarea>
+                                <input type="button" value="후기작성" onclick="addReview(); return false">
+                            </form>
                         </div>
                     </div>
                 </div>
