@@ -1,9 +1,12 @@
 
+// let backURL = "http://172.30.1.15:8888/developer/";
+// let frontURL = "http://172.30.1.15:5500/html/"; 
+// userCheckIntervalLogined();
 let queryParams = new URLSearchParams(window.location.search);
 let lessonSeq = queryParams.get('lessonSeq');
 
 
-// 주문번호 만들기
+// 주문번호 만들기 START
 function createOrderNum(){
   const date = new Date();
   const year = date.getFullYear();
@@ -16,21 +19,21 @@ function createOrderNum(){
   }
   return orderNum;
 }
+// 주문번호 만들기 END
 
-let backURL = 'http://localhost:8888/developer/';
-let frontURL = "http://localhost:5500/html/";
-
-
+// 결제 해야하는 수업 가져오기 START
 function orderdetail() {
   $.ajax({
     xhrFields: {
        withCredentials: true
     },
-    url : "http://172.30.1.15:8888/developer/mypage/tutor/upcoming/detail/"+lessonSeq,
+    url : backURL+"mypage/tutor/upcoming/detail/"+lessonSeq,
     success: function(jsonObj){
       console.log(jsonObj)
+      console.log(jsonObj.llist[0].lessonName)
 
-      $('#name').html(jsonObj.llist[0].lessonName)
+      
+      $("#name").html(jsonObj.llist[0].lessonName)
 
 
     }, 
@@ -42,10 +45,12 @@ function orderdetail() {
 
   })
 }
+$(document).ready(function() {
+  orderdetail();
+});
+// 결제 해야하는 수업 가져오기 END
 
-orderdetail();
-
-
+// 결제하기 START
 function payment(pg_provider, mode, payment_method){
   IMP.init('imp85753634');
   let pg_mid;
@@ -80,7 +85,6 @@ function payment(pg_provider, mode, payment_method){
   };
 
   IMP.request_pay(data, response => {
-    alert('callback! : ' +JSON.stringify(response));
     console.log(response)
     console.log(data)
     console.log(JSON.stringify(response))
@@ -90,45 +94,43 @@ function payment(pg_provider, mode, payment_method){
       xhrFields: {
          withCredentials: true
       },
-      // url: "http://192.168.0.9:8888/developer/orders/payment/callback_receive",
-      url: "http://172.30.1.15:8888/developer/orders/payment/callback_receive",
-      // url: "http://172.20.10.7:8888/developer/orders/payment/add/1",
+      url: backURL+"orders/payment/callback_receive",
       method : "POST",
       headers : { "Content-Type" : "application/json"},
       data : JSON.stringify(response),
-      //여기까지는 들어감.
     }).done(function (rsp) {
-          //결제 성공시 로직,
           data.impUid = rsp.imp_uid;
           data.merchant_uid = rsp.merchant_uid;
-          console.log('이거 뭐냐면~~'+JSON.stringify(response));
-          console.log('언더바있는거->이게맞다'+JSON.stringify(response.imp_uid));
           response.impUid = JSON.stringify(response.imp_uid);
           console.log('담아준 값은' + response.impUid)
-          // paymentComplete(response.impUid);
-          alert('결제가 완료되었습니다.')
-      // })
     }).then((data) => {
-      console.log(JSON.parse(response.impUid))
-      console.log(response.impUid)
       var impUid = JSON.parse(response.impUid)
-      console.log('이젠 좀 돼라'+ impUid)
-      console.log('이건 키 값 담아준거'+{imp_uid:impUid})
-      console.log('제이슨바꾸기'+JSON.stringify({"imp_uid":impUid}))
+
         $.ajax({
         xhrFields: {
              withCredentials: true
                   },
-            // headers : { "Content-Type" : "application/json"},
-            // url: "http://192.168.0.9:8888/developer/orders/payment/add/3",
-            url: "http://172.30.1.15:8888/developer/orders/payment/add/"+lessonSeq,
-            // url: "http://172.20.10.7:8888/developer/orders/payment/add/1",
+            url: backURL+"orders/payment/add/"+lessonSeq,
             method: "POST",
             contentType : 'application/json',
             data: JSON.stringify({"imp_uid":impUid})         
+      }).done(function(response) {
+        console.log("DB에 값 저장 성공", response);
+      
+      }).then(function(){
+        $.ajax({
+                xhrFields: {
+                withCredentials: true
+                },
+                method: "PUT",
+                url: backURL+"mypage/tutor/pay/"+lessonSeq,             
+        });
+      }).done(function (response){
+        console.log(lessonSeq+"번 강의의 payLesosn값 변경 완료",response)
       })
-    alert('결제완료')
-    location.href=frontURL+'signup/hostCheckEmail.html'
+
+    alert('결제가 완료되었습니다.')
+    location.href=frontURL+'mypage/tutor/main.html'
     }).fail(function() {
       alert('에러');
       location.href=frontURL+'index.html'
@@ -137,3 +139,4 @@ function payment(pg_provider, mode, payment_method){
 
   })
 }
+// 결제하기 END

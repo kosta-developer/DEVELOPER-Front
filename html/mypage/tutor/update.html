@@ -37,62 +37,61 @@
             </nav>
         </div>
         <div class="content-container">
+            <div class="top-title">
+                <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
+            </div>
             <div id="header">클래스 수정하기</div>
             <form id="addForm" enctype="multipart/form-data">
                 <div class="explain"> 
                     <div class="ex-content">수업 대표 이미지</div>
-                    <input  class="content-value"
-                                type="file"
-                                name="f"
-                                multiple="multiple"
-                                accept="image/jpeg, image/png, image/gif">
+                    <input class="content-value" type="file" name="f" multiple="multiple" accept="image/jpeg, image/png, image/gif">
                 </div>
                 <hr>
                 <div class="explain">
                     <div class="ex-content"">클래스명</div>
-                    <input type="text" name="lessonName" class="content-value">
+                    <input type="text" name="lessonName" id="classname">
                 </div>
                 <hr>
                 <div class="explain">
                     <div class="ex-content">카테고리</div>
-                    <select name="category" class="content-value">
-                        <option value="0">프로그래밍 언어</option>
-                        <option value="1">웹 개발</option>
-                        <option value="2">앱 개발</option>
-                        <option value="3">보안/네트워크</option>
-                        <option value="4">데이터</option>
+                    <select id="lessoncate" name="category" class="content-value">
+                        <option value=0>프로그래밍 언어</option>
+                        <option value=1>웹 개발</option>
+                        <option value=2>앱 개발</option>
+                        <option value=3>보안/네트워크</option>
+                        <option value=4>데이터</option>
                     </select>
                 </div>
                 <hr>
                 <div class="explain">
                     <div class="ex-content">모집인원</div>
-                    <input name="people" type="number"></div>
+                    <input id="tuteecount" name="people" type="number"></div>
                 <hr>
                 <div class="explain">
                     <div class="ex-content">신청시작일</div> 
-                    <input name="startDate" type="date"></div>
+                    <input id="startapply" name="startDate" type="date"></div>
                 <hr>
                 <div class="explain">
                     <div class="ex-content">신청마감일</div>
-                    <input name="endDate" type="date"></div>
+                    <input id="endapply" name="endDate" type="date"></div>
                 <hr>
                 <div class="explain">
                     <div class="ex-content">수업시작일</div>
-                    <input name="startCdate" type="date"></div>
+                    <input id="startlesson" name="startCdate" type="date"></div>
                 <hr>
                 <div class="explain">
                     <div class="ex-content">수업마감일</div>
-                    <input name="endCdate" type="date"></div>
+                    <input id="endlesson" name="endCdate" type="date"></div>
                 <hr>
                 <div class="explain">
                     <div class="ex-content">가격</div> 
-                    <label> 무료 <input name="payLesson" type="checkbox" value="0"></label>
-                    <label> 유료 <input name="payLesson" type="checkbox" value="2">  <input type="number"></label>
+                    <label> 무료 <input id="freelesson" name="payLesson" type="checkbox" value=0></label>
+                    <label> 유료 <input id="chargelesson" name="payLesson" type="checkbox" value=2>  <input id='classprice' type="number"></label>
                 </div>
                 <hr>
                 <div class="explain">
                     <div class="ex-content">위치 </div>
-                    <input name="location" type="text">
+                    <input id="place" name="location" type="text">
                 <hr>
                 <div class="explain">상세정보
                     <textarea id="summernote" name="content"></textarea>

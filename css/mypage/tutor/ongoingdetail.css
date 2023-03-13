@@ -1,10 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Nanum Gothic', sans-serif;
+    /* background-color: #FFFEFE; */
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
 
 #wrap {
     width: 100%;
@@ -14,33 +22,33 @@
 
 /* #header-wrap{width: 100%; background-color: #67615f; text-align:center;} */
 
-#nav-wrap {
-    width: 100%;
-    border: 1px solid rgb(187, 187, 187);
-}
-
 #content-wrap {
     width: 100%;
     height: auto;
-    border: 1px solid rgb(187, 187, 187);
 }
 
 #footer-wrap {
     width: 100%;
-    border: 1px solid rgb(187, 187, 187);
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
     text-align: center;
+    background-color: #303740;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
  width: 100%는 기본값이기 때문에 없어도 된다 */
 
 
-.header-container {
+.nav-container {
     width: 1000px;
     height: 100px;
     line-height: 60px;
     margin: 0 auto;
-    border: 1px solid #c39d91;
 }
 
 .nav-container {
@@ -48,14 +56,12 @@
     height: 100px;
     line-height: 60px;
     margin: 0 auto;
-    border: 1px solid #c39d91;
 }
 
 .mypage-body-wrap {
     margin: 0 auto;
     width: 1000px;
     height: 780px;
-    border: 1px solid rgb(187, 187, 187);
 }
 
 .side-container {
@@ -63,7 +69,7 @@
     width: 19%;
     height: 700px;
     margin: 0 auto;
-    border: 1px solid #fc487b;
+    background-color: #F9F9F9;
 }
 
 .content-container {
@@ -71,21 +77,22 @@
     width: 78%;
     height: 710px;
     margin: 0 auto;
-    border: 1px solid #62ff19;
     margin: 18px 13px 13px 13px;
 }
 
 .footer-container {
-    width: 1000px;
+    width: 100%;
     height: 100px;
     line-height: 100px;
     margin: 0 auto;
-    background-color: #c39d91;
 }
 
+#footer-wrap>div.footer-container {
+    background-color: #303740;
+}
 
 .nav-container>nav {
-    width: 600px;
+    /* width: 600px; */
     /* display: inline-block; */
     float: right;
 }
@@ -93,27 +100,65 @@
 .nav-container>img {
     height: 30px;
     float: left;
-    margin-top: 13px;
-    margin-left: 10px;
+    margin-top: 33px;
+    margin-left: 20px;
 }
 
 .nav-container>nav>ul {
     /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
     list-style-type: none;
     padding-left: 0px;
-
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 17px;
 }
 
 .nav-container>nav>ul>li {
     /* width: 100px; */
     display: inline-block;
-    margin-left: 5px;
+    margin-left: 15px;
+}
+
+/*  클릭 안 한 메뉴 */
+.nav-container>nav>ul>li>a:link {
+    text-decoration: none;
+    color: black;
+    margin-top: 50px;
+}
+
+/*  클릭 한 메뉴 */
+.nav-container>nav>ul>li>a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-container>nav>ul>li>a:hover {
+    color: #00C471;
+    font-weight: bold;
 }
 
 .nav-container>nav>ul>li:hover {
-    background-color: #80d8b4;
-    color: #fff
+    color: #00C471;
+    font-weight: bold;
 }
+
+.side-container>.menu>ul>li>a:hover {
+    color: #00C471;
+    font-weight: bold;
+}
+
+.side-container>ul>li>a:hover {
+    color: #00C471;
+    font-weight: bold;
+}
+
+
+.side-container>.menu>ul>li>ul>li>a:hover {
+    color: #00C471;
+    font-weight: bold;
+}
+
 
 .side-container>.menu {
     display: inline-block;
@@ -131,21 +176,31 @@
 }
 
 .side-container>.menu>ul>li {
-    margin-top: 13px;
+    margin-top: 5px;
     margin-left: 20px;
     font-size: 16px;
     list-style-type: none;
 }
 
 .side-container>.menu>ul>li>ul>li {
-    margin-top: 10px;
+    margin-top: 8px;
     margin-left: 15px;
     font-size: 16px;
     list-style-type: none;
 }
 
+div.top-title {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+span#showLoginId {
+    font-weight: 800;
+    color: #00C471;
+}
+
 .content-container>.ongoingDetail>div {
-    background-color: rgb(248, 246, 239);
+    background-color: #F9F9F9;
     margin-top: 15px;
     width: 95%;
     height: 156px;
@@ -168,15 +223,40 @@
     margin-left: 20px;
 }
 
+div.content-container>div>div.classlist>div.classThumbnail>h4 {
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
 /* .content-container>.ongoingDetail>.classlist>.classThumbnail>.imgbox{
     width: 230px;
     height: 150px;
 } */
 
 .content-container>.ongoingDetail>.classlist>.classThumbnail>.classDetailButton>input {
-    margin-top: 15px;
+margin-top: 10px;
     margin-left: 8px;
     font-size: 17px;
+    padding: 0px 22px;
+    appearance: none;
+    text-align: left;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 42px;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    width: auto;
+    position: relative;
+    line-height: 1;
+    font-size: 16px;
+    user-select: none;
+    cursor: pointer;
+    margin-right: 16px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(206, 212, 218);
+    border-radius: 8px;
 }
 
 .content-container>.ongoingDetail>.classlist>.classDetail {
@@ -200,6 +280,12 @@
     float: right;
     width: 95%;
     margin-right: 0px;
+        height: 230px;
+        /* 기본 높이 */
+        max-height: 700px;
+        /* 최대 높이 */
+        overflow-y: auto;
+        /* 내용이 넘칠 때 스크롤바 표시 */
 }
 
 .content-container>.ongoingDetail>.tuteelist>h4 {

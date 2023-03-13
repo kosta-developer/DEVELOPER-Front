@@ -189,89 +189,31 @@ a {
     list-style-type: none;
 }
 
-div.top-title {
-    margin-left: 25px;
-    margin-bottom: 15px;
+.content-container>#comingClass {
+    background-color: #F9F9F9;
+    margin-top: 15px;
+    width: 95%;
+    height: auto;
+    float: right;
+    position: relative;
+    left: -2.5%;
 }
 
-span#showLoginId {
-    font-weight: 800;
+.content-container>#comingClass>h2 {
+    /* margin-top: 20px; */
+    margin-left: 20px;
+}
+
+.content-container>#comingClass>div>div {
+    margin-top: 25px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.content-container>#comingClass>div>div:hover {
     color: #00C471;
 }
 
-#content-wrap>div.mypage-body-wrap>div.content-container>div.detail-content-box {
-    text-align: center;
-    width: 100%;
-    height: auto;
-}
-
-#sub-title {
-    font-weight: 700;
-    text-align: center;
-    margin: 20px 0px 50px 0px;
-    font-size: 25px;
-}
-
-
-
-#content-wrap>.mypage-body-wrap>.content-container>.detail-content-box>.sell-title {
-    background-color: #F9F9F9;
-    padding-bottom: 20px;
-    padding-top: 20px;
-}
-
-#content-wrap>.mypage-body-wrap>.content-container>.detail-content-box>div.list-of-order {
-    margin-top: 12px;
-    max-height: 360px;
-    overflow: scroll;
-    overflow-x: hidden;
-    /* height: 200px; */
-    font-weight: 700;
-}
-
-#content-wrap>.mypage-body-wrap>.content-container>.detail-content-box>div.list-of-order>div.list-of-order-origin {
-    margin-top: 20px;
-}
-
-b#b-lessonName {
-    width: 280px;
-    display: inline-block;
-    text-align: center;
-}
-
-.list-of-order>.list-of-order-origin>span.lessonName {
-    width: 295px;
-    height: 30px;
-    display: inline-block;
-    text-align: center;
-    /* cursor: pointer; */
-    /* border: 1px solid #62ff19; */
-}
-
-b#b-price {
-    width: 200px;
-    display: inline-block;
-    text-align: center;
-}
-
-.list-of-order>.list-of-order-origin>span.price {
-    width: 200px;
-    height: 30px;
-    display: inline-block;
-    text-align: center;
-    /* border: 1px solid #62ff19; */
-}
-
-b#b-orderDate {
-    width: 250px;
-    display: inline-block;
-    text-align: center;
-}
-
-.list-of-order>.list-of-order-origin>span.orderDate {
-    width: 250px;
-    height: 30px;
-    display: inline-block;
-    text-align: center;
-    /* border: 1px solid #62ff19; */
+div.lessonSeq {
+    display: none;
 }
