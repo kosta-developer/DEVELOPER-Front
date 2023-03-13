@@ -9,7 +9,7 @@ $(()=>{
 
     let openTime;
     let endTime;
-    var favStatus;
+    let favStatus;
     var favSeq;
     var srSeq;
 
@@ -26,14 +26,10 @@ $(()=>{
             $(jsonObj.studyroomAndFavStuyroomInfoDTO.favoritesStudyroomDTO).each((i)=>{
               if(jsonObj.studyroomAndFavStuyroomInfoDTO.favoritesStudyroomDTO[i].userId == logined){
                 let abc=jsonObj.studyroomAndFavStuyroomInfoDTO.favoritesStudyroomDTO[i].userId;
-                
+                console.log(abc)
                 $('.favStudy').css('backgroundColor', 'yellow');
-                
-                favSeq=jsonObj.studyroomAndFavStuyroomInfoDTO.favoritesStudyroomDTO[i].favSeq;
-                console.log(favSeq)
                 favStatus = 0; //즐겨찾기 있으면 0
               }else{
-                console.log("야")
                 favStatus = 1; //즐겨찾기 없으면 1
               }
             }) 
@@ -50,7 +46,7 @@ $(()=>{
                 endTime=d.studyroomAndFavStuyroomInfoDTO.endTime;
 
                 let $imgObj=$('<img id="cafeimg">') 
-                $imgObj.attr('src', '../../images/' + imgPath+ '.jpeg')
+                $imgObj.attr('src', '../../images/' + imgPath)
                 $head.find(".img").html($imgObj)
                 $head.find(".cfName").html(cfName);
                 $head.find(".info").html(info);
@@ -90,7 +86,7 @@ $(()=>{
                 let $copy=$origin.clone()
 
                 let $imgObj=$('<img id="roomimg">') 
-                $imgObj.attr('src', '../../images/' + imgPath+ '.jpeg')
+                $imgObj.attr('src', '../../images/' + imgPath)
                 $copy.find(".roomImg").html($imgObj)
                 $copy.find(".roomSeq").html(roomSeq)
                 $copy.find(".hostId").html(hostId)
@@ -148,7 +144,7 @@ $(()=>{
     //--즐겨찾기 버튼 클릭 START--
      $('.favStudy').click(()=>{
        //--즐겨찾기 삭제 START--
-       alert(favStatus)
+       
      if(favStatus == 0){
         $.ajax({
             xhrFields: {
@@ -166,7 +162,7 @@ $(()=>{
             }
              
           })
-      } else {
+      } else if(favStatus == 1) {
         //--즐겨찾기 추가 START--
           $.ajax({
                 xhrFields: {
