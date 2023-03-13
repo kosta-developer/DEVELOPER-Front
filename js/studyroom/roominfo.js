@@ -1,7 +1,6 @@
 $(()=>{
-  userCheckLogined()
   let logined = sessionStorage.getItem("logined");
-   $('span#showLoginId').html(sessionStorage.getItem("logined"));
+
     let url = backURL+'studyroom/roominfo/'
     let seq = location.search.substring(1) 
     let url2 = backURL+"favoritesstudyroom/add/"+seq //즐겨찾기추가
