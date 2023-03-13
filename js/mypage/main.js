@@ -1,13 +1,6 @@
 $(()=>{
-
-    userCheckIntervalLogined();
-    $('span#showLoginId').html(sessionStorage.getItem("logined"));
-
-    let url = backURL+'mypage/main';
-    let userId;
-    userdetail();
-function userdetail() {
-
+    // let url = backURL+'mypage/main';
+    let url = 'http://172.30.1.15:8888/developer/mypage/main'
 
     $.ajax({
         xhrFields: {
@@ -18,14 +11,12 @@ function userdetail() {
         success: function(jsonObj){
             console.log(jsonObj)
 
-            $('#content-wrap >.mypage-body-wrap >.content-container > div >.userDetail >.userinfo > .userinformation > ul > li.name').html(jsonObj.name)
-            $('#content-wrap >.mypage-body-wrap >.content-container > div >.userDetail >.userinfo > .userinformation > ul > li.nickname').html(jsonObj.nickname)
-            $('#content-wrap >.mypage-body-wrap >.content-container > div >.userDetail >.userinfo > .userinformation > ul > li.userId').html(jsonObj.userId)
-            $('#content-wrap >.mypage-body-wrap >.content-container > div >.userDetail >.userinfo > .userinformation > ul > li.email').html(jsonObj.email)
-            $('#content-wrap >.mypage-body-wrap >.content-container > div >.userDetail >.userinfo > .userinformation > ul > li.tel').html(jsonObj.tel)
-            $('#content-wrap >.mypage-body-wrap >.content-container > div >.userDetail >.userinfo > .userinformation > ul > li.addr').html(jsonObj.addr)
-            userId = jsonObj.userId;
-
+            $('#content-wrap >.mypage-body-wrap >.content-container > div >.userDetail >.userinfo > ul > li.name').html(jsonObj.name)
+            $('#content-wrap >.mypage-body-wrap >.content-container > div >.userDetail >.userinfo > ul > li.nickname').html(jsonObj.nickname)
+            $('#content-wrap >.mypage-body-wrap >.content-container > div >.userDetail >.userinfo > ul > li.userId').html(jsonObj.userId)
+            $('#content-wrap >.mypage-body-wrap >.content-container > div >.userDetail >.userinfo > ul > li.email').html(jsonObj.email)
+            $('#content-wrap >.mypage-body-wrap >.content-container > div >.userDetail >.userinfo > ul > li.tel').html(jsonObj.tel)
+            $('#content-wrap >.mypage-body-wrap >.content-container > div >.userDetail >.userinfo > ul > li.addr').html(jsonObj.addr)
         },
         error : function(xhr){
             let jsonObj = JSON.parse(xhr.responseText);
@@ -35,40 +26,22 @@ function userdetail() {
 
     });
 
-
-    $(document).on('click', '#delete', function(){
-    console.log(userId)
-    let url = backURL +'mypage/delete/'+userId
-
+    // 회원이 탈퇴 버튼을 눌렀을때 START
+    $(document).on('click', '#userDelete', function(event){
+        // let url = backURL+'users/deleteusers';
+        let userId = $(event.target).parent().find('li.userId').html()
+        console.log(userId)
+        let url = 'http://172.30.1.15:8888/developer/mypage/delete/'+userId
+        // let data = userId
+        
         $.ajax({
-            xhrFields: {
-            withCredentials: true
-            },
             url: url,
             // data: data,
             method : 'PUT',
             success: function(){
                 alert('탈퇴가 완료되었습니다')
-                // console.log(userId+'님의'+'탈퇴가 완료되었습니다.')
-                location.href = frontURL + '/index.html';
-
-            $.ajax({
-            xhrFields: {
-                withCredentials: true
-            },
-            url: backURL + 'users/logout',
-            success: function () {
-                showMenuAtLogouted()
-                sessionStorage.removeItem("logined");
-                sessionStorage.removeItem("role");
-                sessionStorage.removeItem("hostlogined")
-                sessionStorage.removeItem("hostready");
-                // alert("로그아웃성공")
-                location.href = frontURL + 'index.html'
-                }
-                })
-                return false
-
+                console.log(userId+'님의'+'탈퇴가 완료되었습니다.')
+                // location.href = frontURL + '/signup/signup.html';
             },
             error : function(){
                 alert('탈퇴실패');
@@ -79,24 +52,6 @@ function userdetail() {
         
     
     });
-
-
-    $(document).on('click', '#modify', function(){
-    console.log(userId)
-    location.href = frontURL + 'mypage/userupdate.html?userId='+userId
-
-
-    });
-
-
-
-
-}
-
-
-
-    // 회원이 탈퇴 버튼을 눌렀을때 START
-
     // 회원이 탈퇴 버튼을 눌렀을때 END
     
     // 회원이 수정 버튼을 눌렀을때 START

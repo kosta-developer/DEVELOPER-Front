@@ -1,44 +1,89 @@
-#myreview {width: 100%; height: 1500px; color: #000000; font-size: 15px; }
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
-.nav-container {width:1000px; height: 100px; line-height: 60px; margin: 0 auto; border: 3px solid black; } 
-.content-container {width: 1000px; margin: 0 auto; border: 3px solid yellowgreen; } 
-.footer-container{width: 1000px; height: 100px; text-align:center; line-height: 100px; margin: 0 auto;  border: 3px solid orange; }
+*{margin: 0; padding: 0; background-color: #FFFEFE; font-family: 'Spoqa Han Sans Neo', 'sans-serif';} 
+
+#myreview {width: 100%; height: auto; color: #000000; font-size: 15px; }
+#footer-wrap{
+    width: 100%; 
+    height: 100px; 
+    line-height: 100px; 
+    margin: 0 auto; 
+    text-align:center; 
+  
+    background-color: #303740; 
+    color:#fff;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    }
+    #footer-wrap > div.footer-container{
+      background-color: #303740; 
+  }
+.nav-container {width:1000px; height: 100px; line-height: 60px; margin: 0 auto;  } 
+.content-container {width: 1000px; margin: 0 auto; } 
 
 /*=================== 헤더메뉴바 ===================*/
 .nav-container>nav{
-    width: 600px;
+    /* width: 600px; */
     /* display: inline-block; */
     float: right;
-}
-
-div.nav-container > img{
+  }
+  
+  .nav-container>img{
     height: 30px;
     float: left;
-    margin-top: 13px;
-    margin-left: 10px;
-}
-
-.nav-container>nav>ul{
+    margin-top: 33px;
+    margin-left: 20px;
+  }
+  
+  .nav-container>nav>ul{
     /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
     list-style-type: none;
-    padding-left: 0px; 
-}
-
-.nav-container>nav>ul>li{
-    /* width: 100px; */
+    padding-left: 0px;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 17px;
+  }
+  
+  .nav-container>nav>ul>li{
+   /* width: 100px; */
     display: inline-block;
     margin-left:15px;
-}
-
-.nav-container>nav>ul>li:hover{
-    background-color: #2C2A29;
-    color: #fff
-}
-
-#nav-wrap > div > nav > ul > li > a{
+  }
+  
+  /*  클릭 안 한 메뉴 */
+  .nav-container>nav>ul>li>a:link{
     text-decoration: none;
     color: black;
+    margin-top: 50px;
+  }
+  
+  /*  클릭 한 메뉴 */
+  .nav-container>nav>ul>li>a:visited{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .nav-container>nav>ul>li>a:hover{
+    color:  #00C471;
+    font-weight: bold;
+  }
+  
+  .nav-container>nav>ul>li:hover{
+    color:  #00C471;
+    font-weight: bold;
+  }
+  #userName{
+    margin-top: 10px;
+    font-size: 14px;
 }
+
+#showLoginId{
+    color: #00C471;
+    font-weight: bold;
+}
+
 
 /*=================== 사이드바+메인영역 ===================*/
 div.content-container > div.container{
@@ -80,6 +125,40 @@ div.content-container > div.container > div.menu>ul>li>a{
 }
 
 /*=================== 메인 영역 ===================*/
- div.content-container > div > div.main{
+h3{
+    margin-top: 20px;
+} 
+
+div.content-container > div > div.main{
     margin-left: 250px;
+}
+
+#myreview-list{
+    display: inline-block;
+}
+
+#review{
+    background-color: #F9F9F9;
+    width: 330px;
+    margin: 5px;
+    float: right;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#review>div.lessonName{
+    background-color: #F9F9F9;
+    font-weight: bold;
+}
+#review>div.name{
+    background-color: #F9F9F9;
+}
+#review>div.star{
+    margin-top: 3px;
+    background-color: #F9F9F9;
+}
+#review>div.review{
+    margin-top: 15px;
+    background-color: #F9F9F9;
 }
