@@ -6,7 +6,7 @@
     <!--<link rel="stylesheet" href="../css/basic.css">-->
     <link rel="stylesheet" href="/css/mypage/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    
+
     <script src="/js/basic.js"></script>
     <script src="/js/mypage/main.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -16,7 +16,8 @@
 <body>
     <div id="wrap">
         <div id="header-wrap">
-            <div class="header-container"></header>
+            <div class="header-container">
+                </header>
             </div>
         </div>
 
@@ -31,24 +32,25 @@
                     <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
                     <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
                     <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
-                    <li class='chat'><a href="/html/chat/chat.html">채팅</a></li>
+                    <li class='lessonAdd'><a href="/html/lesson/add.html">수업등록</a></li>
+                    <li class='tutorAdd'><a href="/html/tutor/add.html">튜터등록</a></li>
                     <li class='myPage'><a href="/html/mypage/main.html">마이페이지</a></li>
-                    <li class='logout' onclick="logout()">로그아웃</li>
+                    <li class='adminPage'><a href="/html/admin/main.html">관리자페이지</a></li>
+                    <li class='logout'>로그아웃</li>
                 </ul>
             </nav>
         </div>
-        
+
         <div id="content-wrap">
             <div class="mypage-body-wrap">
-        
+
                 <div class="side-container">
                     <div class="menu">
-        
+
                         <div>메인페이지</div>
                         <ul>
                             <li><a href="/html/mypage/main.html">회원 정보</a></li>
                         </ul>
-        
                         <div>수업</div>
                         <ul>
                             <li><a href="/html/mypage/tutor/main.html">튜터</a>
@@ -66,13 +68,10 @@
                                 </ul>
                             </li>
                         </ul>
-        
                         <div>스터디룸 예약</div>
-        
                         <ul>
-                            <li><a href="/html/mypage/studyroom/roomreview.html">예약 목록</a></li>
+                            <li><a href="/html/mypage/studyroom/reshistory.html">예약 목록</a></li>
                         </ul>
-        
                         <div>이용후기</div>
                         <ul>
                             <li>수업
@@ -88,7 +87,7 @@
                             <li><a href="/html/mypage/favorites/lesson.html">수업</a></li>
                             <li><a href="/html/mypage/favorites/studyroom.html">스터디카페</a></li>
                         </ul>
-        
+
                     </div>
                 </div>
                 <div class="content-container">
@@ -100,9 +99,10 @@
                         <!-- <br/><h2>클래스명</h2><br/> -->
                         <div class="userDetail">
                             <div class="userinfo">
-                                <br/><h2>회원정보</h2><br/>
+                                <br />
+                                <h2>회원정보</h2><br />
                                 <div class="userform">
-                                    <ul type="none">        
+                                    <ul type="none">
                                         <li>아이디</li>
                                         <li>닉네임</li>
                                         <li>회원명</li>
@@ -110,7 +110,7 @@
                                         <li>연락처</li>
                                         <li>주소</li>
                                     </ul>
-                                </div> 
+                                </div>
                                 <div class="userinformation">
                                     <ul type="none">
                                         <li class="userId">아이디</li>
@@ -123,8 +123,8 @@
                                 </div>
                             </div>
                             <div class="userButton">
-                                <input id="delete" type="button" value="탈퇴하기" >
-                                    <input id="modify" type="button" value="수정하기" >
+                                <input id="delete" type="button" value="탈퇴하기">
+                                <input id="modify" type="button" value="수정하기">
                             </div>
                         </div>
                         <div class="class">
@@ -143,15 +143,15 @@
                             <h3><a href="/html/mypage/studyroom/roomreview.html">스터디카페 예약 내역 확인하기</a></h3>
                         </div>
 
+                    </div>
+
                 </div>
 
             </div>
-
+            <div id="footer-wrap">
+                <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+            </div>
         </div>
-        <div id="footer-wrap">
-            <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
-        </div>
-    </div>
 </body>
 
 </html>

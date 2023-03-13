@@ -24,9 +24,11 @@
                     <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
                     <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
                     <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
-                    <li class='chat'><a href="/html/chat/chat.html">채팅</a></li>
+                    <li class='lessonAdd'><a href="/html/lesson/add.html">수업등록</a></li>
+                    <li class='tutorAdd'><a href="/html/tutor/add.html">튜터등록</a></li>
                     <li class='myPage'><a href="/html/mypage/main.html">마이페이지</a></li>
-                    <li class='logout' onclick="logout()">로그아웃</li>
+                    <li class='adminPage'><a href="/html/admin/main.html">관리자페이지</a></li>
+                    <li class='logout'>로그아웃</li>
                 </ul>
             </nav>
         </div>
@@ -36,12 +38,11 @@
 
                 <div class="side-container">
                     <div class="menu">
-                    
+
                         <div>메인페이지</div>
                         <ul>
                             <li><a href="/html/mypage/main.html">회원 정보</a></li>
                         </ul>
-                    
                         <div>수업</div>
                         <ul>
                             <li><a href="/html/mypage/tutor/main.html">튜터</a>
@@ -59,13 +60,10 @@
                                 </ul>
                             </li>
                         </ul>
-                    
                         <div>스터디룸 예약</div>
-                    
                         <ul>
-                            <li><a href="/html/mypage/studyroom/roomreview.html">예약 목록</a></li>
+                            <li><a href="/html/mypage/studyroom/reshistory.html">예약 목록</a></li>
                         </ul>
-                    
                         <div>이용후기</div>
                         <ul>
                             <li>수업
@@ -81,61 +79,62 @@
                             <li><a href="/html/mypage/favorites/lesson.html">수업</a></li>
                             <li><a href="/html/mypage/favorites/studyroom.html">스터디카페</a></li>
                         </ul>
-                    
+
+
                     </div>
                 </div>
                 <div class="content-container">
                     <div class="top-title">
-                        <br/>
+                        <br />
                         <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
                     </div>
                     <div class="tutor">
-                        <br/>
+                        <br />
                         <h2>진행 완료된 수업</h2>
-                        <br/>
+                        <br />
                         <div id="endclass">
                             <div id="endclassimg">
                                 <div class="imgPath"><img /></div>
                             </div>
-                                <div id="endclasslist">
-                                    <div class="category"></div>
-                                    <div class="lessonName"></div>
-                                    <div class="people"></div>
-                                    <div class="startCdate"></div>
-                                    <div class="endCdate"></div>
-                                    <div class="tutee"></div>
-                                </div>
+                            <div id="endclasslist">
+                                <div class="category"></div>
+                                <div class="lessonName"></div>
+                                <div class="people"></div>
+                                <div class="startCdate"></div>
+                                <div class="endCdate"></div>
+                                <div class="tutee"></div>
                             </div>
                         </div>
-                        <div id="jointutee">
-                            <br/>
-                            <h2>수업에 참여한 튜티목록</h2>
-                            <div id="tuteelist">
-                                <div class="tuteename"></div>
-                                <div class="lessonseq" style="display:none"></div>
-                            </div>                            
-                            <button id="writereviewbtn">후기 작성</button>
+                    </div>
+                    <div id="jointutee">
+                        <br />
+                        <h2>수업에 참여한 튜티목록</h2>
+                        <div id="tuteelist">
+                            <div class="tuteename"></div>
+                            <div class="lessonseq" style="display:none"></div>
                         </div>
-                        <div id="completedClass">
-                            <br/>
-                            <h2>수업 후기목록 </h2>
-                            <div id="completedclassreview">
-                                <div class="completedname"></div>
-                                <div class="reviewlist">
-                                    <div class="completedreview"></div>
-                                    <div class="completedstar"></div>
-                                </div>
-                            </div>                            
+                        <button id="writereviewbtn">후기 작성</button>
+                    </div>
+                    <div id="completedClass">
+                        <br />
+                        <h2>수업 후기목록 </h2>
+                        <div id="completedclassreview">
+                            <div class="completedname"></div>
+                            <div class="reviewlist">
+                                <div class="completedreview"></div>
+                                <div class="completedstar"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
 
         </div>
-        <div id="footer-wrap">
-            <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
-        </div>
+
+    </div>
+    <div id="footer-wrap">
+        <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+    </div>
     </div>
 </body>
 
