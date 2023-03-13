@@ -2,7 +2,7 @@ $(() => {
     userCheckIntervalLogined();
 
     //-----정보출력 START------
-    let url = "http://172.30.1.15:8888/developer/orders/orderlist"
+    let url = backURL+"orders/orderlist"
     // let url = backURL + 'admin/host';
     let $origin = $('div.list-of-order-origin').first()
     $origin.show()
