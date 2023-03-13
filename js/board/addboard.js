@@ -1,5 +1,5 @@
 $(() => {
-
+    userCheckIntervalLogined();
     //--첨부파일이 변경되었을때 할일 START--
     let $divShow = $('div.show')
     $('div.form>form>input[type=file]').change((e) => {
@@ -50,7 +50,8 @@ $(() => {
     // 써머노트 스크립트
     $(document).ready(function () {
         $('#summernote').summernote({
-            height: 200, // set editor height
+            width: 800,
+            height: 300, // set editor height
             minHeight: null, // set minimum height of editor
             maxHeight: null, // set maximum height of editor
             focus: true // set focus to editable area after initializing summernote

@@ -64,9 +64,47 @@ div.order>div.contents>div{
 
 
 #cardbutton{
-    font-size: 18px;
+padding: 0px 22px;
+    appearance: none;
+    text-align: left;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 42px;
+    /* -webkit-tap-highlight-color: transparent; */
+    display: inline-block;
+    width: auto;
+    position: relative;
+    line-height: 1;
+    font-size: 16px;
+    user-select: none;
+    cursor: pointer;
+    margin-right: 16px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(206, 212, 218);
+    border-radius: 8px;
 }
 
 #kakaobutton {
-    font-size: 18px;
+padding: 0px 22px;
+    appearance: none;
+    text-align: left;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 42px;
+    /* -webkit-tap-highlight-color: transparent; */
+    display: inline-block;
+    width: auto;
+    position: relative;
+    line-height: 1;
+    font-size: 16px;
+    user-select: none;
+    cursor: pointer;
+    margin-right: 16px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(206, 212, 218);
+    border-radius: 8px;
 }

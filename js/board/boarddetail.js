@@ -1,11 +1,11 @@
 let Seq = document.location.href.split("?")[1];
-
-
 let url2 = new URL(location.href);
 let postSeq2 = url2.searchParams.get("postSeq");
 let postSeq3 = Number(postSeq2);
+let logined = sessionStorage.getItem("logined");
 
 $(() => {
+    userCheckIntervalLogined();
     let url = backURL + 'board/detail';
     // 페이지 로드되었을시 목록 출력 START
     $.ajax({
@@ -37,6 +37,7 @@ $(() => {
                     boardData += "<div class='info'>";
                     boardData += "<div class='subinfo1'>";
                     boardData += "<span> 작성자 : " + item.usersNameDTO.nickname + "</span>";
+                    boardData += "<div class='userId' style='display:none'>"+item.usersNameDTO.userId+"</div>";
                     boardData += "<span> 작성일 : " + item.cdate + "</span>";
                     boardData += "</div>";
                     boardData += "<div class='subinfo2'>";
@@ -50,20 +51,31 @@ $(() => {
                 }
 
                 boardRepData += "<div class='replist-container'>";
+                $('#replist').empty();
+                let repuserId = item.boardRepSelectDTO.usersNameDTO.userId;
+
+                console.log(repuserId, "로그인:"+logined);
                 if(item.boardRepSelectDTO.postRepSeq != null){
-                boardRepData += "<span> 작성자 : " + item.boardRepSelectDTO.usersNameDTO.nickname + "</span>";
-                boardRepData += "<div class='repcontent'>" + item.boardRepSelectDTO.content + "</div>";
-                boardRepData += "<span> 작성일 :" + item.boardRepSelectDTO.cdate + "</span>";
-                boardRepData += "<input type='hidden' name='postReqSeq' value='"+item.boardRepSelectDTO.postRepSeq +" '"
-                boardRepData += "<div class='repdetailbtn'> <button type='button' id='repeditbtn'>수정</button>";
-                boardRepData += "<button type='button' id='repdelbtn'>삭제</button>"
-                boardRepData += "<form id='editReplyForm' style='display:none'><input type='text' name='editRepContent' id='editRepContent'>"
-                boardRepData += "<button id='modifybtn'>수정완료</button><button id='cancelbtn'>취소</button></form></div></div>";
-                $('#replist').append(boardRepData);
-                }else{
-                $('#replist').append("댓글이 존재하지 않습니다.");
+                    boardRepData += "<span> 작성자 : " + item.boardRepSelectDTO.usersNameDTO.nickname + "</span>";
+                    boardRepData += "<div class='repcontent'>" + item.boardRepSelectDTO.content + "</div>";
+                    boardRepData += "<span> 작성일 :" + item.boardRepSelectDTO.cdate + "</span>";
+                    boardRepData += "<input type='hidden' name='postReqSeq' value='"+item.boardRepSelectDTO.postRepSeq +"' >"; // 수정된 코드
+                    boardRepData += "<div class='repuserId' style='display:none'>"+item.boardRepSelectDTO.usersNameDTO.userId[index] +"</div>"
+                    boardRepData += "<div class='repdetailbtn'";
+                    if(logined==repuserId){
+                        boardRepData += "style='display:block'>";
+                    }else{
+                        boardRepData += "style='display:none'>";
+                    }
+                    boardRepData += "<button type='button' id='repeditbtn'>수정</button>";
+                    boardRepData += "<button type='button' id='repdelbtn'>삭제</button>"
+                    boardRepData += "<form id='editReplyForm' style='display:none'><input type='text' name='editRepContent' id='editRepContent'>"
+                    boardRepData += "<button id='modifybtn'>수정완료</button><button id='cancelbtn'>취소</button></form></div></div>";
+                    $('#replist').append(boardRepData);
                 }
-               
+                else{
+                    $('#replist').append("댓글이 존재하지 않습니다.");
+                }
                 let $img = $('div.boarddetaillist-container> div.imgPath');
                 //--썸네일 이미지 다운로드 START--
                 $.ajax({
@@ -81,25 +93,35 @@ $(() => {
                     },
                 });
             });
-           
+
+            
+            let userId = $("div.userId").text();
+            if (logined === userId) {
+                $("#detailbtn").show();
+            } else {
+                $("#detailbtn").hide();
+            }
+            // let id = $('div.repuserId').text();
+            // console.log(id) 
+            // if(logined === id){
+            //     $('#repeditbtn').show();
+            //     $('#repdelbtn').show();
+            // }else{
+            //     $('#repeditbtn').hide();
+            //     $('#repdelbtn').hide();
+            // }
+            
+
         },
         error: function (xhr) {
             alert(xhr.status);
         }
     })
 
-    // ...버튼클릭시 수정,삭제버튼 보여지게
-    $("#edit-btn").click(() => {
-        $("#detailbtn").show();
-    })
-
-    // ...버튼클릭시 수정,삭제버튼 보여지게 
-
     //수정버튼 클릭시 START
     $('#editbtn').click(() => {
         location.href = frontURL + "board/editboard.html?" + Seq;
     })
-
     // 수정버튼 클릭시 END 
     
     //삭제버튼 클릭시 START
@@ -148,10 +170,9 @@ $(() => {
 
     })
     //댓글 작성 END
-  
-    // 댓글 수정 START
 
-    //수정버튼 클릭시 
+    // 댓글 수정 START
+    //수정버튼 클릭시
     $(document).on("click", "#repeditbtn", function (){
         $('#editReplyForm').attr("style","display:block;");
     })
@@ -215,10 +236,7 @@ $(() => {
         return false;
     })
     //수정완료버튼 클릭시
-
-   
-console.log(document.cookie);
-   
     // 댓글 수정 END
 })
+
 
