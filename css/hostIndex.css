@@ -12,7 +12,7 @@
  #host-index-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91; } 
  #host-index-wrap>#content-wrap>.hostpage-body-wrap>.side-container {float: left; width: 19%; height: 155px; margin: 0 auto; border: 1px solid #fc487b;} 
  #host-index-wrap>#content-wrap>.hostpage-body-wrap>.content-container {float: right; width: 78%; height: 750px; margin: 0 auto; border: 1px solid #62ff19; margin: 18px 13px 13px 13px;}
- #host-index-wrap>#footer-wrap>.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
+ #host-index-wrap>#footer-wrap>.footer-container{width: 100%; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
 
  #host-index-wrap>#nav-wrap>.nav-container>nav{
     margin-top: 3px;

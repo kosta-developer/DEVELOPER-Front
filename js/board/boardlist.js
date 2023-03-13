@@ -1,7 +1,7 @@
 let url = backURL + 'board/list';
 
 $(()=>{
-checkIntervalLogined();
+  userCheckIntervalLogined();
 
 //     // 페이지 로드되었을시 목록 출력 START
 //     function showBoardList(url){
@@ -263,6 +263,89 @@ $('#searchbtn').click(()=>{
     })
 }
 
+// 조회순 버튼 클릭되었을시 START
+$('#cntbtn').click(()=>{
+    $.ajax({
+      xhrFields: {
+        withCredentials: true //크로스오리진을 허용!
+      },
+        url: backURL+'board/listcnt',
+        method: "get",
+        data: {currentPage:currentPage},
+        success: (res) => {
+          alert('조회수버튼');
+            let totalCnt = res.totalCnt
+            let totalPage = res.totalPage
+            let startPage = res.startPage
+            let endPage = res.endPage
+            let list = res.list 
+            $("#list").empty();
+        list.forEach((item) => {
+            console.log(item);
+            let category = item.category === 0 ? "Q/A" : item.category === 1 ? "스터디모집" : "자유게시판";
+            let title = item.title;
+            let content = item.content;
+            let nickname = item.usersDTO.nickname;
+            let cDate = item.cDate;
+            let recommend = item.recommend;
+            let cnt = item.cnt;
+            let totalPages = item.totalPages
+            // postSeq=${item.postSeq}
+            let boardData = `
+              <div class='list-container'>
+                <div class='title'><a href='boarddetail.html?postSeq=${item.postSeq}'>${title}</a></div>
+                <div class='content'>${content}</div>
+                <div class='info'>
+                  <div class='subinfo1'>
+                    <span> 작성자 : ${nickname}</span>
+                    <span> 작성일 : ${cDate}</span>
+                    <span class='postCategory'> 카테고리 : ${category}</span>
+                  </div>
+                  <div class='subinfo2'>
+                    <span><i class='fa-solid fa-heart'></i> ${recommend}</span>
+                    <span><i class='fa-regular fa-eye'></i> ${cnt}</span>
+                  </div>
+                </div>
+              </div>
+            `;
+    
+            $("#list").append(boardData);
+        
+            let $pageGroup = $('div.pagegroup')
+            //페이지그룹 
+             let pageGroupStr = '';
+             if(startPage > 1){
+                pageGroupStr += '<span class="'+(startPage-1)+'">[PREV]</span>'
+            }
+            if(endPage > totalPage){
+                endPage = totalPage;
+            }
+              //페이지 넘버링 
+              for(let i=startPage; i<=endPage; i++){
+                if(i == currentPage){
+                    //현재페이지 구분 css먹이려고 current + i
+                    pageGroupStr += '<span class="current '+i+'">[' + i +']</span>'
+                }else{
+                    pageGroupStr += '<span class="'+i+'">[' + i +']</span>'
+                }
+            }
+            //endpage의 다음페이지 가있을 때 
+            if(endPage < totalPage){
+                pageGroupStr += '<span class="'+(endPage+1)+'">[NEXT]</span>'
+            }
+            $pageGroup.html(pageGroupStr);
+    
+                // 생성된 페이지 그룹을 페이지에 추가
+                $('div.pagegroup').html(pageGroupStr);
+          });
+    
+        },
+        error : function(xhr){
+            alert(xhr.status);
+        }
+    })
+})
+// 조회순 버튼 클릭되었을시 END
 //페이지 그룹 클릭되었을시 START
 
 $('div.pagegroup').on('click', 'span:not(.current)', (e)=>{
@@ -359,176 +442,12 @@ showBoardList(url, 1)
 //     }
 //   })
 
-
-    // $.ajax({
-    //     url:url,
-    //     method:'get',
-    //     data:'boardType=1',
-    //     success : function(jsonObj){
-    //        // console.log(jsonObj);
-    //        // console.log(jsonObj[0].cDate);
-    //        let boardData = "";
-    //        let temp = "";
-    //        $("#list").html("");
-
-    //         $.each(jsonObj, function(index,item){
-    //             console.log(jsonObj[index]);
-  
-    //             if(item.category == 0){
-    //                 temp="Q/A";
-    //             } else if(item.category == 1){
-    //                 temp="스터디모집";
-    //             } else if(item.category == 2){
-    //                 temp="자유게시판"
-    //             }
-    //             boardData += "<div class='list-container'>";
-    //             boardData += "<div class='title'><a href='communityDetail.html?postSeq="+item.postSeq+"'>"+item.title+"</a></div>";
-    //             boardData += "<div class='content'>"+item.content+"</div>";
-    //             boardData += "<div class='info'>";
-    //             boardData += "<div class='subinfo1'>";
-    //             boardData += "<span> 작성자 : "+item.nickname+"</span>";
-    //             boardData += "<span> 작성일 : "+item.cDate+"</span>";
-    //             boardData += "<span class='postCategory'> 카테고리 : "+temp+"</span>";
-    //             boardData += "</div>";
-    //             boardData += "<div class='subinfo2'>";
-    //             boardData += "<span><i class='fa-solid fa-heart'></i> "+item.recommend+"</span> ";
-    //             boardData += "<span><i class='fa-regular fa-eye'></i> "+item.cnt+"</span>";
-    //             boardData += "</div>";
-    //             boardData += "</div>";
-    //             boardData += "</div>";
-
-    //         });
-    //         $("#list").append(boardData);
-            
-    //     },
-    //     error : function(xhr){
-    //         alert(xhr.status);
-    //     }
-    // })
-
 // 최신순 버튼 클릭되었을시 END
-
-// 조회순 버튼 클릭되었을시 START
-// $('#cntbtn').click(()=>{
-//     alert('cnt');
-//     $.ajax({
-//       xhrFields: {
-//         withCredentials: true //크로스오리진을 허용!
-//       },
-//         url:url,
-//         method:'get',
-//         data:'boardType=2',
-//         success : function(jsonObj){
-//            // console.log(jsonObj);
-//            // console.log(jsonObj[0].cDate);
-//            let boardData = "";
-//            let temp = "";
-//            $("#list").html("");
-
-//             $.each(jsonObj, function(index,item){
-//                 console.log(jsonObj[index]);
-  
-//                 if(item.category == 0){
-//                     temp="Q/A";
-//                 } else if(item.category == 1){
-//                     temp="스터디모집";
-//                 } else if(item.category == 2){
-//                     temp="자유게시판"
-//                 }
-//                 boardData += "<div class='list-container'>";
-//                 boardData += "<div class='title'><a href='boarddetail.html?postSeq="+item.postSeq+"'>"+item.title+"</a></div>";
-//                 boardData += "<div class='content'>"+item.content+"</div>";
-//                 boardData += "<div class='info'>";
-//                 boardData += "<div class='subinfo1'>";
-//                 boardData += "<span> 작성자 : "+item.nickname+"</span>";
-//                 boardData += "<span> 작성일 : "+item.cDate+"</span>";
-//                 boardData += "<span class='postCategory'> 카테고리 : "+temp+"</span>";
-//                 boardData += "</div>";
-//                 boardData += "<div class='subinfo2'>";
-//                 boardData += "<span><i class='fa-solid fa-heart'></i> "+item.recommend+"</span> ";
-//                 boardData += "<span><i class='fa-regular fa-eye'></i> "+item.cnt+"</span>";
-//                 boardData += "</div>";
-//                 boardData += "</div>";
-//                 boardData += "</div>";
-
-//             });
-//             $("#list").append(boardData);
-            
-//         },
-//         error : function(xhr){
-//             alert(xhr.status);
-//         }
-//     })
-// })
-// 조회순 버튼 클릭되었을시 END
-
-// 추천순 버튼 클릭되었을시 START
-// $('#recbtn').click(()=>{
-//     alert('rec');
-//     $.ajax({
-//       xhrFields: {
-//         withCredentials: true //크로스오리진을 허용!
-//      },
-//         url:url,
-//         method:'get',
-//         data:'boardType=3',
-//         success : function(jsonObj){
-//             // console.log(jsonObj);
-//             // console.log(jsonObj[0].cDate);
-//             let boardData = "";
-//             let temp = "";
-//             $("#list").html("");
-            
-//             $.each(jsonObj, function(index,item){
-//                 console.log(jsonObj[index]);
-                
-//                 if(item.category == 0){
-//                     temp="Q/A";
-//                 } else if(item.category == 1){
-//                     temp="스터디모집";
-//                 } else if(item.category == 2){
-//                     temp="자유게시판"
-//                 }
-//                 boardData += "<div class='list-container'>";
-//                 boardData += "<div class='title'><a href='boarddetail.html?postSeq="+item.postSeq+"'>"+item.title+"</a></div>";
-//                 boardData += "<div class='content'>"+item.content+"</div>";
-//                 boardData += "<div class='info'>";
-//                 boardData += "<div class='subinfo1'>";
-//                 boardData += "<span> 작성자 : "+item.nickname+"</span>";
-//                 boardData += "<span> 작성일 : "+item.cDate+"</span>";
-//                 boardData += "<span class='postCategory'> 카테고리 : "+temp+"</span>";
-//                 boardData += "</div>";
-//                 boardData += "<div class='subinfo2'>";
-//                 boardData += "<span><i class='fa-solid fa-heart'></i> "+item.recommend+"</span> ";
-//                 boardData += "<span><i class='fa-regular fa-eye'></i> "+item.cnt+"</span>";
-//                 boardData += "</div>";
-//                 boardData += "</div>";
-//                 boardData += "</div>";
-                
-//             });
-//             $("#list").append(boardData);
-            
-//         },
-//         error : function(xhr){
-//             alert(xhr.status);
-//         }
-//     })
-// })
-// 추천순 버튼 클릭되었을시 END
 
 // 글쓰기 버튼 클릭되었을시 START
 $('#addbtn').on("click",function(){
-    location.href= frontURL + "/board/addboard.html";
+    location.href= frontURL + "board/addboard.html";
 });
 // 글쓰기 버튼 클릭되었을시 END
 
 })
-
-function select_orderby(orderby2){
-  let query = new URL(location.href);
-  let currentPage = query.searchParams.get("currentpage");
-  if(currentPage == null){
-    currentPage = parseInt(1)
-  }
-  location.href='./boardlist.html?orderby='+orderby2+'&currentPage='+currentPage;
-}

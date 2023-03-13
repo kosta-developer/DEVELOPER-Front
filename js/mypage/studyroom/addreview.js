@@ -1,5 +1,5 @@
 $(()=>{
-  checkIntervalLogined();
+  userCheckIntervalLogined();
 
   const postURL = decodeURI(location.href);
   const postURL2 = postURL.split("?");

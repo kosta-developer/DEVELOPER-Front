@@ -1,39 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
         <meta charset="utf-8">
-        <!-- <link rel="stylesheet" href="/css/basic.css"> -->
         <link rel="stylesheet" href="/css/board/board.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <script src="https://kit.fontawesome.com/f2754c19ed.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <!-- <html xmlns:th="http://www.thymeleaf.org"></html> -->
         <script src="/js/basic.js"></script>
         <script src="/js/board/boardlist.js"></script>
-        
     </head>
     <body>
         <div id="wrap">
-            <div id="header-wrap" style="display:flex">
-                <div class="header-container">
-                    <a href="index.html"><img src="../images/developerlogo.png" style="height: 50px;"></a>
-                </div>
                 <div class="nav-container">
+                    <img id="logo" src="/images/logo.png">
                     <nav>
                         <ul>
-                            <li class='lesson'>수업</li>
-                            <li class='studycafe'>스터디카페</li>
-                            <li class='community'>커뮤니티</li>
+                            <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
+                            <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
+                            <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
                             <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
-                            <li class='signup'>회원가입</li>
-                            <li class='tutorAdd'>튜터등록</li>
-                            <li class='myPage'>마이페이지</li>
-                            <li class='login'>로그인</li>
-                            <li class='logout'>로그아웃</li>
-                            </ul>
+                            <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
+                            <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
+                            <li class='chat'><a href="/html/chat/chat.html">채팅</a></li>
+                            <li class='myPage'><a href="/html/mypage/usermypage.html">마이페이지</a></li>
+                            <li class='logout' onclick="logout()">로그아웃</li>
+                        </ul>
                     </nav>
-                </div>
+                
             </div>
                 <div class="board-banner">
                     Developer Community<br/><br/>
@@ -41,33 +34,33 @@
                     </span>
                 </div>
                 <div class="board-container">
-                    <div class="cate">
+                    <!-- <div class="cate">
                         <h3>카테고리</h3>
                         <button class="cate0" id="cate0">Q/A</button>
                         <button class="cate1" id="cate1">자유게시판</button>
                         <button class="cate2" id="cate2">스터디모집</button>
-                    </div>
+                    </div> -->
                     <div id="content-wrap">
-                        <div class="search">
-                            <formm id="searchtitle">
-                                <input
-                                    type="text"
-                                    placeholder="제목으로 검색하세요"
-                                    style="width: 400px; height:48px; font: size 10px;"
-                                    name="title">
-                                <button id="searchbtn" style="width:90px; height:48px;">검색</button>
-                            </form>
-                        </div>
-                        <div class="filter">
-                            <button class="descbtn fitbtn" id="descbtn" onclick="select_orderby('c_date')">최신순</button>
-                            <button class="cntbtn fitbtn" id="cntbtn" onclick="select_orderby('cnt')">조회순</button>
-                            <button class="recbtn fitbtn" id="recbtn" onclick="select_orderby('recommend')">추천순</button>
-                            <div class="addboard">
-                                <button class="addbtn" id="addbtn">
-                                    <i class="fa-solid fa-pen"></i>글쓰기</button>
-                            </div>
-                        </div>
                         <div class="content-container">
+                            <div class="search">
+                                <formm id="searchtitle">
+                                    <input
+                                        type="text"
+                                        placeholder="    제목으로 검색하세요"
+                                        style="width: 600px; height:48px; font: size 10px; border-radius: 8px ;"
+                                        name="title">
+                                    <button id="searchbtn">검색</button>
+                                </form>
+                            </div>
+                            <div class="filter">
+                                <button class="descbtn fitbtn" id="descbtn"> 최신순</button>
+                                <button class="cntbtn fitbtn" id="cntbtn"> 조회순</button>
+                                <button class="recbtn fitbtn" id="recbtn"> 추천순</button>
+                                <div class="addboard">
+                                    <button class="addbtn" id="addbtn">
+                                        <i class="fa-solid fa-pen"></i>글쓰기</button>
+                                </div>
+                            </div>
                             <div class="list" id="list">
                                 <!-- 본문내용 append 될 부분 -->
                             </div>

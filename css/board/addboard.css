@@ -1,6 +1,5 @@
 div.show{
-    height:100px;
-    border:1px dotted;
+    height:150px;
     margin-bottom: 10px;
 }
 div.show>img{
@@ -35,7 +34,6 @@ input[type=text]{
     font-weight: 700;
     line-height: 1.35;
     padding: 10px;
-    border-bottom: 2px solid rgb(222, 226, 230);
 }
 
 textarea{
@@ -56,6 +54,7 @@ textarea{
     display: flex;
     justify-content: flex-end;
 }
+
 #cancelbtn{
 padding: 0px 22px;
     appearance: none;
