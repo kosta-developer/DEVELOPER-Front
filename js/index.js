@@ -1,8 +1,9 @@
 $(() => {
-    userCheckIntervalLogined();
-    //let queryStr = location.search.substring(1) // ?뒤에 붙는 매개변수 값 반환 
-    // let arr = queryStr.split('=')
+     userCheckIntervalLogined();
+     //let queryStr = location.search.substring(1) // ?뒤에 붙는 매개변수 값 반환 
+     // let arr = queryStr.split('=')
 
+    
     let $banner = $(".banner-container").find("ul");
 
     let $bannerWidth = $banner.children().outerWidth();//배너 이미지의 폭
@@ -11,7 +12,7 @@ $(() => {
     let rollingId;
     rollingId = setInterval(function () { rollingStart(); }, 2000)
 
-    //=================[마우스 오버(롤링멈춤) & 마우스아웃(다시 롤링) START]==================
+//=================[마우스 오버(롤링멈춤) & 마우스아웃(다시 롤링) START]==================
     $banner.mouseover(function () {
         //중지
         clearInterval(rollingId);
@@ -22,11 +23,11 @@ $(() => {
         rollingId = setInterval(function () { rollingStart(); }, 3000);
         $(this).css("cursor", "default");
     });
-    //=================[마우스 오버(롤링멈춤) & 마우스아웃(다시 롤링) END]==================
+//=================[마우스 오버(롤링멈춤) & 마우스아웃(다시 롤링) END]==================
 
 
 
-    //=================[배너 START]==================
+//=================[배너 START]==================
     function rollingStart() {
         $banner.css("width", $bannerWidth * $bannerLength + "px");
         $banner.css("height", $bannerHeight + "px");
@@ -41,11 +42,11 @@ $(() => {
         });
     }
 
-    //=================[배너 END]==================
+//=================[배너 END]==================
 
 
 
-    //=================[수업 & 게시글 START]==================
+//=================[수업 & 게시글 START]==================
     let url = backURL + 'main/'
     let $origin_lesson = $('div.lessonlistorigin').first()
     let $origin_board = $('div.communityListOrigin').first()
@@ -94,6 +95,7 @@ $(() => {
                 let imgPath = jsonObj.listLesson[index].imgPath
                 console.log(imgPath)
 
+
                 //=================[이미지 다운로드 START]==================
                 $.ajax({
                     xhrFields: {
@@ -106,7 +108,7 @@ $(() => {
                     success: function (result) {
                         //console.log(result);
                         let blobStr = URL.createObjectURL(result);
-                        $copy_lesson.find("a>img").attr("src", blobStr);
+                        $copy_lesson.find("img.lessonImg").attr("src", blobStr);
                     },
                 });
                 //=================[이미지 다운로드 END]==================
@@ -128,6 +130,27 @@ $(() => {
         }
     })
 
-    //=================[수업 & 게시글 END]==================
+//=================[수업 & 게시글 END]==================
 
 })
+
+
+//================[수업이미지 클릭 시 START]==================-
+$(document).on('click', 'img.lessonImg', (e) => {
+    let lessonSeq = $(e.target).parents('div.lessonlistorigin').find('div.lessonSeq').text();
+    console.log(lessonSeq)
+    location.href = frontURL + 'lesson/detail.html?' + lessonSeq
+})
+
+//================[수업이미지 클릭 시 END]==================
+
+
+
+
+//================[게시글영역 클릭 시 START]==================-
+$(document).on('click', 'div.communityListOrigin', (e) => {
+    let postSeq = $(e.target).parents('div.communityList').find('div.postSeq').eq(1).text();
+    console.log(postSeq)
+    location.href = frontURL + 'board/boarddetail.html?postSeq=' + postSeq
+})
+//================[게시글영역 클릭 시 END]==================

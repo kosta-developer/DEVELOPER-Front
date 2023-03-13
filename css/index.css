@@ -2,7 +2,7 @@
 
 *{margin: 0; padding: 0; background-color: #FFFEFE; font-family: 'Spoqa Han Sans Neo', 'sans-serif';} 
 #index-wrap {width: 100%; height: 1500px; color: #000000; font-size: 15px; }
-#banner-wrap{width: 100%; }
+#banner-wrap{width: 100%;}
 #content-wrap{width: 100%; height:auto; }
 #footer-wrap{
     width: 100%; 
@@ -16,6 +16,7 @@
     justify-content: center;
     align-items : center;
     }
+    
 #devBanner{width: 1000px; height: 300px;}
 
 #content-wrap>.content-container>div.lessonlist{ width:100%; height:800px;}
@@ -26,6 +27,7 @@
 .banner-container {width: 1000px; height: 300px; line-height: 300px; margin: 0 auto;  }
 .content-container {width: 1000px; margin: 0 auto; }
 .footer-container{width: 100%; height: 100px; line-height: 100px; margin: 0 auto; }
+
 #footer-wrap > div.footer-container{
     background-color: #303740; 
 }

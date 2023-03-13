@@ -1,54 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
-*{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
+*{margin: 0; padding: 0; font-family: 'Spoqa Han Sans Neo', 'sans-serif';}
 #list-reservation-wrap {width: 100%; height: auto; font-size: 15px; }
-#list-reservation-wrap>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
-#list-reservation-wrap>#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
-#list-reservation-wrap>#footer-wrap{width: 100%; border: 1px solid rgb(187, 187, 187); text-align:center;}
-#list-reservation-wrap>#content-wrap>.hostpage-body-wrap{margin:0 auto; width: 1000px; height: 600px;  border: 1px solid rgb(187, 187, 187);}
+#list-reservation-wrap>#nav-wrap{width: 100%;}
+#list-reservation-wrap>#content-wrap{width: 100%; height:auto;}
+#footer-wrap{
+    width: 100%; 
+    height: 100px; 
+    line-height: 100px; 
+    margin: 0 auto; 
+    text-align:center; 
+    background-color: #303740; 
+    color:#fff;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    }
+#list-reservation-wrap>#content-wrap>.hostpage-body-wrap{margin:0 auto; width: 1000px; height: 770px;}
 /*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
-width: 100%는 기본값이기 때문에 없어도 된다 */
+ width: 100%는 기본값이기 때문에 없어도 된다 */
 
 
-#list-reservation-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91; } 
-#list-reservation-wrap>#content-wrap>.hostpage-body-wrap>.side-container {float: left; width: 19%; height: auto; margin: 0 auto; border: 1px solid #fc487b;} 
-#list-reservation-wrap>#content-wrap>.hostpage-body-wrap>.content-container {float: right; width: 78%; height: auto; margin: 0 auto; border: 1px solid #62ff19; margin: 18px 13px 13px 13px;}
-#list-reservation-wrap>#footer-wrap>.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
-
-#list-reservation-wrap>#nav-wrap>.nav-container>nav{
-    width: 310px;
-    /* display: inline-block; */
+ #list-reservation-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto;  } 
+ #list-reservation-wrap>#content-wrap>.hostpage-body-wrap>.side-container {float: left; width: 19%; height: 175px; margin: 0 auto; background-color: #F9F9F9;} 
+ #list-reservation-wrap>#content-wrap>.hostpage-body-wrap>.content-container {float: right; width: 78%; height: 720px; margin: 0 auto; margin: 18px 13px 13px 13px;}
+ 
+ .nav-container>nav{
     float: right;
 }
 
-#list-reservation-wrap>#nav-wrap>.nav-container>img{
+.nav-container>img{
     height: 30px;
     float: left;
-    margin-top: 13px;
-    margin-left: 10px;
+    margin-top: 33px;
+    margin-left: 20px;
 }
-
-#list-reservation-wrap>#nav-wrap>.nav-container>nav>ul{
+.nav-container>nav>ul{
     /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
     list-style-type: none;
     padding-left: 0px;
-    
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 17px;
 }
 
-#list-reservation-wrap>#nav-wrap>.nav-container>nav>ul>li{
-   /* width: 100px; */
+.nav-container>nav>ul>li{
     display: inline-block;
     margin-left:15px;
 }
 
-#list-reservation-wrap>#nav-wrap>.nav-container>nav>ul>li:hover{
-    background-color: #80d8b4;
-    color: #fff
-}
-
-#list-reservation-wrap>#nav-wrap>.nav-container>nav>ul>li>a{
+/*  클릭 안 한 메뉴 */
+.nav-container>nav>ul>li>a:link{
     text-decoration: none;
     color: black;
+    margin-top: 50px;
+}
+
+/*  클릭 한 메뉴 */
+.nav-container>nav>ul>li>a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-container>nav>ul>li>a:hover{
+    color:  #00C471;
+    font-weight: bold;
+}
+
+.nav-container>nav>ul>li:hover{
+    color:  #00C471;
+    font-weight: bold;
+}
+
+div.top-title{
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+span#showLoginId{
+    font-weight: 800;
+    color:  #00C471;
 }
 
 #list-reservation-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu{
@@ -72,12 +104,10 @@ width: 100%는 기본값이기 때문에 없어도 된다 */
     font-size: 14px;
 }
 
-
 #list-reservation-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li:hover{
-    background-color: #80d8b4;
     font-weight: 700;
     font-size: 15px;
-    color: #fff
+    color:#00C471;
 }
 
 #list-reservation-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li>a{
@@ -85,56 +115,82 @@ width: 100%는 기본값이기 때문에 없어도 된다 */
     color: rgb(88, 88, 88);
 }
 
-#content-wrap > div > div.content-container > div.detail-content-box{
-    
-    width: 96%;
-    height: auto;
-    margin-left: 12px;
-}
 
-#list-reservation-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>.sub-title{
+#content-wrap > div > div.content-container > .info-title{
+    margin-left: 23px;
+    margin-top: 20px;
     font-weight: 700;
-    margin: 20px 0px 20px 20px;
+    font-size: 16px;
 }
 
 
-
-#list-reservation-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>.sell-title{
-    background-color: #e9e9e9;
-    padding-bottom: 20px;
-    padding-top: 20px;
+#list-reservation-wrap>#content-wrap>.hostpage-body-wrap>.content-container>div#reservation-infomation-box{
+    width:730px;
+    height:630px;
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    margin: 10px 25px 30px 25px;
 }
 
-#list-reservation-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>div.reservation-list{
+#list-reservation-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#div#reservation-infomation-box>.title{
+    font-weight: 700;   
+    padding-top: 15px;
+    padding-left: 15px;
+    margin: 20px 0px 5px 255px;
+
+}
+
+
+#list-reservation-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#div#reservation-infomation-box>.field{
+    padding-left: 15px;
+}
+
+
+/* ///////////////////////////////////////// */
+
+
+
+#list-reservation-wrap>#content-wrap>.hostpage-body-wrap>.content-container>div#reservation-infomation-box>.sell-title{
+    height: 50px;
+}
+
+#list-reservation-wrap>#content-wrap>.hostpage-body-wrap>.content-container>div#reservation-infomation-box>div.reservation-list{
     overflow:scroll;
     overflow-x:hidden;
-    height: 400px;
+    height: 577px;
 }
 
 
-
+.reservation-list-origin{
+    height: 40px;
+}
 
 b#b-reservation-seq{
-    width:100px;
+    width:70px;
     display:inline-block;
     text-align: center;
+    margin: 15px 10px 10px 13px;
 }
 
-.reservation-list>.reservation-list-origin>#reservation-seq{
- width: 100px;
+.reservation-list>.reservation-list-origin>span#reservation-seq{
+ width: 70px;
  display:inline-block; 
  text-align: center;
+ margin: 13px 5px 5px 13px;
 }
 
 b#b-reservation-usingDate{
     width:90px;
     display:inline-block;
     text-align: center;
+    margin-left: 5px;
+    
 }
 .reservation-list>.reservation-list-origin>#reservation-usingDate{
-    width: 90px;
+    width: 85px;
     display:inline-block; 
     text-align: center;
+    margin: 13px 0px 5px 10px;
 }
 
 b#b-reservation-idAndName{
@@ -147,10 +203,12 @@ b#b-reservation-idAndName{
     width: 230px;
     display:inline-block; 
     text-align: center;
+    margin-left: 5px;
 }
 
 b#b-reservation-hostId{
     width:130px;
+    
     display:inline-block;
     text-align: center;
 }
@@ -158,27 +216,24 @@ b#b-reservation-hostId{
 .reservation-list>.reservation-list-origin>#reservation-hostId{
     width: 130px;
     display:inline-block; 
-    text-align: center;
+    text-align: center; 
 }
 
 b#b-reservation-roomName{
-    width:130px;
+    width:150px;
     display:inline-block;
     text-align: center;
+    padding-right: 18px;
 }
 
 .reservation-list>.reservation-list-origin>#reservation-roomName{
-    width: 130px;
+    width: 150px;
     display:inline-block; 
     text-align: center;
 }
 
-hr.list-sell-line{
-   border-style: dashed;
-   border-color: #bbbbbb;
-}
 
-#list-reservation-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>div.reservation-list>.reservation-list-origin>.reservation-data{
+#list-reservation-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.div#reservation-infomation-box>div.reservation-list>.reservation-list-origin>.reservation-data{
     margin-top: 10px;
     margin-bottom: 10px;
 }

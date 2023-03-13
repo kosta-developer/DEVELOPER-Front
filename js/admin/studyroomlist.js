@@ -3,8 +3,8 @@
 // let lessonSeq = Number(seq);
 
 $(()=>{
-    checkIntervalLogined();
-
+    userCheckIntervalLogined();
+    $('span#showLoginId').html(sessionStorage.getItem("logined"));
     let $origin_studyroom_info= $('div#studyroom_info').first()
     let $parent_admin_studyroom = $('div#admin_studyroom');
     $origin_studyroom_info.show()
@@ -23,8 +23,8 @@ $(()=>{
                 let $copy_studyroom_info = $origin_studyroom_info.clone();
                 console.log(res[index].name);
                 let srSeq = res[index].srSeq;
-                  $copy_studyroom_info.find('div.host_id').html('<a href=./studyroomdetail.html?srSeq='+srSeq+'>'+res[index].hostUser.hostId)
-                  $copy_studyroom_info.find('div.name').html(res[index].name)
+                  $copy_studyroom_info.find('div.host_id').html(res[index].hostUser.hostId)
+                  $copy_studyroom_info.find('div.name').html('<a href=./studyroomdetail.html?srSeq='+srSeq+'>'+res[index].name+'</a>')
                   $copy_studyroom_info.find('div.open_time').html(res[index].openTime)
                   $copy_studyroom_info.find('div.end_time').html(res[index].endTime)
                   $copy_studyroom_info.find('div.srSeq').html(res[index].srSeq)

@@ -2,65 +2,55 @@
 <html>
 
 <head>
-    <meta charset='UTF-8'>
-    <!--<link rel='stylesheet' href='../css/basic.css'>-->
-    <link rel='stylesheet' href='/css/host/addroom.css'>
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
-    <script src='/js/hostbasic.js'></script>
-    <script src='/js/host/addroom.js'></script>
+    <meta charset="UTF-8">
+    <!--<link rel="stylesheet" href="../css/basic.css">-->
+    <link rel="stylesheet" href="/css/host/addroom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/hostbasic.js"></script>
+    <script src="/js/host/addroom.js"></script>
 </head>
 
+
 <body>
-    <div id='add-room-wrap'>
-        <div id='nav-wrap'>
-            <div class='nav-container'>
-                <img id='logo' src='/images/logo.png'>
+    <div id="add-room-wrap">
+        <div id="nav-wrap">
+            <div class="nav-container">
+                <img id="logo" src="/images/logo.png">
                 <nav>
                     <ul>
-                        <li class='navbar'><a href='hostIndex.html'>마이페이지</a></li>
-                        <li class='navbar'><a href='index.html'>로그아웃</a></li>
+                        <li class='logout'>로그아웃</li>
                     </ul>
                 </nav>
             </div>
         </div>
 
-        <div id='content-wrap'>
-            <div class='hostpage-body-wrap'>
-                <div class='side-container'>
-                    <div class='menu'>
-
-                        <div>회원정보</div>
-                        <ul>
-                            <li><a href='edithost.html'>회원 정보 수정</a></li>
-                        </ul>
-                        <div>스터디카페</div>
-                        <ul>
-                            <li>카페 정보 수정</li>
-                        </ul>
+        <div id="content-wrap">
+            <div class="hostpage-body-wrap">
+                <div class="side-container">
+                    <div class="menu">
                         <div>스터디룸</div>
                         <ul>
-                            <li>스터디룸 목록</li>
-                            <li>스터디룸 추가</li>
-                            <li>스터디룸 정보 수정</li>
+                            <li class="roomList">스터디룸 목록</li>
                         </ul>
                         <div>예약관리</div>
                         <ul>
-                            <li>예약내역</li>
-                            <li>예약추가_관리자전용</li>
+                            <li class="reservationList">모든 예약내역</li>
                     </div>
                 </div>
+                <div class="content-container">
+                    <div class="top-title">
+                        <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
+                    </div>
+                    <div class="info-title">스터디룸 추가 </div>
 
-                <div class='content-container'>
-                    <!--나중에 호스트id 받아오는 걸로-->
-                    <div class='top-title' style='margin-bottom: 15px;'>호스트회원 ID님, 반갑습니다 ></div>
-                    <div class='detail-content-box'>
-                        <div class='sub-title'>스터디룸 추가 등록 ></div>
+                    <div id="room-infomation-box">
+
                         <form>
                             <br />
                             <div class='title'>룸 이름</div>
                             <input type='text' id='room-name' name="name" class='field'>
                             <div class='title'>룸 사진</div>
-                            <input type='file' name='f' accept='image/jpeg, image/png'>
+                            <input type='file' id='roomFile' name='f' accept='image/jpeg, image/png'>
 
                             <!-- 이미지보여주기 -->
                             <div class="roomImage">
@@ -80,24 +70,24 @@
                             <div class='title'>상세정보</div>
 
                             <textarea id="room-info-text" maxlength="200" name="info"
-                            placeholder="해당 스터디룸에 대한 소개글을 작성해주세요."></textarea>
+                                placeholder="해당 스터디룸에 대한 소개글을 작성해주세요."></textarea>
                             <div class="textLengthWrap">
                                 <span class="textCount">0자</span>
                                 <span class="textTotal">/200자</span>
                             </div>
                             <div class='info-button'>
                                 <input type='button' value='취소'>
-                                <input type='submit' value='등록'>
+                                <input type='submit' value='추가'>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
+        </div>  
+
+        <div id="footer-wrap">
+            <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
         </div>
-        <div id='footer-wrap'>
-            <div class='footer-container'>ⓒ 2023 이거맞조. All Rights Reserved.</div>
-        </div>
-    </div>
 </body>
 
 </html>

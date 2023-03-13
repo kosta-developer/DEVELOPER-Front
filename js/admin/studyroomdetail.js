@@ -3,8 +3,8 @@ let seq = url.searchParams.get("srSeq");
 let srSeq = Number(seq);
 
 $(()=>{
-    checkIntervalLogined();
-
+    userCheckIntervalLogined();
+    $('span#showLoginId').html(sessionStorage.getItem("logined"));
     let $origin_studyroomDetail= $('div#studyroomDetail').first()
     let $parent_studyDetail = $('div.studyDetail');
 
@@ -26,6 +26,23 @@ $(()=>{
             } else if (res.s.oc == 1) {
                 temp = "운영여부 : 마감";
             }
+            let $img = $('.content-container>.studyDetail>#studyroomDetail>div.imgPath');
+                //--썸네일 이미지 다운로드 START--
+                $.ajax({
+                    xhrFields: {
+                        responseType: "blob",
+                    },
+                    cache: false,
+                    url: backURL + "download/admin/studyroom",
+                    method: "get",
+                    data: "imgPath=" + res.s.imgPath + "&opt=inline&type=1",
+                    success: function (result) {
+                        console.log(result);
+                        let blobStr = URL.createObjectURL(result);
+                        $img.find("img").attr("src", blobStr);
+                    },
+                });
+
             console.log(res);
                 let $copy_studyroomDetail = $origin_studyroomDetail.clone();
                 $copy_studyroomDetail.find('div.name').html(res.s.name)
@@ -37,7 +54,8 @@ $(()=>{
                 $copy_studyroomDetail.find('div.oc').html(temp)
                 $copy_studyroomDetail.find('div.srSeq').html(res.s.srSeq)
                 $parent_studyDetail.append($copy_studyroomDetail)
-               
+                
+                
                 $origin_studyroomDetail.hide();
 
                 if (res.reservationDTO == null) {
@@ -51,10 +69,11 @@ $(()=>{
                 $copy_reservationList.find('div.endTime').html("예약 종료시간 : "+ res.reservationDTO[index].reservation.endTime);
                 $copy_reservationList.find('div.nickname').html("예약자: "+ res.reservationDTO[index].users.nickname);
                 $copy_reservationList.find('div.usingDate').html("예약일: "+ res.reservationDTO[index].users.usingDate);
-
                 $parent_reservation.append($copy_reservationList);
                 $origin_reservationList.hide();
                 })
+
+                
         },
         error : function(xhr){
             alert(xhr.status);

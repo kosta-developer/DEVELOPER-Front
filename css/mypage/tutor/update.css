@@ -35,6 +35,16 @@
     color: #fff
 }
 
+div.top-title {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+span#showLoginId {
+    font-weight: 800;
+    color: #00C471;
+}
+
 /*=================== 등록창 ===================*/
 #header{
     font: 30px bold;

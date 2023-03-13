@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="/css/studyroom/list.css">
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="/js/basic.js"></script>
-  <!-- <script src="../js/index.js"></script> -->
   <script src="/js/studyroom/list.js"></script>
 </head>
 
@@ -34,6 +34,9 @@
     <div id="content-wrap">
       <!-- Todo: 로그인한 아이디명도 같이 띄우기, 섬네일 또는 용량제한-->
       <div class="content-container">
+        <div class="top-title">
+          <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
+        </div>
         <div class="studycafe">
           <div class="searchgroup">
             <form class="form" >
@@ -62,14 +65,14 @@
                 <option value="2">즐겨찾기 순</option>
               </select>
 
-              <input type="button" value="검색" class="btn" id="btn">
+              <a href="#" class="btn-gradient red small"></a><input type="button" value="검색" class="btn" id="btn"></a>
 
 
             </form>
           </div>
           <div class="studycafe-group"></div>
           <div class="studycafeList">
-            <table class="studycafeTable" border="1">
+            <table class="studycafeTable" >
               <thead>
                 <tr>
 
@@ -100,7 +103,6 @@
       </div>
     </div>
   </div>
-  <img src="../images/장학스터디.jpg" id="cafeimg">
   <div id="footer-wrap">
     <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
   </div>

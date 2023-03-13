@@ -1,12 +1,13 @@
 $(()=>{
 
-    checkIntervalLogined();
+     userCheckLogined()
+    $('span#showLoginId').html(sessionStorage.getItem("logined"));
     //--작성한 후기 리스트 출력 START--
     $.ajax({
         xhrFields: {
             withCredentials: true
         },
-        url: "http://localhost:8888/developer/mypage/roomreview",
+        url: backURL+"mypage/roomreview",
         method:"GET",
         success: function(jsonObj){
             let $origin = $('div.review-content1').first()
@@ -44,7 +45,7 @@ $(()=>{
         xhrFields: {
             withCredentials: true
         },
-        url: "http://localhost:8888/developer/mypage/roomreview",
+        url: backURL+"mypage/roomreview",
         method:"GET",
         success: function(jsonObj){
             let $origin = $('div.review-content2').first()

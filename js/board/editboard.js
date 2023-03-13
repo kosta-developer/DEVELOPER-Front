@@ -3,6 +3,17 @@ let postSeq = document.location.href.split("?")[1];
 console.log(postSeq);
 
 $(()=>{
+    userCheckIntervalLogined();
+
+ // 써머노트 스크립트
+ $(document).ready(function () {
+    $('#summernote').summernote({
+        height: 200, // set editor height
+        minHeight: null, // set minimum height of editor
+        maxHeight: null, // set maximum height of editor
+        focus: true // set focus to editable area after initializing summernote
+    });
+ });
     // 페이지 로드되었을시 목록 출력 START
     $.ajax({
         url:url,
@@ -17,9 +28,10 @@ $(()=>{
                 boardData += "<div class='title'><input type='text' name='title' id='editTitle' value='"+jsonObj.title+"'></div>";
                 boardData += "<div class='content'><textarea name='content' id='summernote' value='' placeholder='내용을 입력해주세요.'>"+jsonObj.content+"</textarea></div>";
                 boardData += "<div class='imgPath'> 이미지: "+jsonObj.imgPath+"</div>";
+                boardData += "<div class='show'></div>"
                 boardData += "<input type='file' name='f' multiple='multiple' accept='image/jpeg, image/png, image/gif'><br/>";
                 boardData += "<div class='editbutton'>";
-                boardData += "<div class='cancelbtn'><a href='community.html'><input type='button' value='취소' id='cancelbtn'></a></div>";
+                boardData += "<div class='cancelbtn'><a href='/html/board/boarddetail.html?postSeq='"+postSeq+"><input type='button' value='취소' id='cancelbtn'></a></div>";
                 boardData += "<div class='editbtn>'><button id='modifybtn'>수정</button><br/></div>";
                 boardData += "</div>";
                 boardData += "<input type='hidden' name='postSeq' value='"+jsonObj.postSeq+"'>";
@@ -40,18 +52,6 @@ $(()=>{
         console.log(form);
         let formData = new FormData(form);
 
-        // let form = document.getEle mentById('editForm');
-        // let formData = new FormData();
-        // title = $('input[name=title]').val();
-        // title = $('#editTitle').val();
-        // content = $('input[name=content]').val();
-        // imgpath = $('input[name=imgPath]').val();
-        // postseq = $('input[name=postSeq]').val();
-        // formData.append('title', title);
-        // formData.append('content', content);
-        // formData.append('imgPath', imgpath);
-        // formData.append('postSeq', postseq);
-        
         console.log("폼데이터는:");
         console.log( formData.get('title'));
         formData.forEach((value, key) => {
@@ -82,15 +82,22 @@ $(()=>{
 
         
  });
- // 써머노트 스크립트
- $(document).ready(function () {
-    $('#summernote').summernote({
-        height: 200, // set editor height
-        minHeight: null, // set minimum height of editor
-        maxHeight: null, // set maximum height of editor
-        focus: true // set focus to editable area after initializing summernote
-    });
- });
+  //--첨부파일이 변경되었을때 할일 START--
+  let $divShow = $('div.show')
+  $('div.form>form>input[type=file]').change((e) => {
+      $(e.target.files).each((index, imgFileObj) => {
+          // let imgFileObj = e.target.files[0]
+
+          console.log(imgFileObj)
+          //blob타입의 이미지파일객체내용을 문자열로 변환
+          let blobStr = URL.createObjectURL(imgFileObj)
+          // $('div.show>img').attr('src', blobStr)
+          let img = $('<img>')
+              .attr('src', blobStr)
+              .css('margin-left', '10px')
+          $divShow.append(img)
+      })
+  })
  
 })
 
