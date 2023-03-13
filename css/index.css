@@ -1,98 +1,51 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
-* {
-    margin: 0;
-    padding: 0;
-    background-color: #FFFEFE;
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-}
-
-#index-wrap {
-    width: 100%;
-    height: 1500px;
-    color: #000000;
-    font-size: 15px;
-}
-
-#banner-wrap {
-    width: 100%;
-}
-
-#content-wrap {
-    width: 100%;
-    height: auto;
-}
-
-#footer-wrap {
-    width: 100%;
-    height: 100px;
-    line-height: 100px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #303740;
-    color: #fff;
-    display: flex;
+*{margin: 0; padding: 0; background-color: #FFFEFE; font-family: 'Spoqa Han Sans Neo', 'sans-serif';} 
+#index-wrap {width: 100%; height: 1500px; color: #000000; font-size: 15px; }
+#banner-wrap{width: 100%;}
+#content-wrap{width: 100%; height:auto; }
+#footer-wrap{
+    width: 100%; 
+    height: 100px; 
+    line-height: 100px; 
+    margin: 0 auto; 
+    text-align:center; 
+    background-color: #303740; 
+    color:#fff;
+    display : flex;
     justify-content: center;
-    align-items: center;
-}
+    align-items : center;
+    }
+    
+#devBanner{width: 1000px; height: 300px;}
 
-#devBanner {
-    width: 1000px;
-    height: 300px;
-}
-
-#content-wrap>.content-container>div.lessonlist {
-    width: 100%;
-    height: 800px;
-}
-
+#content-wrap>.content-container>div.lessonlist{ width:100%; height:800px;}
 /*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
  width: 100%는 기본값이기 때문에 없어도 된다 */
 
-.nav-container {
-    width: 1000px;
-    height: 100px;
-    line-height: 60px;
-    margin: 0 auto;
+.nav-container {width:1000px; height: 100px; line-height: 60px; margin: 0 auto;} 
+.banner-container {width: 1000px; height: 300px; line-height: 300px; margin: 0 auto;  }
+.content-container {width: 1000px; margin: 0 auto; }
+.footer-container{width: 100%; height: 100px; line-height: 100px; margin: 0 auto; }
+
+#footer-wrap > div.footer-container{
+    background-color: #303740; 
 }
 
-.banner-container {
-    width: 1000px;
-    height: 300px;
-    line-height: 300px;
-    margin: 0 auto;
-}
-
-.content-container {
-    width: 1000px;
-    margin: 0 auto;
-}
-
-.footer-container {
-    width: 100%;
-    height: 100px;
-    line-height: 100px;
-    margin: 0 auto;
-}
-
-#footer-wrap>div.footer-container {
-    background-color: #303740;
-}
-
-.nav-container>nav {
+.nav-container>nav{
     /* width: 600px; */
     /* display: inline-block; */
     float: right;
 }
 
-.nav-container>img {
+.nav-container>img{
     height: 30px;
     float: left;
     margin-top: 33px;
     margin-left: 20px;
 }
 
-.nav-container>nav>ul {
+.nav-container>nav>ul{
     /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
     list-style-type: none;
     padding-left: 0px;
@@ -102,94 +55,74 @@
     font-size: 17px;
 }
 
-.nav-container>nav>ul>li {
-    /* width: 100px; */
+.nav-container>nav>ul>li{
+   /* width: 100px; */
     display: inline-block;
-    margin-left: 15px;
+    margin-left:15px;
 }
 
 /*  클릭 안 한 메뉴 */
-.nav-container>nav>ul>li>a:link {
+.nav-container>nav>ul>li>a:link{
     text-decoration: none;
     color: black;
     margin-top: 50px;
 }
 
 /*  클릭 한 메뉴 */
-.nav-container>nav>ul>li>a:visited {
+.nav-container>nav>ul>li>a:visited{
     text-decoration: none;
     color: black;
 }
 
-.nav-container>nav>ul>li>a:hover {
-    color: #00C471;
+.nav-container>nav>ul>li>a:hover{
+    color:  #00C471;
     font-weight: bold;
 }
 
-.nav-container>nav>ul>li:hover {
-    color: #00C471;
+.nav-container>nav>ul>li:hover{
+    color:  #00C471;
     font-weight: bold;
 }
 
 /* -----------------index 전용 css START ----------------------*/
 
-.banner-container {
-    position: relative;
-    width: 1000px;
-    height: 300px;
-    margin: 0 auto;
-    padding: 0;
-    overflow: hidden;
-}
+.banner-container {position: relative; width: 1000px; height: 300px; margin:0 auto; padding:0; overflow: hidden;}
+.banner-container ul {position: absolute; margin: 0px; padding:0; list-style: none; }
+.banner-container ul li {float: left; width: 1000px; height: 300px; margin:0; padding:0;}
 
-.banner-container ul {
-    position: absolute;
-    margin: 0px;
-    padding: 0;
-    list-style: none;
-}
-
-.banner-container ul li {
-    float: left;
-    width: 1000px;
-    height: 300px;
-    margin: 0;
-    padding: 0;
-}
-
-.main-title {
-    font-size: 17px;
+.main-title{
+    font-size: 17px;    
     padding: 10px 10px 0px 10px;
     margin: 20px 10px 0px 10px;
     font-weight: 800;
-    width: 300px;
+    width:300px;
     height: 30px;
-
+    
 }
 
-.lessonlistorigin {
-    float: left;
+.lessonlistorigin{
+    float:left;
     /* display: inline-block; */
-    margin-right: 20px;
+    margin-right: 20px; 
     margin-bottom: 10px;
 }
 
-.lessonSeq {
+.lessonSeq{
     display: none;
 }
 
-.postSeq {
+.postSeq{
     display: none;
 }
 
-div.lessonImage>img.lessonImg {
+div.lessonImage>img.lessonImg{
     width: 300px;
     height: 200px;
 }
 
-#mainCommunityImg {
-    width: 220px;
-    height: 100px;
+#mainCommunityImg{
+    width:220px;
+    height:100px;
     float: right;
 }
 
@@ -200,38 +133,38 @@ div.lessonImage>img.lessonImg {
     margin-top: 20px;
 }
 
-.communityList {
+.communityList{
     margin-left: 20px;
 }
 
-.postContent {
-    width: 450px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: inline-block;
+.postContent{
+    width: 450px; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display:inline-block;
 }
 
-.postTitle {
-    width: 450px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: inline-block;
+.postTitle{
+    width:450px; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display:inline-block;
     font-size: 17px;
-    font-weight: 800;
-    margin-top: 10px;
+    font-weight:800;
+    margin-top:10px;
     margin-bottom: 2px;
 }
 
 .mainCommunityLine {
-    border-top: 1px solid #00C471;
+    border-top:1px solid #00C471;
     margin-top: 10px;
     margin-bottom: 15px;
-
+    
 }
 
-.communityListOrigin {
+.communityListOrigin{
     width: 450px;
     display: inline-block;
     margin-right: 15px;
@@ -241,28 +174,28 @@ div.lessonImage>img.lessonImg {
     line-height: 25px;
 }
 
-.postRecommend {
+.postRecommend{
     margin-left: 120px;
-    color: #858A8D;
+    color:#858A8D;
 }
 
-.postCnt {
+.postCnt{
     margin-left: 20px;
-    color: #858A8D;
+    color:#858A8D;
 }
 
-.lessonName {
+.lessonName{
     font-weight: 800;
-    width: 300px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: inline-block;
+    width:300px; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display:inline-block;
     font-size: 16px;
     margin-top: 5px;
 }
 
-.lessonPrice {
+.lessonPrice{
     font-weight: 700;
     font-size: 15px;
     margin-top: -5px;

@@ -1,20 +1,21 @@
-let url = backURL + 'host/studyroom'
+let url = backURL + 'host/studyroom/'
 
 $(() => {
     hostCheckIntervalLogined()
-
-
-    //----정보출력 START----
+    let srSeq = document.location.href.split("=")[1];
+    $('span#showLoginId').html(sessionStorage.getItem("hostlogined"));
+   
+   
+    //---스터디카페 정보 출력 START----
     $.ajax({
         xhrFields: {
             withCredentials: true
         },
-        url: url,
+        url: url + srSeq,
         method: 'get',
-        //data:'1',  //data변수써먹기 나중에
         success: function (jsonObj) {
             console.log(jsonObj)
-            let $cafeInfo = $('div.detail-content-box');
+            let $cafeInfo = $('div#cafe-infomation-box');
 
             $cafeInfo.find('div#cafe-seq').text(jsonObj.srSeq)
             $cafeInfo.find('input#cafe-name').val(jsonObj.name)
@@ -23,7 +24,7 @@ $(() => {
             $cafeInfo.find('input#cafe-close-time').val(jsonObj.endTime)
             $cafeInfo.find('textarea#cafe-info-text').val(jsonObj.info)
             let imgPath = jsonObj.imgPath
-            console.log('imgPath: ' + imgPath);
+            
 
             //--썸네일 이미지 다운로드 START--
             $.ajax({
@@ -38,8 +39,7 @@ $(() => {
                     console.log(result);
                     let blobStr = URL.createObjectURL(result);
                     $cafeInfo.find("div.cafeImage>img").attr("src", blobStr);
-                    //console.log('틀렸나?'+$copy_lesson.find("div.lessonlistorigin>a").html())
-                    //console.log('틀렸나first?'+$copy_lesson.find("div.lessonlistorigin>a>img").first())
+                    
                 },
             });
             //--썸네일 이미지 다운로드 END--
@@ -71,7 +71,7 @@ $(() => {
 
     //--첨부파일이 변경되었을때 할일 START--
     let $divShow = $('div.cafeImage')
-    $('#content-wrap > div > div.content-container > div.detail-content-box > form > input[type=file]').change((e) => {
+    $('#content-wrap > div > div.content-container > div#cafe-infomation-box > form > input[type=file]').change((e) => {
         $divShow.empty()
         let imgFileObj = e.target.files[0]
 
@@ -86,6 +86,9 @@ $(() => {
     })
     //--첨부파일이 변경되었을때 할일 END--
 
+
+
+
     //----오픈시간, 마감시간 24시간 설정 START----
     $('.timepicker').timepicker({
         timeFormat: 'HH:mm',
@@ -97,6 +100,9 @@ $(() => {
     });
     //----오픈시간, 마감시간 24시간 설정 END----
 
+
+
+
     //--취소버튼 클릭 시 할일 START--
     $('#content-wrap > div > div.content-container > div.detail-content-box > form > div.info-button > input[type=button]:nth-child(1)').click((e) => {
         location.href = frontURL + 'hostindex.html'
@@ -105,15 +111,16 @@ $(() => {
 
 
 
+
     //--폼 서브밋되었을때 할일 START--
-    let $form = $('div.detail-content-box>form')
+    let $form = $('div#cafe-infomation-box>form')
     $form.submit(() => {
 
         let formData = new FormData($form[0])
 
         //alert(formData);
         let srSeq = $('div#cafe-seq').html();
-
+        let info = $('textarea#cafe-info-text').val();
         //alert(srSeq);
 
         const fileInput = document.querySelector('input#cafeFile');
@@ -125,7 +132,12 @@ $(() => {
             return false
         } else if (fileInput.files[0].size > maxSizeInBytes) {
             alert('파일 크기는 5MB 이하여야 합니다.');
-            //fileInput.value = ''; // 파일 선택 취소
+            return false
+        }
+
+
+        if (!info) {
+            alert('상세정보를 입력해주세요')
             return false
         }
 
@@ -133,13 +145,14 @@ $(() => {
             xhrFields: {
                 withCredentials: true //크로스오리진을 허용!
             },
-            url: backURL + "host/studyroom/" + srSeq,
+            url: url + srSeq,
             method: 'post',//파일업로드용 설정
             data: formData, //파일업로드용 설정
             processData: false,//파일업로드용 설정
             MimeType: "multipart/form-data", //파일업로드용설정
             contentType: false,//파일업로드용 설정
             success: function () {
+                alert('수정이 완료되었습니다.')
                 location.href = frontURL + 'hostindex.html'
             },
             error: function (xhr) {

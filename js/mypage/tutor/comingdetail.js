@@ -1,16 +1,17 @@
 $(()=>{
-    
+    userCheckIntervalLogined();
     let queryParams = new URLSearchParams(window.location.search);
     let lessonSeq = queryParams.get('lessonSeq');
 
-    let url = "http://172.30.1.15:8888/developer/mypage/tutor/upcoming/detail/"+lessonSeq
-    // let url = backURL + 'mypage/tutor/upcoming/detail/1';
+    // let url = "http://172.30.1.15:8888/developer/mypage/tutor/upcoming/detail/"+lessonSeq
+    let url = backURL + 'mypage/tutor/upcoming/detail/'+lessonSeq;
     function lessondetail() {
         $.ajax({
             xhrFields: {
             withCredentials: true
             },   
             url : url,
+            cache: false,
             // data: data,
             success: function(jsonObj){
                 console.log(jsonObj)
@@ -33,7 +34,7 @@ $(()=>{
                 }
                 console.log(jsonObj)
                 console.log(jsonObj.llist[0].lessonName)
-                $('.content-container>.comingDetail>.classlist>.classThumbnail>h2').html(jsonObj.llist[0].lessonName)
+                $('.content-container>.comingDetail>.classlist>.classThumbnail>h4').html(jsonObj.llist[0].lessonName)
                 $('.content-container > div > div.classlist > div.classDetail > ul > li.name').html('<h4>'+"강 사 명 : "+jsonObj.llist[0].tdto.udto.name+'</h4>')
                 $('.content-container > div > div.classlist > div.classDetail > ul > li.location').html('<h4>'+"위&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;치 : "+jsonObj.llist[0].location+'</h4>')
                 $('.content-container > div > div.classlist > div.classDetail > ul > li.startDate').html('<h4>'+"시작날짜 : "+jsonObj.llist[0].startCdate+'</h4>')
@@ -43,6 +44,10 @@ $(()=>{
                 
                 //수업 삭제, 수정, 상세정보 이동을 위한 lessonSeq값 뽑아내기
                 $('#lessonSeq').html(jsonObj.llist[0].lessonSeq)
+                //이미지패스 값 뽑아내기
+                $('#imgPath').html(jsonObj.llist[0].imgPath)
+                
+
                 //클래스 정보 END
 
 
@@ -79,21 +84,52 @@ $(()=>{
                 $origin2.hide();
 
                 //클래스 미승인 튜티 END
+                //—썸네일 이미지 다운로드 START—
+                let imgPath = jsonObj.llist[0].imgPath; 
+                console.log('이미지패스는'+imgPath)
 
-            }, 
+            $.ajaxSetup({
+            cache: false
+            });
+
+            let $img = $('div.imgbox');
+
+            $.ajax({
+                xhrFields: {
+                    responseType: "blob",
+                },
+                cache: false, // 캐시 방지
+                url: backURL + "download/lesson",
+                method: "get",
+                data: {
+                    imgPath: imgPath,
+                    opt: "inline",
+                    type: 1
+                },
+                // data: "imgPath=" + imgPath + "&opt=inline&type=1",
+                success: function (result) {
+                    console.log(result);
+                    let blobStr = URL.createObjectURL(result);
+                    $img.find("img").attr("src", blobStr);
+                },
+            });
+
+        }, 
             error: function(xhr){
                 let jsonObj = JSON.parse(xhr.responseText);
                 alert(jsonObj.msg);
             }
             
         })
+
         
     }
 
     //----수업수정버튼 클릭시 START----
     $(document).on('click','#classUpdate', (e)=>{
         let lessonSeq = $(e.target).parents('div.classDetail').find('div#lessonSeq').text();
-        location.href = 'http://172.30.1.15:5500/html/mypage/tutor/update.html?lessonSeq='+lessonSeq;
+        // location.href = 'http://172.30.1.15:5500/html/mypage/tutor/update.html?lessonSeq='+lessonSeq;
+        location.href = frontURL + 'mypage/tutor/update.html?lessonSeq='+lessonSeq;
     })
     //----수업수정버튼 클릭시 END----
 
@@ -108,13 +144,13 @@ $(()=>{
             xhrFields: {
             withCredentials: true //크로스오리진을 허용!
             },
-            // url : backURL + 'mypage/tutor/upcoming/detail/apply/'+applySeq,
-            url :"http://172.30.1.15:8888/developer/mypage/tutor/upcoming/detail/delete/"+lessonSeq,
+            url : backURL + 'mypage/tutor/upcoming/detail/delete/'+lessonSeq,
+            // url :"http://172.30.1.15:8888/developer/mypage/tutor/upcoming/detail/delete/"+lessonSeq,
             method : 'PUT',
             success : function(){
                 
-                // location.href = frontURL + 'mypage/tutor/comingdetail'
-                location.href = 'http://172.30.1.15:5500/html/mypage/tutor/comingdetail.html';
+                location.href = frontURL + 'mypage/tutor/main.html'
+                // location.href = 'http://172.30.1.15:5500/html/mypage/tutor/comingdetail.html';
                 lessondetail();
 
             },
@@ -135,13 +171,13 @@ $(()=>{
             xhrFields: {
             withCredentials: true //크로스오리진을 허용!
             },
-            // url : backURL + 'mypage/tutor/upcoming/detail/apply/'+applySeq,
-            url :"http://172.30.1.15:8888/developer/mypage/tutor/upcoming/detail/apply/"+applySeq,
+            url : backURL + 'mypage/tutor/upcoming/detail/apply/'+applySeq,
+            // url :"http://172.30.1.15:8888/developer/mypage/tutor/upcoming/detail/apply/"+applySeq,
             method : 'PUT',
             success : function(){
                 
-                // location.href = frontURL + 'mypage/tutor/comingdetail'
-                location.href = 'http://172.30.1.15:5500/html/mypage/tutor/comingdetail.html';
+                location.href = frontURL + 'mypage/tutor/comingdetail.html?lessonSeq='+lessonSeq
+                // location.href = 'http://172.30.1.15:5500/html/mypage/tutor/comingdetail.html';
                 lessondetail();
 
             },
@@ -161,13 +197,11 @@ $(()=>{
             xhrFields: {
             withCredentials: true //크로스오리진을 허용!
             },
-            // url : backURL + 'mypage/tutor/upcoming/detail/apply/'+applySeq,
-            url :"http://172.30.1.15:8888/developer/mypage/tutor/upcoming/detail/notapply/"+applySeq,
+            url : backURL + 'mypage/tutor/upcoming/detail/notapply/'+applySeq,
             method : 'PUT',
             success : function(){
                 
-                // location.href = frontURL + 'mypage/tutor/comingdetail'
-                location.href = 'http://172.30.1.15:5500/html/mypage/tutor/comingdetail.html';
+                location.href = frontURL + 'mypage/tutor/comingdetail.html?lessonSeq='+lessonSeq
                 lessondetail();
 
             },
@@ -181,8 +215,7 @@ $(()=>{
     //----수업 상세정보 클릭시 START
     $(document).on('click','#classDetail', (e)=>{
         console.log(lessonSeq)
-        location.href = 'http://172.30.1.15:5500/html/lesson/detail.html?lessonSeq=' + lessonSeq;
-        // location.href = frontURL + 'lesson/detail.html?lessonSeq=' + lessonSeq;
+        location.href = frontURL + 'lesson/detail.html?' + lessonSeq;
     })
     //----수업 상세정보 클릭시 END
 

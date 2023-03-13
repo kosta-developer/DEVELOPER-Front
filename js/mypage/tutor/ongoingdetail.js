@@ -1,10 +1,10 @@
 $(()=>{
-    
+    userCheckIntervalLogined();
     let queryParams = new URLSearchParams(window.location.search);
     let lessonSeq = queryParams.get('lessonSeq');
 
-    // let url = backURL + 'mypage/tutor/ongoing/detail/'+lessonSeq;
-    let url = "http://172.30.1.15:8888/developer/mypage/tutor/ongoing/detail/"+lessonSeq
+    let url = backURL + 'mypage/tutor/ongoing/detail/'+lessonSeq;
+    // let url = "http://172.30.1.15:8888/developer/mypage/tutor/ongoing/detail/"+lessonSeq
 
 
     function lessondetail() {
@@ -55,8 +55,34 @@ $(()=>{
                 });
                 $origin.hide();
                 //클래스 승인 튜티 END
+                let imgPath = jsonObj.llist[0].imgPath; 
+                console.log('이미지패스는'+imgPath)
 
+            $.ajaxSetup({
+            cache: false
+            });
 
+            let $img = $('div.imgbox');
+
+            $.ajax({
+                xhrFields: {
+                    responseType: "blob",
+                },
+                cache: false, // 캐시 방지
+                url: backURL + "download/lesson",
+                method: "get",
+                data: {
+                    imgPath: imgPath,
+                    opt: "inline",
+                    type: 1
+                },
+                // data: "imgPath=" + imgPath + "&opt=inline&type=1",
+                success: function (result) {
+                    console.log(result);
+                    let blobStr = URL.createObjectURL(result);
+                    $img.find("img").attr("src", blobStr);
+                },
+            });
                 
             }, 
             error: function(xhr){
@@ -71,8 +97,8 @@ $(()=>{
     //----수업 상세정보 클릭시 START
     $(document).on('click','#classDetail', (e)=>{
         console.log(lessonSeq)
-        location.href = 'http://172.30.1.15:5500/html/lesson/detail.html?lessonSeq=' + lessonSeq;
-        // location.href = frontURL + 'lesson/detail.html?lessonSeq=' + lessonSeq;
+        // location.href = 'http://172.30.1.15:5500/html/lesson/detail.html?lessonSeq=' + lessonSeq;
+        location.href = frontURL + 'lesson/detail.html?' + lessonSeq;
     })
     //----수업 상세정보 클릭시 END
 

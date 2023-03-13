@@ -1,42 +1,78 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 * { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
 *{margin: 0; padding: 0;}
-#wrap {width: 1000px; height: 1500px; margin: 0 auto; font-size: 15px; text-align: center; flex-direction: column;}
-#header-wrap{width: 1000px; margin: 0 auto; background-color: #eee;}
+#wrap {width: 100%; margin: 0 auto; font-size: 15px; text-align: center; flex-direction: column;}
+#nav-wrap{width: 100%; margin-bottom : 30px;}
 #findUserId-wrap{width: 1000px; min-height : 800px; overflow-y: scroll; margin: 0 auto;background-color: white;}
-#footer-wrap{width: 1000px; margin: 0 auto;background-color: #e6dcd3;}
-
+#footer-wrap{
+    width: 100%; 
+    height: 100px; 
+    line-height: 100px; 
+    margin: 0 auto; 
+    text-align:center; 
+    background-color: #303740; 
+    color:#fff;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+}
+#footer-wrap > div.footer-container{background-color: #303740; }
 /*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
  width: 100%는 기본값이기 때문에 없어도 된다 */
-
-.header-container {height: 100px; line-height: 100px; margin: 0 auto;} 
-.nav-container {width:100%; height: 60px; line-height: 60px;margin: 0 auto; background-color: #eee;} 
-.findUserId-container {width: 80%; height: 100%; margin: 0 auto; margin-top: 100px;  background-color: white; color:black;}
-.footer-container{width: 100%; height: 100px; line-height: 100px; margin: 0 auto; background-color: #c39d91;}
-
-.nav-container>nav{
-    width: 600px;
-    /* display: inline-block; */
-    float: right;
-}
-
-.nav-container>nav>ul{
-    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
-    list-style-type: none;
-    padding-left: 0px;
-}
-
-.nav-container>nav>ul>li{
-   /* width: 100px; */
-    display: inline-block;
-    color:#000;
-}
-
-.nav-container>nav>ul>li:hover{
-    background-color: #2C2A29;
-    color: white;
-}
-
+ .nav-container {width:1000px; height: 100px; line-height: 60px; margin: 0 auto;}
+ .findUserId-container {width: 100%; margin: 0 auto; margin-top: 100px;  background-color: white; color:black;}
+ .footer-container{width: 100%; height: 100px; line-height: 100px; margin: 0 auto; background-color: #c39d91;}
+ .nav-container>nav{
+     /* width: 600px; */
+     /* display: inline-block; */
+     float: right;
+ }
+ 
+ .nav-container>img{
+     height: 30px;
+     float: left;
+     margin-top: 33px;
+     margin-left: 20px;
+ }
+ 
+ .nav-container>nav>ul{
+     /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+     list-style-type: none;
+     padding-left: 0px;
+     margin-top: 20px;
+     margin-right: 20px;
+     text-align: right;
+     font-size: 17px;
+ }
+ 
+ .nav-container>nav>ul>li{
+    /* width: 100px; */
+     display: inline-block;
+     margin-left:15px;
+ }
+ 
+ /*  클릭 안 한 메뉴 */
+ .nav-container>nav>ul>li>a:link{
+     text-decoration: none;
+     color: black;
+     margin-top: 50px;
+ }
+ 
+ /*  클릭 한 메뉴 */
+ .nav-container>nav>ul>li>a:visited{
+     text-decoration: none;
+     color: black;
+ }
+ 
+ .nav-container>nav>ul>li>a:hover{
+     color:  #00C471;
+     font-weight: bold;
+ }
+ 
+ .nav-container>nav>ul>li:hover{
+     color:  #00C471;
+     font-weight: bold;
+ }
 .findUserId-find-text{
     margin-top:50px;
 }
@@ -49,38 +85,54 @@
     
 }
 
-/* .findUserId-container .input-phonedesc{
-    text-align:center;
-} */
 .findUserId-container .input-info{
     height : 50px;
-    margin-top : 20px;
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
-.findUserId-container .input-email .inputphonenum{
-    height : 100%;
-    display: block;
-    color: #495057;
-    display: block;
-    min-height: 32px;
-    font-size: 24px;
-    line-height: 1.35;
-    border-color: #d5dbe2;
-}
 .findUserId-container .Asterisk{
     color: #e5503c;
 }
 .findUserId-container .input-email .emailsubmit{
+    margin-right: 14px;
+    margin-top: 20px;
+    /* float:right; */
+    border-width: 1px;
+    /* text-align: center; */
+    appearance: none;
+    text-decoration: none;
     box-sizing: border-box;
-    border-color: #d5dbe2;
-    display:inline-block;
+    height: 52px;
+    -webkit-tap-highlight-color: transparent;
+    width: 80px;
+    position: relative;
+    line-height: 1;
+    font-size: 15px;
+    user-select: none;
     cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #00C471;
     border-radius: 8px;
-    color: #495057;
-    background-color: #fff; 
-    margin-left: 20px;
-    height : 100%;
-    min-width: 78px;
 }
+
+.findUserId-find-content {
+    box-sizing: border-box;
+    width: 50%; /* 가운데 정렬할 div의 너비 */
+    margin: 0 auto; /* 가로 방향으로 중앙에 위치하도록 margin 지정 */
+  }
+.findUserId-find-content .input-email .inputemail{
+    width : 200px; height:48px; margin-right:20px;
+}
+  .input-email {
+    box-sizing: border-box;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+

@@ -1,13 +1,12 @@
-//let data = location.search.substring(1);
 let roomSeq = document.location.href.split("=")[1];
 let url = backURL + 'host/roominfo/' + roomSeq;
 console.log(roomSeq);
 
 $(() => {
     hostCheckIntervalLogined()
-    let $origin = $('div.room-list-origin').first()
+    $('span#showLoginId').html(sessionStorage.getItem("hostlogined"));
 
-    $origin.show()
+    // $origin.show()
     $.ajax({
         xhrFields: {
             withCredentials: true //크로스오리진을 허용!
@@ -16,7 +15,7 @@ $(() => {
         method: 'get',
         success: function (jsonObj) {
             console.log(jsonObj)
-            let $roomInfo = $('div.detail-content-box');
+            let $roomInfo = $('div#room-infomation-box');
 
             //let roomSeq = $('input#room-seq').val()
 
@@ -79,7 +78,7 @@ $(() => {
 
     //--첨부파일이 변경되었을때 할일 START--
     let $divShow = $('div.roomImage')
-    $('#content-wrap > div > div.content-container > div.detail-content-box > form > div:nth-child(6) > input[type=file]').change((e) => {
+    $('#roomFile').change((e) => {
         $divShow.empty()
         let imgFileObj = e.target.files[0]
 
@@ -100,24 +99,45 @@ $(() => {
 
 
     //--폼 서브밋되었을때 할일 START--
-    let $form = $('div.detail-content-box>form')
+    let $form = $('div#room-infomation-box>form')
     $form.submit(() => {
 
         let formData = new FormData($form[0])
-
-
-        //let roomSeq = $('input#room-seq').val();
-        // console.log('시퀀스값: ' + roomSeq)
+        let name = $('input#room-name').val();
+        let person = $('input#room-person').val();
+        let price = $('input#room-price').val();
+        let info = $('textarea#room-info-text').val();
 
         const fileInput = document.querySelector('input#roomFile');
         const file = fileInput.files[0];
         const maxSizeInBytes = 5120000; //나중에 5MB로 바꾸기 5120000
+
+
+        if (!name) {
+            alert('이름을 입력해주세요')
+            return false
+        }
 
         if (!file) {
             alert('파일을 선택해주세요')
             return false
         } else if (fileInput.files[0].size > maxSizeInBytes) {
             alert('파일 크기는 5MB 이하여야 합니다.');
+            return false
+        }
+
+        if (!person) {
+            alert('인원을 입력해주세요')
+            return false
+        }
+
+        if (!price) {
+            alert('가격을 입력해주세요')
+            return false
+        }
+
+        if (!info) {
+            alert('상세정보를 입력해주세요')
             return false
         }
 
@@ -146,7 +166,7 @@ $(() => {
 
 
     //--취소버튼 클릭 시 할일 START--
-    $('#content-wrap > div > div.content-container > div.detail-content-box > form > div.info-button > input[type=button]:nth-child(1)').click((e) => {
+    $('#room-infomation-box > form > div.info-button > input[type=button]:nth-child(1)').click((e) => {
         location.href = frontURL + 'host/listroom.html'
     })
     //--취소버튼 클릭 시 할일 END--

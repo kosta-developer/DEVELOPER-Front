@@ -1,7 +1,7 @@
 $(()=>{
     userCheckIntervalLogined();
-    // let url = backURL+'mypage/tutor';
-    let url = 'http://172.30.1.15:8888/developer/mypage/tutor';
+    let url = backURL+'mypage/tutor';
+    // let url = 'http://172.30.1.15:8888/developer/mypage/tutor';
 
     function coming() {
     $.ajax({
@@ -30,8 +30,8 @@ $(()=>{
             $(document).on('click','div.unpaidlessonName', (e)=>{
                 let lessonSeq = $(e.currentTarget).parent().find('div.unpaidlessonSeq').html()
                 console.log('클릭한 lessonName의 시퀀스는' +lessonSeq)
-                // location.href = frontURL + 'mypage/tutor/order.html?lessonSeq=' + lessonSeq;
-                location.href = 'http://172.30.1.15:5500/html/mypage/tutor/order.html?lessonSeq=' + lessonSeq;
+                location.href = frontURL + 'mypage/tutor/order.html?lessonSeq=' + lessonSeq;
+                // location.href = 'http://172.30.1.15:5500/html/mypage/tutor/order.html?lessonSeq=' + lessonSeq;
             })
 
 
@@ -53,8 +53,8 @@ $(()=>{
             $(document).on('click','div.cominglessonName', (e)=>{
                 let lessonSeq = $(e.currentTarget).parent().find('div.cominglessonSeq').html()
                 console.log('클릭한 lessonName의 시퀀스는' +lessonSeq)
-                // location.href = frontURL + '/mypage/tutor/comingdetail.html?lessonSeq=' + lessonSeq;
-                location.href = 'http://172.30.1.15:5500/html/mypage/tutor/comingdetail.html?lessonSeq=' + lessonSeq;
+                location.href = frontURL + '/mypage/tutor/comingdetail.html?lessonSeq=' + lessonSeq;
+                // location.href = 'http://172.30.1.15:5500/html/mypage/tutor/comingdetail.html?lessonSeq=' + lessonSeq;
             })
 
             // 진행 예정 수업 END
@@ -76,8 +76,8 @@ $(()=>{
                 // let unpaidlessonSeq = $(e.target).html()
                 let lessonSeq = $(e.currentTarget).parent().find('div.ongoinglessonSeq').html()
                 console.log('클릭한 lessonName의 시퀀스는' +lessonSeq)
-                // location.href = frontURL + 'mypage/tutor/ongoingdetail.html?lessonSeq=' + lessonSeq;
-                location.href = 'http://172.30.1.15:5500/html/mypage/tutor/ongoingdetail.html?lessonSeq=' + lessonSeq;
+                location.href = frontURL + 'mypage/tutor/ongoingdetail.html?lessonSeq=' + lessonSeq;
+                // location.href = 'http://172.30.1.15:5500/html/mypage/tutor/ongoingdetail.html?lessonSeq=' + lessonSeq;
             })
             // 진행중인 수업 END
 
@@ -97,8 +97,8 @@ $(()=>{
                 // let unpaidlessonSeq = $(e.target).html()
                 let lessonSeq = $(e.currentTarget).parent().find('div.completedlessonSeq').html()
                 console.log('클릭한 lessonName의 시퀀스는' +lessonSeq)
-                // location.href = frontURL + 'mypage/tutor/ongoingdetail.html?lessonSeq=' + lessonSeq;
-                location.href = 'http://172.30.1.15:5500/html/mypage/tutor/completeddetail.html?lessonSeq=' + lessonSeq;
+                location.href = frontURL + 'mypage/tutor/completeddetail.html?lessonSeq=' + lessonSeq;
+                // location.href = 'http://172.30.1.15:5500/html/mypage/tutor/completeddetail.html?lessonSeq=' + lessonSeq;
             })
             // 진행중인 수업 END
 
