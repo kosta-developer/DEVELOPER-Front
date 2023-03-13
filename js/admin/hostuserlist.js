@@ -30,7 +30,7 @@ $(() => {
             $(document).on('click','span.host-hostId', (e)=>{
                 let hostId = $(e.target).html()
                 console.log('클릭한 hostId' +hostId)
-                location.href = frontURL + 'admin/host/detail/'+hostId
+                location.href = frontURL + 'admin/hostuserdetail.html?hostId='+hostId
             })
 
 

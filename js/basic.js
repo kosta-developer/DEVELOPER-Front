@@ -35,17 +35,31 @@ $(() => {
 });
 
 
-//--[회원] 로그인상태의 메뉴들 보여주기 함수 START--
+//--로그인상태의 메뉴들 보여주기 함수 START--
 function showMenuAtMemberLogined() {
     $('div.nav-container >nav > ul > li.lesson').show()
     $('div.nav-container >nav > ul > li.studyroom').show()
     $('div.nav-container >nav > ul > li.board').show()
     $('div.nav-container >nav > ul > li.signup').hide()
     $('div.nav-container >nav > ul > li.login').hide()
-    $('div.nav-container >nav > ul > li.tutorAdd').show()
-    $('div.nav-container >nav > ul > li.lessonAdd').show()
-    $('div.nav-container >nav > ul > li.myPage').show()
     $('div.nav-container >nav > ul > li.logout').show()
+
+    if(sessionStorage.getItem("role") == 1){
+        $('div.nav-container >nav > ul > li.myPage').show()
+        $('div.nav-container >nav > ul > li.tutorAdd').hide();
+        $('div.nav-container >nav > ul > li.lessonAdd').show()
+        $('div.nav-container >nav > ul > li.adminPage').hide()
+    } else if(sessionStorage.getItem("role") == 2){
+        $('div.nav-container >nav > ul > li.myPage').show()
+        $('div.nav-container >nav > ul > li.tutorAdd').show();
+        $('div.nav-container >nav > ul > li.lessonAdd').hide()
+        $('div.nav-container >nav > ul > li.adminPage').hide()
+    } else if(sessionStorage.getItem("role") == 9){
+        $('div.nav-container >nav > ul > li.myPage').hide()
+        $('div.nav-container >nav > ul > li.tutorAdd').hide();
+        $('div.nav-container >nav > ul > li.lessonAdd').hide()
+        $('div.nav-container >nav > ul > li.adminPage').show()
+    }
 }
 //--[회원] 로그인상태의 메뉴들 보여주기 함수 END--
 
@@ -61,6 +75,7 @@ function showMenuAtLogouted() {
     $('div.nav-container >nav > ul > li.lessonAdd').hide()
     $('div.nav-container >nav > ul > li.myPage').hide()
     $('div.nav-container >nav > ul > li.logout').hide()
+    $('div.nav-container >nav > ul > li.adminPage').hide()
 }
 //--로그아웃상태의 메뉴들 보여주기 함수 END--
 
