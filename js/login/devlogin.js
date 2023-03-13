@@ -5,7 +5,7 @@ $(() => {
         let pwdValue = $('input[name=pwd]').val()
         let url = backURL + 'users/login'
         let data = $('#userLoginform').serialize()
-        console.log("serialize값:", data)
+        //console.log("serialize값:", data)
         $.ajax({
             xhrFields: {
                 withCredentials: true
@@ -14,9 +14,13 @@ $(() => {
             method: 'post',
             data: data,
             success: function (jsonObj) {
-                alert('로그인 성공 !')
-                console.log(jsonObj)
-                location.href = frontURL
+               // alert('로그인 성공 !')
+               let sessionData = "logined"
+               sessionStorage.setItem("logined", jsonObj.userId)
+               sessionStorage.setItem("role", jsonObj.role)
+               console.log(sessionData);
+               // console.log(jsonObj)
+                location.href = frontURL + 'index.html'
             },
             error: function (xhr) {
                 alert(xhr.responseText)
@@ -30,7 +34,7 @@ $(() => {
     $('#hostlogin_btn').click(function() {
         let url = backURL + 'host/login'
         let data = $('#hostLoginform').serialize()
-        console.log("serialize값:", data)
+        //console.log("serialize값:", data)
         $.ajax({
             xhrFields: {
                 withCredentials: true
@@ -39,8 +43,10 @@ $(() => {
             method: 'post',
             data: data,
             success: function (jsonObj) {
-                alert('로그인 성공 !')
-                console.log(jsonObj)
+                let sessionData = "hostlogined"
+                sessionStorage.setItem("hostlogined", jsonObj.hostId)
+                sessionStorage.setItem("hostready", jsonObj.ready)
+                console.log(sessionData);
                 location.href = frontURL + 'hostindex.html'
             },
             error: function (xhr) {
@@ -50,11 +56,6 @@ $(() => {
         return false;
     });
     // 호스트 로그인 버튼 클릭되었을시 End
-
-    // 회원가입 버튼 클릭되었을시 START
-    $('.login_btn1').on("click", function () {
-        location.href = frontURL 
-    });
 
     //체크 박스 선택시 START
     $('#ulogin').click( function () {

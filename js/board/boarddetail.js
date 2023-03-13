@@ -221,6 +221,4 @@ console.log(document.cookie);
    
     // 댓글 수정 END
 })
-let a = sessionStorage.getItem('logined');
-alert(a);
 

@@ -2,65 +2,50 @@
 <html>
 
 <head>
-    <meta charset='UTF-8'>
-    <!--<link rel='stylesheet' href='../css/basic.css'>-->
-    <link rel='stylesheet' href='/css/host/inforeservation.css'>
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
-    <script src='/js/hostbasic.js'></script>
-    <script src='/js/host/inforeservation.js'></script>
+    <meta charset="UTF-8">
+    <!--<link rel="stylesheet" href="../css/basic.css">-->
+    <link rel="stylesheet" href="/css/host/inforeservation.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/hostbasic.js"></script>
+    <script src="/js/host/inforeservation.js"></script>
 </head>
 
+
 <body>
-    <div id='info-reservation-wrap'>
-        <div id='nav-wrap'>
-            <div class='nav-container'>
-                <img id='logo' src='/images/logo.png'>
+    <div id="info-reservation-wrap">
+        <div id="nav-wrap">
+            <div class="nav-container">
+                <img id="logo" src="/images/logo.png">
                 <nav>
                     <ul>
-                        <li class='navbar'><a href='index.html'>홈</a></li>
-                        <li class='navbar'><a href='hostIndex.html'>마이페이지</a></li>
-                        <li class='navbar'><a href=''>스터디카페</a></li>
-                        <li class='navbar'><a href='index.html'>로그아웃</a></li>
+                        <li class='logout'>로그아웃</li>
                     </ul>
                 </nav>
             </div>
         </div>
 
-        <div id='content-wrap'>
-            <div class='hostpage-body-wrap'>
-                <div class='side-container'>
-                    <div class='menu'>
-
-                        <div>회원정보</div>
-                        <ul>
-                            <li><a href='edithost.html'>회원 정보 수정</a></li>
-                        </ul>
-                        <div>스터디카페</div>
-                        <ul>
-                            <li>카페 정보 수정</li>
-                        </ul>
+        <div id="content-wrap">
+            <div class="hostpage-body-wrap">
+                <div class="side-container">
+                    <div class="menu">
                         <div>스터디룸</div>
                         <ul>
-                            <li>스터디룸 목록</li>
-                            <li>스터디룸 추가</li>
-                            <li>스터디룸 정보 수정</li>
+                            <li class="roomList">스터디룸 목록</li>
                         </ul>
                         <div>예약관리</div>
                         <ul>
-                            <li>예약내역</li>
-                            <li>예약추가_관리자전용</li>
+                            <li class="reservationList">모든 예약내역</li>
                     </div>
                 </div>
+                <div class="content-container">
+                    <div class="top-title">
+                        <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
+                    </div>
+                    <div class="info-title">예약 상세 내역
+                        <input type='button' value='목록으로 돌아가기'>
+                    </div>
 
-                <div class='content-container'>
-                    <!--나중에 호스트id 받아오는 걸로-->
-                    <div class='top-title' style='margin-bottom: 15px;'>호스트회원 ID님, 반갑습니다 ></div>
-                    <div class='detail-content-box'>
-                        <div class='sub-title'>예약 상세 내역 >
-                            <input type='button' value='목록으로 돌아가기'>
-                        </div>
-                        
-                        <hr>
+                    <div id="reservation-infomation-box">
                         <div class="reservation-list">
                             <!-- 원본 -->
                             <div class="reservation-list-origin">
@@ -79,17 +64,14 @@
                                 <div class='title'>종료 시간</div>
                                 <div id='reservation-endTime' class='field'></div>
                                 <input type='button' id='delreservation' value='예약취소'>
-                               
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id='footer-wrap'>
-            <div class='footer-container'>ⓒ 2023 이거맞조. All Rights Reserved.</div>
-        </div>
-    </div>
+            <div id="footer-wrap">
+                <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+            </div>
 </body>
 
 </html>

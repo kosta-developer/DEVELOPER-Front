@@ -2,7 +2,7 @@ $(() => {
   hostCheckIntervalLogined()
   
   let url = backURL + "studyroom/roominfo/reservation/";
-
+  http: console.log(decodeURI(location.href));
  var postURL = decodeURI(location.href);
  var postURL2 = postURL.split("=");
 
@@ -31,6 +31,7 @@ $(() => {
  //--체크박스 초기화 START--
  var date_input = "";
  $("#input-date").change(function () {
+   arr = [];
    for (i = 1; i <= 24; i++) {
      //체크박스 초기화
      $("#" + i).prop("checked", false);
@@ -182,7 +183,12 @@ $(() => {
            }
          }
        
-         
+        var changeColor1=secondNum-1 
+        var changeColor2=firstNum+1 
+        for(i= changeColor2;i<=changeColor1; i++ ){
+           
+          $("#"+i).prop('checked', true);
+        }
          $(".time").html("예약블록시간: " + first + "시 ~ " + second + "시");
        } else {
          //첫번째 체크의 시간이 두번째 체크의 시간 보다 클때 (09>08)
@@ -212,7 +218,12 @@ $(() => {
            }
          }
          $(".time").html("예약블록시간: " + first + "시 ~ " + second + "시");
-        
+        changeColor1=secondNum+1
+        changeColor2=firstNum-1
+        for(i= changeColor1;i<=changeColor2; i++ ){
+           
+          $("#"+i).prop('checked', true);
+        }
        }
      } else if (arr.length == 1) {
        // 체크가 첫 번째인 상태
@@ -267,13 +278,11 @@ $(() => {
        roomSeq: roomSeq,
      };
  
-     console.log("d퍼스트벨류는 " + firstValue + " 세컨드벨류: " + secondValue);
-     // console.log("알디티오"+rDTO.startTime)
      $.ajax({
        xhrFields: {
          withCredentials: true,
        },
-       url: backURL + 'host/reservation/' + roomSeq,
+       url: backURL+"host/reservation/"+roomSeq,
        method: "POST",
        contentType: "application/json; charset=utf-8",
        data: JSON.stringify(rDTO),
@@ -289,4 +298,9 @@ $(() => {
    }
  });
  // --예약기능 END--
+ //--새로고침 START--
+$('.reroad').click(function() {
+location.reload();
+});
+//--새로고침 END--
 });
