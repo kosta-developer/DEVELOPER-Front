@@ -1,6 +1,6 @@
 $(()=>{
-  checkIntervalLogined();
-
+   userCheckLogined()
+    $('span#showLoginId').html(sessionStorage.getItem("logined"));
   const postURL = decodeURI(location.href);
   const postURL2 = postURL.split("?");
 

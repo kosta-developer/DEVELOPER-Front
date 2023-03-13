@@ -17,13 +17,19 @@
                 <img id="logo" src="/images/logo.png">
                 <nav>
                     <ul>
-                        <li class='studycafe'>스터디카페</li>
-                        <li class='logout'>로그아웃</li>
+                        <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
+                        <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
+                        <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
+                        <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                        <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
+                        <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
+                        <li class='chat'><a href="/html/chat/chat.html">채팅</a></li>
+                        <li class='myPage'><a href="/html/mypage/usermypage.html">마이페이지</a></li>
+                        <li class='logout' onclick="logout()">로그아웃</li>
                     </ul>
                 </nav>
             </div>
         </div>
-
         <div id="content-wrap">
             <div class="userpage-body-wrap">
                 <div class="side-container">
@@ -69,20 +75,22 @@
                 </div>
                 <div class="content-container">
                     
-                    <div class="top-title" style="margin-bottom: 15px;"></div>
+                    <div class="top-title">
+  <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
+</div>
                     <div id="userlist-box">
-                        <div class="info-title">회원목록</div>
+                        <div class="info-title1">회원목록</div>
                         <div class="review-content">
                             
-                            <button id="userBtn" onclick="location.href='http://localhost:5500/html/adminMemberList.html'">일반회원 목록 바로가기</button></br>
-                            <button id="hostBtn">호스트회원 목록 바로가기</button>
+                            <button id="userBtn" onclick="location.href=frontURL+'admin/memberlist.html'">일반회원 목록 바로가기</button></br>
+                            <button id="hostBtn" onclick="location.href=frontURL+'admin/hostuserlist.html'" >호스트회원 목록 바로가기</button>
                         </div>
                     </div>
                     <div class="top-title" style="margin-bottom: 15px;"></div>
                     <div id="studycafelist-box">
                         <div class="info-title">스터디카페 관리
                             <div class="btn-location1">
-                                <button id="studycafe-btn">전체보기</button>
+                                <button id="studycafe-btn" onclick="location.href=frontURL+'admin/studyroomlist.html'">전체보기</button>
 
                             </div>
                         </div>
@@ -91,8 +99,8 @@
                             <div class="studycafe-sub-title">
                                 -최신 등록된 스터디카페-
                             </div>
-                             <div>
-                                <table class="class-table-title" >
+                             <div class="head-title">
+                                <table class="class-table-title1" >
                                     <tr><td id="seqtitle">번호</td><td id="cfname">카페명</td><td id="hosttitle">호스트회원</td></tr>
                                 </table><hr>
                                 
@@ -112,25 +120,25 @@
                     </div>
                     <div class="top-title" style="margin-bottom: 15px;"></div>
                     <div id="classlist-box">
-                        <div class="info-title">클래스 관리 
+                        <div class="info-title2">클래스 관리 
                             <div class="btn-location2">
-                                <button id="class-btn">전체보기</button>
+                                <button id="class-btn" onclick="location.href=frontURL+'레슨리스트'" >전체보기</button>
 
                             </div>
                         </div>
-                        <div class="review-content">
+                        <div class="review-content2">
                             <div class="class-sub-title">
                                 -최신 개설된 클래스-
                             </div>
-                            <div>
-                                <table class="class-table-title">
+                            <div class="head-title2">
+                                <table class="class-table-title2"  >
                                     <tr><td id="classHeader">수업명</td><td id="categoryHeader">카테고리</td><td id="personnalHeader">정원</td></tr>
-                                </table><hr>
+                                </table>
                                 
                             </div>
                             
                             <div class="currentClass">
-                                <table  class="class-table-body">
+                                <table  class="class-table-body"  >
                                     <tr>
                                         <td id="lessonName">가나다라마바사 수업</td>
                                         <td id="category">개발</td>

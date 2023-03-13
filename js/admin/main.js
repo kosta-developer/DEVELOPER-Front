@@ -1,5 +1,6 @@
 $(()=>{
    userCheckLogined()
+    $('span#showLoginId').html(sessionStorage.getItem("logined"));
   //--최신 스터디룸 리스트 5개 출력 START--
   $.ajax({
     xhrFields: {
@@ -69,3 +70,27 @@ $(()=>{
   });
   //--최신 수업 리스트 5개 출력 END--
 })
+
+//--일반회원 리스트 이동 START--
+   $("#userBtn").click(() => {
+    location.href=frontURL+"admin/memberlist.html"
+   })
+//--일반회원 리스트 이동 END--
+
+//--호스트 회원 리스트 이동 START--
+$("#hostBtn").click(() => {
+    location.href=frontURL+"admin/hostuserlist.html"
+   })
+//--호스트 회원 리스트 이동END--
+
+//--스터디카페 전체보기 START--
+$("#studycafe-btn").click(() => {
+    location.href=frontURL+"admin/studyroomlist.html"
+   })
+//--스터디카페 전체보기 END --
+
+//--수업 전체보기 START--
+$("#class-btn").click(() => {
+    location.href=frontURL+"admin/lesson.html"
+   })
+//--수업 전체보기 END --

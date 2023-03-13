@@ -1,51 +1,173 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
 *{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
 
-#studycafe-wrap{width: 100%; height: 1500px; color: #000000; font-size: 14px; border: 1px solid rgb(187, 187, 187); }
-#studycafe-wrap>#nav-wrap{width: 100%; border: 1px solid rgb(187, 187, 187);}
-#studycafe-wrap>#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
-#footer-wrap{width: 100%; text-align:center; margin: 0px; border: 1px solid rgb(14, 13, 13);}
+#studycafe-wrap{width: 100%; height: 2000px; margin-bottom: 200px; color: #000000; font-size: 14px; }
+#studycafe-wrap>#nav-wrap{width: 100%;}
+#studycafe-wrap>#content-wrap{width: 100%; height:auto; }
+
+#footer-wrap {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #303740;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+ width: 100%는 기본값이기 때문에 없어도 된다 */
+
+
+#studycafe-wrap>#content-wrap>.content-container {width: 1000px; margin: 0 auto; height: auto; text-align: center; padding-top: 50px; }
+
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFEFE;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+#index-wrap {
+    width: 100%;
+    height: 1500px;
+    color: #000000;
+    font-size: 15px;
+}
+
+#nav-wrap {
+    width: 100%;
+    ;
+}
+
+#banner-wrap {
+    width: 100%;
+}
+
+#content-wrap {
+    width: 100%;
+    height: auto;
+}
+
+#footer-wrap {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #303740;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#devBanner {
+    width: 1000px;
+    height: 300px;
+}
+
+#content-wrap>.content-container>div.lessonlist {
+    width: 100%;
+    height: 800px;
+}
 
 /*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
  width: 100%는 기본값이기 때문에 없어도 된다 */
 
-#studycafe-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91;} 
-#studycafe-wrap>#content-wrap>.content-container {width: 1000px; margin: 0 auto; height: auto; padding-top: 50px; border: 1px solid #62ff19;}
-#studycafe-wrap>#footer-wrap>.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
-
-
-#studycafe-wrap>#nav-wrap>.nav-container>img{
-    height: 30px;
-    float: left;
-    margin-top: 13px;
-    margin-left: 10px;
+.nav-container {
+    width: 1000px;
+    height: 100px;
+    line-height: 60px;
+    margin: 0 auto;
 }
 
-#studycafe-wrap>#nav-wrap>.nav-container>nav{
-    width: 600px;
+.banner-container {
+    width: 1000px;
+    height: 300px;
+    line-height: 300px;
+    margin: 0 auto;
+}
+
+.content-container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-container {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+}
+
+#footer-wrap>div.footer-container {
+    background-color: #303740;
+}
+
+.nav-container>nav {
+    /* width: 600px; */
     /* display: inline-block; */
     float: right;
 }
 
-#studycafe-wrap>#nav-wrap>.nav-container>nav>ul{
+.nav-container>img {
+    height: 30px;
+    float: left;
+    margin-top: 33px;
+    margin-left: 20px;
+}
+
+.nav-container>nav>ul {
     /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
     list-style-type: none;
     padding-left: 0px;
-    
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 17px;
 }
 
-#studycafe-wrap>#nav-wrap>.nav-container>nav>ul>li{
-   /* width: 100px; */
+.nav-container>nav>ul>li {
+    /* width: 100px; */
     display: inline-block;
-    margin-left:15px;
+    margin-left: 15px;
 }
 
-#studycafe-wrap>#nav-wrap>.nav-container>nav>ul>li:hover{
-    background-color: #2C2A29;
-    color: #fff
+/*  클릭 안 한 메뉴 */
+.nav-container>nav>ul>li>a:link {
+    text-decoration: none;
+    color: black;
+    margin-top: 50px;
 }
 
+/*  클릭 한 메뉴 */
+.nav-container>nav>ul>li>a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-container>nav>ul>li>a:hover {
+    color: #00C471;
+    font-weight: bold;
+}
+
+.nav-container>nav>ul>li:hover {
+    color: #00C471;
+    font-weight: bold;
+}
+
+/* -----------------index 전용 css START ----------------------*/
 
 
 #studycafe-wrap>#content-wrap>.content-container>.addstudycafeform{
@@ -95,28 +217,50 @@
 }
 #searchBy{
     text-align: center;
-    width: 100px;
-    height: 30px;
+    width: 110px;
+    height: 42px;
+    margin-left: -20px;
+}
+.searchgroup{
+ margin-bottom: -10px;
 }
 #srNameAddrName{
-    width: 530px;
-    height: 28px;
+    width: 460px;
+    height: 42px;
 }
 #person{
     text-align: center;
     width: 100px;
-    height: 30px;
+    height: 42px;
 }
 #orderBy{
     text-align: center;
     width: 100px;
-    height: 30px;
+    height: 42px;
 }
 #btn{
-    text-align: center;
-    width: 150px;
-    height: 30px; 
+    
+        appearance: none;
+        text-align: center;
+        text-decoration: none;
+        box-sizing: border-box;
+        height: 42px;
+        -webkit-tap-highlight-color: transparent;
+        display: inline-block;
+        width: 100px;
+        position: relative;
+        line-height: 1;
+        font-size: 16px;
+        user-select: none;
+        cursor: pointer;
+        border: 1px solid transparent;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        background-color: #00C471;
+        border-radius: 8px;
+    
 }
+
 .studycafeTable{
     background-color: white;
     width: 320px;
@@ -155,9 +299,50 @@
 .srSeq{
     display: none;
 }
-.srbtn{
-    width: 310px;
-    height: 30px;
+.td{
+    text-align: center;
+}
+td.srbtnn{
+    text-align: right;
+}
+input.srbtn{
+    
+    padding: 0px 22px;
+    
+        appearance: none;
+        text-align: center;
+        text-decoration: none;
+        box-sizing: border-box;
+        height: 20px;
+        -webkit-tap-highlight-color: transparent;
+        display: inline-block;
+        width: 250px;
+        position: relative;
+        line-height: 1;
+        font-size: 16px;
+        user-select: none;
+        cursor: pointer;
+        border: 1px solid transparent;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        background-color: #00C471;
+        border-radius: 8px;
+        margin-left: 5px;
+    
+}
+.price {
+    text-align: right;
+    width: 120px;
+}
+.favCnt{
+    text-align: left;
+}
+div.top-title {
+    margin-left: -750px;
+    margin-bottom: 60px;
 }
 
-
+span#showLoginId {
+    font-weight: 800;
+    color: #00C471;
+}

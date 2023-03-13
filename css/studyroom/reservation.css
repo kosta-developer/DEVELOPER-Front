@@ -1,3 +1,8 @@
+@import url([//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css](notion://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css));
+
+* {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
 .ref{
     margin: auto;
     margin-top: 20px;
@@ -5,8 +10,26 @@
     margin-bottom: 50px;
 }
 .btn{
-    width: 100px;
-    height: 100px;
+    padding: 0px 22px;
+        appearance: none;
+        text-align: left;
+        text-decoration: none;
+        box-sizing: border-box;
+        height: 42px;
+        -webkit-tap-highlight-color: transparent;
+        display: inline-block;
+        width: auto;
+        position: relative;
+        line-height: 1;
+        font-size: 16px;
+        user-select: none;
+        cursor: pointer;
+        border: 1px solid transparent;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        background-color: #00C471;
+        border-radius: 8px;
+
 }
 .impossible {
     width: 20px;
@@ -79,6 +102,8 @@ input:disabled {
     width: 700px;
     height: 100px;
     margin: auto;
+    margin-top: -30px;
+    margin-bottom: 100px;
     overflow-y: scroll
 }
 div.checkbox-pack{
@@ -177,4 +202,38 @@ div.checkbox-pack{
 }
 .reserve{
     text-align: center;
+}
+        #footer-wrap>div.footer-container {
+            background-color: #303740;
+        }
+.reroad{
+    
+    appearance: none;
+    margin-left: 85px;
+        text-align: center;
+        text-decoration: none;
+        box-sizing: border-box;
+        height: 32px;
+        -webkit-tap-highlight-color: transparent;
+        display: inline-block;
+        width: 150px;
+        position: relative;
+        line-height: 1;
+        font-size: 16px;
+        user-select: none;
+        cursor: pointer;
+        border: 1px solid transparent;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        background-color: #00C471;
+        border-radius: 8px;
+}
+div.top-title {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+span#showLoginId {
+    font-weight: 800;
+    color: #00C471;
 }

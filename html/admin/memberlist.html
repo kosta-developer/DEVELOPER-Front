@@ -12,16 +12,21 @@
 <title>관리자페이지</title>
 <body>
     <div id="user-index-wrap">
-        <div id="nav-wrap">
-            <div class="nav-container">
-                <img id="logo" src="/images/logo.png">
-                <nav>
-                    <ul>
-                        <li class='studycafe'>스터디카페</li>
-                        <li class='logout'>로그아웃</li>
-                    </ul>
-                </nav>
-            </div>
+        <div class="nav-container">
+            <img id="logo" src="/images/logo.png">
+            <nav>
+                <ul>
+                    <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
+                    <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
+                    <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
+                    <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                    <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
+                    <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
+                    <li class='chat'><a href="/html/chat/chat.html">채팅</a></li>
+                    <li class='myPage'><a href="/html/mypage/main.html">마이페이지</a></li>
+                    <li class='logout' onclick="logout()">로그아웃</li>
+                </ul>
+            </nav>
         </div>
 
         <div id="content-wrap">
@@ -69,17 +74,20 @@
                 </div>
 
                 <div class="content-container">
+                    <div class="top-title">
+  <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
+</div>
                     <div class="searchpackage">
                     
                     </select><input id="textbox" type="search" placeholder="찾으시는 유저의 정보를 입력해주세요"  ><input type="button" id="search-btn" value="찾기" >
                     </div>
                     <table>
-                    <table border="0" class="memberList-table1
+                    <table class="memberList-table1
                     ">
-                    <th>번호</th><th>아이디</th><th>닉네임</th><th>연락처</th><th></th>        
+                    <th>번호</th><th id="id">아이디</th><th>닉네임</th><th id="phone">연락처</th><th></th>        
                     </table>
                     <div class="memberList-Box">
-                    <table border="0" class="memberList-table2">
+                    <table  class="memberList-table2" >
                         
                         <tr id="memberList-body">
                             <td id="num">1</td>

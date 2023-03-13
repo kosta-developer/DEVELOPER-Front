@@ -1,6 +1,7 @@
 $(()=>{
 
-    checkIntervalLogined();
+     userCheckLogined()
+    $('span#showLoginId').html(sessionStorage.getItem("logined"));
     //--작성한 후기 리스트 출력 START--
     $.ajax({
         xhrFields: {
