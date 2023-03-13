@@ -15,121 +15,120 @@
 <body>
     <div id="wrap">
         <div id="nav-wrap">
-        <div class="nav-container">
-            <img id="logo" src="/images/logo.png">
-            <nav>
-                <ul>
-                    <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
-                    <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
-                    <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
-                    <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
-                    <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
-                    <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
-                    <li class='chat'><a href="/html/chat/chat.html">채팅</a></li>
-                    <li class='myPage'><a href="/html/mypage/main.html">마이페이지</a></li>
-                    <li class='logout' onclick="logout()">로그아웃</li>
-                </ul>
-            </nav>
-        </div>
-        
-        <div id="content-wrap">
-            <div class="mypage-body-wrap">
-        
-                <div class="side-container">
-                    <div class="menu">
-        
-                        <div>메인페이지</div>
-                        <ul>
-                            <li><a href="/html/mypage/main.html">회원 정보</a></li>
-                        </ul>
-        
-                        <div>수업</div>
-                        <ul>
-                            <li><a href="/html/mypage/tutor/main.html">튜터</a>
-                                <ul>
-                                    <li><a href="/html/mypage/tutor/coming.html">진행예정 수업</a></li>
-                                    <li><a href="/html/mypage/tutor/ongoing.html">진행중인 수업</a></li>
-                                    <li><a href="/html/mypage/tutor/complete.html">진행완료 수업</a></li>
-                                    <li><a href="/html/mypage/tutor/orderlist.html">수업 결제내역</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/html/mypage/tutee/dashboard.html">튜티</a>
-                                <ul>
-                                    <li><a href="/html/mypage/tutee/upcoming.html">진행예정 수업</a></li>
-                                    <li><a href="/html/mypage/tutee/ongoing.html">진행중인 수업</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-        
-                        <div>스터디룸 예약</div>
-        
-                        <ul>
-                            <li><a href="/html/mypage/studyroom/roomreview.html">예약 목록</a></li>
-                        </ul>
-        
-                        <div>이용후기</div>
-                        <ul>
-                            <li>수업
-                                <ul>
-                                    <li><a href="/html/mypage/tutee/lessonreview/add.html">후기 작성</a></li>
-                                    <li><a href="/html/mypage/tutee/lessonreview/myreview.html">작성한 후기</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/html/mypage/studyroom/roomreview.html">스터디룸</a></li>
-                        </ul>
-                        <div>즐겨찾기</div>
-                        <ul>
-                            <li><a href="/html/mypage/favorites/lesson.html">수업</a></li>
-                            <li><a href="/html/mypage/favorites/studyroom.html">스터디카페</a></li>
-                        </ul>
-        
+            <div class="nav-container">
+                <img id="logo" src="/images/logo.png">
+                <nav>
+                    <ul>
+                        <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
+                        <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
+                        <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
+                        <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                        <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
+                        <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
+                        <li class='lessonAdd'><a href="/html/lesson/add.html">수업등록</a></li>
+                        <li class='tutorAdd'><a href="/html/tutor/add.html">튜터등록</a></li>
+                        <li class='myPage'><a href="/html/mypage/main.html">마이페이지</a></li>
+                        <li class='adminPage'><a href="/html/admin/main.html">관리자페이지</a></li>
+                        <li class='logout'>로그아웃</li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="content-wrap">
+                <div class="mypage-body-wrap">
+
+                    <div class="side-container">
+                        <div class="menu">
+
+                            <div>메인페이지</div>
+                            <ul>
+                                <li><a href="/html/mypage/main.html">회원 정보</a></li>
+                            </ul>
+                            <div>수업</div>
+                            <ul>
+                                <li><a href="/html/mypage/tutor/main.html">튜터</a>
+                                    <ul>
+                                        <li><a href="/html/mypage/tutor/coming.html">진행예정 수업</a></li>
+                                        <li><a href="/html/mypage/tutor/ongoing.html">진행중인 수업</a></li>
+                                        <li><a href="/html/mypage/tutor/complete.html">진행완료 수업</a></li>
+                                        <li><a href="/html/mypage/tutor/orderlist.html">수업 결제내역</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/html/mypage/tutee/dashboard.html">튜티</a>
+                                    <ul>
+                                        <li><a href="/html/mypage/tutee/upcoming.html">진행예정 수업</a></li>
+                                        <li><a href="/html/mypage/tutee/ongoing.html">진행중인 수업</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div>스터디룸 예약</div>
+                            <ul>
+                                <li><a href="/html/mypage/studyroom/reshistory.html">예약 목록</a></li>
+                            </ul>
+                            <div>이용후기</div>
+                            <ul>
+                                <li>수업
+                                    <ul>
+                                        <li><a href="/html/mypage/tutee/lessonreview/add.html">후기 작성</a></li>
+                                        <li><a href="/html/mypage/tutee/lessonreview/myreview.html">작성한 후기</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/html/mypage/studyroom/roomreview.html">스터디룸</a></li>
+                            </ul>
+                            <div>즐겨찾기</div>
+                            <ul>
+                                <li><a href="/html/mypage/favorites/lesson.html">수업</a></li>
+                                <li><a href="/html/mypage/favorites/studyroom.html">스터디카페</a></li>
+                            </ul>
+
+
+                        </div>
                     </div>
-                </div>
-                <div class="content-container">
-                    <div class="top-title">
-                        <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
-                    </div>
-                    <div class="tutor">
-                        <div id="unpaidClass">
-                            <h2>결제가 필요한 수업</h2>
-                            <div id="unpaidclasslist">
-                                <div class="unpaidlessonName">진행 예정 수업이 없습니다.</div>
-                                <div class="unpaidlessonSeq"></div>
+                    <div class="content-container">
+                        <div class="top-title">
+                            <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
+                        </div>
+                        <div class="tutor">
+                            <div id="unpaidClass">
+                                <h2>결제가 필요한 수업</h2>
+                                <div id="unpaidclasslist">
+                                    <div class="unpaidlessonName">진행 예정 수업이 없습니다.</div>
+                                    <div class="unpaidlessonSeq"></div>
+                                </div>
+                            </div>
+                            <div id="comingClass">
+                                <h2>진행 예정 수업</h2>
+                                <div id="comingclasslist">
+                                    <div class="cominglessonName">진행 예정 수업이 없습니다.</div>
+                                    <div class="cominglessonSeq"></div>
+                                </div>
+                            </div>
+
+                            <div id="ongoingClass">
+                                <h2>진행 중인 수업</h2>
+                                <div id="ongoingclasslist">
+                                    <div class="ongoinglessonName">진행중인 수업이 없습니다.</div>
+                                    <div class="ongoinglessonSeq"></div>
+                                </div>
+                            </div>
+
+                            <div id="completedClass">
+                                <h2>진행 완료 수업</h2>
+                                <div id="completedclasslist">
+                                    <div class="completedlessonName">진행을 완료한 수업이 없습니다.</div>
+                                    <div class="completedlessonSeq"></div>
+                                </div>
                             </div>
                         </div>
-                        <div id="comingClass">
-                            <h2>진행 예정 수업</h2>
-                            <div id="comingclasslist">
-                                <div class="cominglessonName">진행 예정 수업이 없습니다.</div>
-                                <div class="cominglessonSeq"></div>
-                            </div>                            
-                        </div>
-                        
-                        <div id="ongoingClass">
-                            <h2>진행 중인 수업</h2>
-                            <div id="ongoingclasslist">
-                                <div class="ongoinglessonName">진행중인 수업이 없습니다.</div>
-                                <div class="ongoinglessonSeq"></div>
-                            </div>                                  
-                        </div>
-                        
-                        <div id="completedClass">
-                            <h2>진행 완료 수업</h2>
-                            <div id="completedclasslist">
-                                <div class="completedlessonName">진행을 완료한 수업이 없습니다.</div>
-                                <div class="completedlessonSeq"></div>
-                            </div>                            
-                        </div>
                     </div>
+
                 </div>
 
             </div>
-
+            <div id="footer-wrap">
+                <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+            </div>
         </div>
-        <div id="footer-wrap">
-            <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
-        </div>
-    </div>
 </body>
 
 </html>
