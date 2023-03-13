@@ -1,6 +1,10 @@
-let backURL = "http://localhost:8888/developer/";
-let frontURL = "http://localhost:5500/html/"; 
-  $(() => {
+let backURL = "http://192.168.0.20:8888/developer/";
+let frontURL = "http://192.168.0.20:5500/html/"; 
+ //http://192.168.0.20 학원
+ //http://192.168.219.100 집
+ //http://192.168.0.13학원와이파이
+
+ $(() => {
     showMenuAtLogouted()
     //--로그아웃 클릭되었을 때 할 일 START--
     $('div.nav-container > nav > ul > li.logout').click((e) => {
@@ -13,6 +17,9 @@ let frontURL = "http://localhost:5500/html/";
             success: function () {
                 showMenuAtLogouted()
                 sessionStorage.removeItem("logined");
+                sessionStorage.removeItem("role");
+                sessionStorage.removeItem("hostlogined")
+                sessionStorage.removeItem("hostready");
                // alert("로그아웃성공")
                 location.href = frontURL + 'index.html'
             }

@@ -143,6 +143,16 @@ width: 100%는 기본값이기 때문에 없어도 된다 */
     color: rgb(88, 88, 88);
 }
 
+div.top-title {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+span#showLoginId {
+    font-weight: 800;
+    color: #00C471;
+}
+
 #content-wrap>div.body-wrap>div.content-container>div.detail-content-box {
     text-align: center;
     width: 100%;

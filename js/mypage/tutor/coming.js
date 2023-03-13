@@ -1,6 +1,6 @@
 $(()=>{
-        
-        let url = 'http://172.30.1.15:8888/developer/mypage/tutor/upcoming';
+    userCheckIntervalLogined();
+        let url = backURL + 'mypage/tutor/upcoming';
 
     $.ajax({
         xhrFields: {
@@ -27,7 +27,7 @@ $(()=>{
                 let lessonSeq = $(e.currentTarget).parent().find('div.lessonSeq').html()
                 console.log('클릭한 lessonName의 시퀀스는' +lessonSeq)
                 // location.href = frontURL + 'admin/host/detail/'+hostId
-                location.href = 'http://172.30.1.15:5500/html/mypage/tutor/comingdetail.html?lessonSeq=' + lessonSeq;
+                location.href = frontURL +'mypage/tutor/comingdetail.html?lessonSeq=' + lessonSeq;
             })
 
         },
