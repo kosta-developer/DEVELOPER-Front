@@ -44,8 +44,3 @@ $(() => {
     //=== 즐겨찾기한 수업 목록 보여주기 END ===
 });
 
-//=== 수업 이름 누르면 상세 페이지로 이동 START ===
-$(document).on('click', '.tutorLesson > .lessonName', function () {
-    location.href = frontURL + 'lesson/detail.html';
-});
-//=== 수업 이름 누르면 상세 페이지로 이동 END ===

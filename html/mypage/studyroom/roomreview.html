@@ -13,12 +13,19 @@
 <body>
     <div id="user-index-wrap">
         <div id="nav-wrap">
-            <div class="nav-container">
+               <div class="nav-container">
                 <img id="logo" src="/images/logo.png">
                 <nav>
                     <ul>
-                        <li class='studycafe'>스터디카페</li>
-                        <li class='logout'>로그아웃</li>
+                        <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
+                        <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
+                        <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
+                        <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                        <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
+                        <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
+                        <li class='chat'><a href="/html/chat/chat.html">채팅</a></li>
+                        <li class='myPage'><a href="/html/mypage/usermypage.html">마이페이지</a></li>
+                        <li class='logout' onclick="logout()">로그아웃</li>
                     </ul>
                 </nav>
             </div>
@@ -26,7 +33,7 @@
 
         <div id="content-wrap">
             <div class="userpage-body-wrap">
-                <div class="side-container">
+               <div class="side-container">
                     <div class="menu">
                     
                         <div>메인페이지</div>

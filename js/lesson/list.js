@@ -1,20 +1,21 @@
 let data; //받아온 수업 목록 다 받아주는 배열
 
 $(() => {
-
     userCheckIntervalLogined()
-    //=== 처음 페이지 진입시, 전체 수업 목록 보여주기 START ===
 
+    //=== 처음 페이지 진입시, 전체 수업 목록 보여주기 START ===
     let url = backURL + 'lesson/';
     $.ajax({
         xhrFields: {
             withCredentials: true
         },
         url: url,
-        success: function (jsonObj) {
+        success: function (jsonObj) {     
+            // if(jsonObj.length<6){
+            //     $('#load').hide();
+            // }       
             console.log(jsonObj)
             data = jsonObj;
-            console.log(typeof (data))
             dataList(data);
         },
         error: function (xhr) {
@@ -35,9 +36,6 @@ $(() => {
         location.href = frontURL + 'lesson/detail.html?' + lessonSeq;
     });
     //=== 수업 이미지/이름누르면 해당 페이지로 이동 END ===
-
-
-
 });
 
 
@@ -74,6 +72,24 @@ function dataList(list) {
             price = '무료'
         }
 
+        console.log(imgPath);
+        //=================[이미지 다운로드 START]==================
+        $.ajax({
+            xhrFields: {
+                responseType: "blob",
+            },
+            cashe: false,
+            url: backURL + "download/lesson",
+            method: "get",
+            data: "imgPath=" + imgPath + "&opt=inline&type=1",
+            success: function (result) {
+                console.log(result);
+                let blobStr = URL.createObjectURL(result);
+                $copy.find("a>img").attr("src", blobStr);
+            },
+        });
+        //=================[이미지 다운로드 END]==================
+
         let $copy = $origin.clone()
         $copy.show()
         $copy.find('div.lessonSeq').html(lessonSeq)
@@ -82,9 +98,9 @@ function dataList(list) {
         $imgObj.attr('class', 'lessonImg');
         $imgObj.attr('src', '/images/' + imgPath);
         $copy.find('div.img').empty().append($imgObj);
-        $copy.find('div.lessonName').html("<h6>" + lessonName + "</h6>")
+        $copy.find('div.lessonName').html("<h2>" + lessonName + "</h2>")
         $copy.find('div.startDate').html("수강기간: " + startDate + " ~ " + endDate)
-        $copy.find('div.applyDate').html("수강신청기간: " + applyStartDate + " ~ " + applyEndDate)
+        $copy.find('div.applyDate').html("신청 마감일 ➡️ " + applyEndDate)
         $copy.find('div.price').html(price);
 
         $parent.append($copy);

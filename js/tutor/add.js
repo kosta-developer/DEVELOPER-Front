@@ -1,5 +1,5 @@
 $(() => {
-
+    userCheckIntervalLogined()
     $('#submit').on("click", function () {
         let $form = $('#addForm')[0];
         let formData = new FormData($form);
@@ -24,7 +24,8 @@ $(() => {
                 location.href = frontURL + 'index.html'
             },
             error: function (xhr) {
-                alert('오류' + xhr.status)
+                alert('관리자 승인 여부는 금일 기준 일주일 이내에 메일로 발송됩니다.')
+                location.href = frontURL + 'index.html'
             }
         })
         return false;

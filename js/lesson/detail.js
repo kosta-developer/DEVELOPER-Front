@@ -1,10 +1,7 @@
-let logined = sessionStorage.getItem("logined");
-let favStatus;
-let favLesSeq;
-// let queryParams = new URLSearchParams(window.location.search);
-// let lessonSeq = queryParams.get('lessonSeq');
-
 $(() => {
+    let logined = sessionStorage.getItem("logined");
+    let favStatus;
+    let favLesSeq;
 
     userCheckIntervalLogined()
     //=== 선택한 수업의 상세 내용 보여주기 START ===
@@ -12,7 +9,6 @@ $(() => {
     let url = backURL + 'lesson/detail/' + lessonSeq;
 
     $('.dContent-container > .lessonReview').hide();
-    $('.dContent-container > .ask').hide();
     $.ajax({
         xhrFields: {
             withCredentials: true
@@ -31,7 +27,7 @@ $(() => {
             //이미 즐겨찾기한 사용자라면 버튼 색 바꾸기
             $(jsonObj.lessonDto.flDTO).each((i) => {
                 if (jsonObj.lessonDto.flDTO[i].tuteeId == logined) {
-                    $('#favoritesBtn').css('backgroundColor', 'yellow');
+                    $('#favoritesBtn').css('backgroundColor', '#DAECE5');
                     favLesSeq = jsonObj.lessonDto.flDTO[i].favLesSeq;
                     console.log(favLesSeq)
                     favStatus = 0; //즐겨찾기OOO
@@ -39,6 +35,24 @@ $(() => {
                     favStatus = 1; //즐겨찾기XXX
                 }
             });
+
+            //=================[이미지 다운로드 START]==================
+            let imgPath = jsonObj.lessonDto.imgPath;
+            $.ajax({
+                xhrFields: {
+                    responseType: "blob",
+                },
+                cashe: false,
+                url: backURL + "download/lesson",
+                method: "get",
+                data: "imgPath=" + imgPath + "&opt=inline&type=1",
+                success: function (result) {
+                    console.log(result);
+                    let blobStr = URL.createObjectURL(result);
+                    $('#detail >.lessonImg').attr("src", blobStr);
+                },
+            });
+            //=================[이미지 다운로드 END]==================
 
             let category = jsonObj.lessonDto.category;
             if (category == 0) {
@@ -58,9 +72,8 @@ $(() => {
                 price = "무료";
             }
 
-            $('#detail > #classImg').attr('src', '/images/' + jsonObj.lessonDto.imgPath)
             $('#detail > .detail-container > .category').html(category)
-            $('#detail > .detail-container > .lessonName').html("<h5>" + jsonObj.lessonDto.lessonName + "</h5>")
+            $('#detail > .detail-container > .lessonName').html("<h2>" + jsonObj.lessonDto.lessonName + "</h2>")
             $('#detail > .detail-container > .tutorName').html(jsonObj.lessonDto.udto.name)
             $('#detail > .detail-container > .tutorId').html(jsonObj.lessonDto.tdto.tutorId)
             $('#detail > .detail-container > .category').html(category)
@@ -68,8 +81,8 @@ $(() => {
             $('#detail > .detail-container > .location').html(jsonObj.lessonDto.location)
             $('#detail > .detail-container > .people').html(jsonObj.lessonDto.people)
             $('#detail > .detail-container > .cDate').html(jsonObj.lessonDto.startCdate + " ~ " + jsonObj.lessonDto.endCdate)
-            $('#detail > .detail-container > .date').html(jsonObj.lessonDto.startDate + " ~ " + jsonObj.lessonDto.endDate)
-            $('.dContent > .dContent-container > .detail').html(jsonObj.lessonDto.content)
+            $('#detail > .detail-container > .date').html("신청마감일 ➡️ " + jsonObj.lessonDto.endDate)
+            $('.dContent > .dContent-container > .lesson-detail').html(jsonObj.lessonDto.content)
         },
         error: function (xhr) {
             let jsonObj = JSON.parse(xhr.responseText);
@@ -155,7 +168,7 @@ $(() => {
 
 //=== 상세정보 보여주기 START ===
 $(document).on('click', '.dContent > .btn-container > #detailbtn', function () {
-    $('.dContent > div.dContent-container > div.detail').show();
+    $('div.dContent-container > div.lesson-detail').show();
     $('.dContent > div.dContent-container > div.lessonReview').hide();
 });
 //=== 상세정보 보여주기 END ===
@@ -163,7 +176,7 @@ $(document).on('click', '.dContent > .btn-container > #detailbtn', function () {
 
 //=== 수강평 보여주기 START ===
 $(document).on('click', '.dContent > .btn-container >#lessonReviewbtn', function () {
-    $('.dContent > div.dContent-container > div.detail').hide();
+    $('div.dContent-container > div.lesson-detail').hide();
     $('.dContent > div.dContent-container > div.lessonReview').show();
 
     let lessonSeq = location.search.substring(1).split('?');
