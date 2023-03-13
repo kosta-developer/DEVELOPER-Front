@@ -1,9 +1,9 @@
 
 #user-index-wrap {width: 100%; height: auto; font-size: 15px; }
-#user-index-wrap>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
+#user-index-wrap>#nav-wrap{width: 100%;}
 
 
-#user-index-wrap>#content-wrap>.userpage-body-wrap{margin:0 auto; width: 1000px; height: 1200px;  border: 1px solid rgb(187, 187, 187);}
+#user-index-wrap>#content-wrap>.userpage-body-wrap{margin:0 auto; width: 1000px; height: 1200px; }
 /*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
  width: 100%는 기본값이기 때문에 없어도 된다 */
 
@@ -26,6 +26,9 @@
     justify-content: center;
     align-items : center;
     }
+    .content{
+         background-color: #F9F9F9;
+    }
 #devBanner{width: 1000px; height: 300px;}
 
 #content-wrap>.content-container>div.lessonlist{ width:100%; height:800px;}
@@ -34,7 +37,9 @@
 
 .nav-container {width:1000px; height: 100px; line-height: 60px; margin: 0 auto;} 
 .banner-container {width: 1000px; height: 300px; line-height: 300px; margin: 0 auto;  }
-.content-container {width: 1000px; margin: 0 auto; }
+.content-container {  float: right; width: 78%; height: 1000px; margin: 0 auto; margin: -618px 13px 13px 13px;
+    overflow: auto
+ }
 .footer-container{width: 100%; height: 100px; line-height: 100px; margin: 0 auto; }
 #footer-wrap > div.footer-container{
     background-color: #303740; 
@@ -405,10 +410,7 @@ background-color: #F9F9F9;
     margin: 0 auto;
 }
 
-.content-container {
-    width: 1000px;
-    margin: 0 auto;
-}
+
 
 .footer-container {
     width: 100%;

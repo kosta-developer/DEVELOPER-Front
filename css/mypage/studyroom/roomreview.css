@@ -2,10 +2,10 @@
 
 *{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
 #user-index-wrap {width: 100%; height: auto; font-size: 15px; }
-#user-index-wrap>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
-#user-index-wrap>#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
+#user-index-wrap>#nav-wrap{width: 100%;}
+#user-index-wrap>#content-wrap{width: 100%; height:auto; }
 
-#user-index-wrap>#content-wrap>.userpage-body-wrap{margin:0 auto; width: 1000px; height: 1200px;  border: 1px solid rgb(187, 187, 187);}
+#user-index-wrap>#content-wrap>.userpage-body-wrap{margin:0 auto; width: 1000px; height: 1200px;  }
 /*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
  width: 100%는 기본값이기 때문에 없어도 된다 */
 
@@ -210,7 +210,9 @@ div.lessonImage>img.lessonImg{
     margin-top: -5px;
     margin-bottom: 7px;
 }
- #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container { overflow: auto; float: right; width: 78%; height: 1000px; margin: 0 auto; border: 1px solid #62ff19; margin: -618px 13px 13px 13px;}
+.content-container {  float: right; width: 78%; height: 1000px; margin: 0 auto; margin: -618px 13px 13px 13px;
+    overflow: auto
+ }
 
 a {
     text-decoration: none;
