@@ -1,86 +1,24 @@
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    background-color: #FFFEFE;
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-}
-
-#index-wrap {
-    width: 100%;
-    height: 1500px;
-    color: #000000;
-    font-size: 15px;
-}
-
-#banner-wrap {
-    width: 100%;
-}
-
-#content-wrap {
-    width: 100%;
-    height: auto;
-}
-
-#footer-wrap {
-    width: 100%;
-    height: 100px;
-    line-height: 100px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #303740;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#devBanner {
-    width: 1000px;
-    height: 300px;
-}
-
-#content-wrap>.content-container>div.lessonlist {
-    width: 100%;
-    height: 800px;
-}
+*{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
+#index-wrap {width: 100%; height: 1500px; color: #000000; font-size: 15px; }
+#nav-wrap{width: 100%; border: 1px solid rgb(187, 187, 187);}
+#banner-wrap{width: 100%; border: 1px solid rgb(187, 187, 187);}
+#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
+#footer-wrap{width: 100%; text-align:center; border: 1px solid rgb(187, 187, 187);}
+#devBanner{width: 1000px; height: 300px; border: 1px solid rgb(187, 187, 187);}
 
 /*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
  width: 100%는 기본값이기 때문에 없어도 된다 */
 
-.nav-container {
-    width: 1000px;
-    height: 100px;
-    line-height: 60px;
-    margin: 0 auto;
-}
+.nav-container {width:1000px; height: 100px; line-height: 60px; margin: 0 auto; border: 1px solid #c39d91; } 
+.banner-container {width: 1000px; height: 300px; line-height: 300px; margin: 0 auto; border: 1px solid #4567ff; }
+.content-container {width: 1000px; margin: 0 auto; border: 1px solid #62ff19;}
+.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
 
-.banner-container {
-    width: 1000px;
-    height: 300px;
-    line-height: 300px;
-    margin: 0 auto;
-}
 
-.content-container {
-    width: 1000px;
-    margin: 0 auto;
-}
-
-.footer-container {
-    width: 100%;
-    height: 100px;
-    line-height: 100px;
-    margin: 0 auto;
-}
-
-#footer-wrap>div.footer-container {
-    background-color: #303740;
-}
-
-.nav-container>nav {
-    /* width: 600px; */
+.nav-container>nav{
+    width: 600px;
     /* display: inline-block; */
     float: right;
 }
@@ -126,9 +64,27 @@
     font-weight: bold;
 }
 
-.nav-container>nav>ul>li:hover {
-    color: #00C471;
+/*  클릭 안 한 메뉴 */
+.nav-container>nav>ul>li>a:link{
+    text-decoration: none;
+    color: black;
+    margin-top: 50px;
+}
+
+/*  클릭 한 메뉴 */
+.nav-container>nav>ul>li>a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-container>nav>ul>li>a:hover{
+    color:  #00C471;
     font-weight: bold;
+}
+
+.nav-container>nav>ul>li:hover{
+    background-color: #2C2A29;
+    color: #fff
 }
 
 /* -----------------index 전용 css START ----------------------*/
@@ -157,14 +113,12 @@
     padding: 0;
 }
 
-.main-title {
+.main-title{
     font-size: 17px;
-    padding: 10px 10px 0px 10px;
-    margin: 20px 10px 0px 10px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    margin-left: 20px;
     font-weight: 800;
-    width: 300px;
-    height: 30px;
-
 }
 
 .lessonlistorigin {
@@ -182,14 +136,18 @@
     display: none;
 }
 
-div.lessonImage>img.lessonImg {
+div.lessonImage>a>img{
     width: 300px;
     height: 200px;
 }
 
-#mainCommunityImg {
-    width: 220px;
-    height: 100px;
+.lessonimg{
+    margin-bottom: 10px;
+}
+
+#mainCommunityImg{
+    width:220px;
+    height:100px;
     float: right;
 }
 
@@ -225,7 +183,7 @@ div.lessonImage>img.lessonImg {
 }
 
 .mainCommunityLine {
-    border-top: 1px solid #00C471;
+    border-top:1px solid #e9ddbc;
     margin-top: 10px;
     margin-bottom: 15px;
 
@@ -243,21 +201,19 @@ div.lessonImage>img.lessonImg {
 
 .postRecommend {
     margin-left: 120px;
-    color: #858A8D;
 }
 
 .postCnt {
     margin-left: 20px;
-    color: #858A8D;
 }
 
 .lessonName {
     font-weight: 800;
-    width: 300px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: inline-block;
+    width:200px; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display:inline-block;
     font-size: 16px;
     margin-top: 5px;
 }
