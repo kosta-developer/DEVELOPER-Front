@@ -2,8 +2,7 @@ $(() => {
     userCheckIntervalLogined();
 
     //-----정보출력 START------
-    let url = "http://192.168.0.33:8888/developer/admin/host"
-    // let url = backURL + 'admin/host';
+    let url = backURL + 'admin/host';
     let $origin = $('div.list-of-host-origin').first()
     $origin.show()
     $.ajax({
@@ -31,7 +30,7 @@ $(() => {
             $(document).on('click','span.host-hostId', (e)=>{
                 let hostId = $(e.target).html()
                 console.log('클릭한 hostId' +hostId)
-                // location.href = frontURL + 'admin/host/detail/'+hostId
+                location.href = frontURL + 'admin/host/detail/'+hostId
             })
 
 
