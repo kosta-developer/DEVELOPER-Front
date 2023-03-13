@@ -1,10 +1,10 @@
-let backURL = "http://192.168.0.24:8888/developer/";
-let frontURL = "http://192.168.0.24:5500/html/"; 
+//지원
+let backURL = "http://192.168.0.34:8888/developer/";
+let frontURL = "http://192.168.0.34:5500/html/";
 
-
- $(() => {
+$(() => {
     showMenuAtLogouted()
-//--로그아웃 클릭되었을 때 할 일 START--
+    //--로그아웃 클릭되었을 때 할 일 START--
     $('div.nav-container > nav > ul > li.logout').click((e) => {
         // alert("로그아웃클릭됨")
         $.ajax({
@@ -18,7 +18,7 @@ let frontURL = "http://192.168.0.24:5500/html/";
                 sessionStorage.removeItem("role");
                 sessionStorage.removeItem("hostlogined")
                 sessionStorage.removeItem("hostready");
-               // alert("로그아웃성공")
+                // alert("로그아웃성공")
                 location.href = frontURL + 'index.html'
             }
         })
@@ -31,6 +31,7 @@ let frontURL = "http://192.168.0.24:5500/html/";
         location.href = frontURL + 'index.html'
     })
     //--로고가 클릭되었을 때 할 일 END--
+
 });
 
 
@@ -41,7 +42,8 @@ function showMenuAtMemberLogined() {
     $('div.nav-container >nav > ul > li.board').show()
     $('div.nav-container >nav > ul > li.signup').hide()
     $('div.nav-container >nav > ul > li.login').hide()
-    $('div.nav-container >nav > ul > li.chat').show()
+    $('div.nav-container >nav > ul > li.tutorAdd').show()
+    $('div.nav-container >nav > ul > li.lessonAdd').show()
     $('div.nav-container >nav > ul > li.myPage').show()
     $('div.nav-container >nav > ul > li.logout').show()
 }
@@ -55,7 +57,8 @@ function showMenuAtLogouted() {
     $('div.nav-container >nav > ul > li.board').show()
     $('div.nav-container >nav > ul > li.signup').show()
     $('div.nav-container >nav > ul > li.login').show()
-    $('div.nav-container >nav > ul > li.chat').hide()
+    $('div.nav-container >nav > ul > li.tutorAdd').hide()
+    $('div.nav-container >nav > ul > li.lessonAdd').hide()
     $('div.nav-container >nav > ul > li.myPage').hide()
     $('div.nav-container >nav > ul > li.logout').hide()
 }

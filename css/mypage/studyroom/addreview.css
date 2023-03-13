@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
-*{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
 #user-index-wrap {width: 100%; height: auto; font-size: 15px; }
 #user-index-wrap>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
 #user-index-wrap>#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
@@ -10,71 +8,73 @@
  width: 100%는 기본값이기 때문에 없어도 된다 */
 
  #user-index-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91; } 
- #user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container {float: left; width: 19%; height: 700px; margin: 0 auto; border: 1px solid #fc487b;} 
- #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container {float: right; width: 78%; height: 1000px; margin: 0 auto; border: 1px solid #62ff19; margin: 18px 13px 13px 13px;}
- #user-index-wrap>#footer-wrap>.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
-
- #user-index-wrap>#nav-wrap>.nav-container>nav{
-    width: 200px;
-    /* display: inline-block; */
-    float: right;
+ 
+ #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container {
+    background-color: #F9F9F9; float: right; width: 78%; height: 500px; margin: 0 auto; margin: 18px 13px 13px 13px;
 }
 
-#user-index-wrap>#nav-wrap>.nav-container>img{
-    height: 30px;
-    float: left;
-    margin-top: 13px;
-    margin-left: 10px;
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
 
-#user-index-wrap>#nav-wrap>.nav-container>nav>ul{
-    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
-    list-style-type: none;
-    padding-left: 0px;
-    
+a {
+    text-decoration: none;
+    color: black;
 }
 
-#user-index-wrap>#nav-wrap>.nav-container>nav>ul>li{
-   /* width: 100px; */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.side-container>.menu>ul>li>a:hover {
+    color: #00C471;
+    font-weight: bold;
+}
+
+.side-container>ul>li>a:hover {
+    color: #00C471;
+    font-weight: bold;
+}
+
+
+.side-container>.menu>ul>li>ul>li>a:hover {
+    color: #00C471;
+    font-weight: bold;
+}
+
+
+.side-container>.menu {
     display: inline-block;
-    margin-left:15px;
+    margin-left: 15px;
 }
 
-#user-index-wrap>#nav-wrap>.nav-container>nav>ul>li:hover{
-    background-color: #2C2A29;
-    color: #fff
-}
-
-#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu{
-    display: inline-block;
-    margin-left: 20px;
-}
-
-#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>div{
+.side-container>.menu>div {
     font-size: 16px;
     margin-top: 20px;
     font-weight: 700;
 }
-#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul>div{
-    font-size: 13px;
-    margin-top: 10px;
-    margin-left: 15px;
-    font-weight: 700;
-}
-#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul{
+
+.side-container>.menu>ul {
     list-style-type: none;
 }
 
-#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul>li{
-    margin-top: 13px;
+.side-container>.menu>ul>li {
+    margin-top: 5px;
     margin-left: 20px;
-    font-size: 14px;
+    font-size: 16px;
+    list-style-type: none;
 }
 
-#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul>li:hover{
-    background-color: #2C2A29;
-    color: #fff
+.side-container>.menu>ul>li>ul>li {
+    margin-top: 8px;
+    margin-left: 15px;
+    font-size: 16px;
+    list-style-type: none;
 }
+
 
 #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#user-reviewRequired-box{
     width:730px;
@@ -187,7 +187,7 @@ hr{
 #myform label{
     font-size: 20px; /* 이모지 크기 */
     color: transparent; /* 기존 이모지 컬러 제거 */
-    text-shadow: 0 0 0 #f0f0f0; /* 새 이모지 색상 부여 */
+    text-shadow: 0 0 0 gray; /* 새 이모지 색상 부여 */
 }
 
 #myform label:hover{
@@ -212,16 +212,235 @@ hr{
 }
 .content-container > .content{
     margin: 50px;
+    background-color: #F9F9F9;
+}
+form#myform{
+    background-color: #F9F9F9;
+}
+#rate1{
+    background-color: #F9F9F9;
 }
 #myform-textarea{
     margin-top: 50px;
-    width: 680px;
+    width: 775px;
     height: 300px;
     font-size: 20px;
 }
 .cfName{
     width: 200px;
+    
 }
 .SeqQuery{
     display: none;
+}
+#scname{
+background-color: #F9F9F9;
+}
+#sfname{
+background-color: #F9F9F9;
+}
+.cfName{
+background-color: #F9F9F9;
+}
+#room{
+background-color: #F9F9F9;
+}
+.rName{
+background-color: #F9F9F9;
+}
+
+table.content-table{
+    background-color: #F9F9F9;
+}
+
+.content1 {
+    background-color: #F9F9F9;
+}
+.content-table>{
+    background-color: #F9F9F9;
+}
+.fieldset{
+    background-color: #F9F9F9;
+}
+#scname{
+background-color: #F9F9F9;
+}
+#label{
+background-color: #F9F9F9;
+}
+/* ///////////////////////////////////////////////////////////////////////// */
+
+
+#index-wrap {
+    width: 100%;
+    height: 1500px;
+    color: #000000;
+    font-size: 15px;
+}
+
+#nav-wrap {
+    width: 100%;
+    ;
+}
+
+#banner-wrap {
+    width: 100%;
+}
+
+#content-wrap {
+    width: 100%;
+    height: auto;
+}
+
+#footer-wrap {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #303740;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#devBanner {
+    width: 1000px;
+    height: 300px;
+}
+
+#content-wrap>.content-container>div.lessonlist {
+    width: 100%;
+    height: 800px;
+}
+
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+ width: 100%는 기본값이기 때문에 없어도 된다 */
+
+.nav-container {
+    width: 1000px;
+    height: 100px;
+    line-height: 60px;
+    margin: 0 auto;
+}
+
+.banner-container {
+    width: 1000px;
+    height: 300px;
+    line-height: 300px;
+    margin: 0 auto;
+}
+
+.content-container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-container {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+}
+
+#footer-wrap>div.footer-container {
+    background-color: #303740;
+}
+
+.nav-container>nav {
+    /* width: 600px; */
+    /* display: inline-block; */
+    float: right;
+}
+
+.nav-container>img {
+    height: 30px;
+    float: left;
+    margin-top: 33px;
+    margin-left: 20px;
+}
+
+.nav-container>nav>ul {
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 17px;
+}
+
+.nav-container>nav>ul>li {
+    /* width: 100px; */
+    display: inline-block;
+    margin-left: 15px;
+}
+
+/*  클릭 안 한 메뉴 */
+.nav-container>nav>ul>li>a:link {
+    text-decoration: none;
+    color: black;
+    margin-top: 50px;
+}
+
+/*  클릭 한 메뉴 */
+.nav-container>nav>ul>li>a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-container>nav>ul>li>a:hover {
+    color: #00C471;
+    font-weight: bold;
+}
+
+.nav-container>nav>ul>li:hover {
+    color: #00C471;
+    font-weight: bold;
+}
+
+/* -----------------index 전용 css START ----------------------*/
+.btn{
+    margin-top: 10px;
+    margin-left: 670px;
+    padding: 0px 22px;
+        appearance: none;
+        text-align: left;
+        text-decoration: none;
+        box-sizing: border-box;
+        height: 42px;
+        -webkit-tap-highlight-color: transparent;
+        display: inline-block;
+        width: auto;
+        position: relative;
+        line-height: 1;
+        font-size: 16px;
+        user-select: none;
+        cursor: pointer;
+        border: 1px solid transparent;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        background-color: #00C471;
+        border-radius: 8px;
+}
+div.top-title {
+    margin-left: 25px;
+    margin-bottom: 15px;
+    background-color: #F9F9F9;
+}
+
+span#showLoginId {
+    font-weight: 800;
+    color: #00C471;
+}
+.review-box{
+    background-color: #F9F9F9;
+}
+.form{
+    background-color: #F9F9F9;
+}
+.review-name{
+    font-weight: bold;
+background-color: #F9F9F9;
 }

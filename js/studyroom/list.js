@@ -1,6 +1,6 @@
 $(()=>{
-    
-    checkIntervalLogined();
+    userCheckLogined();
+    $('span#showLoginId').html(sessionStorage.getItem("logined"));
     //--스터디 카페 목록 보여주기용 함수 START --
     function showList(result){
         //카페별 div  
@@ -27,7 +27,7 @@ $(()=>{
 
             let $copy=$origin.clone()
             let $imgObj=$('<img id="cafeimg">') 
-            $imgObj.attr('src', '../images/' + imgPath+ '.jpeg')
+            $imgObj.attr('src', '../../images/' + imgPath+ '.jpeg')
             
             $copy.find(".srSeq").html(srSeq)
             $copy.find(".img").html($imgObj)

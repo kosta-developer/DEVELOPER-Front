@@ -1,6 +1,6 @@
 $(()=>{
-  checkIntervalLogined();
-
+   userCheckLogined()
+    $('span#showLoginId').html(sessionStorage.getItem("logined"));
   const postURL = decodeURI(location.href);
   const postURL2 = postURL.split("?");
 
@@ -29,7 +29,7 @@ $(()=>{
       xhrFields: {
         withCredentials: true,
       },
-      url: frontURL + "mypage/roomreview/add",
+      url: backURL + "mypage/roomreview/add",
       method: "POST",
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(params),

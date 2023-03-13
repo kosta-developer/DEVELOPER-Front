@@ -2,6 +2,8 @@ let roomSeq = document.location.href.split("=")[1];
 
 $(() => {
     hostCheckIntervalLogined()
+
+    $('span#showLoginId').html(sessionStorage.getItem("hostlogined"));
     let url = backURL + 'host/roominfo/list'
     let $origin = $('div.room-list-origin').first()
 
@@ -70,17 +72,16 @@ $(() => {
 })
 
 
-//$(e.target).parents('div.room-list-origin').find('div#room-seq').text();
+
 
 //----룸 정보 수정 클릭 시 START----
 $(document).on('click', 'input.room-info-btn-edit', (e) => {
-    // let roomSeq = $('div.room-list-origin>div#room-seq').text()
     let roomSeq = $(e.target).parents('div.room-list-origin').find('div#room-seq').text();
-    console.log(roomSeq)
     location.href = frontURL + 'host/editroom.html?roomSeq=' + roomSeq
-    //location.href = frontURL + 'host/editroom.html'
 })
 //----룸 정보 수정 클릭 시 END----
+
+
 
 
 //----예약 클릭 시 START----
@@ -89,11 +90,8 @@ $(document).on('click', 'input.room-info-btn-reservation', (e) => {
     let roomSeq = $(e.target).parents('div.room-list-origin').find('div#room-seq').text();
     let openTime = $(e.target).parents('div.room-list-origin').find('div#room-openTime').text();
     let endTime = $(e.target).parents('div.room-list-origin').find('div#room-endTime').text();
-    console.log(roomSeq)
-    console.log(openTime)
-    console.log(endTime)
 
     location.href = frontURL + 'host/hostreservation.html?roomSeq=' + roomSeq +'&openTime='+ openTime +'&endTime='+ endTime
-    //location.href = frontURL + 'host/editroom.html'
+    
 })
 //----예약 클릭 클릭 시 END----

@@ -1,9 +1,7 @@
 $(() => {
     hostCheckIntervalLogined()
 
-    $('div.side-container>div.menu>div>ul>li.roomList').click((e) => {
-        location.href = frontURL + 'host/listroom.html'
-    })
+    $('span#showLoginId').html(sessionStorage.getItem("hostlogined"));
 
     //=================[호스트 유저 정보 & 스터디카페 정보 출력 START]==================
     let url = backURL + 'host/'
@@ -37,8 +35,8 @@ $(() => {
             }
 
             let srSeq = $('div#studycafe-seq').html();
-            console.log('srSeq: ' + srSeq);
-            localStorage.setItem("srSeq", srSeq);
+            //console.log('srSeq: ' + srSeq);
+           // localStorage.setItem("srSeq", srSeq);
 
             //=================[이미지 다운로드 START]==================
             let imgPath = jsonObj.imgPath
@@ -81,7 +79,8 @@ $(() => {
 
     //=================[카페 정보 수정버튼 클릭 START]==================
     $('#studycafe-infomation-box > div.textbox > div:nth-child(14) > input[type=button]').click((e) => {
-        location.href = frontURL + 'host/editstudycafe.html'
+        let srSeq = $(e.target).parents('div.textbox').find('div#studycafe-seq').text();
+        location.href = frontURL + 'host/editstudycafe.html?srSeq=' + srSeq
     })
     //=================[카페 정보 수정버튼 클릭 END]==================
 
@@ -102,7 +101,7 @@ $(() => {
                 xhrFields: {
                     withCredentials: true
                 },
-                url: backURL + 'host/open/' + srSeq,
+                url: url + 'open/' + srSeq,
                 method: 'put',
                 success: function (result) {
                     alert('영업을 시작하여 예약기능 활성화되었습니다.')
@@ -139,7 +138,7 @@ $(() => {
                     withCredentials: true
                 },
 
-                url: backURL + 'host/close/' + srSeq,
+                url: url + 'close/' + srSeq,
                 method: 'put',
                 success: function (result) {
                     alert('영업을 종료하여 예약기능 비활성화되었습니다.')
@@ -164,7 +163,8 @@ $(() => {
 
     //=================[룸 추가 버튼 클릭 START]==================
     $('#add-room-btn').click((e) => {
-        location.href = frontURL + 'host/addroom.html'
+        let srSeq = $(e.target).parents('div.textbox').find('div#studycafe-seq').text();
+        location.href = frontURL + 'host/addroom.html?srSeq=' + srSeq
     });
     //=================[룸 추가 버튼 클릭 END]==================
 

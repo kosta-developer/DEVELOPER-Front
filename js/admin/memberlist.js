@@ -1,4 +1,6 @@
 $(()=>{
+   userCheckLogined()
+     $('span#showLoginId').html(sessionStorage.getItem("logined"));
     let $memberList = $("#memberList-body");
     //원본
      let $origin = $memberList.first();

@@ -10,27 +10,23 @@
     </head>
     <body>
         <div id="wrap">
-            <div id="header-wrap" style="display:flex">
-                <div class="header-container">
-                    <a href="index.html"><img src="/images/logo.png" style="height: 50px;"></a>
-                </div>
                 <div class="nav-container">
+                    <img id="logo" src="/images/logo.png">
                     <nav>
                         <ul>
-                            <li class='lesson'>수업</li>
-                            <li class='studycafe'>스터디카페</li>
-                            <li class='community'>커뮤니티</li>
+                            <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
+                            <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
+                            <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
                             <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
-                            <li class='signup'>회원가입</li>
-                            <li class='tutorAdd'>튜터등록</li>
-                            <li class='myPage'>마이페이지</li>
-                            <li class='login'>로그인</li>
-                            <li class='logout'>로그아웃</li>
+                            <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
+                            <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
+                            <li class='chat'><a href="/html/chat/chat.html">채팅</a></li>
+                            <li class='myPage'><a href="/html/mypage/usermypage.html">마이페이지</a></li>
+                            <li class='logout' onclick="logout()">로그아웃</li>
                         </ul>
                     </nav>
-                </div>
             </div>
-            <div id="findUserId-wrap">
+            <div id="findUserPwd-wrap">
                 <div class ="findUserPwd-container">
                     
                     <div class="findUserPwd-find-text">
@@ -45,7 +41,7 @@
                         <div class="input-email">
                             아이디<input type="text" id="userId" class="inputemail">
                             이메일<input type="text" id="userEmail" class="inputemail" placeholder="example@gmail.com">
-                            <button type="button" id="email-submit">인증메일 전송하기</button>
+                            <button type="button" id="email-submit">메일 전송하기</button>
                       
                         </div>
                     </div>
