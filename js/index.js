@@ -108,7 +108,7 @@ $(() => {
                     success: function (result) {
                         //console.log(result);
                         let blobStr = URL.createObjectURL(result);
-                        $copy_lesson.find("a>img").attr("src", blobStr);
+                        $copy_lesson.find("img.lessonImg").attr("src", blobStr);
                     },
                 });
                 //=================[이미지 다운로드 END]==================
@@ -135,35 +135,22 @@ $(() => {
 })
 
 
-  //다시 맞추기 선택자
-    // if(arr[0] == 'menu'){
-    //  console.log('메뉴', arr[1])
-    //      switch(arr[1]){
-    //      case 'lesson':
-    //          $('header>nav>ul>li.lesson').click()
-    //          break;
-    //      case 'studycafe':
-    //          $('header>nav>ul>li.studycafe').click()
-    //          break;
-    //      case 'community':
-    //          $('header>nav>ul>li.community').click()
-    //          break;
-    //          case 'signup':
-    //             location.href = frontURL + 'signup/userCheckEmail.html'
-    //             console.log( frontURL + 'users/login.html')
-    //             break;   
-    //         case 'login' :
-    //             location.href = frontURL + 'users/login.html'
-    //             console.log( frontURL + 'users/login.html')
-    //             break;        
-    //      case 'logout':
-    //          $('header>nav>ul>li.logout').click()
-    //          break;      
-    //      case 'tutorAdd':
-    //          $('header>nav>ul>li.tutorAdd').click()
-    //          break;      
-    //      case 'myPage':
-    //          $('header>nav>ul>li.myPage').click()
-    //          break;      
-    //      }
-    // }
+//================[수업이미지 클릭 시 START]==================-
+$(document).on('click', 'img.lessonImg', (e) => {
+    let lessonSeq = $(e.target).parents('div.lessonlistorigin').find('div.lessonSeq').text();
+    console.log(lessonSeq)
+    location.href = frontURL + 'lesson/detail.html?' + lessonSeq
+})
+
+//================[수업이미지 클릭 시 END]==================
+
+
+
+
+//================[게시글영역 클릭 시 START]==================-
+$(document).on('click', 'div.communityListOrigin', (e) => {
+    let postSeq = $(e.target).parents('div.communityList').find('div.postSeq').eq(1).text();
+    console.log(postSeq)
+    location.href = frontURL + 'board/boarddetail.html?postSeq=' + postSeq
+})
+//================[게시글영역 클릭 시 END]==================

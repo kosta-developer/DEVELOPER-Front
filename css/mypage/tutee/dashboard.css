@@ -1,0 +1,89 @@
+#tutee-dashboard {width: 100%; height: 1500px; color: #000000; font-size: 15px; }
+
+.nav-container {width:1000px; height: 100px; line-height: 60px; margin: 0 auto; border: 3px solid black; } 
+.content-container {width: 1000px; margin: 0 auto; border: 3px solid yellowgreen; } 
+.footer-container{width: 1000px; height: 100px; text-align:center; line-height: 100px; margin: 0 auto;  border: 3px solid orange; }
+
+/*=================== 헤더메뉴바 ===================*/
+.nav-container>nav{
+    width: 600px;
+    /* display: inline-block; */
+    float: right;
+}
+
+.nav-container > img{
+    height: 30px;
+    float: left;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px; 
+}
+
+.nav-container>nav>ul>li{
+    /* width: 100px; */
+    display: inline-block;
+    margin-left:15px;
+}
+
+.nav-container>nav>ul>li:hover{
+    background-color: #2C2A29;
+    color: #fff
+}
+
+#nav-wrap > div > nav > ul > li > a{
+    text-decoration: none;
+    color: black;
+}
+
+/*=================== 사이드바+메인영역 ===================*/
+div.content-container > div.container{
+    display: inline-block;
+}
+
+/*=================== 사이드바 ===================*/
+div.content-container > div.container > div.menu{
+    float: left;
+    margin-left: 20px;
+}
+
+div.content-container > div.container > div.menu>div{
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+div.content-container > div.container > div.menu>ul{
+    list-style-type: none;
+}
+
+div.content-container > div.container > div.menu>ul>li{
+    margin-top: 13px;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+div.content-container > div.container > div.menu>ul>li:hover{
+    background-color: #80d8b4;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff
+}
+
+div.content-container > div.container > div.menu>ul>li>a{
+    text-decoration: none;
+    color: rgb(88, 88, 88);
+}
+
+/*=================== 메인 영역 ===================*/
+ div.content-container > div > div.main{
+    margin-left: 250px;
+}
+
+.main > .dash-box > div{
+    border: 1px solid black;
+}

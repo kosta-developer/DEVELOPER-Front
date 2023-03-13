@@ -1,182 +1,265 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
-*{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
-#edit-studycafe-wrap {width: 100%; height: auto; font-size: 15px; }
-#edit-studycafe-wrap>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
-#edit-studycafe-wrap>#content-wrap{width: 100%; height: auto; border: 1px solid rgb(187, 187, 187);}
-#host-index-wrap>#footer-wrap{width: 100%; border: 1px solid rgb(187, 187, 187); text-align:center;}
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap{margin:0 auto; width: 1000px; height: 850px; border: 1px solid rgb(187, 187, 187);}
+*{margin: 0; padding: 0; font-family: 'Spoqa Han Sans Neo', 'sans-serif';}
+#edit-cafe-wrap {width: 100%; height: auto; font-size: 15px; }
+#edit-cafe-wrap>#nav-wrap{width: 100%;}
+#edit-cafe-wrap>#content-wrap{width: 100%; height:auto;}
+#footer-wrap{
+    width: 100%; 
+    height: 100px; 
+    line-height: 100px; 
+    margin: 0 auto; 
+    text-align:center; 
+    background-color: #303740; 
+    color:#fff;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    }
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap{margin:0 auto; width: 1000px; height: 870px;}
 /*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
  width: 100%는 기본값이기 때문에 없어도 된다 */
 
-#edit-studycafe-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91; } 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container {float: left; width: 19%; height: auto; margin: 0 auto; border: 1px solid #fc487b;} 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container {float: right; width: 78%; height: auto; margin: 0 auto; border: 1px solid #62ff19; margin: 18px 13px 13px 13px;}
-#edit-studycafe-wrap>#footer-wrap>.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
 
-#edit-studycafe-wrap>#nav-wrap>.nav-container>nav{
-    width: 310px;
-    /* display: inline-block; */
+ #edit-cafe-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto;  } 
+ #edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container {float: left; width: 19%; height: 175px; margin: 0 auto; background-color: #F9F9F9;} 
+ #edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container {float: right; width: 78%; height: 850px; margin: 0 auto; margin: 18px 13px 13px 13px;}
+ 
+ .nav-container>nav{
     float: right;
 }
 
-#edit-studycafe-wrap>#nav-wrap>.nav-container>img{
+.nav-container>img{
     height: 30px;
     float: left;
-    margin-top: 13px;
-    margin-left: 10px;
+    margin-top: 33px;
+    margin-left: 20px;
 }
-
-#edit-studycafe-wrap>#nav-wrap>.nav-container>nav>ul{
+.nav-container>nav>ul{
     /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
     list-style-type: none;
     padding-left: 0px;
-    
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 17px;
 }
 
-#edit-studycafe-wrap>#nav-wrap>.nav-container>nav>ul>li{
-   /* width: 100px; */
+.nav-container>nav>ul>li{
     display: inline-block;
     margin-left:15px;
 }
 
-#edit-studycafe-wrap>#nav-wrap>.nav-container>nav>ul>li:hover{
-    background-color: #80d8b4;
-    color: #fff
+/*  클릭 안 한 메뉴 */
+.nav-container>nav>ul>li>a:link{
+    text-decoration: none;
+    color: black;
+    margin-top: 50px;
 }
 
-#edit-studycafe-wrap>#nav-wrap>.nav-container>nav>ul>li>a{
+/*  클릭 한 메뉴 */
+.nav-container>nav>ul>li>a:visited{
     text-decoration: none;
     color: black;
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu{
+.nav-container>nav>ul>li>a:hover{
+    color:  #00C471;
+    font-weight: bold;
+}
+
+.nav-container>nav>ul>li:hover{
+    color:  #00C471;
+    font-weight: bold;
+}
+
+div.top-title{
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+span#showLoginId{
+    font-weight: 800;
+    color:  #00C471;
+}
+
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu{
     display: inline-block;
     margin-left: 20px;
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>div{
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>div{
     font-size: 16px;
     margin-top: 20px;
     font-weight: 700;
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul{
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul{
     list-style-type: none;
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li{
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li{
     margin-top: 13px;
     margin-left: 20px;
     font-size: 14px;
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li:hover{
-    background-color: #80d8b4;
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li:hover{
     font-weight: 700;
     font-size: 15px;
-    color: #fff
+    color:#00C471;
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li>a{
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li>a{
     text-decoration: none;
     color: rgb(88, 88, 88);
 }
 
-#edit-studycafe-wrap>#content-wrap > div > div.content-container > div.detail-content-box{
-    border: 1.5px solid #bbbbbb;
-    border-radius: 15px;
-    width: 96%;
-    height: 780px;
-    margin-left: 12px;
-}
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>.title{
+#content-wrap > div > div.content-container > .info-title{
+    margin-left: 23px;
+    margin-top: 20px;
     font-weight: 700;
-    margin: 20px 0px 5px 20px;
+    font-size: 16px;
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>div.ocOpenTime>div.title{
+
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#cafe-infomation-box{
+    width:730px;
+    height:730px;
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    margin: 10px 25px 30px 25px;
+}
+
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#cafe-infomation-box>.title{
+    font-weight: 700;   
+    padding-top: 15px;
+    padding-left: 15px;
+    margin: 20px 0px 5px 255px;
+
+}
+
+/* //////////////////////////////// */
+
+
+
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#cafe-infomation-box>form>div.title{
     font-weight: 700;
-    margin: 20px 0px 5px 20px;
+    margin: 0px 0px 5px 20px;
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>div.ocCloseTime>div.title{
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#cafe-infomation-box>form>div.ocOpenTime>div.title{
     font-weight: 700;
-    margin: 20px 0px 5px 165px;
+    margin: 0px 0px 5px 20px;
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>.sub-title{
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#cafe-infomation-box>form>div.ocCloseTime>div.title{
     font-weight: 700;
-    margin: 20px 0px 0px 20px;
+    margin: 0px 0px 5px 165px;
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>.field{
+
+
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#cafe-infomation-box>form>.field{
     width: 200px;
     height: 30px;
     margin-left: 20px;
+    margin-bottom: 20px;
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>.info-button{
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#cafe-infomation-box>form>.info-button{
     margin-left: 20px;
     margin-top: 10px;
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>.info-button>input[type=button]{
-    width: 70px;
-    height: 30px;
-    border-radius: 5px;
-    background-color: #80d8b4;
+
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#cafe-infomation-box>form>.info-button>input[type=submit]{
+    border-width: 1px;
+    margin-top: 10px;
     margin-right: 10px;
+    appearance: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 30px;
+    -webkit-tap-highlight-color: transparent;
+    width:80px;
+    position: relative;
+    line-height: 1;
+    font-size: 15px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #00C471;
+    border-radius: 8px;
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>.info-button>input[type=submit]{
-    width: 70px;
-    height: 30px;
-    border-radius: 5px;
-    background-color: #80d8b4;
+
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#cafe-infomation-box>form>.info-button>input[type=button]{
+    border-width: 1px;
+    margin-top: 10px;
     margin-right: 10px;
+    appearance: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 30px;
+    -webkit-tap-highlight-color: transparent;
+    width:80px;
+    position: relative;
+    line-height: 1;
+    font-size: 15px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: black;
+    background-color:#DAECE5;
+    border: 1.5px solid #d8d8d8;
+    border-radius: 8px;
 }
 
-#content-wrap > div > div.content-container > div.detail-content-box > form > input[type=file]:nth-child(3){
+
+#content-wrap > div > div.content-container > div#cafe-infomation-box > form > input[type=file]:nth-child(3){
     margin-left: 20px; 
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>textarea{
-    width: 550px;
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#cafe-infomation-box>form>textarea{
+    width: 670px;
     height: 100px;
     resize: none;
     margin-left: 20px;
     padding: 10px 10px 10px 10px;
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>.textLengthWrap{
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#cafe-infomation-box>form>.textLengthWrap{
     float: right;
-    width: 240px;
+    width: 100px;
     margin-bottom: 10px;
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>.field>input[type=text]{
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#cafe-infomation-box>form>.field>input[type=text]{
 height: 30px;
 padding-left: 7px;
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>.field>input#cafe-addr{
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#cafe-infomation-box>form>.field>input#cafe-addr{
     width: 380px;
 }
    
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>.field>input#cafe-name{
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#cafe-infomation-box>form>.field>input#cafe-name{
     width: 380px;
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>div.ocOpenTime>div.field>input.timepicker{
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#cafe-infomation-box>form>div.ocOpenTime>div.field>input.timepicker{
     width:120px;
     margin-left: 20px;
     height: 30px;
     text-align: center;
 }
 
-#edit-studycafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>form>div.ocCloseTime>div.field>input.timepicker{
+#edit-cafe-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#cafe-infomation-box>form>div.ocCloseTime>div.field>input.timepicker{
     width:120px;
     margin-left: 20px;
     height: 30px;
@@ -186,9 +269,10 @@ padding-left: 7px;
 
 div.cafeImage{
     height:190px;
-    width: 700px;
+    width: 690px;
     border:1px dotted;
     margin: 10px 0px 10px 20px;
+    background-color: white;
 }
 
 div.cafeImage>img{
@@ -205,4 +289,9 @@ div.cafeImage>img{
 
 div.ocOpenTime{
     float: left;
+}
+
+
+#cafe-close-time{
+    margin-bottom: 20px;
 }
