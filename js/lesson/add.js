@@ -1,6 +1,6 @@
 $(() => {
     let url = backURL + 'lesson/';
-
+    userCheckIntervalLogined()
     //=== 썸머노트 부르기 START ===
     $(document).ready(function () {
         $('#summernote').summernote({
@@ -29,8 +29,8 @@ $(() => {
             contentType: false, //파일업로드용 설정
             processData: false, //파일업로드용 설정  
             success: function (result) {
-                console.log(result);
-                location.href = frontURL + 'lesson/list.html'
+                alert('')
+                location.href = frontURL + 'mypage/tutor/main.html'
             },
             error: function (xhr) {
                 alert('ERROR: ' + xhr.status)
@@ -41,7 +41,6 @@ $(() => {
     //=== 입력받은 정보 보내는 작업 END ===
 
 });
-
 
 //=== 로고 누르면 해당 페이지로 이동 START ===
 $(document).on('click', '#logo', function () {

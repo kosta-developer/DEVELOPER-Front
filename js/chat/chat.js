@@ -24,7 +24,7 @@ function connect(event) {
         chatPage.classList.remove('hidden');
 
         //현재 내 주소로 바꿔주기 *********
-        var socket = new SockJS("http://192.168.0.28:8888/developer/ws/chat");
+        var socket = new SockJS("http://192.168.0.34:8888/developer/ws/chat");
         stompClient = Stomp.over(socket);
 
         stompClient.connect({}, onConnected, onError);

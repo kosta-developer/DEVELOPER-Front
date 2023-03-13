@@ -2,7 +2,7 @@ let url = new URL(location.href);
 let seq = url.searchParams.get("lessonSeq");
 let lessonSeq = Number(seq);
 $(()=>{
-    checkIntervalLogined();
+    userCheckIntervalLogined();
 
     let $origin_completedclassreview= $('div#completedclassreview').first()
     let $origin_tuteelist=$('div#tuteelist').first()

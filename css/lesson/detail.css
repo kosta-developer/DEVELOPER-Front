@@ -1,79 +1,253 @@
-#detail {width: 100%; height: 1500px; color: #000000; font-size: 15px; }
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
-.nav-container {width:1000px; height: 100px; line-height: 60px; margin: 0 auto; border: 3px solid black; } 
-.content-container {width: 1000px; margin: 0 auto; border: 3px solid yellowgreen; } 
-.footer-container{width: 1000px; height: 100px; text-align:center; line-height: 100px; margin: 0 auto;  border: 3px solid orange; }
+*{margin: 0; padding: 0; background-color: #FFFEFE; font-family: 'Spoqa Han Sans Neo', 'sans-serif';} 
+
+#detail-wrap {width: 100%; height: auto; color: #000000; font-size: 15px; }
+#nav-wrap{width:1000px; height: 100px; line-height: 60px; margin: 0 auto;}
+#footer-wrap{
+  width: 100%; 
+  height: 100px; 
+  line-height: 100px; 
+  margin: 0 auto; 
+  text-align:center; 
+
+  background-color: #303740; 
+  color:#fff;
+  display : flex;
+  justify-content: center;
+  align-items : center;
+  }
+  #footer-wrap > div.footer-container{
+    background-color: #303740; 
+}
+.content-container {width: 1000px; margin: 0 auto; } 
+.footer-container{width: 1000px; height: 100px; text-align:center; line-height: 100px; margin: 0 auto; }
 
 /*=================== 헤더메뉴바 ===================*/
 .nav-container>nav{
-    width: 600px;
+    /* width: 600px; */
     /* display: inline-block; */
     float: right;
-}
-
-#detail > #nav-wrap >div.nav-container > img{
+  }
+  
+  .nav-container>img{
     height: 30px;
     float: left;
-    margin-top: 13px;
-    margin-left: 10px;
-}
-
-.nav-container>nav>ul{
+    margin-top: 33px;
+    margin-left: 20px;
+  }
+  
+  .nav-container>nav>ul{
     /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
     list-style-type: none;
-    padding-left: 0px; 
-}
-
-.nav-container>nav>ul>li{
-    /* width: 100px; */
+    padding-left: 0px;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 17px;
+  }
+  
+  .nav-container>nav>ul>li{
+   /* width: 100px; */
     display: inline-block;
     margin-left:15px;
-}
-
-.nav-container>nav>ul>li:hover{
-    background-color: #2C2A29;
-    color: #fff
-}
-
-#nav-wrap > div > nav > ul > li > a{
+  }
+  
+  /*  클릭 안 한 메뉴 */
+  .nav-container>nav>ul>li>a:link{
     text-decoration: none;
     color: black;
-}
+    margin-top: 50px;
+  }
+  
+  /*  클릭 한 메뉴 */
+  .nav-container>nav>ul>li>a:visited{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .nav-container>nav>ul>li>a:hover{
+    color:  #00C471;
+    font-weight: bold;
+  }
+  
+  .nav-container>nav>ul>li:hover{
+    color:  #00C471;
+    font-weight: bold;
+  }
 
 /*===================  상세정보 ===================*/
 .content-container > .dContent{
-    margin: 50px;
+  margin: 0 50px 50px 50px;
 }
 
-/*=================== 상단 상세정보 ===================*/
 #detail {
     display: inline-block;
-    margin-top: 50px;
     height: auto;
+    margin-top: 70px;
+    margin-left: 50px;
 }
 
-#detail > #classImg{
-    display: inline-block;
-    margin-left: 80px;
-    width: 400px;
+hr{
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#detail >.lessonImg{
+  margin-top: 5px;
+    margin-left: 120px;
+    width: 350px;
     height: 200px;
+}
+
+.detail-container>.tutorName{
+  margin-top: 15px;
+}
+
+.detail-container>.date{
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+#detail>.icon{
+  text-align: left;
+  margin-left: 130px;
 }
 
 #detail > div.detail-container{
     float: right;
     margin-left: 50px;
-    margin-right: 200px;
 }
 
+
+
+/*=================== 각종 신청버튼 ===================*/
 #applyBtn{
-    margin-top: 15px;
+    margin-top: 20px;
+    padding: 0px 22px;
+    appearance: none;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 42px;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    width: 100px;
+    height: 25px;
+    position: relative;
+    line-height: 1;
+    font-size: 14px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #FF6D5A;
+    border-radius: 8px;
+    margin-bottom: 100px;
 }
 
 #favoritesBtn{
-    background-color: greenyellow;
+  margin-top: 20px;
+  padding: 0px 22px;
+  appearance: none;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  height: 42px;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  width: 100px;
+  height: 25px;
+  position: relative;
+  line-height: 1;
+  font-size: 14px;
+  user-select: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-weight: 500;
+  color: black;
+  background-color: #DAECE5;
+  border-radius: 8px;
+  margin-bottom: 100px;
 }
 
-/*=================== 하단 상세정보 ===================*/
+#detailbtn{
+  padding: 0px 22px;
+  appearance: none;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  height: 42px;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  width: 100px;
+  height: 25px;
+  position: relative;
+  line-height: 1;
+  font-size: 14px;
+  user-select: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  background-color: #00C471;
+  border-radius: 8px;
+}
+
+#lessonReviewbtn{
+  padding: 0px 22px;
+  appearance: none;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  height: 42px;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  width: 100px;
+  height: 25px;
+  position: relative;
+  line-height: 1;
+  font-size: 14px;
+  user-select: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  background-color: #00C471;
+  border-radius: 8px;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+/*=================== 상세 정보 및 후기  ===================*/
+#detail-wrap > div.content-container > div.dContent > div.btn-container{
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-left: 100px;
+}
+
 #detail > div.content-container > div.dContent > div.dContent-container {
-    margin-top: 30px;
+  margin-top: 50px;
+}
+
+#detail-wrap > div.content-container > div.dContent > div.dContent-container > div.lesson-detail{
+  margin-left: 150px;
+  margin-bottom: 100px;
+  width: 600px;
+}
+
+#detail-wrap > div.content-container > div.dContent > div.dContent-container > div.lessonReview{
+  margin-left: 150px;
+  margin-bottom: 100px;
+  width: 600px;
 }

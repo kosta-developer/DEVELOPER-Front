@@ -1,20 +1,24 @@
 //지원
-let backURL = "http://192.168.9.156:8888/developer/";
-let frontURL = "http://192.168.9.156:5500/html/";
+let backURL = "http://192.168.0.34:8888/developer/";
+let frontURL = "http://192.168.0.34:5500/html/";
 
 $(() => {
     showMenuAtLogouted()
     //--로그아웃 클릭되었을 때 할 일 START--
-    $('#nav-wrap > div > nav > ul > li.logout').click((e) => {
-        alert("로그아웃클릭됨")
+    $('div.nav-container > nav > ul > li.logout').click((e) => {
+        // alert("로그아웃클릭됨")
         $.ajax({
             xhrFields: {
                 withCredentials: true
             },
             url: backURL + 'users/logout',
             success: function () {
-                sessionStorage.removeItem("logined");
                 showMenuAtLogouted()
+                sessionStorage.removeItem("logined");
+                sessionStorage.removeItem("role");
+                sessionStorage.removeItem("hostlogined")
+                sessionStorage.removeItem("hostready");
+                // alert("로그아웃성공")
                 location.href = frontURL + 'index.html'
             }
         })
@@ -27,32 +31,36 @@ $(() => {
         location.href = frontURL + 'index.html'
     })
     //--로고가 클릭되었을 때 할 일 END--
-})
+
+});
 
 
-//--로그인상태의 메뉴들 보여주기 함수 START--
-function showMenuAtLogined() {
-    $('#nav-wrap>.nav-container>nav>ul>li.lesson').show();
-    $('#nav-wrap>.nav-container>nav>ul>li.studyroom').show();
-    $('#nav-wrap>.nav-container>nav>ul>li.board').show();
-    $('#nav-wrap>.nav-container>nav>ul>li.signup').hide();
-    $('#nav-wrap>.nav-container>nav>ul>li.login').hide();
-    $('#nav-wrap>.nav-container>nav>ul>li.logout').show();
-    $('#nav-wrap>.nav-container>nav>ul>li.myPage').show();
-    $('#nav-wrap>.nav-container>nav>ul>li.message').show();
+//--[회원] 로그인상태의 메뉴들 보여주기 함수 START--
+function showMenuAtMemberLogined() {
+    $('div.nav-container >nav > ul > li.lesson').show()
+    $('div.nav-container >nav > ul > li.studyroom').show()
+    $('div.nav-container >nav > ul > li.board').show()
+    $('div.nav-container >nav > ul > li.signup').hide()
+    $('div.nav-container >nav > ul > li.login').hide()
+    $('div.nav-container >nav > ul > li.tutorAdd').show()
+    $('div.nav-container >nav > ul > li.lessonAdd').show()
+    $('div.nav-container >nav > ul > li.myPage').show()
+    $('div.nav-container >nav > ul > li.logout').show()
 }
-//--로그인상태의 메뉴들 보여주기 함수 END--
+//--[회원] 로그인상태의 메뉴들 보여주기 함수 END--
+
 
 //--로그아웃상태의 메뉴들 보여주기 함수 START--
 function showMenuAtLogouted() {
-    $('#nav-wrap>.nav-container>nav>ul>li.lesson').show();
-    $('#nav-wrap>.nav-container>nav>ul>li.studyroom').show();
-    $('#nav-wrap>.nav-container>nav>ul>li.board').show();
-    $('#nav-wrap>.nav-container>nav>ul>li.signup').show();
-    $('#nav-wrap>.nav-container>nav>ul>li.login').show();
-    $('#nav-wrap>.nav-container>nav>ul>li.logout').hide();
-    $('#nav-wrap>.nav-container>nav>ul>li.myPage').hide();
-    $('#nav-wrap>.nav-container>nav>ul>li.message').hide();
+    $('div.nav-container >nav > ul > li.lesson').show()
+    $('div.nav-container >nav > ul > li.studyroom').show()
+    $('div.nav-container >nav > ul > li.board').show()
+    $('div.nav-container >nav > ul > li.signup').show()
+    $('div.nav-container >nav > ul > li.login').show()
+    $('div.nav-container >nav > ul > li.tutorAdd').hide()
+    $('div.nav-container >nav > ul > li.lessonAdd').hide()
+    $('div.nav-container >nav > ul > li.myPage').hide()
+    $('div.nav-container >nav > ul > li.logout').hide()
 }
 //--로그아웃상태의 메뉴들 보여주기 함수 END--
 
@@ -65,8 +73,13 @@ function userCheckLogined() {
         },
         url: backURL + 'users/checklogined',
         success: function (responseObj) {
-            showMenuAtLogined() 
-        }, error: function (xhr) {
+            //console.log(responseObj)
+            if (responseObj == 1) {
+                //alert(responseObj)
+                showMenuAtMemberLogined();
+            } else {
+                showMenuAtLogouted();
+            }
         }
     });
 }
