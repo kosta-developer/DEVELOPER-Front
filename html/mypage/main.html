@@ -4,17 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <!--<link rel="stylesheet" href="../css/basic.css">-->
-    <link rel="stylesheet" href="/css/mypage/tutor/main.css">
+    <link rel="stylesheet" href="/css/mypage/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    
     <script src="/js/basic.js"></script>
-    <script src="/js/mypage/tutor/main.js"></script>
+    <script src="/js/mypage/main.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--<script src="../js/mypage.js"></script>-->
 </head>
 
 <body>
     <div id="wrap">
-        <div id="nav-wrap">
+        <div id="header-wrap">
+            <div class="header-container"></header>
+            </div>
+        </div>
+
+
         <div class="nav-container">
             <img id="logo" src="/images/logo.png">
             <nav>
@@ -89,38 +95,54 @@
                     <div class="top-title">
                         <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
                     </div>
-                    <div class="tutor">
-                        <div id="unpaidClass">
-                            <h2>결제가 필요한 수업</h2>
-                            <div id="unpaidclasslist">
-                                <div class="unpaidlessonName">진행 예정 수업이 없습니다.</div>
-                                <div class="unpaidlessonSeq"></div>
+
+                    <div class="userMain">
+                        <!-- <br/><h2>클래스명</h2><br/> -->
+                        <div class="userDetail">
+                            <div class="userinfo">
+                                <br/><h2>회원정보</h2><br/>
+                                <div class="userform">
+                                    <ul type="none">        
+                                        <li>아이디</li>
+                                        <li>닉네임</li>
+                                        <li>회원명</li>
+                                        <li>이메일</li>
+                                        <li>연락처</li>
+                                        <li>주소</li>
+                                    </ul>
+                                </div> 
+                                <div class="userinformation">
+                                    <ul type="none">
+                                        <li class="userId">아이디</li>
+                                        <li class="nickname">닉네임</li>
+                                        <li class="name">회원명</li>
+                                        <li class="email">이메일</li>
+                                        <li class="tel">연락처</li>
+                                        <li class="addr">주소</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="userButton">
+                                <input id="delete" type="button" value="탈퇴하기" >
+                                    <input id="modify" type="button" value="수정하기" >
                             </div>
                         </div>
-                        <div id="comingClass">
-                            <h2>진행 예정 수업</h2>
-                            <div id="comingclasslist">
-                                <div class="cominglessonName">진행 예정 수업이 없습니다.</div>
-                                <div class="cominglessonSeq"></div>
-                            </div>                            
+                        <div class="class">
+                            <h3>수업</h3>
                         </div>
-                        
-                        <div id="ongoingClass">
-                            <h2>진행 중인 수업</h2>
-                            <div id="ongoingclasslist">
-                                <div class="ongoinglessonName">진행중인 수업이 없습니다.</div>
-                                <div class="ongoinglessonSeq"></div>
-                            </div>                                  
+                        <div class="tutorTutee">
+                            <div class="tutor">
+                                <h6>튜터 마이페이지 </h6>
+                            </div>
+                            <div class="tutee">
+                                <h6>튜티 마이페이지</h6>
+                            </div>
                         </div>
-                        
-                        <div id="completedClass">
-                            <h2>진행 완료 수업</h2>
-                            <div id="completedclasslist">
-                                <div class="completedlessonName">진행을 완료한 수업이 없습니다.</div>
-                                <div class="completedlessonSeq"></div>
-                            </div>                            
+
+                        <div class="studyCafe">
+                            <h3><a href="/html/mypage/studyroom/roomreview.html">스터디카페 예약 내역 확인하기</a></h3>
                         </div>
-                    </div>
+
                 </div>
 
             </div>

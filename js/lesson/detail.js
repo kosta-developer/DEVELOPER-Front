@@ -1,6 +1,8 @@
 let logined = sessionStorage.getItem("logined");
 let favStatus;
 let favLesSeq;
+// let queryParams = new URLSearchParams(window.location.search);
+// let lessonSeq = queryParams.get('lessonSeq');
 
 $(() => {
 
