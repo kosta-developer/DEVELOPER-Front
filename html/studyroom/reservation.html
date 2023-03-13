@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto"/>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto" />
     <link rel="stylesheet" href="/css/basic.css">
     <link rel="stylesheet" href="/css/studyroom/reservation.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -17,105 +17,150 @@
 <body>
     <div id="wrap">
         <div id="header-wrap">
-            <div class="header-container"></header>
+            <div class="header-container">
+                </header>
             </div>
         </div>
         <div id="nav-wrap">
-           <div id="nav-wrap">
-            <div class="nav-container">
-                <img id="logo" src="/images/logo.png">
-                <nav>
-                    <ul>
-                        <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
-                        <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
-                        <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
-                        <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
-                        <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
-                        <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
-                        <li class='chat'><a href="/html/chat/chat.html">채팅</a></li>
-                        <li class='myPage'><a href="/html/mypage/usermypage.html">마이페이지</a></li>
-                        <li class='logout' onclick="logout()">로그아웃</li>
-                    </ul>
-                </nav>
+            <div id="nav-wrap">
+                <div class="nav-container">
+                    <img id="logo" src="/images/logo.png">
+                    <nav>
+                        <ul>
+                            <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
+                            <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
+                            <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
+                            <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                            <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
+                            <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
+                            <li class='lessonAdd'><a href="/html/lesson/add.html">수업등록</a></li>
+                            <li class='tutorAdd'><a href="/html/tutor/add.html">튜터등록</a></li>
+                            <li class='myPage'><a href="/html/mypage/main.html">마이페이지</a></li>
+                            <li class='adminPage'><a href="/html/admin/main.html">관리자페이지</a></li>
+                            <li class='logout'>로그아웃</li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
-        </div>
-       
+
         <div id="content-wrap">
             <div class="content-container">
                 <div class="top-title">
                     <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
                 </div>
                 <div class="reservation">
-                        <!-- <form class="myform" >
+                    <!-- <form class="myform" >
                         </form> -->
-                        
-                        <input type="date" id="input-date" ">  <button class="reroad">다시 선택하기</button>
-                        <div class="guide"><p>예약하실 날짜를 선택해주세요</p></div>
-                            
-                                
-                            
-                            
-                           
-                        
+
+                    <input type="date" id="input-date" ">  <button class=" reroad">다시 선택하기</button>
+                    <div class="guide">
+                        <p>예약하실 날짜를 선택해주세요</p>
                     </div>
-                      <div class="ref">
+
+
+
+
+
+
+                </div>
+                <div class="ref">
                     <table class="refTable">
                         <tr>
-                            <td class="impossible1"><div class="impossible"></div></td><td class="impossible2">예약불가</td>
-                            <td class="possible1"> <div class="possible"></div></td><td class="possible2">예약가능</td>
-                            <td class="completed1"><div class="completed"></div></td><td>선택완료</td>
-                        
+                            <td class="impossible1">
+                                <div class="impossible"></div>
+                            </td>
+                            <td class="impossible2">예약불가</td>
+                            <td class="possible1">
+                                <div class="possible"></div>
+                            </td>
+                            <td class="possible2">예약가능</td>
+                            <td class="completed1">
+                                <div class="completed"></div>
+                            </td>
+                            <td>선택완료</td>
+
                         </tr>
                     </table>
-                   
-                                    
-                   
-                    
+
+
+
+
                 </div>
-                  <!-- js ajax부분 -->
-                   <div class="checkBox">
+                <!-- js ajax부분 -->
+                <div class="checkBox">
                     <table border="1" class="checkboxTable">
-                        <tr><td rowspan="3" id="heightcontrol">
-                          <div class="checkbox-pack">
-                            <input type="checkbox" data-name="01:00 ~ 02:00" value="01:00" id="1" name="1" class="checkbox"><div class="valueStorage"></div>
-                            <input type="checkbox" data-name="02:00 ~ 02:00" value="02:00" id="2" name="2" class="checkbox">
-                            <input type="checkbox" data-name="03:00 ~ 04:00" value="03:00" id="3" name="3" class="checkbox">
-                            <input type="checkbox" data-name="04:00 ~ 05:00" value="04:00" id="4" name="4" class="checkbox">
-                            <input type="checkbox" data-name="05:00 ~ 06:00" value="05:00" id="5" name="5" class="checkbox">
-                            <input type="checkbox" data-name="06:00 ~ 07:00" value="06:00" id="6" name="6" class="checkbox">
-                            <input type="checkbox" data-name="07:00 ~ 08:00" value="07:00" id="7" name="7" class="checkbox">
-                            <input type="checkbox" data-name="08:00 ~ 09:00" value="08:00" id="8" name="8" class="checkbox">
-                            <input type="checkbox" data-name="09:00 ~ 10:00" value="09:00" id="9" name="9" class="checkbox">
-                            <input type="checkbox" data-name="10:00 ~ 11:00" value="10:00" id="10" name="10" class="checkbox">
-                            <input type="checkbox" data-name="11:00 ~ 12:00" value="11:00" id="11" name="11" class="checkbox">
-                            <input type="checkbox" data-name="12:00 ~ 13:00" value="12:00" id="12" name="12" class="checkbox">
-                            <input type="checkbox" data-name="13:00 ~ 14:00" value="13:00" id="13" name="13" class="checkbox">
-                            <input type="checkbox" data-name="14:00 ~ 15:00" value="14:00" id="14" name="14" class="checkbox">
-                            <input type="checkbox" data-name="15:00 ~ 16:00" value="15:00" id="15" name="15"class="checkbox">
-                            <input type="checkbox" data-name="16:00 ~ 17:00" value="16:00" id="16" name="16" class="checkbox">
-                            <input type="checkbox" data-name="17:00 ~ 18:00" value="17:00" id="17" name="17" class="checkbox">
-                            <input type="checkbox" data-name="18:00 ~ 19:00" value="18:00" id="18" name="18" class="checkbox">
-                            <input type="checkbox" data-name="19:00 ~ 20:00" value="19:00" id="19" name="19" class="checkbox">
-                            <input type="checkbox" data-name="20:00 ~ 21:00" value="20:00" id="20" name="20" class="checkbox">
-                            <input type="checkbox" data-name="21:00 ~ 22:00" value="21:00" id="21" name="21" class="checkbox">
-                            <input type="checkbox" data-name="22:00 ~ 23:00" value="22:00" id="22" name="22" class="checkbox">
-                            <input type="checkbox" data-name="23:00 ~ 24:00" value="23:00" id="23" name="23" class="checkbox">
-                            <input type="checkbox" data-name="24:00 ~ 01:00" value="24:00" id="24" name="24" class="checkbox">
-                            </div>
-                        </td>
-                        <td class="time">예약시간:    </td></tr>
-                        <tr><td class="price">최종가격:   원</td></tr>
-                        <tr><td class="reserve"> <button class="btn">예약하기</button></td></tr>
-                        
-                        
-                        </table>
-                   </div>
-               
-                    
-                
-              
-                
+                        <tr>
+                            <td rowspan="3" id="heightcontrol">
+                                <div class="checkbox-pack">
+                                    <input type="checkbox" data-name="01:00 ~ 02:00" value="01:00" id="1" name="1"
+                                        class="checkbox">
+                                    <div class="valueStorage"></div>
+                                    <input type="checkbox" data-name="02:00 ~ 02:00" value="02:00" id="2" name="2"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="03:00 ~ 04:00" value="03:00" id="3" name="3"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="04:00 ~ 05:00" value="04:00" id="4" name="4"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="05:00 ~ 06:00" value="05:00" id="5" name="5"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="06:00 ~ 07:00" value="06:00" id="6" name="6"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="07:00 ~ 08:00" value="07:00" id="7" name="7"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="08:00 ~ 09:00" value="08:00" id="8" name="8"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="09:00 ~ 10:00" value="09:00" id="9" name="9"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="10:00 ~ 11:00" value="10:00" id="10" name="10"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="11:00 ~ 12:00" value="11:00" id="11" name="11"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="12:00 ~ 13:00" value="12:00" id="12" name="12"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="13:00 ~ 14:00" value="13:00" id="13" name="13"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="14:00 ~ 15:00" value="14:00" id="14" name="14"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="15:00 ~ 16:00" value="15:00" id="15" name="15"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="16:00 ~ 17:00" value="16:00" id="16" name="16"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="17:00 ~ 18:00" value="17:00" id="17" name="17"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="18:00 ~ 19:00" value="18:00" id="18" name="18"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="19:00 ~ 20:00" value="19:00" id="19" name="19"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="20:00 ~ 21:00" value="20:00" id="20" name="20"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="21:00 ~ 22:00" value="21:00" id="21" name="21"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="22:00 ~ 23:00" value="22:00" id="22" name="22"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="23:00 ~ 24:00" value="23:00" id="23" name="23"
+                                        class="checkbox">
+                                    <input type="checkbox" data-name="24:00 ~ 01:00" value="24:00" id="24" name="24"
+                                        class="checkbox">
+                                </div>
+                            </td>
+                            <td class="time">예약시간: </td>
+                        </tr>
+                        <tr>
+                            <td class="price">최종가격: 원</td>
+                        </tr>
+                        <tr>
+                            <td class="reserve"> <button class="btn">예약하기</button></td>
+                        </tr>
+
+
+                    </table>
+                </div>
+
+
+
+
+
             </div>
         </div>
     </div>

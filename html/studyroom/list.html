@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="/css/studyroom/list.css">
-  
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="/js/basic.js"></script>
   <script src="/js/studyroom/list.js"></script>
@@ -17,16 +17,18 @@
         <img id="logo" src="/images/logo.png">
         <nav>
           <ul>
-            <li class='lesson'>수업</li>
-            <li class='studycafe'>스터디카페</li>
-            <li class='community'>커뮤니티</li>
+            <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
+            <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
+            <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
             <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
-            <li class='signup'>회원가입</li>
-            <li class='login'>로그인</li>
+            <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
+            <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
+            <li class='lessonAdd'><a href="/html/lesson/add.html">수업등록</a></li>
+            <li class='tutorAdd'><a href="/html/tutor/add.html">튜터등록</a></li>
+            <li class='myPage'><a href="/html/mypage/main.html">마이페이지</a></li>
+            <li class='adminPage'><a href="/html/admin/main.html">관리자페이지</a></li>
             <li class='logout'>로그아웃</li>
-            <li class='tutorAdd'>튜터등록</li>
-            <li class='myPage'>마이페이지</li>
-          </ul>
+        </ul>
         </nav>
       </div>
     </div>
@@ -39,7 +41,7 @@
         </div>
         <div class="studycafe">
           <div class="searchgroup">
-            <form class="form" >
+            <form class="form">
 
               <select id="searchBy">
                 <option value="1">주소</option>
@@ -72,12 +74,12 @@
           </div>
           <div class="studycafe-group"></div>
           <div class="studycafeList">
-            <table class="studycafeTable" >
+            <table class="studycafeTable">
               <thead>
                 <tr>
 
                   <td colspan="3" class="img">대표사진</td>
-                  
+
                 </tr>
                 <tr>
                   <td colspan="3" class="name">카페이름</td>
@@ -90,7 +92,9 @@
                   <td class="person">최대인원</td>
                   <td class="favCnt">즐겨찾기수</td>
                 </tr>
-                <tr class="srSeq"><td></td></tr>
+                <tr class="srSeq">
+                  <td></td>
+                </tr>
                 <tr>
                   <td colspan="3" class="srbtn">
 
