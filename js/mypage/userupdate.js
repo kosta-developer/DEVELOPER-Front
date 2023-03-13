@@ -90,23 +90,32 @@ $(()=>{
             const userId = jsonObj.userId;
 
 
+            
+            
+            
             $('#modify').on('click', function () {
-                let data = {
-                    nickname: $('#nickname').val(),
-                    name: $('#name').val(),
-                    tel: $('#tel').val(),
-                    addr: $('#addr').val(),
-                    userId: $('#userId').val(),
-                    // pwd: 
-                }
-
+                let nickname = $('#nickname').val();
+                let name = $('#name').val();
+                let tel = $('#tel').val();
+                let addr = $('#addr').val();
+                let userId = $('#userId').val();
+                let pwd = $('#pwd').val();
+             
+                
                 $.ajax({
                     xhrFields: {
                         withCredentials: true
                     },
                     url: backURL + 'mypage/userupdate',
                     method: 'PUT',
-                    data: data,
+                    data: JSON.stringify({
+                        "nickname" : nickname,
+                        "name" : name,
+                        "tel" : tel,
+                        "addr" : addr,
+                        "pwd" : pwd
+
+                    }),
                     headers : { "Content-Type" : "application/json"},
                     success: function () {
                         alert('수정이 완료되었습니다')
