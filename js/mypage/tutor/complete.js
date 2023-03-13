@@ -1,6 +1,5 @@
 $(()=>{
-    userCheckIntervalLogined();
-    $('span#showLoginId').html(sessionStorage.getItem("logined"));
+    checkIntervalLogined();
     $.ajax({
         xhrFields: {
             withCredentials: true //크로스오리진을 허용!
