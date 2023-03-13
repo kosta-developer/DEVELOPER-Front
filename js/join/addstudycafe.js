@@ -28,7 +28,7 @@ $(() => {
 
     //=================[첨부파일이 변경되었을 때 START]==================
     let $divShow = $('div.show')
-    $('#content-wrap > div > div > form > div:nth-child(6) > input[type=file]').change((e) => {
+    $('#cafeFile').change((e) => {
         $(e.target.files).each((index, imgFileObj) => {
             $divShow.empty()
             imgFileObj = e.target.files[0]
@@ -55,7 +55,6 @@ $(() => {
         let formData = new FormData($form[0])
         //console.log( formData.get('addr1'));
         let name = $('input#nameCafe').val();
-        console.log(name)
         let info = $('textarea#info').val();
         let openTime = $('input#openTime').val();
         let endTime = $('input#endTime').val();
@@ -120,7 +119,7 @@ $(() => {
 
             },
             error: function (xhr) {
-                alert('오류' + xhr.status)
+                alert(xhr.responseText)
             }
         })
         return false

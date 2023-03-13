@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="/css/index.css">
   <link rel="stylesheet" href="/css/studyroom/roominfo.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="/js/basic.js"></script>
@@ -13,71 +12,83 @@
 <body>
   <div id="wrap">
     <div id="header-wrap">
-        <div class="header-container">header</header></div>
+        <div class="header-container"></header></div>
     </div>
     <div id="nav-wrap">
-        <div class="nav-container">
-            <nav>
-                <ul>
-                    <li class='lesson'>수업</li>
-                    <li class='studycafe'>스터디카페</li>
-                    <li class='community'>커뮤니티</li>
-                    <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
-                    <li class='signup'>회원가입</li>
-                    <li class='login'>로그인</li>
-                    <li class='logout'>로그아웃</li>
-                    <li class='tutorAdd'>튜터등록</li>
-                    <li class='myPage'>마이페이지</li>
-                </ul>
-            </nav>
-        </div>
+       <div class="nav-container">
+                <img id="logo" src="/images/logo.png">
+                <nav>
+                    <ul>
+                        <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
+                        <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
+                        <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
+                        <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                        <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
+                        <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
+                        <li class='chat'><a href="/html/chat/chat.html">채팅</a></li>
+                        <li class='myPage'><a href="/html/mypage/usermypage.html">마이페이지</a></li>
+                        <li class='logout' onclick="logout()">로그아웃</li>
+                    </ul>
+                </nav>
+            </div>
     </div>
-    <div id="banner-wrap">
-        <div class="banner-container">Banner</div>
-    </div>
+
     <div id="content-wrap">
         <div class="content-container">
+            <div class="top-title">
+                <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
+            </div>
           <div class="studycafeInfo">
-            <div class="studycafeDetail">
+            <div class="study-body">
+                <div class="studycafeDetail">
 
-                <table border="1" class="sfDetail">
-                    <tr><td rowspan="4" class="img">카페사진</td><td class="cfName" colspan="3">카페이름</td></tr>
-                    <tr><td class="info" colspan="3">상세정보</td></tr>
-                    <tr><td class="addr" colspan="3">주소</td></tr>
-                    <tr><td class="openTime">오픈시간</td><td class="endTime">마감시간</td><td><input type="button" value="🌟" class="favStudy"></input></td></tr>
-                    
-                    
+                    <table  class="sfDetail">
+                        <tr><td rowspan="4" class="img">카페사진</td><td class="cfName" colspan="3">카페이름</td></tr>
+                        <tr><td class="info" colspan="3">상세정보</td></tr>
+                        <tr><td class="addr" colspan="3">주소</td></tr>
+                        <tr><td class="openTime">오픈시간</td><td class="endTime">마감시간</td><td><input type="button" value="🌟" class="favStudy"></input></td></tr>
                         
-                </table>
-            </div>
-            <div class="studyroomList">
-                <form>
-                    <table border="1" class="studyroomTable">
-                        <tr><td class="roomName">방이름</td><td rowspan="3"class="roomImg">방사진</td></tr>
-                        <tr><td class="roomInfo">방정보</td></tr>
-                        <tr><td class="person">수용인원</td></tr>
-                        <tr><td class="roomPrice">가격</td><td class="locationbtn"></td></tr>
-                            <tr><td class="roomSeq"></td><td class="hostId"></td></tr>
-                        </td></tr>
                         
+                            
                     </table>
-                </form>
+                </div>
+                <div class="studyroomList">
+                    <form class="formclass">
+                        <table  class="studyroomTable">
+                            <tr><td class="roomName">방이름</td><td rowspan="3"class="roomImg">방사진</td></tr>
+                            <tr><td class="roomInfo">방정보</td></tr>
+                            <tr><td class="person">수용인원</td></tr>
+                            <tr><td class="roomPrice">가격</td><td class="locationbtn"></td></tr>
+                                <tr><td class="roomSeq"></td><td class="hostId"></td></tr>
+                            </td></tr>
+                            
+                        </table>
+                    </form>
+                </div>
             </div>
-            <div class="roomReview">
-                <table border="1" class="roomReviewTable">
-                    <tr><td class="nickname">닉네임</td><td class="rmname">방이름</td><td class="star">별점</td><td class="usingDate">작성일자</td></tr>
-                    <tr><td colspan="5" class="content">후기내용</td></tr>
-                </table>
-            </div>
+            
+            <div class="review">
+                <div id="review-title">스터디카페 후기</div> 
+               <table class="review-title-table" >
+                <th class="title-nickname">닉네임</th><th class="title-room">스터디룸</th><th class="title-star">별점</th><th class="title-date">이용일</th>
+               </table>
+                <div class="roomReview">
+                    
+                    <table class="roomReviewTable">
+                        <tr><td class="nickname">닉네임</td><td class="rmname">방이름</td><td class="star">별점</td><td class="usingDate">작성일자</td></tr>
+                        <tr id="re-con"><td colspan="5" class="content">후기내용</td></tr>
+                    </table>
+                </div>
+            </div> 
             <div id="nonebox"></div><div id="nonebox2"></div>
           </div>
           </div>
         </div>
     </div>
    
-    <!-- <div id="footer-wrap">
+    <div id="footer-wrap">
         <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
-    </div> -->
+    </div>
 </div>
 
    

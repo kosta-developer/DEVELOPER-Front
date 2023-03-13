@@ -1,7 +1,10 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
 
 html,
@@ -28,7 +31,7 @@ body:before {
     position: absolute;
     top: 0;
     left: 0;
-    background: yellowgreen;
+    background: #00C471;
     content: "";
     z-index: 0;
 }

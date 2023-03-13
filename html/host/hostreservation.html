@@ -29,10 +29,41 @@
         <div class="content-container">
             <div class="space"></div>
             <div class="reservation">
-                <input type="date" id="input-date" "> <button class=" reroad" style="display: none;">다시 하기</button>
+                <!-- <form class="myform" >
+                    </form> -->
+
+                <input type="date" id="input-date" ">  <button class=" reroad">다시 선택하기</button>
                 <div class="guide">
                     <p>예약하실 날짜를 선택해주세요</p>
                 </div>
+
+
+
+
+
+
+            </div>
+            <div class="ref">
+                <table class="refTable">
+                    <tr>
+                        <td class="impossible1">
+                            <div class="impossible"></div>
+                        </td>
+                        <td class="impossible2">예약불가</td>
+                        <td class="possible1">
+                            <div class="possible"></div>
+                        </td>
+                        <td class="possible2">예약가능</td>
+                        <td class="completed1">
+                            <div class="completed"></div>
+                        </td>
+                        <td>선택완료</td>
+
+                    </tr>
+                </table>
+
+
+
 
             </div>
             <!-- js ajax부분 -->
@@ -44,7 +75,7 @@
                                 <input type="checkbox" data-name="01:00 ~ 02:00" value="01:00" id="1" name="1"
                                     class="checkbox">
                                 <div class="valueStorage"></div>
-                                <input type="checkbox" data-name="02:00 ~ 03:00" value="02:00" id="2" name="2"
+                                <input type="checkbox" data-name="02:00 ~ 02:00" value="02:00" id="2" name="2"
                                     class="checkbox">
                                 <input type="checkbox" data-name="03:00 ~ 04:00" value="03:00" id="3" name="3"
                                     class="checkbox">
@@ -94,43 +125,20 @@
                         </td>
                         <td class="time">예약시간: </td>
                     </tr>
-                    <!-- 버튼 네이밍은 수정하시면됩니다 -->
                     <tr>
-                        <td class="reserve"> <button class="btn">예약막기</button></td>
+                        <td class="price">최종가격: 원</td>
                     </tr>
-
-
-                </table>
-            </div>
-
-            <div class="ref">
-                <table class="refTable">
                     <tr>
-                        <td class="impossible1">
-                            <div class="impossible"></div>
-                        </td>
-                        <td class="impossible2">예약불가</td>
-                        <td class="possible1">
-                            <div class="possible"></div>
-                        </td>
-                        <td class="possible2">예약가능</td>
-                        <td class="completed1">
-                            <div class="completed"></div>
-                        </td>
-                        <td>선택완료</td>
+                        <td class="reserve"> <button class="btn">예약하기</button></td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
-    </div>
-
     <div id="footer-wrap">
         <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
     </div>
     </div>
-
-
 </body>
 
 </html>

@@ -1,48 +1,153 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url([//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css](notion://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css));
 
-*{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
-#user-index-wrap {width: 100%; height: auto; font-size: 15px; }
-#user-index-wrap>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
-#user-index-wrap>#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
-#user-index-wrap>#footer-wrap{width: 100%; border: 1px solid rgb(187, 187, 187); text-align:center;}
-#user-index-wrap>#content-wrap>.userpage-body-wrap{margin:0 auto; width: 1000px; height: 1200px;  border: 1px solid rgb(187, 187, 187);}
+* {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFEFE;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+#index-wrap {
+    width: 100%;
+    height: 1500px;
+    color: #000000;
+    font-size: 15px;
+}
+
+#banner-wrap {
+    width: 100%;
+}
+
+#content-wrap {
+    width: 100%;
+    height: auto;
+}
+
+#footer-wrap {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #303740;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#devBanner {
+    width: 1000px;
+    height: 300px;
+}
+
+#content-wrap>.content-container>div.lessonlist {
+    width: 100%;
+    height: 800px;
+}
+
 /*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
  width: 100%는 기본값이기 때문에 없어도 된다 */
 
- #user-index-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91; } 
- #user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container {float: left; width: 19%; height: 700px; margin: 0 auto; border: 1px solid #fc487b;} 
- #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container {float: right; width: 78%; height: 1000px; margin: 0 auto; border: 1px solid #62ff19; margin: 18px 13px 13px 13px;}
- #user-index-wrap>#footer-wrap>.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
+.nav-container {
+    width: 1000px;
+    height: 100px;
+    line-height: 60px;
+    margin: 0 auto;
+}
 
- #user-index-wrap>#nav-wrap>.nav-container>nav{
-    width: 200px;
+.banner-container {
+    width: 1000px;
+    height: 300px;
+    line-height: 300px;
+    margin: 0 auto;
+}
+
+
+.footer-container {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+}
+
+#footer-wrap>div.footer-container {
+    background-color: #303740;
+}
+
+.nav-container>nav {
+    /* width: 600px; */
     /* display: inline-block; */
     float: right;
 }
 
-#user-index-wrap>#nav-wrap>.nav-container>img{
+.nav-container>img {
     height: 30px;
     float: left;
-    margin-top: 13px;
-    margin-left: 10px;
+    margin-top: 33px;
+    margin-left: 20px;
 }
 
-#user-index-wrap>#nav-wrap>.nav-container>nav>ul{
+.nav-container>nav>ul {
     /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
     list-style-type: none;
     padding-left: 0px;
-    
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 17px;
 }
 
-#user-index-wrap>#nav-wrap>.nav-container>nav>ul>li{
-   /* width: 100px; */
+.nav-container>nav>ul>li {
+    /* width: 100px; */
     display: inline-block;
-    margin-left:15px;
+    margin-left: 15px;
 }
 
-#user-index-wrap>#nav-wrap>.nav-container>nav>ul>li:hover{
-    background-color: #2C2A29;
-    color: #fff
+/*  클릭 안 한 메뉴 */
+.nav-container>nav>ul>li>a:link {
+    text-decoration: none;
+    color: black;
+    margin-top: 50px;
+}
+
+/*  클릭 한 메뉴 */
+.nav-container>nav>ul>li>a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-container>nav>ul>li>a:hover {
+    color: #00C471;
+    font-weight: bold;
+}
+
+.nav-container>nav>ul>li:hover {
+    color: #00C471;
+    font-weight: bold;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+*{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
+#user-index-wrap {width: 100%; height: auto; font-size: 15px; }
+
+#user-index-wrap>#content-wrap{width: 100%; height:auto; }
+
+#user-index-wrap>#content-wrap>.userpage-body-wrap{margin:0 auto; width: 1000px; height: 1200px; }
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+ width: 100%는 기본값이기 때문에 없어도 된다 */
+
+ 
+ #user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container {float: left; width: 19%; height: 700px; margin: 0 auto; } 
+ #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container {
+    float: right; width: 78%; height: 1000px;  margin: 0px 13px 13px 13px;
+    overflow: auto
+
 }
 
 #user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu{
@@ -76,14 +181,39 @@
     color: #fff
 }
 
-#user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#user-reviewRequired-box{
-    width:730px;
-    height:auto;
-    background-color: rgb(248, 246, 239);
-    border-radius: 10px;
-    margin: 30px 25px 30px 25px;
-    padding-bottom: 30px;
+
+.info-title1{
+    background-color: #F9F9F9;
+    margin-left: 10px;
+    font-weight: 700;
+    padding: 30px;
 }
+.info-title2 {
+    background-color: #F9F9F9;
+    width: 691px;
+    margin-top: 20px;
+    margin-left: 40px;
+    font-weight: 700;
+    padding: 30px;
+}
+
+
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#studycafe-infomation-box>.imgbox{
+    float: left;
+    background-color: #8fd9c3;
+    width: 220px;
+    height: 220px;
+    margin: 15px 0px 0px 25px 
+}
+
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#studycafe-infomation-box>.textbox{
+    float: right;
+    
+    width: 450px;
+    height: 220px;
+    margin: 15px 25px 0px 0px
+}
+
 #review-box{
     width:440px;
     height:auto;
@@ -98,6 +228,20 @@
     margin-top: 10px;
     margin-left: 25px;
 }
+.review-content{
+    background-color: #F9F9F9;
+    width: 350px;
+    text-align: center;
+    
+}
+.review-content2 {
+    background-color: #F9F9F9;
+    width: 690px;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 50px;
+    }
+
 div.review-content>div>div{
     float: left;
     margin-top: 20px;
@@ -139,46 +283,41 @@ div.reviewTextBox{
 }
 
 .info-title{
+    background-color: #F9F9F9;
     font-weight: 700;
     padding: 20px ;
     
 }
 .info-title2{
+    background-color: #F9F9F9;
     font-weight: 700;
     padding: 10px ;
 }
-#user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#userlist-box{
-    width:330px;
-    height:200px;
-    background-color: rgb(248, 246, 239);
-    border-radius: 10px;
-    margin: 30px 25px 20px 25px;
-    padding-bottom: 30px;
-}
+
 #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#userlist-box{
     width:355px;
-    height:250px;
-    background-color: rgb(248, 246, 239);
+    height: 300px;
+    background-color: #F9F9F9;
     border-radius: 10px;
-    margin: 30px 5px 20px 25px;
+    margin: 45px 5px 20px 10px;
     padding-bottom: 30px;
     float: left;
 }
 #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#studycafelist-box{
-    width:355px;
-    height:250px;
-    background-color: rgb(248, 246, 239);
+    width:380px;
+    height:300px;
+    background-color: #F9F9F9;
     border-radius: 10px;
-    margin: 30px 25px 20px 5px;
+    margin: 30px 10px 20px 0px;
     padding-bottom: 30px;
     float: right;
 }
 #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#classlist-box{
-    width:730px;
+    width:760px;
     height:300px;
-    background-color: rgb(248, 246, 239);
+   background-color: #F9F9F9;
     border-radius: 10px;
-    margin: 0px 5px 60px 25px;
+    margin: 0px 5px 60px 10px;
     padding-bottom: 30px;
     float: left;
 }
@@ -186,7 +325,7 @@ div.reviewTextBox{
 
 #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#studycafe-infomation-box>.imgbox{
     float: left;
-    background-color: #8fd9c3;
+    background-color: #F9F9F9;
     width: 220px;
     height: 220px;
     margin: 15px 0px 0px 25px 
@@ -194,7 +333,7 @@ div.reviewTextBox{
 
 #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#studycafe-infomation-box>.textbox{
     float: right;
-    background-color: #c39d91;
+    background-color: #F9F9F9;
     width: 450px;
     height: 220px;
     margin: 15px 25px 0px 0px
@@ -220,26 +359,32 @@ td{
     width: 100px;
     height: 30px;
 }
-hr{
-    height: 10%;
-}
+
 .review-content>div>table{
     text-align: center;
 }
 .class-table-title{
+  
     margin-left: 15px;
     margin-right: 15px;
     margin-top: -10px;
 }
+.class-table-title2 {
+    width: 670px;
+    
+    margin-right: 15px;
+    margin-top: -10px;
+    border-bottom: 1px solid rgb(16, 16, 16);
+}
 #classHeader{
     text-align: left;
     text-align: center;
-    width: 300px;
+    width: 260px;
 }
 
 .study-table-body{
     border-bottom:1px solid rgb(16, 16, 16);
-    background-color: white;
+  
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: -20px;
@@ -249,16 +394,15 @@ hr{
 }
 .class-table-body{
     border-bottom:1px solid rgb(16, 16, 16);
-    background-color: white;
-    margin-left: 28px;
+ 
     text-align: center;
 }
 #personnalHeader{
-    width: 180px;
+    width: 160px;
     text-align: center;
 }
 #categoryHeader{
-    width: 180px;
+    width: 170px;
     text-align: center;
 }
 #lessonName{
@@ -274,41 +418,54 @@ hr{
     width: 320px; 
 }
 #category{
-    width: 180px;
+    width: 190px;
     text-align: center;
 }
 #personnal{
     width: 180px;
     text-align: center;
 }
-hr{
-    size: 2px;
-}
+
 .class-sub-title{
-    font-weight: 600;
+    width: 700px;
+    background-color: #F9F9F9;
+    font-weight: 900;
     text-align: right;
     margin-right: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+}
+.class-table-title1{
+    width: 290px;
+    margin-left: 15px;
 }
 .studycafe-sub-title{
+    width: 300px;
+    background-color: #F9F9F9;
     font-weight: 600;
     text-align: right;
-    margin-right: 20px;
-    margin-bottom: 2px;
+    margin-left: 50px;
+   
+    margin-bottom: 20px;
     margin-top: -10px;
 }
 .studycafe-list{
+    margin-left: 30px;
     margin-top: 20px;
     
 }
+.head-title{
+    margin-left: 30px;
+}
+.head-title2{
+    width: 200px;
+    margin-left: 25px;
+}
 #class-btn{
+  
     width: 80px;
     height: 20px;
 }
-#studycafe-btn{
-    width: 80px;
-    height: 20px;
-}
+
 .btn-location1{
     float: right;
     margin-right: 10px;
@@ -327,17 +484,128 @@ hr{
     text-align: center;
 }
 #seqtitle{
-    width: 40px;
+    width: 50px;
     text-align: center;
 }
 #cfname{
-    width: 250px;
+    width: 230px;
     text-align: center;
 }
 #hosttitle{
-    width: 180px;
+    width: 170px;
     text-align: center;
 }
 #study{
     width: 250px;
+}
+#userBtn{
+margin-top: 10px;
+   
+   
+    appearance: none;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 42px;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    width: 250px;
+    position: relative;
+    line-height: 1;
+    font-size: 16px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #00C471;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+#hostBtn{
+    margin-top: 10px;
+    margin-right: 20px;
+    
+        padding: 0px 22px;
+        appearance: none;
+        text-align: center;
+        text-decoration: none;
+        box-sizing: border-box;
+        height: 42px;
+        -webkit-tap-highlight-color: transparent;
+        display: inline-block;
+        width: 250px;
+        position: relative;
+        line-height: 1;
+        font-size: 16px;
+        user-select: none;
+        cursor: pointer;
+        border: 1px solid transparent;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        background-color: #00C471;
+        border-radius: 8px;
+}
+#studycafe-btn{
+
+padding: 0px 22px;
+    appearance: none;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 42px;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    width: 115px;
+    height: 20px;
+    margin-right: 0px;
+    position: relative;
+    line-height: 1;
+    font-size: 16px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #00C471;
+    border-radius: 8px;
+
+}
+
+#class-btn{
+        margin-right: -10px;
+        appearance: none;
+        text-align: center;
+        text-decoration: none;
+        box-sizing: border-box;
+        height: 42px;
+        -webkit-tap-highlight-color: transparent;
+        display: inline-block;
+        width: 115px;
+        height: 20px;
+        margin-right: 0px;
+        position: relative;
+        line-height: 1;
+        font-size: 16px;
+        user-select: none;
+        cursor: pointer;
+        border: 1px solid transparent;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        background-color: #00C471;
+        border-radius: 8px;
+}
+.currentClass{
+    margin-left: 25px;
+    width: 670px;
+}
+div.top-title {
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-bottom: -30px;
+}
+
+span#showLoginId {
+    font-weight: 800;
+    color: #00C471;
 }

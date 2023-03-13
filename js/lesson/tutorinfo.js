@@ -12,7 +12,6 @@ $(() => {
         url: url,
         success: function (jsonObj) {
             console.log(jsonObj)
-            $('#tImgPath').attr('src', '/images/' + jsonObj[0].imgPath)
             $('#tutor-container > div.tutorName').html(jsonObj[0].name)
             $('#tutor-container > div.info').html(jsonObj[0].info)
 
@@ -40,28 +39,64 @@ $(() => {
             let lessonSeq;
 
             $(jsonObj[0].lesson).each((i) => {
+                let $copy = $origin.clone();
+
                 lessonSeq = jsonObj[0].lesson[i].lessonSeq
-                lImgPath = jsonObj[0].lesson[i]
+                lImgPath = jsonObj[0].lesson[i].imgPath
                 lessonName = jsonObj[0].lesson[i].lessonName
                 location = jsonObj[0].lesson[i].location
                 price = jsonObj[0].lesson[i].price
                 if (price == 0) {
                     price = '무료';
                 }
+
+                //=================[이미지 다운로드 START]==================
+                $.ajax({
+                    xhrFields: {
+                        responseType: "blob",
+                    },
+                    cashe: false,
+                    url: backURL + "download/lesson",
+                    method: "get",
+                    data: "imgPath=" + lImgPath + "&opt=inline&type=1",
+                    success: function (result) {
+                        console.log(result);
+                        let blobStr = URL.createObjectURL(result);
+                        console.log($copy.find("img.lImgPath"));
+                        $copy.find("img.lImgPath").attr("src", blobStr);
+
+
+                        //=================[이미지 다운로드 START]==================
+                        let imgPath = jsonObj[0].imgPath;
+                        $.ajax({
+                            xhrFields: {
+                                responseType: "blob",
+                            },
+                            cashe: false,
+                            url: backURL + "download/tutor",
+                            method: "get",
+                            data: "imgPath=" + imgPath + "&opt=inline&type=1",
+                            success: function (result) {
+                                console.log(result);
+                                let blobStr = URL.createObjectURL(result);
+                                $('#tutor >#tImgPath').attr("src", blobStr);
+                            },
+                        });
+                        //=================[이미지 다운로드 END]==================
+
+                    },
+                });
+                //=================[이미지 다운로드 END]==================
+
                 console.log(lessonName)
-                let $copy = $origin.clone();
-                let $imgObj = $('<img>')
-                $imgObj.attr('class', 'lessonImg');
-                $imgObj.attr('src', '/images/' + lImgPath);
-                $copy.find('div.lImgPath').empty().append($imgObj);
+            
                 $copy.find('div.lessonSeq').html(lessonSeq);
-                $copy.find('div.lessonName').html("<h6>" + lessonName + "</h6>");
+                $copy.find('div.lessonName').html("<h3>" + lessonName + "</h3>");
                 $copy.find('div.location').html(location);
                 $copy.find('div.price').html(price);
                 console.log("----");
                 $parent.append($copy);
             })
-
             $origin.hide();
         },
         error: function (xhr) {
@@ -70,18 +105,6 @@ $(() => {
         }
     });
     //=== 튜터 상세 내용 보여주기 END ===
-
-
-    //=== 수업 이미지/이름 누르면 상세 페이지로 이동 START ===
-    $('#tutorLessonList').on('click', 'div.lImgPath', (e) => {
-        let seq = $(e.target).parents('div.tutorLesson').find('div.lessonSeq').html();
-        location.href = frontURL + 'lesson/detail.html?' + seq;
-    });
-    $('#tutorLessonList').on('click', 'div.lessonName', (e) => {
-        let seq = $(e.target).parents('div.tutorLesson').find('div.lessonSeq').html();
-        location.href = frontURL + 'lesson/detail.html?' + seq;
-    });
-    //=== 수업 이름 누르면 상세 페이지로 이동 END ===
 
 
 });

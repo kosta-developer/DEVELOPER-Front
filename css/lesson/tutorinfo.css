@@ -1,70 +1,130 @@
-#tutorInfo {width: 100%; height: 1500px; color: #000000; font-size: 15px; }
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
-.nav-container {width:1000px; height: 100px; line-height: 60px; margin: 0 auto; border: 3px solid black; } 
-.content-container {width: 1000px; margin: 0 auto; border: 3px solid yellowgreen; } 
-.footer-container{width: 1000px; height: 100px; text-align:center; line-height: 100px; margin: 0 auto;  border: 3px solid orange; }
+*{margin: 0; padding: 0; background-color: #FFFEFE; font-family: 'Spoqa Han Sans Neo', 'sans-serif';} 
+
+#tutorInfo {width: 100%; height: auto; color: #000000; font-size: 15px; }
+#nav-wrap{width:1000px; height: 100px; line-height: 60px; margin: 0 auto;}
+#footer-wrap{
+    width: 100%; 
+    height: 100px; 
+    line-height: 100px; 
+    margin: 0 auto; 
+    text-align:center; 
+  
+    background-color: #303740; 
+    color:#fff;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    }
+    #footer-wrap > div.footer-container{
+      background-color: #303740; 
+  }
+.content-container {width: 1000px; margin: 0 auto; } 
+.footer-container{width: 1000px; height: 100px; text-align:center; line-height: 100px; margin: 0 auto;  }
+
 
 /*=================== 헤더메뉴바 ===================*/
 .nav-container>nav{
-    width: 600px;
+    /* width: 600px; */
     /* display: inline-block; */
     float: right;
-}
-
-#tutorInfo > #nav-wrap > div.nav-container > img{
+  }
+  
+  .nav-container>img{
     height: 30px;
     float: left;
-    margin-top: 13px;
-    margin-left: 10px;
-}
-
-.nav-container>nav>ul{
+    margin-top: 33px;
+    margin-left: 20px;
+  }
+  
+  .nav-container>nav>ul{
     /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
     list-style-type: none;
-    padding-left: 0px; 
-}
-
-.nav-container>nav>ul>li{
-    /* width: 100px; */
+    padding-left: 0px;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 17px;
+  }
+  
+  .nav-container>nav>ul>li{
+   /* width: 100px; */
     display: inline-block;
     margin-left:15px;
-}
-
-.nav-container>nav>ul>li:hover{
-    background-color: #2C2A29;
-    color: #fff
-}
-
-#nav-wrap > div > nav > ul > li > a{
+  }
+  
+  /*  클릭 안 한 메뉴 */
+  .nav-container>nav>ul>li>a:link{
     text-decoration: none;
     color: black;
-}
+    margin-top: 50px;
+  }
+  
+  /*  클릭 한 메뉴 */
+  .nav-container>nav>ul>li>a:visited{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .nav-container>nav>ul>li>a:hover{
+    color:  #00C471;
+    font-weight: bold;
+  }
+  
+  .nav-container>nav>ul>li:hover{
+    color:  #00C471;
+    font-weight: bold;
+  }
 
 /*=================== 튜터 상세정보 ===================*/
 #tutor{
-    margin: 50px 20px 30px 50px;
+    margin-left: 200px;
+    margin-top: 70px;
     display: inline-block;
+    background-color: #DAECE5;
 }
 
 #tutor > #tImgPath{
     width: 200px;
-    height: 240px;
+    height: 250px;
+    margin: 15px;
+}
+
+#tutor-container > div.tutorName{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #DAECE5;
+    font-size: 20px;
+    font-weight: bold;
+}
+#tutor-container > div.starAvg{
+    margin-bottom: 10px;
+    background-color: #DAECE5;
+}
+#tutor-container > div.info{
+    width: 400px;
+    margin-top: 12px;
+    max-height: 360px;
+    overflow: scroll;
+    overflow-x: hidden;
+    /* height: 200px; */
+    background-color: #DAECE5;
 }
 
 #tutor > #tutor-container{
-    margin-top: 90px;
-    margin-left: 50px;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 20px;
     float: right;
-}
-
-#tutor > #tutor-container > .info{
-    width: 500px;
+    background-color: #DAECE5;
 }
 
 /*=================== 수업 상세정보 ===================*/
 #tutorLessonList {
     width: 800px;
     margin-left: 100px;
+    margin-top: 30px;
     display: inline-block;
     text-align: center;
 }
@@ -74,11 +134,22 @@
     margin: 50px;
 }
 
-.tutorLesson > .lImgPath > .lessonImg{
+.lImgPath{
     width: 300px;
-    height: 150px;
+    height: 200px;
 }
 
 .tutorLesson > .lessonName{
     width: 300px;
+}
+
+#chat{
+  margin-top: 20px;
+  font-size: 25px;
+  background-color: #DAECE5;
+}
+
+#chat>a{
+  text-decoration: none;
+  background-color: #DAECE5;
 }

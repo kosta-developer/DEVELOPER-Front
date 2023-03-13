@@ -1,6 +1,6 @@
+//지원
 let backURL = "http://192.168.0.33:8888/developer/";
 let frontURL = "http://192.168.0.33:5500/html/";
-//http://192.168.0.20 학원 http://192.168.219.100 집 http://192.168.0.13학원와이파이
 
 $(() => {
     showMenuAtLogouted()
@@ -18,7 +18,7 @@ $(() => {
                 sessionStorage.removeItem("role");
                 sessionStorage.removeItem("hostlogined")
                 sessionStorage.removeItem("hostready");
-               // alert("로그아웃성공")
+                // alert("로그아웃성공")
                 location.href = frontURL + 'index.html'
             }
         })
@@ -31,6 +31,7 @@ $(() => {
         location.href = frontURL + 'index.html'
     })
     //--로고가 클릭되었을 때 할 일 END--
+
 });
 
 
@@ -41,7 +42,8 @@ function showMenuAtMemberLogined() {
     $('div.nav-container >nav > ul > li.board').show()
     $('div.nav-container >nav > ul > li.signup').hide()
     $('div.nav-container >nav > ul > li.login').hide()
-    $('div.nav-container >nav > ul > li.chat').show()
+    $('div.nav-container >nav > ul > li.tutorAdd').show()
+    $('div.nav-container >nav > ul > li.lessonAdd').show()
     $('div.nav-container >nav > ul > li.myPage').show()
     $('div.nav-container >nav > ul > li.logout').show()
 }
@@ -55,7 +57,8 @@ function showMenuAtLogouted() {
     $('div.nav-container >nav > ul > li.board').show()
     $('div.nav-container >nav > ul > li.signup').show()
     $('div.nav-container >nav > ul > li.login').show()
-    $('div.nav-container >nav > ul > li.chat').hide()
+    $('div.nav-container >nav > ul > li.tutorAdd').hide()
+    $('div.nav-container >nav > ul > li.lessonAdd').hide()
     $('div.nav-container >nav > ul > li.myPage').hide()
     $('div.nav-container >nav > ul > li.logout').hide()
 }

@@ -1,5 +1,6 @@
 $(() => {
-  checkIntervalLogined();
+  userCheckIntervalLogined();
+  $('span#showLoginId').html(sessionStorage.getItem("logined"));
   let url = backURL + "studyroom/roominfo/reservation/";
   var postURL = decodeURI(location.href);
   var postURL2 = postURL.split("?");
@@ -16,6 +17,11 @@ $(() => {
   var firstValue = "원본";
   var secondValue = "원본";
 
+   var arr = new Array();
+  var first = ""; //문자열
+  var second = ""; // 문자열
+  var checkboxes = new Array();
+
   //--오늘 이전 날짜 선택 금지 기능START--
   var date = new Date();
   var year = date.getFullYear();
@@ -30,6 +36,7 @@ $(() => {
   //--체크박스 초기화 START--
   var date_input = "";
   $("#input-date").change(function () {
+    arr = [];
     for (i = 1; i <= 24; i++) {
       //체크박스 초기화
       $("#" + i).prop("checked", false);
@@ -121,10 +128,7 @@ $(() => {
   // 체크가 2개 일때에는 시작시간은 해당 value 그대로 들어감 종료시간은 value +1
 
 
-  var arr = new Array();
-  var first = ""; //문자열
-  var second = ""; // 문자열
-  var checkboxes = new Array();
+
   //--클릭 이벤트 START--
 
   $("input[type='checkbox']").on("click", function () {
@@ -172,6 +176,12 @@ $(() => {
               }
             }
           }
+          var changeColor1=secondNum-1 
+          var changeColor2=firstNum+1 
+          for(i= changeColor2;i<=changeColor1; i++ ){
+             
+            $("#"+i).prop('checked', true);
+          }
           let totalprice = 0;
 
           for (i = 0; i <= gap; i++) {
@@ -208,7 +218,13 @@ $(() => {
           }
           $(".time").html("예약시간: " + first + "시 ~ " + second + "시");
           let totalprice = 0;
-
+          console.log("퍼스트"+firstNum+"세컨드"+secondNum)
+          changeColor1=secondNum+1
+          changeColor2=firstNum-1
+          for(i= changeColor1;i<=changeColor2; i++ ){
+             
+            $("#"+i).prop('checked', true);
+          }
           for (i = 0; i <= gap; i++) {
             totalprice += price;
           }
@@ -270,7 +286,7 @@ $(() => {
            xhrFields: {
              withCredentials: true,
            },
-           url: "http://localhost:8888/developer/studyroom/roominfo/reservation",
+           url: backURL+"studyroom/roominfo/reservation",
            method: "POST",
            contentType: "application/json; charset=utf-8",
            data: JSON.stringify(rDTO),
@@ -286,5 +302,10 @@ $(() => {
        }
   });
   // --예약기능 END--
+//--새로고침 START--
+  $('.reroad').click(function() {
+location.reload();
+});
+//--새로고침 END--
 });
 

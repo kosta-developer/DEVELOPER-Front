@@ -1,54 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
-*{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
+*{margin: 0; padding: 0; font-family: 'Spoqa Han Sans Neo', 'sans-serif';}
 #host-index-wrap {width: 100%; height: auto; font-size: 15px; }
-#host-index-wrap>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
-#host-index-wrap>#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
-#host-index-wrap>#footer-wrap{width: 100%; border: 1px solid rgb(187, 187, 187); text-align:center;}
-#host-index-wrap>#content-wrap>.hostpage-body-wrap{margin:0 auto; width: 1000px; height: 780px;  border: 1px solid rgb(187, 187, 187);}
+#host-index-wrap>#nav-wrap{width: 100%;}
+#host-index-wrap>#content-wrap{width: 100%; height:auto;}
+#footer-wrap{
+    width: 100%; 
+    height: 100px; 
+    line-height: 100px; 
+    margin: 0 auto; 
+    text-align:center; 
+    background-color: #303740; 
+    color:#fff;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    }
+#host-index-wrap>#content-wrap>.hostpage-body-wrap{margin:0 auto; width: 1000px; height: 870px;}
 /*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
  width: 100%는 기본값이기 때문에 없어도 된다 */
 
- #host-index-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91; } 
- #host-index-wrap>#content-wrap>.hostpage-body-wrap>.side-container {float: left; width: 19%; height: 155px; margin: 0 auto; border: 1px solid #fc487b;} 
- #host-index-wrap>#content-wrap>.hostpage-body-wrap>.content-container {float: right; width: 78%; height: 750px; margin: 0 auto; border: 1px solid #62ff19; margin: 18px 13px 13px 13px;}
- #host-index-wrap>#footer-wrap>.footer-container{width: 100%; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
 
- #host-index-wrap>#nav-wrap>.nav-container>nav{
-    margin-top: 3px;
-    width: 190px;
-    /* display: inline-block; */
+ #host-index-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto;  } 
+ #host-index-wrap>#content-wrap>.hostpage-body-wrap>.side-container {float: left; width: 19%; height: 175px; margin: 0 auto; background-color: #F9F9F9;} 
+ #host-index-wrap>#content-wrap>.hostpage-body-wrap>.content-container {float: right; width: 78%; height: 850px; margin: 0 auto; margin: 18px 13px 13px 13px;}
+ 
+ .nav-container>nav{
     float: right;
 }
 
-#host-index-wrap>#nav-wrap>.nav-container>img{
+.nav-container>img{
     height: 30px;
     float: left;
-    margin-top: 13px;
-    margin-left: 10px;
+    margin-top: 33px;
+    margin-left: 20px;
 }
-
-#host-index-wrap>#nav-wrap>.nav-container>nav>ul{
+.nav-container>nav>ul{
     /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
     list-style-type: none;
     padding-left: 0px;
-    
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 17px;
 }
 
-#host-index-wrap>#nav-wrap>.nav-container>nav>ul>li{
-   /* width: 100px; */
+.nav-container>nav>ul>li{
     display: inline-block;
     margin-left:15px;
 }
 
-#host-index-wrap>#nav-wrap>.nav-container>nav>ul>li:hover{
-    background-color: #80d8b4;
-    color: #fff
-}
-
-#host-index-wrap>#nav-wrap>.nav-container>nav>ul>li>a{
+/*  클릭 안 한 메뉴 */
+.nav-container>nav>ul>li>a:link{
     text-decoration: none;
     color: black;
+    margin-top: 50px;
+}
+
+/*  클릭 한 메뉴 */
+.nav-container>nav>ul>li>a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-container>nav>ul>li>a:hover{
+    color:  #00C471;
+    font-weight: bold;
+}
+
+.nav-container>nav>ul>li:hover{
+    color:  #00C471;
+    font-weight: bold;
+}
+
+div.top-title{
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+span#showLoginId{
+    font-weight: 800;
+    color:  #00C471;
 }
 
 #host-index-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu{
@@ -73,10 +105,9 @@
 }
 
 #host-index-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li:hover{
-    background-color: #80d8b4;
     font-weight: 700;
     font-size: 15px;
-    color: #fff
+    color:#00C471;
 }
 
 #host-index-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li>a{
@@ -88,7 +119,7 @@
 #host-index-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#studycafe-infomation-box{
     width:730px;
     height:315px;
-    background-color: rgb(248, 246, 239);
+    background-color: #F9F9F9;
     border-radius: 10px;
     margin: 10px 25px 30px 25px;
 }
@@ -103,8 +134,8 @@
 
 #host-index-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#host-infomation-box{
     width:730px;
-    height:280px;
-    background-color: rgb(248, 246, 239);
+    height: 315px;
+    background-color: #F9F9F9;
     border-radius: 10px;
     margin: 10px 25px 30px 25px;
 }
@@ -130,7 +161,7 @@
 
 #host-index-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#studycafe-infomation-box>.textbox{
     float: right;
-    border: 1px solid #833b25;
+    /* border: 1px solid #833b25; */
     width: 380px;
     height: 285px;
     margin: 15px 25px 0px 0px;
@@ -138,36 +169,75 @@
 
 
 #host-infomation-box > div.info-button > input[type=button]{
-    width:100px;
-    height: 30px;
-    border-radius: 10px;
     border-width: 1px;
     margin: 15px 0px 0px 15px;
-}
-
-#host-infomation-box > div.info-button > input[type=button]:hover{
-    font-weight: 700;
-    border-width: 2px;
-    box-shadow: 0 4px 2px -2px rgba(72, 72, 72, 0.7);
-    /* box-shadow: 0 5px 18px -7px rgba(0,0,0,1); */
+    padding: 0px 20px;
+    appearance: none;
+    text-align: left;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 30px;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    width:100px;
+    position: relative;
+    line-height: 1;
+    font-size: 15px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #00C471;
+    border-radius: 8px;
 }
 
 #studycafe-infomation-box > div.textbox > div.info-button> input[type=button]{
-    width:60px;
-    height: 28px;
-    border-radius: 3px;
-    margin-right: 10px;
-    background-color: #fc487b;
+    margin-left: 14px;
+    margin-top: 20px;
     float:right;
+    border-width: 1px;
+    text-align: center;
+    appearance: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 28px;
+    -webkit-tap-highlight-color: transparent;
+    width: 80px;
+    position: relative;
+    line-height: 1;
+    font-size: 15px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #00C471;
+    border-radius: 8px;
 }
 
 #studycafe-infomation-box > div.textbox > div.time-button> input[type=button]{
-    width:60px;
-    height: 28px;
-    border-radius: 3px;
-    margin-right: 10px;
+    
+    margin-top: 20px;
     float:right;
-    background-color: #20eeb7;
+    appearance: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 28px;
+    text-align: center;
+    width: 80px;
+    position: relative;
+    line-height: 1;
+    font-size: 15px;
+    user-select: none;
+    cursor: pointer;
+    margin-left: 14px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    background-color:#DAECE5;
+    border: 1.5px solid #d8d8d8;
+    border-radius: 8px;
+    
 }
 
 #host-index-wrap>#content-wrap>.hostpage-body-wrap>.content-container>#studycafe-infomation-box>.textbox>.title{

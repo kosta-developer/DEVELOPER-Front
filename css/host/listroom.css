@@ -1,54 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
-*{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
+*{margin: 0; padding: 0; font-family: 'Spoqa Han Sans Neo', 'sans-serif';}
 #list-room-wrap {width: 100%; height: auto; font-size: 15px; }
-#list-room-wrap>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
-#list-room-wrap>#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
-#list-room-wrap>#footer-wrap{width: 100%; border: 1px solid rgb(187, 187, 187); text-align:center;}
-#list-room-wrap>#content-wrap>.hostpage-body-wrap{margin:0 auto; width: 1000px; height: 600px;  border: 1px solid rgb(187, 187, 187);}
+#list-room-wrap>#nav-wrap{width: 100%;}
+#list-room-wrap>#content-wrap{width: 100%; height:auto;}
+#footer-wrap{
+    width: 100%; 
+    height: 100px; 
+    line-height: 100px; 
+    margin: 0 auto; 
+    text-align:center; 
+    background-color: #303740; 
+    color:#fff;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    }
+#list-room-wrap>#content-wrap>.hostpage-body-wrap{margin:0 auto; width: 1000px; height: 770px;}
 /*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
-width: 100%는 기본값이기 때문에 없어도 된다 */
+ width: 100%는 기본값이기 때문에 없어도 된다 */
 
 
-#list-room-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91; } 
-#list-room-wrap>#content-wrap>.hostpage-body-wrap>.side-container {float: left; width: 19%; height: auto; margin: 0 auto; border: 1px solid #fc487b;} 
-#list-room-wrap>#content-wrap>.hostpage-body-wrap>.content-container {float: right; width: 78%; height: auto; margin: 0 auto; border: 1px solid #62ff19; margin: 18px 13px 13px 13px;}
-#list-room-wrap>#footer-wrap>.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
-
-#list-room-wrap>#nav-wrap>.nav-container>nav{
-    width: 310px;
-    /* display: inline-block; */
+ #list-room-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto;  } 
+ #list-room-wrap>#content-wrap>.hostpage-body-wrap>.side-container {float: left; width: 19%; height: 175px; margin: 0 auto; background-color: #F9F9F9;} 
+ #list-room-wrap>#content-wrap>.hostpage-body-wrap>.content-container {float: right; width: 78%; height: 745px; margin: 0 auto; margin: 18px 13px 13px 13px;}
+ 
+ .nav-container>nav{
     float: right;
 }
 
-#list-room-wrap>#nav-wrap>.nav-container>img{
+.nav-container>img{
     height: 30px;
     float: left;
-    margin-top: 13px;
-    margin-left: 10px;
+    margin-top: 33px;
+    margin-left: 20px;
 }
-
-#list-room-wrap>#nav-wrap>.nav-container>nav>ul{
+.nav-container>nav>ul{
     /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
     list-style-type: none;
     padding-left: 0px;
-    
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 17px;
 }
 
-#list-room-wrap>#nav-wrap>.nav-container>nav>ul>li{
-   /* width: 100px; */
+.nav-container>nav>ul>li{
     display: inline-block;
     margin-left:15px;
 }
 
-#list-room-wrap>#nav-wrap>.nav-container>nav>ul>li:hover{
-    background-color: #80d8b4;
-    color: #fff
-}
-
-#list-room-wrap>#nav-wrap>.nav-container>nav>ul>li>a{
+/*  클릭 안 한 메뉴 */
+.nav-container>nav>ul>li>a:link{
     text-decoration: none;
     color: black;
+    margin-top: 50px;
+}
+
+/*  클릭 한 메뉴 */
+.nav-container>nav>ul>li>a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-container>nav>ul>li>a:hover{
+    color:  #00C471;
+    font-weight: bold;
+}
+
+.nav-container>nav>ul>li:hover{
+    color:  #00C471;
+    font-weight: bold;
+}
+
+div.top-title{
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+span#showLoginId{
+    font-weight: 800;
+    color:  #00C471;
 }
 
 #list-room-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu{
@@ -72,12 +104,10 @@ width: 100%는 기본값이기 때문에 없어도 된다 */
     font-size: 14px;
 }
 
-
 #list-room-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li:hover{
-    background-color: #80d8b4;
     font-weight: 700;
     font-size: 15px;
-    color: #fff
+    color:#00C471;
 }
 
 #list-room-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li>a{
@@ -85,72 +115,122 @@ width: 100%는 기본값이기 때문에 없어도 된다 */
     color: rgb(88, 88, 88);
 }
 
-#list-room-wrap>#content-wrap > div > div.content-container > div.detail-content-box{
-    border: 1.5px solid #bbbbbb;
-    border-radius: 15px;
-    width: 96%;
-    height: auto;
-    margin-left: 12px;
-}
 
-#list-room-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>.sub-title{
+#content-wrap > div > div.content-container > .info-title{
+    margin-left: 23px;
+    margin-top: 20px;
     font-weight: 700;
-    margin: 20px 0px 20px 20px;
+    font-size: 16px;
 }
 
-#list-room-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>.title{
-    font-weight: 700;
-    margin: 20px 0px 5px 20px;
+
+#list-room-wrap>#content-wrap>.hostpage-body-wrap>.content-container>div#room-infomation-box{
+    width:730px;
+    height:630px;
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    margin: 10px 25px 30px 25px;
 }
 
-#room-img{
-    width: 180px;
-    height: 120px;
+#list-room-wrap>#content-wrap>.hostpage-body-wrap>.content-container>div#room-infomation-box>.title{
+    font-weight: 700;   
+    padding-top: 15px;
+    padding-left: 15px;
+    margin: 20px 0px 5px 255px;
+
 }
 
-#room-seq{
-    margin: 20px 10px 5px 20px;
+
+#list-room-wrap>#content-wrap>.hostpage-body-wrap>.content-container>div#room-infomation-box>.field{
+    padding-left: 15px;
 }
 
-#room-name{
-    margin: 30px 10px 5px 20px;
-}
 
-#room-person{
-    margin: 0px 10px 5px 20px;
-}
-
-#room-price{
-    margin: 0px 10px 5px 20px;
-}
-
-input.room-info-btn-edit{
-    width: 60px;
-    height: 25px;
-    margin: 10px 0px 20px 20px;
-    border-radius: 5px;
-    font-weight: 700;
-    background-color: #80d8b4;
-}
-
-input.room-info-btn-reservation{
-    width: 60px;
-    height: 25px;
-    margin: 10px 0px 20px 20px;
-    border-radius: 5px;
-    font-weight: 700;
-    background-color: #80d8b4;
-}
+/* //////////////////////////////////// */
 
 #room-seq{
     display: none;
 }
 
+
+#room-img{
+    width: 200px;
+    height: 140px;
+}
+
+#room-seq{
+    margin: 20px 10px 5px 30px;
+}
+
+#room-name{
+    margin: 30px 10px 5px 30px;
+}
+
+#room-person{
+    margin: 0px 10px 5px 30px;
+}
+
+#room-price{
+    margin: 0px 10px 5px 30px;
+}
+
+
+
+input.room-info-btn-edit{
+    border-width: 1px;
+    margin: 10px 0px 20px 30px;
+    appearance: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 25px;
+    -webkit-tap-highlight-color: transparent;
+    width:65px;
+    position: relative;
+    line-height: 1;
+    font-size: 14px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #00C471;
+    border-radius: 8px;
+}
+
+
+
+input.room-info-btn-reservation{
+
+    margin: 10px 335px 20px 0px;
+    float:right;
+    border-width: 1px;
+    text-align: center;
+    appearance: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 26px;
+    -webkit-tap-highlight-color: transparent;
+    width: 66px;
+    position: relative;
+    line-height: 1;
+    font-size: 14px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: #00C471;
+    background-color: white;
+    border: 1.5px solid #00C471;
+    border-radius: 8px;
+
+}
+
+
 div.room-img-div>a>img{
     width: 180px;
     height: 120px;
     float:right;
-    margin: 17px 20px 0px 0px;
+    margin: 0px 30px 20px 0px;
     border-radius: 8px;
 }
 
@@ -159,3 +239,9 @@ div.room-time{
     display: none;
 }
 
+
+div#room-infomation-box{
+    overflow:scroll;
+    overflow-x:hidden;
+    height:205px;
+}

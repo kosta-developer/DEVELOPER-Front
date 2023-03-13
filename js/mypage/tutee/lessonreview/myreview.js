@@ -10,6 +10,7 @@ $(() => {
         url: url,
         success: function (jsonObj) {
             console.log(jsonObj)
+            $('#showLoginId').html(sessionStorage.getItem("logined"));
         
             let $origin = $('#review').first();
             let $parent = $('#myreview-list');
@@ -28,10 +29,10 @@ $(() => {
                 }
 
                 let $copy = $origin.clone();
-                $copy.find('#lessonName').html(jsonObj[i].lessonName)
-                $copy.find('#name').html(jsonObj[i].name)
-                $copy.find('#star').html(star + " (" + jsonObj[i].star + ")")
-                $copy.find('#review').html(jsonObj[i].review)
+                $copy.find('.lessonName').html(jsonObj[i].lessonName)
+                $copy.find('.name').html(jsonObj[i].name)
+                $copy.find('.star').html(star + " (" + jsonObj[i].star + ")")
+                $copy.find('.review').html(jsonObj[i].review)
                 
                 $parent.append($copy);
             })
