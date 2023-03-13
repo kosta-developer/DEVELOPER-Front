@@ -10,7 +10,7 @@
  width: 100%는 기본값이기 때문에 없어도 된다 */
 
  #user-index-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91; } 
- #user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container {float: left; width: 19%; height: 700px; margin: 0 auto; border: 1px solid #fc487b;} 
+ 
  #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container { overflow: auto; float: right; width: 78%; height: 1000px; margin: 0 auto; border: 1px solid #62ff19; margin: 18px 13px 13px 13px;}
  #user-index-wrap>#footer-wrap>.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
 
@@ -45,35 +45,66 @@
     color: #fff
 }
 
-#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu{
-    display: inline-block;
-    margin-left: 20px;
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
 
-#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>div{
+a {
+    text-decoration: none;
+    color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.side-container>.menu>ul>li>a:hover {
+    color: #00C471;
+    font-weight: bold;
+}
+
+.side-container>ul>li>a:hover {
+    color: #00C471;
+    font-weight: bold;
+}
+
+
+.side-container>.menu>ul>li>ul>li>a:hover {
+    color: #00C471;
+    font-weight: bold;
+}
+
+
+.side-container>.menu {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.side-container>.menu>div {
     font-size: 16px;
     margin-top: 20px;
     font-weight: 700;
 }
-#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul>div{
-    font-size: 13px;
-    margin-top: 10px;
-    margin-left: 15px;
-    font-weight: 700;
-}
-#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul{
+
+.side-container>.menu>ul {
     list-style-type: none;
 }
 
-#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul>li{
-    margin-top: 13px;
+.side-container>.menu>ul>li {
+    margin-top: 5px;
     margin-left: 20px;
-    font-size: 14px;
+    font-size: 16px;
+    list-style-type: none;
 }
 
-#user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul>li:hover{
-    background-color: #2C2A29;
-    color: #fff
+.side-container>.menu>ul>li>ul>li {
+    margin-top: 8px;
+    margin-left: 15px;
+    font-size: 16px;
+    list-style-type: none;
 }
 
 #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#user-reviewRequired-box{
@@ -262,4 +293,13 @@ hr{
 }
 .restime{
     width: 130px;
+}
+div.top-title {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+span#showLoginId {
+    font-weight: 800;
+    color: #00C471;
 }

@@ -3,20 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- CSS  -->
     <link rel="stylesheet" href="/css/mypage/tutee/dashboard.css">
-    <!-- 폰트 -->
-    <!-- 부트스트랩 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-    <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <!-- JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
     <script src="/js/basic.js"></script>
     <script src="/js/mypage/tutee/dashboard.js"></script>
 </head>
@@ -28,13 +16,13 @@
             <nav>
                 <ul>
                     <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
-                    <li class='studyroom'><a href="">스터디카페</a></li>
-                    <li class='board'><a href="">커뮤니티</a></li>
+                    <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
+                    <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
                     <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
-                    <li class='signup'><a href="">회원가입</a></li>
-                    <li class='login'><a href="/html/users/devlogin.html">로그인</a></li>
-                    <li class='message'><a href="/html/message/messagebox-user.html">쪽지</a></li>
-                    <li class='myPage'><a href="/html/mypage/dashboard.html">마이페이지</a></li>
+                    <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
+                    <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
+                    <li class='chat'><a href="/html/chat/chat.html">채팅</a></li>
+                    <li class='myPage'><a href="/html/mypage/main.html">마이페이지</a></li>
                     <li class='logout'>로그아웃</li>
                 </ul>
             </nav>
@@ -43,164 +31,68 @@
     <div class="content-container">
         <div class="container">
             <div class="menu">
-                <div>회원정보</div>
+                <div><a href="/html/mypage/main.html">회원정보</a></div>
+                <div class="main-menu">수업</div>
                 <ul>
-                    <li><a href="">회원 정보 수정</a></li>
-                    <li><a href="">회원 탈퇴</a></li>
+                    <li><a href="/html/mypage/tutor/main.html">튜터</a>
+                    <li><a href="/html/mypage/tutor/coming.html">진행예정 수업</a></li>
+                    <li><a href="/html/mypage/tutor/ongoing.html">진행중인 수업</a></li>
+                    <li><a href="/html/mypage/tutor/complete.html">진행완료 수업</a></li>
+                    <li><a href="/html/mypage/tutor/orderlist.html">수업 결제내역</a></li>
+                    </li>
+                    <li><a href="/html/mypage/tutee/dashboard.html">튜티</a>
+                        <ul>
+                            <li><a href="/html/mypage/tutee/upcoming.html">진행예정 수업</a></li>
+                            <li><a href="/html/mypage/tutee/ongoing.html">진행중인 수업</a></li>
+                        </ul>
                 </ul>
-                <div>수업</div>
-                <ul>튜터
-                    <li>진행 예정 클래스</li>
-                    <li>진행 중인 클래스</li>
-                    <li>진행 완료 클래스</li>
-                </ul>
-                <ul>튜티
-                    <li>진행 예정 클래스</li>
-                    <li>진행 중인 클래스</li>
-                    <li>진행 완료 클래스</li>
-                </ul>
-                <div>스터디카페 예약</div>
+                <div class="main-menu">스터디카페 예약</div>
                 <ul>
-                    <li>현재 예약 목록</li>
-                    <li>지난 예약 목록</li>
+                    <li><a href="/html/mypage/studyroom/roomreview.html">예약 목록</a></li>
                 </ul>
-                <div>후기</div>
-                <ul>수업
-                    <li><a href="/html/mypage/tutee/lessonreview/add.html">후기 작성</a></li>
-                    <li><a href="/html/mypage/tutee/lessonreview/myreview.html">후기 목록</a></li>
-                </ul>
-                <div>즐겨찾기</div>
+                <div class="main-menu">이용후기</div>
                 <ul>
-                    <li><a href="/html/mypage/favorites/lesson.html">수업 즐겨찾기</a></li>
-                    <li>스터디카페 즐겨찾기</li>
+                    <li>수업
+                        <ul>
+                            <li><a href="/html/mypage/tutee/lessonreview/add.html">후기 작성</a></li>
+                            <li><a href="/html/mypage/tutee/lessonreview/myreview.html">작성한 후기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/html/mypage/studyroom/roomreview.html">스터디룸</a></li>
+                </ul>
+                <div class="main-menu">즐겨찾기</div>
+                <ul>
+                    <li><a href="/html/mypage/favorites/lesson.html">수업</a></li>
+                    <li><a href="/html/mypage/favorites/studyroom.html">스터디카페</a></li>
+                </ul>
             </div>
             <div class="main">
                 <h3>튜티대시보드</h3>
+                <div id="userName">
+                    <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;
+                </div>
                 <div class="dash-box">
-                    <div id="applyWaitList">승인 예정 수업
+                    <div id="applyWaitList"><a class="dash" href="/html/mypage/tutee/dashboard.html">승인 예정 수업</a>
                         <div class="lastLsit-lessonName"></div>
                     </div>
-                    <div id="notYetList">진행 예정 수업
+                    <div id="notYetList"><a class="dash" href="">진행 예정 수업</a>
                         <div class="lastLsit-lessonName"></div>
                     </div>
-                    <div id="rejectList">승인 거절 수업
+                    <div id="rejectList"><a class="dash" href="">승인 거절 수업</a>
                         <div class="lastLsit-lessonName"></div>
                     </div>
-                    <div id="proceedingList">진행 중인 수업
+                    <div id="proceedingList"><a class="dash" href="">진행 중인 수업</a>
                         <div class="lastLsit-lessonName"></div>
                     </div>
-                    <div id="lastList">진행 완료된 수업
+                    <div id="lastList"><a class="dash" href="">진행 완료된 수업</a>
                         <div class="lastLsit-lessonName"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <footer>
-            <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
-        </footer>
     </div>
-</body>
-
-</html><!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- CSS  -->
-    <link rel="stylesheet" href="/css/mypage/tutee/dashboard.css">
-    <!-- 폰트 -->
-    <!-- 부트스트랩 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <!-- JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-    <script src="/js/basic.js"></script>
-    <script src="/js/mypage/tutee/dashboard.js"></script>
-</head>
-
-<body>
-    <div id="nav-wrap">
-        <div class="nav-container">
-            <img id="logo" src="/images/logo.png">
-            <nav>
-                <ul>
-                    <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
-                    <li class='studyroom'><a href="">스터디카페</a></li>
-                    <li class='board'><a href="">커뮤니티</a></li>
-                    <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
-                    <li class='signup'><a href="">회원가입</a></li>
-                    <li class='login'><a href="/html/users/devlogin.html">로그인</a></li>
-                    <li class='message'><a href="/html/message/messagebox-user.html">쪽지</a></li>
-                    <li class='myPage'><a href="/html/mypage/dashboard.html">마이페이지</a></li>
-                    <li class='logout'>로그아웃</li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <div class="content-container">
-        <div class="container">
-            <div class="menu">
-                <div>회원정보</div>
-                <ul>
-                    <li><a href="">회원 정보 수정</a></li>
-                    <li><a href="">회원 탈퇴</a></li>
-                </ul>
-                <div>수업</div>
-                <ul>튜터
-                    <li>진행 예정 클래스</li>
-                    <li>진행 중인 클래스</li>
-                    <li>진행 완료 클래스</li>
-                </ul>
-                <ul>튜티
-                    <li>진행 예정 클래스</li>
-                    <li>진행 중인 클래스</li>
-                    <li>진행 완료 클래스</li>
-                </ul>
-                <div>스터디카페 예약</div>
-                <ul>
-                    <li>현재 예약 목록</li>
-                    <li>지난 예약 목록</li>
-                </ul>
-                <div>후기</div>
-                <ul>수업
-                    <li><a href="/html/mypage/tutee/lessonreview/add.html">후기 작성</a></li>
-                    <li><a href="/html/mypage/tutee/lessonreview/myreview.html">후기 목록</a></li>
-                </ul>
-                <div>즐겨찾기</div>
-                <ul>
-                    <li><a href="/html/mypage/favorites/lesson.html">수업 즐겨찾기</a></li>
-                    <li>스터디카페 즐겨찾기</li>
-            </div>
-            <div class="main">
-                <h3>튜티대시보드</h3>
-                <div class="dash-box">
-                    <div id="applyWaitList">승인 예정 수업
-                        <div class="lastLsit-lessonName"></div>
-                    </div>
-                    <div id="notYetList">진행 예정 수업
-                        <div class="lastLsit-lessonName"></div>
-                    </div>
-                    <div id="rejectList">승인 거절 수업
-                        <div class="lastLsit-lessonName"></div>
-                    </div>
-                    <div id="proceedingList">진행 중인 수업
-                        <div class="lastLsit-lessonName"></div>
-                    </div>
-                    <div id="lastList">진행 완료된 수업
-                        <div class="lastLsit-lessonName"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer>
-            <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
-        </footer>
+    <div id="footer-wrap">
+        <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
     </div>
 </body>
 

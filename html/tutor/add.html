@@ -3,13 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- AJAX  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <!-- CSS  -->
     <link rel="stylesheet" href="/css/tutor/add.css">
-    <!-- 폰트 -->
-    <!-- JS -->
     <script src="/js/basic.js"></script>
     <script src="/js/tutor/add.js"></script>
     <!-- include summernote css/js -->
@@ -22,24 +17,28 @@
 
 <body>
     <div id="add">
-        <div class="nav-container">
-            <img id="logo" src="/images/logo.png">
-            <nav>
-                <ul>
-                    <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
-                    <li class='studycafe'><a href="">스터디카페</a></li>
-                    <li class='community'><a href="">커뮤니티</a></li>
-                    <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
-                    <li class='signup'><a href="">회원가입</a></li>
-                    <li class='login'><a href="/html/users/devlogin.html">로그인</a></li>
-                    <li class='logout'><a href="">로그아웃</a></li>
-                    <li class='tutorAdd'><a href="/html/tutor/add.html">튜터등록</a></li>
-                    <li class='myPage'><a href="/html/mypage/dashboard.html">마이페이지</a></li>
-                </ul>
-            </nav>
+        <div id="nav-wrap">
+            <div class="nav-container">
+                <img id="logo" src="/images/logo.png">
+                <nav>
+                    <ul>
+                        <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
+                        <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
+                        <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
+                        <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                        <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
+                        <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
+                        <li class='lessonAdd'><a href="/html/lesson/add.html">수업등록</a></li>
+                        <!-- <li class='tutorAdd'><a href="/html/tutor/add.html">튜터등록</a></li> -->
+                        <li class='myPage'><a href="/html/mypage/main.html">마이페이지</a></li>
+                        <li class='logout'>로그아웃</li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <div class="content-container">
-            <div id="header">튜터 등록하기</div>
+            <h3>튜터 등록</h3>
+            <div class="explain">등록 후 운영진의 심사를 통해 튜터로 등록되며, 결과는 이메일로 발송됩니다.</div>
             <form id="addForm" enctype="multipart/form-data">
                 <div id="img"> 튜터 대표 이미지
                     <input  class="content-value"
@@ -54,10 +53,9 @@
                 <input type="submit" id="submit" value="신청하기">
             </form>
         </div>
-        <div id="footer">
+        <div id="footer-wrap">
             <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
         </div>
-    </div>
     </div>
 </body>
 

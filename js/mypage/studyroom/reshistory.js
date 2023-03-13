@@ -1,6 +1,7 @@
 $(()=>{
   
-    checkIntervalLogined();
+     userCheckLogined()
+     $('span#showLoginId').html(sessionStorage.getItem("logined"));
     //--Sysdate 구하기 START--
         const date = new Date();
         const year = date.getFullYear();

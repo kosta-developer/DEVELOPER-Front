@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- AJAX  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <!-- CSS  -->
     <link rel="stylesheet" href="/css/lesson/add.css">
-    <!-- 폰트 -->
-    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="/js/basic.js"></script>
     <script src="/js/lesson/add.js"></script>
     <!-- include summernote css/js -->
@@ -18,93 +14,90 @@
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
 </head>
+
 <body>
     <div id="add">
+        <div id="nav-wrap">
         <div class="nav-container">
             <img id="logo" src="/images/logo.png">
             <nav>
                 <ul>
                     <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
-                    <li class='studyroom'><a href="">스터디카페</a></li>
-                    <li class='board'><a href="">커뮤니티</a></li>
+                    <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
+                    <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
                     <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
-                    <li class='signup'><a href="">회원가입</a></li>
-                    <li class='login'><a href="/html/users/devlogin.html">로그인</a></li>
-                    <li class='message'><a href="/html/message/messagebox-user.html">쪽지</a></li>
-                    <li class='myPage'><a href="/html/mypage/dashboard.html">마이페이지</a></li>
+                    <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
+                    <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
+                    <li class='lessonAdd'><a href="/html/lesson/add.html">수업등록</a></li>
+                    <li class='tutorAdd'><a href="/html/tutor/add.html">튜터등록</a></li>
+                    <li class='myPage'><a href="/html/mypage/main.html">마이페이지</a></li>
                     <li class='logout'>로그아웃</li>
                 </ul>
             </nav>
+            </div>
         </div>
         <div class="content-container">
-            <div id="header">클래스 등록하기</div>
+            <h3>클래스 등록하기</h3>
             <form id="addForm" enctype="multipart/form-data">
-                <div class="explain"> 
+                <div class="explain">
                     <div class="ex-content">수업 대표 이미지</div>
-                    <input  class="content-value"
-                                type="file"
-                                name="f"
-                                multiple="multiple"
-                                accept="image/jpeg, image/png, image/gif">
+                    <input class="content-value" type="file" name="f" multiple="multiple"
+                        accept="image/jpeg, image/png, image/gif">
                 </div>
-                <hr>
                 <div class="explain">
                     <div class="ex-content"">클래스명</div>
-                    <input type="text" name="lessonName" class="content-value">
+                    <input type=" text" name="lessonName" class="content-value">
                 </div>
-                <hr>
                 <div class="explain">
-                    <div class="ex-content">카테고리</div>
-                    <select name="category" class="content-value">
-                        <option value="0">프로그래밍 언어</option>
-                        <option value="1">웹 개발</option>
-                        <option value="2">앱 개발</option>
-                        <option value="3">보안/네트워크</option>
-                        <option value="4">데이터</option>
-                    </select>
+                        <div class="ex-content">카테고리</div>
+                        <select name="category" class="content-value">
+                            <option value="0">프로그래밍 언어</option>
+                            <option value="1">웹 개발</option>
+                            <option value="2">앱 개발</option>
+                            <option value="3">보안/네트워크</option>
+                            <option value="4">데이터</option>
+                        </select>
                 </div>
-                <hr>
                 <div class="explain">
                     <div class="ex-content">모집인원</div>
-                    <input name="people" type="number"></div>
-                <hr>
+                    <input name="people" type="number">
+                </div>
                 <div class="explain">
-                    <div class="ex-content">신청시작일</div> 
-                    <input name="startDate" type="date"></div>
-                <hr>
+                    <div class="ex-content">신청시작일</div>
+                    <input name="startDate" type="date">
+                </div>
                 <div class="explain">
                     <div class="ex-content">신청마감일</div>
-                    <input name="endDate" type="date"></div>
-                <hr>
+                    <input name="endDate" type="date">
+                </div>
                 <div class="explain">
                     <div class="ex-content">수업시작일</div>
-                    <input name="startCdate" type="date"></div>
-                <hr>
+                    <input name="startCdate" type="date">
+                </div>
                 <div class="explain">
                     <div class="ex-content">수업마감일</div>
-                    <input name="endCdate" type="date"></div>
-                <hr>
-                <div class="explain">
-                    <div class="ex-content">가격</div> 
-                    <label> 무료 <input name="payLesson" type="checkbox" value="0"></label>
-                    <label> 유료 <input name="payLesson" type="checkbox" value="2">  <input type="number" name="price"></label>
+                    <input name="endCdate" type="date">
                 </div>
-                <hr>
+                <div class="explain">
+                    <div class="ex-content">가격</div>
+                    <label> 무료 <input name="payLesson" type="checkbox" value="0"></label>
+                    <label> 유료 <input name="payLesson" type="checkbox" value="2"> <input type="number"
+                            name="price"></label>
+                </div>
                 <div class="explain">
                     <div class="ex-content">위치 </div>
                     <input name="location" type="text">
-                <hr>
+                </div>
                 <div class="explain">상세정보
                     <textarea id="summernote" name="content"></textarea>
                 </div>
-                <input id="addBtn" type="submit" value="등록하기"><br />
-                </div>
+                <br />
+                <input id="addBtn" type="submit" value="등록하기">
             </form>
         </div>
-        <div id="footer">
+        <div id="footer-wrap">
             <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
         </div>
-    </div>
     </div>
 </body>
 

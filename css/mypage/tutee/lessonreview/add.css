@@ -1,44 +1,90 @@
-#add {width: 100%; height: 1500px; color: #000000; font-size: 15px; }
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
-.nav-container {width:1000px; height: 100px; line-height: 60px; margin: 0 auto; border: 3px solid black; } 
-.content-container {width: 1000px; margin: 0 auto; border: 3px solid yellowgreen; } 
-.footer-container{width: 1000px; height: 100px; text-align:center; line-height: 100px; margin: 0 auto;  border: 3px solid orange; }
+*{margin: 0; padding: 0; background-color: #FFFEFE; font-family: 'Spoqa Han Sans Neo', 'sans-serif';} 
+
+#add {width: 100%; height: auto; color: #000000; font-size: 15px; }
+#footer-wrap{
+    width: 100%; 
+    height: 100px; 
+    line-height: 100px; 
+    margin: 0 auto; 
+    text-align:center; 
+  
+    background-color: #303740; 
+    color:#fff;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    }
+    #footer-wrap > div.footer-container{
+      background-color: #303740; 
+  }
+.nav-container {width:1000px; height: 100px; line-height: 60px; margin: 0 auto; } 
+.content-container {width: 1000px; margin: 0 auto;  } 
+.container{margin-bottom: 80px;}
 
 /*=================== 헤더메뉴바 ===================*/
 .nav-container>nav{
-    width: 600px;
+    /* width: 600px; */
     /* display: inline-block; */
     float: right;
-}
-
-div.nav-container > img{
+  }
+  
+  .nav-container>img{
     height: 30px;
     float: left;
-    margin-top: 13px;
-    margin-left: 10px;
-}
-
-.nav-container>nav>ul{
+    margin-top: 33px;
+    margin-left: 20px;
+  }
+  
+  .nav-container>nav>ul{
     /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
     list-style-type: none;
-    padding-left: 0px; 
-}
-
-.nav-container>nav>ul>li{
-    /* width: 100px; */
+    padding-left: 0px;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 17px;
+  }
+  
+  .nav-container>nav>ul>li{
+   /* width: 100px; */
     display: inline-block;
     margin-left:15px;
-}
-
-.nav-container>nav>ul>li:hover{
-    background-color: #2C2A29;
-    color: #fff
-}
-
-#nav-wrap > div > nav > ul > li > a{
+  }
+  
+  /*  클릭 안 한 메뉴 */
+  .nav-container>nav>ul>li>a:link{
     text-decoration: none;
     color: black;
-}
+    margin-top: 50px;
+  }
+  
+  /*  클릭 한 메뉴 */
+  .nav-container>nav>ul>li>a:visited{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .nav-container>nav>ul>li>a:hover{
+    color:  #00C471;
+    font-weight: bold;
+  }
+  
+  .nav-container>nav>ul>li:hover{
+    color:  #00C471;
+    font-weight: bold;
+  }
+
+  #userName{
+    margin-bottom: 20px;
+  }
+
+  #showLoginId{
+    color:  #00C471;
+    font-weight: bold;
+  }
+
 
 /*=================== 사이드바+메인영역 ===================*/
 div.content-container > div.container{
@@ -81,28 +127,69 @@ div.content-container > div.container > div.menu>ul>li>a{
 
 /*=================== 메인 영역 ===================*/
 div.content-container > div > div.main{
-    margin-left: 250px;
+    margin-left: 300px;
 }
 
-/*=================== 모달 ===================*/
-button#modal-btn{ position:absolute; top:50%; left:50%;
-    width:120px; height:30px; margin-top:-15px; margin-left:-60px;
-    line-height:15px; cursor:pointer;
-  }
-  
-  .modal{ 
-    position:absolute; width:100%; height:100%; background: rgba(0,0,0,0.8); top:0; left:0; display:none;
-  }
-  
-  .modal_content{
-    width:400px; height:200px;
-    background:#fff; border-radius:10px;
-    position:relative; top:50%; left:50%;
-    margin-top:-100px; margin-left:-200px;
-    text-align:center;
-    box-sizing:border-box; padding:74px 0;
-    line-height:23px; cursor:pointer;
-  }
+
+h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h3>a{
+    text-decoration: none;
+    color: #000000;
+}
+
+h3>a:hover{
+    color:  #00C471;
+    font-weight: bold;
+}
+
+
+/*=================== 후기입력창 ===================*/
+#lessonName > button{
+    /* padding: 0px 22px; */
+    appearance: none;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 42px;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    position: relative;
+    line-height: 1;
+    font-size: 14px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #00C471;
+    border-radius: 8px;
+}
+
+#nowrite-lessonreview-list {
+    height: auto;
+    width: 600px;
+    background-color: #F9F9F9;
+    padding: 20px;
+    /* border: 1px solid black; */
+}
+
+#add > div.content-container > div > div.main > div.add-section {
+    /* border: 1px solid black; */
+    margin-top: 80px;
+    margin-left: 50px;
+}
+
+#lessonName {
+    margin-bottom: 12px;
+    background-color: #F9F9F9;
+}
+
 
 /* 별점 입력 */
   #myform fieldset{
@@ -119,10 +206,10 @@ button#modal-btn{ position:absolute; top:50%; left:50%;
 }
 
 #myform label:hover{
-    text-shadow: 0 0 0 yellowgreen; /* 마우스 호버 */
+    text-shadow: 0 0 0 #00C471; /* 마우스 호버 */
 }
 #myform label:hover ~ label{
-    text-shadow: 0 0 0 yellowgreen ; /* 마우스 호버 뒤에오는 이모지들 */
+    text-shadow: 0 0 0 #00C471 ; /* 마우스 호버 뒤에오는 이모지들 */
 }
 
 #myform fieldset{
@@ -132,5 +219,54 @@ button#modal-btn{ position:absolute; top:50%; left:50%;
 }
 
 #myform input[type=radio]:checked ~ label{
-    text-shadow: 0 0 0 yellowgreen; /* 마우스 클릭 체크 */
+    text-shadow: 0 0 0 #00C471;; /* 마우스 클릭 체크 */
 }
+
+#add-section-lessonName {
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+
+#myform > fieldset{
+    margin-top: 10px;
+    margin-left: 170px;
+    
+}
+
+#myform > textarea {
+    width: 300px;
+    margin-left: 80px;
+    height: 25px;
+    margin-top: 5px;
+    padding: 10px;
+	box-sizing: border-box;
+	border: solid 2px #80d8b4;
+	border-radius: 5px;
+}
+
+#add-form-btn{
+    appearance: none;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 42px;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    position: relative;
+    line-height: 1;
+    font-size: 14px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #00C471;
+    border-radius: 8px;
+     margin-top: 20px;
+    margin-left: 190px;
+}
+
+

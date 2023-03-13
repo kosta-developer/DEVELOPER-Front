@@ -28,48 +28,59 @@
             <div class="userpage-body-wrap">
                 <div class="side-container">
                     <div class="menu">
-
-                        <div>회원정보</div>
+                    
+                        <div>메인페이지</div>
                         <ul>
-                            <li>회원 정보 수정</li>
-                            <li>회원 탈퇴</li>
+                            <li><a href="/html/mypage/main.html">회원 정보</a></li>
                         </ul>
-                        <div>클래스</div>
+                    
+                        <div>수업</div>
                         <ul>
-                            <div>튜터</div>
-                            <li>진행 예정 클래스</li>
-                            <li>진행 중인 클래스</li>
-                            <li>진행 완료 클래스</li>
+                            <li><a href="/html/mypage/tutor/main.html">튜터</a>
+                                <ul>
+                                    <li><a href="/html/mypage/tutor/coming.html">진행예정 수업</a></li>
+                                    <li><a href="/html/mypage/tutor/ongoing.html">진행중인 수업</a></li>
+                                    <li><a href="/html/mypage/tutor/complete.html">진행완료 수업</a></li>
+                                    <li><a href="/html/mypage/tutor/orderlist.html">수업 결제내역</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/html/mypage/tutee/dashboard.html">튜티</a>
+                                <ul>
+                                    <li><a href="/html/mypage/tutee/upcoming.html">진행예정 수업</a></li>
+                                    <li><a href="/html/mypage/tutee/ongoing.html">진행중인 수업</a></li>
+                                </ul>
+                            </li>
                         </ul>
-                        <ul>
-                            <div>튜티</div>
-                            <li>신청 예정 클래스</li>
-                            <li>진행 중인 클래스</li>
-                            <li>진행 완료 클래스</li>
-                        </ul>
+                    
                         <div>스터디룸 예약</div>
+                    
                         <ul>
-                            <li>현재예약 목록</li>
-                            <li>지난예약 목록록</li>
-
+                            <li><a href="/html/mypage/studyroom/roomreview.html">예약 목록</a></li>
                         </ul>
-                        <div>후기</div>
+                    
+                        <div>이용후기</div>
                         <ul>
-                            <li>클래스 후기</li>
-                            <li>스터디룸 후기</li>
-
+                            <li>수업
+                                <ul>
+                                    <li><a href="/html/mypage/tutee/lessonreview/add.html">후기 작성</a></li>
+                                    <li><a href="/html/mypage/tutee/lessonreview/myreview.html">작성한 후기</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/html/mypage/studyroom/roomreview.html">스터디룸</a></li>
                         </ul>
                         <div>즐겨찾기</div>
                         <ul>
-                            <li>클래스 즐겨찾기</li>
-                            <li>스터디카페 즐겨찾기</li>
-
+                            <li><a href="/html/mypage/favorites/lesson.html">수업</a></li>
+                            <li><a href="/html/mypage/favorites/studyroom.html">스터디카페</a></li>
                         </ul>
+                    
                     </div>
                 </div>
                 <div class="content-container">
                     <!--나중에 호스트id 받아오는 걸로-->
-                    <div class="top-title" style="margin-bottom: 15px;">호스트회원 ID님, 반갑습니다 ></div>
+                    <div class="top-title">
+                        <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
+                    </div>
                     <div id="user-review-box">
                         <div class="info-title">작성한 이용 후기</div>
                         <div class="review-content1">

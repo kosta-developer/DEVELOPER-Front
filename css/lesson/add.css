@@ -2,7 +2,7 @@
 
 *{margin: 0; padding: 0; background-color: #FFFEFE; font-family: 'Spoqa Han Sans Neo', 'sans-serif';} 
 
-#tutorInfo {width: 100%; height: auto; color: #000000; font-size: 15px; }
+#add {width: 100%; height: auto; color: #000000; font-size: 15px; }
 #nav-wrap{width:1000px; height: 100px; line-height: 60px; margin: 0 auto;}
 #footer-wrap{
     width: 100%; 
@@ -20,7 +20,8 @@
     #footer-wrap > div.footer-container{
       background-color: #303740; 
   }
-.content-container {width: 1000px; margin: 0 auto; } 
+
+.content-container {width: 1000px; margin: 0 auto;  margin-bottom: 100px;} 
 .footer-container{width: 1000px; height: 100px; text-align:center; line-height: 100px; margin: 0 auto;  }
 
 
@@ -76,80 +77,66 @@
     color:  #00C471;
     font-weight: bold;
   }
+/*=================== 등록창 ===================*/
 
-/*=================== 튜터 상세정보 ===================*/
-#tutor{
-    margin-left: 200px;
-    margin-top: 70px;
-    display: inline-block;
-    background-color: #DAECE5;
-}
-
-#tutor > #tImgPath{
-    width: 200px;
-    height: 250px;
-    margin: 15px;
-}
-
-#tutor-container > div.tutorName{
+#userName{
     margin-top: 10px;
-    margin-bottom: 30px;
-    background-color: #DAECE5;
-    font-size: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#showLoginId{
+    color: #00C471;
     font-weight: bold;
 }
-#tutor-container > div.starAvg{
-    margin-bottom: 10px;
-    background-color: #DAECE5;
-}
-#tutor-container > div.info{
-    width: 400px;
-    margin-top: 12px;
-    max-height: 360px;
-    overflow: scroll;
-    overflow-x: hidden;
-    /* height: 200px; */
-    background-color: #DAECE5;
+
+#header{
+    font: 30px bold;
+    margin: 50px 200px 50px 50px;
 }
 
-#tutor > #tutor-container{
+#addForm{    
     margin-top: 50px;
-    margin-left: 30px;
-    margin-right: 20px;
-    float: right;
-    background-color: #DAECE5;
+    margin-left: 25px;
 }
 
-/*=================== 수업 상세정보 ===================*/
-#tutorLessonList {
-    width: 800px;
-    margin-left: 100px;
-    margin-top: 30px;
+#addForm > .explain{
     display: inline-block;
-    text-align: center;
+    width: 600px;
 }
 
-.tutorLesson {
+#addForm > .explain  > .ex-content{
     float: left;
-    margin: 50px;
+    margin-right: 100px;
 }
 
-.lImgPath{
-    width: 300px;
-    height: 200px;
+#addForm > div{
+    margin-top: 10px;
 }
 
-.tutorLesson > .lessonName{
-    width: 300px;
+#addBtn {
+    float: left;
+    margin-top: 30px;
+
+    padding: 0px 22px;
+    appearance: none;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 42px;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    width: 100px;
+    height: 25px;
+    position: relative;
+    line-height: 1;
+    font-size: 14px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #00C471;
+    border-radius: 8px;
 }
 
-#chat{
-  margin-top: 20px;
-  font-size: 25px;
-  background-color: #DAECE5;
-}
-
-#chat>a{
-  text-decoration: none;
-  background-color: #DAECE5;
-}

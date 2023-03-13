@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto"/>
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/basic.css">
     <link rel="stylesheet" href="/css/studyroom/reservation.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -17,37 +17,40 @@
 <body>
     <div id="wrap">
         <div id="header-wrap">
-            <div class="header-container">header</header>
+            <div class="header-container"></header>
             </div>
         </div>
         <div id="nav-wrap">
+           <div id="nav-wrap">
             <div class="nav-container">
+                <img id="logo" src="/images/logo.png">
                 <nav>
                     <ul>
-                        <li class='lesson'>수업</li>
-                        <li class='studycafe'>스터디카페</li>
-                        <li class='community'>커뮤니티</li>
+                        <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
+                        <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
+                        <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
                         <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
-                        <li class='signup'>회원가입</li>
-                        <li class='login'>로그인</li>
-                        <li class='logout'>로그아웃</li>
-                        <li class='tutorAdd'>튜터등록</li>
-                        <li class='myPage'>마이페이지</li>
+                        <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
+                        <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
+                        <li class='chat'><a href="/html/chat/chat.html">채팅</a></li>
+                        <li class='myPage'><a href="/html/mypage/usermypage.html">마이페이지</a></li>
+                        <li class='logout' onclick="logout()">로그아웃</li>
                     </ul>
                 </nav>
             </div>
         </div>
-        <div id="banner-wrap">
-            <div class="banner-container">Banner</div>
         </div>
+       
         <div id="content-wrap">
             <div class="content-container">
-                <div class="space"></div>
+                <div class="top-title">
+                    <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
+                </div>
                 <div class="reservation">
                         <!-- <form class="myform" >
                         </form> -->
                         
-                        <input type="date" id="input-date" "> <button class="reroad" style="display: none;">다시 하기</button>
+                        <input type="date" id="input-date" ">  <button class="reroad">다시 선택하기</button>
                         <div class="guide"><p>예약하실 날짜를 선택해주세요</p></div>
                             
                                 
@@ -56,6 +59,20 @@
                            
                         
                     </div>
+                      <div class="ref">
+                    <table class="refTable">
+                        <tr>
+                            <td class="impossible1"><div class="impossible"></div></td><td class="impossible2">예약불가</td>
+                            <td class="possible1"> <div class="possible"></div></td><td class="possible2">예약가능</td>
+                            <td class="completed1"><div class="completed"></div></td><td>선택완료</td>
+                        
+                        </tr>
+                    </table>
+                   
+                                    
+                   
+                    
+                </div>
                   <!-- js ajax부분 -->
                    <div class="checkBox">
                     <table border="1" class="checkboxTable">
@@ -97,20 +114,7 @@
                
                     
                 
-                <div class="ref">
-                    <table class="refTable">
-                        <tr>
-                            <td class="impossible1"><div class="impossible"></div></td><td class="impossible2">예약불가</td>
-                            <td class="possible1"> <div class="possible"></div></td><td class="possible2">예약가능</td>
-                            <td class="completed1"><div class="completed"></div></td><td>선택완료</td>
-                        
-                        </tr>
-                    </table>
-                   
-                                    
-                   
-                    
-                </div>
+              
                 
             </div>
         </div>

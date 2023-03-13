@@ -3,12 +3,16 @@
     text-align: center;
     
 }
+
+.study-body{
+    height: auto;
+}
 div.studycafeDetail{
     display: table;
     width: 1000px;
     height: auto;
     
-   
+   background-color: #F9F9F9 ;
     
 }
 div.roomReview{
@@ -18,6 +22,9 @@ div.roomReview{
    
     margin-top: 50px;
   
+}
+.formclass{
+    background-color: #F9F9F9;
 }
 .roomImg{
     width: 200px;
@@ -81,10 +88,11 @@ width: 400px;
     margin: auto;
 }
 .roomReviewTable{
-    
+    background-color: #F9F9F9;
     width: 800px;
     height: 60px;
     margin: auto;
+    margin-bottom: 10px;
 }
 .roomName{
     height: 50px;
@@ -144,6 +152,7 @@ div.studycafeInfo{
 }
 .roomReviewTable{
     margin-bottom: -50px;
+   
 }
 .nickname{
     width: 250px;
@@ -165,4 +174,217 @@ div.studycafeInfo{
 }
 #nonebox2 {
     display: none;
+}
+input.resbtn{
+padding: 0px 22px;
+    appearance: none;
+    text-align: left;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 42px;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    width: auto;
+    position: relative;
+    line-height: 1;
+    font-size: 16px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #00C471;
+    border-radius: 8px;
+}
+.review-title-table{
+    border-bottom:2px solid #00C471;
+    width: 800px;
+    font-weight: bolder;
+    text-align: center;
+    margin: auto;
+    margin-bottom: -40px;
+}
+.title-nickname{
+    width: 240px;
+}
+.title-star{
+    width: 190px;
+
+}
+.title-room{
+    width: 140px;
+}
+.title-date{
+width: 180px;
+}
+.roomReview{
+background-color: #F9F9F9
+}
+.review{
+    background-color: #F9F9F9
+}
+#review-title{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-weight: bolder;
+    background-color: #F9F9F9
+}
+#re-con{
+    background-color: #858A8D;
+}
+
+
+
+.content-container {
+    width: 1000px;
+    height: 1500px;
+    margin: 0 auto;
+    overflow: auto;
+    background-color: #F9F9F9;
+}
+.study-body{
+    background-color: #F9F9F9
+}
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFEFE;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+#index-wrap {
+    width: 100%;
+    height: 1500px;
+    color: #000000;
+    font-size: 15px;
+}
+
+#banner-wrap {
+    width: 100%;
+}
+
+#content-wrap {
+    width: 100%;
+    height: auto;
+}
+
+#footer-wrap {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #303740;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#devBanner {
+    width: 1000px;
+    height: 300px;
+}
+
+#content-wrap>.content-container>div.lessonlist {
+    width: 100%;
+    height: 800px;
+}
+
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+ width: 100%는 기본값이기 때문에 없어도 된다 */
+
+.nav-container {
+    width: 1000px;
+    height: 100px;
+    line-height: 60px;
+    margin: 0 auto;
+}
+
+.banner-container {
+    width: 1000px;
+    height: 300px;
+    line-height: 300px;
+    margin: 0 auto;
+}
+
+.content-container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-container {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+}
+
+#footer-wrap>div.footer-container {
+    background-color: #303740;
+}
+
+.nav-container>nav {
+    /* width: 600px; */
+    /* display: inline-block; */
+    float: right;
+}
+
+.nav-container>img {
+    height: 30px;
+    float: left;
+    margin-top: 33px;
+    margin-left: 20px;
+}
+
+.nav-container>nav>ul {
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 17px;
+}
+
+.nav-container>nav>ul>li {
+    /* width: 100px; */
+    display: inline-block;
+    margin-left: 15px;
+}
+
+/*  클릭 안 한 메뉴 */
+.nav-container>nav>ul>li>a:link {
+    text-decoration: none;
+    color: black;
+    margin-top: 50px;
+}
+
+/*  클릭 한 메뉴 */
+.nav-container>nav>ul>li>a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-container>nav>ul>li>a:hover {
+    color: #00C471;
+    font-weight: bold;
+}
+
+.nav-container>nav>ul>li:hover {
+    color: #00C471;
+    font-weight: bold;
+}
+
+div.top-title {
+    margin-left: -750px;
+    margin-bottom: 50px;
+    height: 50px;
+}
+
+span#showLoginId {
+    font-weight: 800;
+    color: #00C471;
 }

@@ -1,4 +1,6 @@
 $(()=>{
+   userCheckLogined();
+     $('span#showLoginId').html(sessionStorage.getItem("logined"));
   //--회원정보 상세출력 START--
   let userId = location.search.substring(1);
   let url = backURL + "admin/users/detail/" + userId;
