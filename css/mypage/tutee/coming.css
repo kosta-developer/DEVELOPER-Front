@@ -214,6 +214,39 @@ a {
     color: #00C471;
 }
 
+.content-container>#notyetClass {
+    background-color: #F9F9F9;
+    margin-top: 15px;
+    width: 95%;
+    max-height: 700px;
+    overflow: scroll;
+    overflow-x: hidden;
+    float: right;
+    position: relative;
+    left: -2.5%;
+}
+
+.content-container>#notyetClass>h2 {
+    /* margin-top: 20px; */
+    margin-left: 20px;
+}
+
+.content-container>#notyetClass>div>div {
+    margin-top: 25px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.content-container>#notyetClass>div>div:hover {
+    color: #00C471;
+}
+
+
+
 div.lessonSeq {
+    display: none;
+}
+
+div.notyetlessonSeq {
     display: none;
 }

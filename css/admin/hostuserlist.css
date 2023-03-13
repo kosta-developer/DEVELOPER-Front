@@ -1,9 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Nanum Gothic', sans-serif;
+    /* background-color: #FFFEFE; */
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 #hostuserlist {
@@ -12,28 +18,23 @@
     font-size: 15px;
 }
 
-#hostuserlist>#nav-wrap {
-    width: 100%;
-    border: 1px solid rgb(187, 187, 187);
-}
 
-#hostuserlist>#content-wrap {
+/* #hostuserlist>#content-wrap {
     width: 100%;
     height: auto;
     border: 1px solid rgb(187, 187, 187);
-}
+} */
 
-#hostuserlist>#footer-wrap {
+/* #hostuserlist>#footer-wrap {
     width: 100%;
     border: 1px solid rgb(187, 187, 187);
     text-align: center;
-}
+} */
 
 #hostuserlist>#content-wrap>.body-wrap {
     margin: 0 auto;
-    width: 1000px;
-    height: 600px;
-    border: 1px solid rgb(187, 187, 187);
+        width: 1000px;
+        height: 780px;
 }
 
 /*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
@@ -42,39 +43,37 @@ width: 100%는 기본값이기 때문에 없어도 된다 */
 
 #hostuserlist>#nav-wrap>.nav-container {
     width: 1000px;
-    height: 100px;
-    line-height: 60px;
-    margin: 0 auto;
-    border: 1px solid #c39d91;
+        height: 100px;
+        line-height: 60px;
+        margin: 0 auto;
 }
 
 #hostuserlist>#content-wrap>.body-wrap>.side-container {
     float: left;
-    width: 19%;
-    height: auto;
-    margin: 0 auto;
-    border: 1px solid #fc487b;
+        width: 19%;
+        height: 700px;
+        margin: 0 auto;
+        background-color: #F9F9F9;
 }
 
 #hostuserlist>#content-wrap>.body-wrap>.content-container {
     float: right;
-    width: 78%;
-    height: auto;
-    margin: 0 auto;
-    border: 1px solid #62ff19;
-    margin: 18px 13px 13px 13px;
+        width: 78%;
+        height: 710px;
+        margin: 0 auto;
+        margin: 18px 13px 13px 13px;
 }
 
 #hostuserlist>#footer-wrap>.footer-container {
-    width: 1000px;
-    height: 100px;
-    line-height: 100px;
-    margin: 0 auto;
-    background-color: #c39d91;
+    width: 100%;
+        height: 100px;
+        line-height: 100px;
+        margin: 0 auto;
+            background-color: #303740;
 }
 
 #hostuserlist>#nav-wrap>.nav-container>nav {
-    width: 310px;
+    /* width: 310px; */
     /* display: inline-block; */
     float: right;
 }
@@ -89,7 +88,11 @@ width: 100%는 기본값이기 때문에 없어도 된다 */
 #hostuserlist>#nav-wrap>.nav-container>nav>ul {
     /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
     list-style-type: none;
-    padding-left: 0px;
+        padding-left: 0px;
+        margin-top: 20px;
+        margin-right: 20px;
+        text-align: right;
+        font-size: 17px;
 
 }
 
@@ -106,7 +109,8 @@ width: 100%는 기본값이기 때문에 없어도 된다 */
 
 #hostuserlist>#nav-wrap>.nav-container>nav>ul>li>a {
     text-decoration: none;
-    color: black;
+        color: black;
+        margin-top: 50px;
 }
 
 #hostuserlist>#content-wrap>.body-wrap>.side-container>.menu {
