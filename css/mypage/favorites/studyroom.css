@@ -1,0 +1,175 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+*{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
+#favorites-studyroom {width: 100%; height: auto; font-size: 15px; }
+#favorites-studyroom>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
+#favorites-studyroom>#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
+#favorites-studyroom>#footer-wrap{width: 100%; height: auto; border: 1px solid rgb(187, 187, 187); text-align:center;}
+#favorites-studyroom>#content-wrap>.mypage-body-wrap{margin:0 auto; width: 1000px; height: 700px;  border: 1px solid rgb(187, 187, 187);}
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+width: 100%는 기본값이기 때문에 없어도 된다 */
+
+
+#favorites-studyroom>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91; } 
+#favorites-studyroom>#content-wrap>.mypage-body-wrap>.side-container {float: left; width: 19%; height: auto; margin: 0 auto; border: 1px solid #fc487b;} 
+#favorites-studyroom>#content-wrap>.mypage-body-wrap>.content-container {float: right; width: 78%; height: auto; margin: 0 auto; border: 1px solid #62ff19; margin: 18px 13px 13px 13px;}
+#favorites-studyroom>#footer-wrap>.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
+
+#favorites-studyroom>#nav-wrap>.nav-container>nav{
+    width: 600px;
+    /* display: inline-block; */
+    float: right;
+}
+
+#favorites-studyroom>#nav-wrap>.nav-container>img{
+    height: 30px;
+    float: left;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+#favorites-studyroom>#nav-wrap>.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px;
+    
+}
+
+#favorites-studyroom>#nav-wrap>.nav-container>nav>ul>li{
+   /* width: 100px; */
+    display: inline-block;
+    margin-left:15px;
+}
+
+#favorites-studyroom>#nav-wrap>.nav-container>nav>ul>li:hover{
+    background-color: #80d8b4;
+    color: #fff
+}
+
+#favorites-studyroom>#nav-wrap>.nav-container>nav>ul>li>a{
+    text-decoration: none;
+    color: black;
+}
+
+/* ▲ 네비바 */
+
+#favorites-studyroom>#content-wrap>.mypage-body-wrap>.side-container>.menu{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#favorites-studyroom>#content-wrap>.mypage-body-wrap>.side-container>.menu>div{
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+#favorites-studyroom>#content-wrap>.mypage-body-wrap>.side-container>.menu>ul{
+    list-style-type: none;
+}
+
+#favorites-studyroom>#content-wrap>.mypage-body-wrap>.side-container>.menu>ul>li{
+    margin-top: 13px;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+
+#favorites-studyroom>#content-wrap>.mypage-body-wrap>.side-container>.menu>ul>li:hover{
+    background-color: #80d8b4;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff
+}
+
+#favorites-studyroom>#content-wrap>.mypage-body-wrap>.side-container>.menu>ul>li>a{
+    text-decoration: none;
+    color: rgb(88, 88, 88);
+}
+
+
+/* ▲ 사이드바 */
+
+/* ▼ 큰 틀 덩어리 , 어디구역인지 확인하고싶으시면 width를 조절해보십쇼! */
+#favorites-studyroom>#content-wrap>.mypage-body-wrap>div.content-container>div.detail-content-box{
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+
+div.list-fav-studyroom{
+    height: 500px;
+}
+
+#favorites-studyroom>#content-wrap>.mypage-body-wrap>div.content-container>.detail-content-box>.sub-title{
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+}
+
+
+/* ▼ 제일 윗줄 제목줄! 확인하고싶으시면 컬러를 조절해보십쇼 */
+#favorites-studyroom>#content-wrap>.mypage-body-wrap>.content-container>.detail-content-box>.sell-title{
+    background-color: #e9e9e9;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+
+#favorites-studyroom>#content-wrap>.mypage-body-wrap>.content-container>.detail-content-box>div.list-fav-studyroom{
+    overflow:scroll;
+    white-space:nowrap; 
+}
+
+/* ▼ 하나의 행!! 확인하고싶으시면 높이를 조절해보십쇼 */
+#favorites-studyroom>#content-wrap>.mypage-body-wrap>.content-container>.detail-content-box>div.list-fav-studyroom>.list-fav-studyroom-origin{
+    height: 40px;
+    /* line-height: 60px */
+}
+
+/* ▼ b-name이랑 그 아래의 CSS인 favName이랑 width를 같게해줘야합니다 */
+b#b-name{
+    width:310px;
+   display:inline-block;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.list-fav-studyroom>.list-fav-studyroom-origin>#favName{
+ width: 320px;
+ display:inline-block; 
+ text-align: center;
+}
+
+/* ▼ b-addr이랑 그 아래의 CSS인 #favAddr이랑 width 값을 넘지 않게 해줘야합니다 */
+/* ▼ 그리고 이 b-addr랑 b-name의 width값이 detail-content-box의 width값을 넘으면 안돼요! */
+b#b-addr{
+    width:400px;
+    display:inline-block;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.list-fav-studyroom>.list-fav-studyroom-origin>#favAddr{
+    width: 420px;
+    display:inline-block; 
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+hr.list-sell-line{
+   border-style: dashed;
+   border-color: #bbbbbb;
+}
+
+
+span#favSrSeq{
+    display: none;
+}
+
+
+/* 지금 문제는 .. 주소가 길어서 넘치면... 카페명이 세로로 중앙정렬이 안돼요.. ㅜ ㅅ ㅜ */

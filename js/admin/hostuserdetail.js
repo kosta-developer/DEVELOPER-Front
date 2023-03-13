@@ -1,5 +1,9 @@
+let url2 = new URL(location.href);
+let hostId = url2.searchParams.get("hostId");
+
 $(()=>{
-    checkIntervalLogined();
+    userCheckIntervalLogined();
+    $('span#showLoginId').html(sessionStorage.getItem("logined"));
 
     let $origin_hostDetail= $('div#hostDetail').first()
     let $parent_hostinfo = $('div.hostinfo');
@@ -9,7 +13,7 @@ $(()=>{
         xhrFields: {
             withCredentials: true //크로스오리진을 허용!
         },
-        url:backURL+'admin/host/detail/'+'host1',
+        url:backURL+'admin/host/detail/'+hostId,
         headers : { "Content-Type" : "application/json"},
         method:'get',
         success:(res) =>{

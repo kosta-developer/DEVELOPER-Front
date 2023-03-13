@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <!--<link rel='stylesheet' href='../css/basic.css'>-->
+    <link rel='stylesheet' href='/css/host/listreservation.css'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
+    <script src='/js/hostbasic.js'></script>
+    <script src='/js/host/listreservation.js'></script>
+</head>
+
+<body>
+    <div id='list-reservation-wrap'>
+        <div id='nav-wrap'>
+            <div class='nav-container'>
+                <img id='logo' src='/images/logo.png'>
+                <nav>
+                    <ul>
+                        <li class='navbar'><a href='index.html'>홈</a></li>
+                        <li class='navbar'><a href='hostIndex.html'>마이페이지</a></li>
+                        <li class='navbar'><a href=''>스터디카페</a></li>
+                        <li class='navbar'><a href='index.html'>로그아웃</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div id='content-wrap'>
+            <div class='hostpage-body-wrap'>
+                <div class='side-container'>
+                    <div class='menu'>
+
+                        <div>회원정보</div>
+                        <ul>
+                            <li><a href='edithost.html'>회원 정보 수정</a></li>
+                        </ul>
+                        <div>스터디카페</div>
+                        <ul>
+                            <li>카페 정보 수정</li>
+                        </ul>
+                        <div>스터디룸</div>
+                        <ul>
+                            <li>스터디룸 목록</li>
+                            <li>스터디룸 추가</li>
+                            <li>스터디룸 정보 수정</li>
+                        </ul>
+                        <div>예약관리</div>
+                        <ul>
+                            <li>예약내역</li>
+                            <li>예약추가_관리자전용</li>
+                    </div>
+                </div>
+
+                <div class='content-container'>
+                    <!--나중에 호스트id 받아오는 걸로-->
+                    <div class='top-title' style='margin-bottom: 15px;'>호스트회원 ID님, 반갑습니다 ></div>
+                    <div class='detail-content-box'>
+                        <div class='sub-title'>예약 전체 목록 ></div>
+                        <hr>
+                        <div class="sell-title">
+                            <b id='b-reservation-seq'>예약 번호</b>
+                            <b id='b-reservation-usingDate'>이용일자</b>
+                            <b id='b-reservation-idAndName'>이용자 ID(이용자성함)</b>
+                            <b id='b-reservation-hostId'>호스트 ID</b>
+                            <b id='b-reservation-roomName'>룸 이름</b>
+                        </div>
+               
+                        <div class="reservation-list">
+                            
+                            <!-- 원본 -->
+                            <div class="reservation-list-origin">
+                                <hr class="list-sell-line">
+                                <span id='reservation-seq'class='reservation-seq'></span>
+                                <span id='reservation-usingDate'class='reservation-data'></span>
+                                <span id='reservation-idAndName'class='reservation-data'></span>
+                                <span id='reservation-hostId'class='reservation-data'></span>
+                                <span id='reservation-roomName'class='reservation-data'></span>
+                            </div>
+                        </div>
+                        <hr>    
+                        
+                        <!-- 추가될수록..세로길이는 내가 별도로 계속 지정해주긴해야되는데..우선..이상태로..-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='footer-wrap'>
+            <div class='footer-container'>ⓒ 2023 이거맞조. All Rights Reserved.</div>
+        </div>
+    </div>
+</body>
+
+</html>

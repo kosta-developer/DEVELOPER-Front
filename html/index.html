@@ -12,23 +12,21 @@
 
 <body>
     <div id="index-wrap">
-        <div id="nav-wrap">
-            <div class="nav-container">
-                <img id="logo" src="/images/logo.png">
-                <nav>
-                    <ul>
-                        <li class='lesson'>수업</li>
-                        <li class='studycafe'>스터디카페</li>
-                        <li class='community'>커뮤니티</li>
-                        <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
-                        <li class='signup'>회원가입</li>
-                        <li class='login'>로그인</li>
-                        <li class='logout'>로그아웃</li>
-                        <li class='tutorAdd'>튜터등록</li>
-                        <li class='myPage'>마이페이지</li>
-                    </ul>
-                </nav>
-            </div>
+        <div class="nav-container">
+            <img id="logo" src="/images/logo.png">
+            <nav>
+                <ul>
+                    <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
+                    <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
+                    <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
+                    <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                    <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
+                    <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
+                    <li class='chat'><a href="/html/chat/chat.html">채팅</a></li>
+                    <li class='myPage'><a href="/html/mypage/main.html">마이페이지</a></li>
+                    <li class='logout' onclick="logout()">로그아웃</li>
+                </ul>
+            </nav>
         </div>
         <div id="banner-wrap">
             <div class="banner-container">
@@ -41,32 +39,33 @@
         <div id="content-wrap">
             <div class="content-container">
                 <div class="main-title">
-                    > 지금 바로 원하는 수업을 들어보세요!
+                    >  지금 바로 원하는 수업을 들어보세요!
                 </div>
                 <div class="lessonlist">
                     <!-- 원본 -->
                     <div class="lessonlistorigin">
                         <div class="lessonSeq">수업번호</div>
                         <div class="lessonImage">
-                        <a href=""><img  /></a>
+                            <img class="lessonImg" /></a>
                         </div>
-                        <a href=""><div class="lessonName">수업명</div></a>
+                       
+                            <div class="lessonName">수업명</div>
+                        </a>
                         <div class="lessonPrice">수업가격</div>
                     </div>
                 </div>
                 <div class="main-title">
-                    > 커뮤니티에 물어보세요!
+                    >  커뮤니티에 물어보세요!
                 </div>
                 <div class="communityList">
                     <!-- 원본 -->
                     <div class="communityListOrigin">
-                        
+
                         <hr class="mainCommunityLine">
-                        <div class="postSeq">게시글번호</div>  <!--히든처리-->
+                        <div class="postSeq">게시글번호</div> <!--히든처리-->
                         <div class="postCategory">카테고리</div>
-                       
-                        <a href=""><div class="postTitle">글제목</div></a>
-                        <a href=""><div class="postContent">글내용</div></a>
+                        <div class="postTitle">글제목</div>
+                        <div class="postContent">글내용</div>
                         <div class="nickname">유저닉네임</div>
                         <span class="postCDate">글작성일</span>
                         <span class="postRecommend">추천수</span>
@@ -79,7 +78,6 @@
         <div id="footer-wrap">
             <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
         </div>
-    </div>
 </body>
 
 </html>

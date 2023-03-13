@@ -128,13 +128,27 @@
 .content-container>.tutor>div>h2{
     /* margin-top: 20px; */
     margin-left: 20px;
+    margin-top: 10px;
 }
 
 .content-container>.tutor>div>div{
-    margin-left: 20px;
+    margin-left: 30px;
+    margin-top: 15px;
 }
 
 div.unpaidlessonSeq{
+    display: none;
+}
+
+div.cominglessonSeq {
+    display: none;
+}
+
+div.ongoinglessonSeq {
+    display: none;
+}
+
+div.completedlessonSeq {
     display: none;
 }
 

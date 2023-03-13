@@ -12,28 +12,21 @@
 
 <body>
     <div id="wrap">
-        <div id="header-wrap">
-            <div class="header-container">
-                <div class="header-logo"><a href="index.html"><img src="../images/developerlogo.png" style="height:50px;"></a></div>
-            </div>
-        </div>
-
-        <div id="nav-wrap">
-            <div class="nav-container">
-                <nav>
-                    <ul type="none">
-                        <li class='lesson'>수업</li>
-                        <li class='studycafe'>스터디카페</li>
-                        <li class='community'>커뮤니티</li>
-                        <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
-                        <li class='signup'>회원가입</li>
-                        <li class='login'>로그인</li>
-                        <li class='logout'>로그아웃</li>
-                        <li class='tutorAdd'>튜터등록</li>
-                        <li class='myPage'>마이페이지</li>
-                    </ul>
-                </nav>
-            </div>
+        <div class="nav-container">
+            <img id="logo" src="/images/logo.png">
+            <nav>
+                <ul>
+                    <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
+                    <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
+                    <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
+                    <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                    <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
+                    <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
+                    <li class='chat'><a href="/html/chat/chat.html">채팅</a></li>
+                    <li class='myPage'><a href="/html/mypage/main.html">마이페이지</a></li>
+                    <li class='logout' onclick="logout()">로그아웃</li>
+                </ul>
+            </nav>
         </div>
 
         <div id="content-wrap">
@@ -41,51 +34,61 @@
 
                 <div class="side-container">
                     <div class="menu">
-
-                        <div>회원정보</div>
-                        <ul type="none">
-                            <li>회원 정보 수정</li>
-                            <li>회원 탈퇴</li>
+                    
+                        <div>메인페이지</div>
+                        <ul>
+                            <li><a href="/html/mypage/main.html">회원 정보</a></li>
                         </ul>
-
-                        <div>클래스</div>
-                        <ul type="none">
-                            <li>튜터
-                                <ul type="none">
-                                    <li>진행예정 클래스</li>
-                                    <li>진행중인 클래스</li>
-                                    <li>진행완료 클래스</li>
+                    
+                        <div>수업</div>
+                        <ul>
+                            <li><a href="/html/mypage/tutor/main.html">튜터</a>
+                                <ul>
+                                    <li><a href="/html/mypage/tutor/coming.html">진행예정 수업</a></li>
+                                    <li><a href="/html/mypage/tutor/ongoing.html">진행중인 수업</a></li>
+                                    <li><a href="/html/mypage/tutor/complete.html">진행완료 수업</a></li>
+                                    <li><a href="/html/mypage/tutor/orderlist.html">수업 결제내역</a></li>
                                 </ul>
                             </li>
-                            <li>튜티
-                                <ul type="none">
-                                    <li>신청예정 클래스</li>
-                                    <li>진행중인 클래스</li>
-                                    <li>진행완료 클래스</li>
+                            <li><a href="/html/mypage/tutee/dashboard.html">튜티</a>
+                                <ul>
+                                    <li><a href="/html/mypage/tutee/upcoming.html">진행예정 수업</a></li>
+                                    <li><a href="/html/mypage/tutee/ongoing.html">진행중인 수업</a></li>
                                 </ul>
                             </li>
                         </ul>
-
+                    
                         <div>스터디룸 예약</div>
-
-                        <ul type="none">
-                            <li>예약중인 목록</li>
-                            <li>지난예약 목록</li>
+                    
+                        <ul>
+                            <li><a href="/html/mypage/studyroom/roomreview.html">예약 목록</a></li>
                         </ul>
-
+                    
                         <div>이용후기</div>
-
-                        <div>즐겨찾기</div>
-                        <ul type="none">
-                            <li>클래스</li>
-                            <li>스터디카페</li>
+                        <ul>
+                            <li>수업
+                                <ul>
+                                    <li><a href="/html/mypage/tutee/lessonreview/add.html">후기 작성</a></li>
+                                    <li><a href="/html/mypage/tutee/lessonreview/myreview.html">작성한 후기</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/html/mypage/studyroom/roomreview.html">스터디룸</a></li>
                         </ul>
-
+                        <div>즐겨찾기</div>
+                        <ul>
+                            <li><a href="/html/mypage/favorites/lesson.html">수업</a></li>
+                            <li><a href="/html/mypage/favorites/studyroom.html">스터디카페</a></li>
+                        </ul>
+                    
                     </div>
                 </div>
                 <div class="content-container">
+                    <div class="top-title">
+                        <br/>
+                        <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
+                      </div>
                     <div class="completeClass">
-                        <br/><h2>진행 완료된 클래스</h2><br/>
+                        <br/><h2>진행 완료된 수업</h2><br/>
                         <div class="classlist">
                         </div>                            
                     </div>
