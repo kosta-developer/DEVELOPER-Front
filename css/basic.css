@@ -14,6 +14,11 @@
     font-size: 15px;
 }
 
+#nav-wrap {
+    width: 100%;
+    ;
+}
+
 #banner-wrap {
     width: 100%;
 }
@@ -132,139 +137,3 @@
 }
 
 /* -----------------index 전용 css START ----------------------*/
-
-.banner-container {
-    position: relative;
-    width: 1000px;
-    height: 300px;
-    margin: 0 auto;
-    padding: 0;
-    overflow: hidden;
-}
-
-.banner-container ul {
-    position: absolute;
-    margin: 0px;
-    padding: 0;
-    list-style: none;
-}
-
-.banner-container ul li {
-    float: left;
-    width: 1000px;
-    height: 300px;
-    margin: 0;
-    padding: 0;
-}
-
-.main-title {
-    font-size: 17px;
-    padding: 10px 10px 0px 10px;
-    margin: 20px 10px 0px 10px;
-    font-weight: 800;
-    width: 300px;
-    height: 30px;
-
-}
-
-.lessonlistorigin {
-    float: left;
-    /* display: inline-block; */
-    margin-right: 20px;
-    margin-bottom: 10px;
-}
-
-.lessonSeq {
-    display: none;
-}
-
-.postSeq {
-    display: none;
-}
-
-div.lessonImage>img.lessonImg {
-    width: 300px;
-    height: 200px;
-}
-
-#mainCommunityImg {
-    width: 220px;
-    height: 100px;
-    float: right;
-}
-
-#index-wrap>#content-wrap>.content-container>div.lessonlist {
-    width: 98%;
-    height: 530px;
-    margin-left: 30px;
-    margin-top: 20px;
-}
-
-.communityList {
-    margin-left: 20px;
-}
-
-.postContent {
-    width: 450px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: inline-block;
-}
-
-.postTitle {
-    width: 450px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: inline-block;
-    font-size: 17px;
-    font-weight: 800;
-    margin-top: 10px;
-    margin-bottom: 2px;
-}
-
-.mainCommunityLine {
-    border-top: 1px solid #00C471;
-    margin-top: 10px;
-    margin-bottom: 15px;
-
-}
-
-.communityListOrigin {
-    width: 450px;
-    display: inline-block;
-    margin-right: 15px;
-    margin-left: 12px;
-    margin-bottom: 25px;
-    font-size: 12pt;
-    line-height: 25px;
-}
-
-.postRecommend {
-    margin-left: 120px;
-    color: #858A8D;
-}
-
-.postCnt {
-    margin-left: 20px;
-    color: #858A8D;
-}
-
-.lessonName {
-    font-weight: 800;
-    width: 300px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 5px;
-}
-
-.lessonPrice {
-    font-weight: 700;
-    font-size: 15px;
-    margin-top: -5px;
-    margin-bottom: 7px;
-}

@@ -21,6 +21,31 @@ let backURL = 'http://localhost:8888/developer/';
 let frontURL = "http://localhost:5500/html/";
 
 
+function orderdetail() {
+  $.ajax({
+    xhrFields: {
+       withCredentials: true
+    },
+    url : "http://172.30.1.15:8888/developer/mypage/tutor/upcoming/detail/"+lessonSeq,
+    success: function(jsonObj){
+      console.log(jsonObj)
+
+      $('#name').html(jsonObj.llist[0].lessonName)
+
+
+    }, 
+    error: function(xhr){
+        let jsonObj = JSON.parse(xhr.responseText);
+        alert(jsonObj.msg);
+    }
+    
+
+  })
+}
+
+orderdetail();
+
+
 function payment(pg_provider, mode, payment_method){
   IMP.init('imp85753634');
   let pg_mid;

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 $(() => {
      userCheckIntervalLogined();
      //let queryStr = location.search.substring(1) // ?뒤에 붙는 매개변수 값 반환 
@@ -168,7 +168,8 @@ $(() => {
     //          break;      
     //      }
     // }
-=======
+
+
 $(() => {
 
     userCheckIntervalLogined()
@@ -334,4 +335,4 @@ $(() => {
     //--수업 & 게시글 리스트 출력 END
 
 })
->>>>>>> a5c13f41f9b781dea0b7f2190e5d92b5e90c3c8e
+

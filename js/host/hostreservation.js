@@ -31,6 +31,7 @@ $(() => {
    //--체크박스 초기화 START--
    var date_input = "";
    $("#input-date").change(function () {
+     arr = [];
      for (i = 1; i <= 24; i++) {
        //체크박스 초기화
        $("#" + i).prop("checked", false);
@@ -182,7 +183,12 @@ $(() => {
              }
            }
          
-           
+          var changeColor1=secondNum-1 
+          var changeColor2=firstNum+1 
+          for(i= changeColor2;i<=changeColor1; i++ ){
+             
+            $("#"+i).prop('checked', true);
+          }
            $(".time").html("예약블록시간: " + first + "시 ~ " + second + "시");
          } else {
            //첫번째 체크의 시간이 두번째 체크의 시간 보다 클때 (09>08)
@@ -212,7 +218,12 @@ $(() => {
              }
            }
            $(".time").html("예약블록시간: " + first + "시 ~ " + second + "시");
-          
+          changeColor1=secondNum+1
+          changeColor2=firstNum-1
+          for(i= changeColor1;i<=changeColor2; i++ ){
+             
+            $("#"+i).prop('checked', true);
+          }
          }
        } else if (arr.length == 1) {
          // 체크가 첫 번째인 상태
@@ -289,5 +300,10 @@ $(() => {
      }
    });
    // --예약기능 END--
+   //--새로고침 START--
+  $('.reroad').click(function() {
+location.reload();
+});
+//--새로고침 END--
  });
  

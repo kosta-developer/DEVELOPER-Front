@@ -1,16 +1,18 @@
 $(()=>{
-   
+  userCheckLogined()
+  let logined = sessionStorage.getItem("logined");
+   $('span#showLoginId').html(sessionStorage.getItem("logined"));
     let url = backURL+'studyroom/roominfo/'
     let seq = location.search.substring(1) 
-    let url2 = backURL+"favoritesstudyroom/add/"+seq //추가
-    let url3 = backURL+"favoritesstudyroom/check"
+    let url2 = backURL+"favoritesstudyroom/add/"+seq //즐겨찾기추가
+    let url3 = backURL+"favoritesstudyroom/check" //즐겨찾기 상태확인
     
 
-    let openTime=""
-    let endTime=""
-
-    var favSeq = "";
-    var srSeq = "";
+    let openTime;
+    let endTime;
+    var favStatus;
+    var favSeq;
+    var srSeq;
 
 
     $.ajax({
@@ -21,17 +23,32 @@ $(()=>{
         method:"GET",
 
         success: function(jsonObj){
-            
+               //이미 즐겨찾기한 사용자라면 버튼 색 바꾸기
+            $(jsonObj.studyroomAndFavStuyroomInfoDTO.favoritesStudyroomDTO).each((i)=>{
+              if(jsonObj.studyroomAndFavStuyroomInfoDTO.favoritesStudyroomDTO[i].userId == logined){
+                let abc=jsonObj.studyroomAndFavStuyroomInfoDTO.favoritesStudyroomDTO[i].userId;
+                
+                $('.favStudy').css('backgroundColor', 'yellow');
+                
+                favSeq=jsonObj.studyroomAndFavStuyroomInfoDTO.favoritesStudyroomDTO[i].favSeq;
+                console.log(favSeq)
+                favStatus = 0; //즐겨찾기 있으면 0
+              }else{
+                console.log("야")
+                favStatus = 1; //즐겨찾기 없으면 1
+              }
+            }) 
+
             //--스터디카페 상세정보 출력 START--
-            let $head = $('div.content-container>div.studycafeInfo>div.studycafeDetail').first()
+            let $head = $('div.studycafeDetail').first()
 
             $(jsonObj).each((index,d)=>{
-                let  cfName = d.studyroomDTO.name;
-                let  imgPath =d.studyroomDTO.imgPath;
-                let  info =d.studyroomDTO.info;
-                let  addr=d.studyroomDTO.addr;
-                openTime=d.studyroomDTO.openTime;
-                endTime=d.studyroomDTO.endTime;
+                let  cfName = d.studyroomAndFavStuyroomInfoDTO.name;
+                let  imgPath =d.studyroomAndFavStuyroomInfoDTO.imgPath;
+                let  info =d.studyroomAndFavStuyroomInfoDTO.info;
+                let  addr=d.studyroomAndFavStuyroomInfoDTO.addr;
+                openTime=d.studyroomAndFavStuyroomInfoDTO.openTime;
+                endTime=d.studyroomAndFavStuyroomInfoDTO.endTime;
 
                 let $imgObj=$('<img id="cafeimg">') 
                 $imgObj.attr('src', '../../images/' + imgPath+ '.jpeg')
@@ -43,6 +60,7 @@ $(()=>{
                 $head.find(".endTime").html("마감시간: "+endTime);
                 
             }) 
+        
             
         }, error:function(xhr){
             alert(xhr.responseText)
@@ -58,7 +76,7 @@ $(()=>{
         url: url+seq,
         method:"GET",
         success: function(jsonObj){
-            let $origin = $('div.content-container>div.studycafeInfo>div.studyroomList').first()
+            let $origin = $('div.studyroomList').first()
              let $parent = $origin.parent()
 
             $(jsonObj.roominfoDTO).each((index,a)=>{
@@ -98,7 +116,7 @@ $(()=>{
         url: url+seq,
         method:"GET",
         success: function(jsonObj){
-            let $origin2 = $('div.content-container>div.studycafeInfo>div.roomReview').first()
+            let $origin2 = $('div.roomReview').first()
             let $parent2= $origin2.parent()
             $(jsonObj.roomReviewSelectAllDTO).each((index,r)=>{
                 
@@ -130,75 +148,45 @@ $(()=>{
     
     //--즐겨찾기 버튼 클릭 START--
      $('.favStudy').click(()=>{
-       //--즐겨찾기 이미 추가한 상태인지 확인 START-- //즐겨찾기 db에 내역이 완전히 없는 상태이면 에러코드로 넘어감 -> 이럴경우 즐겨찾기 추가실행(하... 왜 중복추가되는거지..)
-      var fav=""
-      // try{
-
-          $.ajax({
+       //--즐겨찾기 삭제 START--
+       alert(favStatus)
+     if(favStatus == 0){
+        $.ajax({
             xhrFields: {
-              withCredentials: true,
+                    withCredentials: true
             },
-            url: url3,
-            method: "GET",
-            success: function (jsonObj) {
-                    
-   
-                  $(jsonObj).each((index, r) => {
-                   
-                    
-                    srSeq = r.srseqDTO.srSeq;
-                   if(srSeq ==seq)
-                  // break
-                  $("#nonebox2").html(srSeq);
-                       
-                  
-                  });
-
-                   if (srSeq == seq) {
-                     //--- 즐겨찾기 추가-----
-                     $.ajax({
-                       xhrFields: {
-                         withCredentials: true,
-                       },
-                       url: backURL + "favoritesstudyroom/" + seq,
-                       method: "DELETE",
-                       success: function (jsonObj) {
-                         alert("즐겨찾기를 삭제하셨습니다");
-                       },
-                     });
-                   } else {
-                     $.ajax({
-                       xhrFields: {
-                         withCredentials: true,
-                       },
-                       url: url2,
-                       method: "POST",
-                       success: function (jsonObj) {
-                         alert("즐겨찾기에 추가하셨습니다");
-                       },
-                     });
-                   }
-              
+            method: 'delete',
+            url: backURL + "favoritesstudyroom/" + seq,
+            success: function(){
+               $('.favStudy').css('backgroundColor', 'greenyellow');
+               alert("즐겨찾기 삭제");
             },
             error: function (xhr) {
+                    let jsonObj = JSON.parse(xhr.responseText);
+                    alert(jsonObj.msg);
+            }
              
-           
-            },
-          });
-      // }catch(e){
-      //   $.ajax({
-      //     xhrFields: {
-      //       withCredentials: true,
-      //     },
-      //     url: url2,
-      //     method: "POST",
-      //     success: function (jsonObj) {
-      //       alert("즐겨찾기에 추가하셨습니다");
-      //     },
-      //   });
-      // }
-       
-     })
+          })
+      } else {
+        //--즐겨찾기 추가 START--
+          $.ajax({
+                xhrFields: {
+                    withCredentials: true
+                },
+                url: url2,
+                method: "POST",
+                success: function () {
+                $('.favStudy').css('backgroundColor', 'yellow');
+                alert("즐겨찾기 등록");
+                },
+                error: function (xhr) {
+                    let jsonObj = JSON.parse(xhr.responseText);
+                    alert(jsonObj.msg);
+                }
+            });
+             //--즐겨찾기 추가 START--
+      }
+    })
     //--즐겨찾기 버튼 클릭 END--
 
     

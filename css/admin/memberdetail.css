@@ -1,18 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
-*{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
+
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFEFE;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
 #user-index-wrap {width: 100%; height: auto; font-size: 15px; }
-#user-index-wrap>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
-#user-index-wrap>#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
-#user-index-wrap>#footer-wrap{width: 100%; border: 1px solid rgb(187, 187, 187); text-align:center;}
-#user-index-wrap>#content-wrap>.userpage-body-wrap{margin:0 auto; width: 1000px; height: 1200px;  border: 1px solid rgb(187, 187, 187);}
+#user-index-wrap>#nav-wrap{width: 100%;}
+#user-index-wrap>#content-wrap{width: 100%; height:auto; }
+
+#footer-wrap {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #303740;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#user-index-wrap>#content-wrap>.userpage-body-wrap{margin:0 auto; width: 1000px; height: 1200px; }
 /*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
  width: 100%는 기본값이기 때문에 없어도 된다 */
 
- #user-index-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91; } 
- #user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container {float: left; width: 19%; height: 700px; margin: 0 auto; border: 1px solid #fc487b;} 
- #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container {float: right; width: 78%; height: 1000px; margin: 0 auto; border: 1px solid #62ff19; margin: 18px 13px 13px 13px;}
- #user-index-wrap>#footer-wrap>.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
+ #user-index-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto;  } 
+ #user-index-wrap>#content-wrap>.userpage-body-wrap>.side-container {float: left; width: 19%; height: 700px; margin: 0 auto; } 
+ #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container {float: right; width: 78%; height: 1000px; margin: 0 auto;  margin: 18px 13px 13px 13px;}
 
  #user-index-wrap>#nav-wrap>.nav-container>nav{
     width: 200px;
@@ -118,7 +137,19 @@ td#memIdContent{
 #user-infomation-box{
     width:730px;
     height:300px;
-    background-color: rgb(248, 246, 239);
+    background-color: #F9F9F9;
     border-radius: 10px;
     margin: 50px 25px 10px 25px;
+}
+div.top-title {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+span#showLoginId {
+    font-weight: 800;
+    color: #00C471;
+}
+.member-detail-table{
+    background-color: #F9F9F9;
 }
