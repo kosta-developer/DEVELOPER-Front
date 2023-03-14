@@ -1,5 +1,5 @@
-let backURL = "http://192.168.0.28:8888/developer/";
-let frontURL = "http://192.168.0.28:5500/html/";
+let backURL = "http://192.168.0.31:8888/developer/";
+let frontURL = "http://192.168.0.31:5500/html/";
 //http://192.168.0.20 학원
 //http://192.168.219.100 집
 //http://192.168.0.13학원와이파이
