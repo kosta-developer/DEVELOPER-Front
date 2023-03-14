@@ -21,16 +21,19 @@
                             <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
                             <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
                             <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
-                            <li class='chat'><a href="/html/chat/chat.html">채팅</a></li>
-                            <li class='myPage'><a href="/html/mypage/usermypage.html">마이페이지</a></li>
-                            <li class='logout' onclick="logout()">로그아웃</li>
+                            <li class='lessonAdd'><a href="/html/lesson/add.html">수업등록</a></li>
+                            <li class='tutorAdd'><a href="/html/tutor/add.html">튜터등록</a></li>
+                            <li class='myPage'><a href="/html/mypage/main.html">마이페이지</a></li>
+                            <li class='adminPage'><a href="/html/admin/main.html">관리자페이지</a></li>
+                            <li class='logout'>로그아웃</li>
                         </ul>
                     </nav>
                 
             </div>
                 <div class="board-banner">
-                    Developer Community<br/><br/>
-                    <span>함께 토론해봐요!!<i class="fa-regular fa-thumbs-up"></i>
+                    Developer Community<br/>
+                    <span>함께 토론해봐요!!
+                        <!-- <i class="fa-regular fa-thumbs-up"></i> -->
                     </span>
                 </div>
                 <div class="board-container">
@@ -53,11 +56,11 @@
                                 </form>
                             </div>
                             <div class="filter">
-                                <button class="descbtn fitbtn" id="descbtn"> 최신순</button>
+                                <!-- <button class="descbtn fitbtn" id="descbtn"> 최신순</button>
                                 <button class="cntbtn fitbtn" id="cntbtn"> 조회순</button>
-                                <button class="recbtn fitbtn" id="recbtn"> 추천순</button>
-                                <div class="addboard">
-                                    <button class="addbtn" id="addbtn">
+                                <button class="recbtn fitbtn" id="recbtn"> 추천순</button> -->
+                                <div class="addboard" style="display:none">
+                                        <button class="addbtn" id="addbtn">
                                         <i class="fa-solid fa-pen"></i>글쓰기</button>
                                 </div>
                             </div>
