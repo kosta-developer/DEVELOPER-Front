@@ -1,6 +1,6 @@
 //지원
-let backURL = "http://192.168.0.18:8888/developer/";
-let frontURL = "http://192.168.0.18:5500/html/";
+let backURL = "http://192.168.0.33:8888/developer/";
+let frontURL = "http://192.168.0.33:5500/html/";
 
 $(() => {
     showMenuAtLogouted()

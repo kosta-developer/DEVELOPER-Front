@@ -196,30 +196,6 @@ a {
         margin-left:30px;
         margin: 18px 13px 13px 13px;
     }
-.content-container>.tutee>div{
-    background-color:  #F9F9F9;
-    margin-top: 15px;
-    width: 95%;
-    height: 156px;
-    float: right;
-    position: relative;
-    left: -2.5%;
-}
-
-.content-container>.tutee>div>h2{
-    /* margin-top: 20px; */
-    margin-left: 20px;
-}
-
-.content-container>.tutee>div>div{
-    margin-left: 20px;
-}
-
-.content-container>.tutee>div>div>ul>input{
-    font-size: 20px;
-    margin-right: 20px;
-    float: right;   
-}
 
 #writereviewbtn{
     margin-right: 14px;
@@ -249,7 +225,12 @@ a {
     /* margin-top: 20px; */
     margin-left: 20px;
 }
-
+.content-container #jointutee{
+    margin-left:20px;
+}
+.content-container .tutor{
+    margin-left:20px;
+}
 .content-container .completeClass{
     margin-left : 30px;
     background-color: #F9F9F9;
@@ -267,8 +248,13 @@ a {
     color: #00C471;
 }
 
-.content-container .tutor>#jointutee>#tuteelist{
-    margin-left:20px;
+.content-container >#jointutee>#tuteelist{
+    margin-left:40px;
+    margin-top:8px;
+}
+
+.content-container >#completedClass{
+    margin-left:40px;
     margin-top:8px;
 }
 

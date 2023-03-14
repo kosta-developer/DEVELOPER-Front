@@ -174,7 +174,7 @@ a {text-decoration: none;color: black;}
     font-size: 16px;
     list-style-type: none;
 } 
-
+/* 
 .content-container>.studyDetail>div{
     background-color: #F9F9F9;
     margin-top: 15px;
@@ -183,8 +183,6 @@ a {text-decoration: none;color: black;}
     position: relative;
     left: -2.5%;
 }
-
-
 .content-container>.studyDetail>div>div{
     margin-left: 20px;
 }
@@ -206,19 +204,102 @@ a {text-decoration: none;color: black;}
 }
 .content-container>.reservation>div>div{
     margin-left: 20px;
-}
+} */
 
-#content-wrap > div > div.content_container > div.studyroomlist > div > .studyroom_tab{
-    display : flex;
-    border-bottom : 1px solid #fc487b;
-    padding: 0 16px;
-    min-height: 28px;
-}
-
-#content-wrap > div > div.content_container > div.studyroomlist > div > .studyroom_tab > li{
-    padding: 0 16px;
-}
-
+.studyDetail {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .studyDetail h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  #studyroomDetail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #studyroomDetail .name {
+    grid-column: 1 / span 2;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  #studyroomDetail .info {
+    font-size: 16px;
+  }
+  
+  #studyroomDetail .addr {
+    font-size: 16px;
+  }
+  
+  #studyroomDetail .open_time {
+    font-size: 16px;
+  }
+  
+  #studyroomDetail .end_time {
+    font-size: 16px;
+  }
+  
+  #studyroomDetail .imgPath img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  #studyroomDetail .oc {
+    font-size: 16px;
+  }
+  
+  .reservation {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  .reservation h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  #reservationList {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+  }
+  
+  #reservationList div {
+    font-size: 16px;
+  }
+  
+  #reservationList .rname {
+    grid-column: 1 / span 2;
+  }
+  
+  #reservationList .startTime {
+    grid-column: 3 / span 1;
+  }
+  
+  #reservationList .endTime {
+    grid-column: 4 / span 1;
+  }
+  
+  #reservationList .usingDate {
+    grid-column: 5 / span 1;
+  }
+  
+  #reservationList .nickname {
+    grid-column: 1 / span 2;
+  }
+  
 div.top-title{
     margin-left: 25px;
     margin-bottom: 15px;
