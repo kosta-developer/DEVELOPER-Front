@@ -95,10 +95,17 @@
 }
 
 .boarddetail-container{
-    display:flex;
+    /* display:flex; */
     flex-direction: column;
     width:1000px;
     margin : 0 auto;
+}
+
+.boarddetail-container .content{
+    width:800px;
+    margin :70px;
+    word-wrap: break-word; /* 글자가 라인의 끝에서 넘치는 경우 줄바꿈 */
+    overflow-wrap: break-word;
 }
 
 .boarddetail-container #edit-btn{
@@ -149,6 +156,102 @@
     position: relative;
     line-height: 1;
     font-size: 20px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #858A8D;
+    border-radius: 8px;
+}
+
+.repdetailbtn #repeditbtn{
+    border-width: 1px;
+    margin: 15px 0px 0px 15px;
+    padding: 0px 20px;
+    appearance: none;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 16px;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    width:80px;
+    position: relative;
+    line-height: 1;
+    font-size: 16px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #858A8D;
+    border-radius: 8px;
+}
+
+.repdetailbtn #repdelbtn{
+    border-width: 1px;
+    margin: 15px 0px 0px 15px;
+    padding: 0px 20px;
+    appearance: none;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 16px;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    width:80px;
+    position: relative;
+    line-height: 1;
+    font-size: 16px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #858A8D;
+    border-radius: 8px;
+}
+
+#editReplyForm #modifybtn{
+    border-width: 1px;
+    margin: 15px 0px 0px 15px;
+    padding: 0px 20px;
+    appearance: none;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 16px;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    width:120px;
+    position: relative;
+    line-height: 1;
+    font-size: 16px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #858A8D;
+    border-radius: 8px;
+}
+
+#editReplyForm #cancelbtn{
+    border-width: 1px;
+    margin: 15px 0px 0px 15px;
+    padding: 0px 20px;
+    appearance: none;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 16px;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    width:80px;
+    position: relative;
+    line-height: 1;
+    font-size: 16px;
     user-select: none;
     cursor: pointer;
     border: 1px solid transparent;

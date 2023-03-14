@@ -1,22 +1,100 @@
 
 #user-index-wrap {width: 100%; height: auto; font-size: 15px; }
-#user-index-wrap>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
-#user-index-wrap>#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
-#user-index-wrap>#footer-wrap{width: 100%; border: 1px solid rgb(187, 187, 187); text-align:center;}
-#user-index-wrap>#content-wrap>.userpage-body-wrap{margin:0 auto; width: 1000px; height: 1200px;  border: 1px solid rgb(187, 187, 187);}
+#user-index-wrap>#nav-wrap{width: 100%;}
+
+
+#user-index-wrap>#content-wrap>.userpage-body-wrap{margin:0 auto; width: 1000px; height: 1200px; }
 /*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
  width: 100%는 기본값이기 때문에 없어도 된다 */
 
- #user-index-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91; } 
- 
- #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container {
-    background-color: #F9F9F9; float: right; width: 78%; height: 500px; margin: 0 auto; margin: 18px 13px 13px 13px;
-}
 
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
-* {
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+*{margin: 0; padding: 0; background-color: #FFFEFE; font-family: 'Spoqa Han Sans Neo', 'sans-serif';} 
+#index-wrap {width: 100%; height: 1500px; color: #000000; font-size: 15px; }
+#banner-wrap{width: 100%; }
+#content-wrap{width: 100%; height:auto; }
+#footer-wrap{
+    width: 100%; 
+    height: 100px; 
+    line-height: 100px; 
+    margin: 0 auto; 
+    text-align:center; 
+    background-color: #303740; 
+    color:#fff;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    }
+    .content{
+         background-color: #F9F9F9;
+    }
+#devBanner{width: 1000px; height: 300px;}
+
+#content-wrap>.content-container>div.lessonlist{ width:100%; height:800px;}
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+ width: 100%는 기본값이기 때문에 없어도 된다 */
+
+.nav-container {width:1000px; height: 100px; line-height: 60px; margin: 0 auto;} 
+.banner-container {width: 1000px; height: 300px; line-height: 300px; margin: 0 auto;  }
+.content-container {  float: right; width: 78%; height: 1000px; margin: 0 auto; margin: -618px 13px 13px 13px;
+    overflow: auto
+ }
+.footer-container{width: 100%; height: 100px; line-height: 100px; margin: 0 auto; }
+#footer-wrap > div.footer-container{
+    background-color: #303740; 
+}
+
+.nav-container>nav{
+    /* width: 600px; */
+    /* display: inline-block; */
+    float: right;
+}
+
+.nav-container>img{
+    height: 30px;
+    float: left;
+    margin-top: 33px;
+    margin-left: 20px;
+}
+
+.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 17px;
+}
+
+.nav-container>nav>ul>li{
+   /* width: 100px; */
+    display: inline-block;
+    margin-left:15px;
+}
+
+/*  클릭 안 한 메뉴 */
+.nav-container>nav>ul>li>a:link{
+    text-decoration: none;
+    color: black;
+    margin-top: 50px;
+}
+
+/*  클릭 한 메뉴 */
+.nav-container>nav>ul>li>a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-container>nav>ul>li>a:hover{
+    color:  #00C471;
+    font-weight: bold;
+}
+
+.nav-container>nav>ul>li:hover{
+    color:  #00C471;
+    font-weight: bold;
 }
 
 a {
@@ -332,10 +410,7 @@ background-color: #F9F9F9;
     margin: 0 auto;
 }
 
-.content-container {
-    width: 1000px;
-    margin: 0 auto;
-}
+
 
 .footer-container {
     width: 100%;
@@ -344,61 +419,6 @@ background-color: #F9F9F9;
     margin: 0 auto;
 }
 
-#footer-wrap>div.footer-container {
-    background-color: #303740;
-}
-
-.nav-container>nav {
-    /* width: 600px; */
-    /* display: inline-block; */
-    float: right;
-}
-
-.nav-container>img {
-    height: 30px;
-    float: left;
-    margin-top: 33px;
-    margin-left: 20px;
-}
-
-.nav-container>nav>ul {
-    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
-    list-style-type: none;
-    padding-left: 0px;
-    margin-top: 20px;
-    margin-right: 20px;
-    text-align: right;
-    font-size: 17px;
-}
-
-.nav-container>nav>ul>li {
-    /* width: 100px; */
-    display: inline-block;
-    margin-left: 15px;
-}
-
-/*  클릭 안 한 메뉴 */
-.nav-container>nav>ul>li>a:link {
-    text-decoration: none;
-    color: black;
-    margin-top: 50px;
-}
-
-/*  클릭 한 메뉴 */
-.nav-container>nav>ul>li>a:visited {
-    text-decoration: none;
-    color: black;
-}
-
-.nav-container>nav>ul>li>a:hover {
-    color: #00C471;
-    font-weight: bold;
-}
-
-.nav-container>nav>ul>li:hover {
-    color: #00C471;
-    font-weight: bold;
-}
 
 /* -----------------index 전용 css START ----------------------*/
 .btn{

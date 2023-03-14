@@ -51,7 +51,7 @@ $(()=>{
                 endTime=d.studyroomAndFavStuyroomInfoDTO.endTime;
 
                 let $imgObj=$('<img id="cafeimg">') 
-                $imgObj.attr('src', '../../images/' + imgPath+ '.jpeg')
+                $imgObj.attr('src', '../../images/' + imgPath)
                 $head.find(".img").html($imgObj)
                 $head.find(".cfName").html(cfName);
                 $head.find(".info").html(info);
@@ -91,7 +91,7 @@ $(()=>{
                 let $copy=$origin.clone()
 
                 let $imgObj=$('<img id="roomimg">') 
-                $imgObj.attr('src', '../../images/' + imgPath+ '.jpeg')
+                $imgObj.attr('src', '../../images/' + imgPath)
                 $copy.find(".roomImg").html($imgObj)
                 $copy.find(".roomSeq").html(roomSeq)
                 $copy.find(".hostId").html(hostId)

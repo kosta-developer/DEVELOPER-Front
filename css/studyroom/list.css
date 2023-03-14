@@ -330,12 +330,14 @@ input.srbtn{
         margin-left: 5px;
     
 }
+
 .price {
     text-align: right;
-    width: 120px;
+    width: 140px;
 }
 .favCnt{
     text-align: left;
+    display: none;
 }
 div.top-title {
     margin-left: -750px;
@@ -345,4 +347,7 @@ div.top-title {
 span#showLoginId {
     font-weight: 800;
     color: #00C471;
+}
+.form{
+    margin-bottom: 20px;
 }

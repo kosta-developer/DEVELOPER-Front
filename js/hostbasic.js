@@ -6,8 +6,6 @@ let frontURL = "http://192.168.0.34:5500/html/";
 //http://192.168.0.13학원와이파이
 
 $(() => {
-
-
     //--로그아웃 클릭되었을 때 할 일 START--
     $('#nav-wrap > div > nav > ul > li.logout').click((e) => {
 

@@ -1,6 +1,7 @@
 $(() => {
     hostCheckIntervalLogined()
 
+    $('#session').html(localStorage.getItem("hostId"));
 
     //=================[textarea 글자수세기 START]==================
     $('#info').keyup(function (e) {
@@ -51,9 +52,10 @@ $(() => {
 
     //=================[폼에서 스터디카페 추가 버튼 클릭 시 START]==================
     let $form = $('div.addstudycafeform>form')
+    const hostId = localStorage.getItem("hostId");
     $form.submit(() => {
         let formData = new FormData($form[0])
-        //console.log( formData.get('addr1'));
+        console.log(localStorage.getItem("hostId"))
         let name = $('input#nameCafe').val();
         let info = $('textarea#info').val();
         let openTime = $('input#openTime').val();
@@ -62,12 +64,13 @@ $(() => {
         let extraAddr = $('input#sample6_extraAddress').val(); // 참고항목 변수
         let detailAddr = $('input#sample6_detailAddress').val(); //상세주소 변수
         let sumaddr = addr + extraAddr + ' ' + detailAddr
+        let hostId = $('div#session').val(); 
 
         formData.append("addr", sumaddr);
 
         const fileInput = document.querySelector('input#cafeFile');
         const file = fileInput.files[0];
-        const maxSizeInBytes = 510000; //나중에 5MB로 바꾸기 5120000
+        const maxSizeInBytes = 5100000; //나중에 5MB로 바꾸기 5120000
 
         if (!name) {  // = if(name="")
             alert("스터디카페 이름을 입력해주세요.");

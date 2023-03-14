@@ -27,24 +27,42 @@ $(()=>{
                 boardData += "<form id='editForm' enctype='multipart/form-data'>"
                 boardData += "<div class='title'><input type='text' name='title' id='editTitle' value='"+jsonObj.title+"'></div>";
                 boardData += "<div class='content'><textarea name='content' id='summernote' value='' placeholder='내용을 입력해주세요.'>"+jsonObj.content+"</textarea></div>";
-                boardData += "<div class='imgPath'> 이미지: "+jsonObj.imgPath+"</div>";
+                boardData += "<div class='imgPath'> <img /></div>";
                 boardData += "<div class='show'></div>"
                 boardData += "<input type='file' name='f' multiple='multiple' accept='image/jpeg, image/png, image/gif'><br/>";
                 boardData += "<div class='editbutton'>";
-                boardData += "<div class='cancelbtn'><a href='/html/board/boarddetail.html?postSeq='"+postSeq+"><input type='button' value='취소' id='cancelbtn'></a></div>";
+                boardData += "<div class='cancelbtn'><a href='/html/board/boarddetail.html?postSeq='"+jsonObj.postSeq+"><input type='button' value='취소' id='cancelbtn'></a></div>";
                 boardData += "<div class='editbtn>'><button id='modifybtn'>수정</button><br/></div>";
                 boardData += "</div>";
                 boardData += "<input type='hidden' name='postSeq' value='"+jsonObj.postSeq+"'>";
+                //boardData += "<input type='hidde"
                 boardData += "</form>";
                 boardData += "</div>";
 
                 $("#list").append(boardData);
 
+                let $img = $('div.list>div.list-container>form div.imgPath');
+                //--썸네일 이미지 다운로드 START--
+                $.ajax({
+                    xhrFields: {
+                        responseType: "blob",
+                    },
+                    cache: false,
+                    url: backURL + "download/board",
+                    method: "get",
+                    data: "imgPath=" + jsonObj.imgPath+ "&opt=inline&type=1",
+                    success: function (result) {
+                        console.log(result);
+                        let blobStr = URL.createObjectURL(result);
+                        $img.find("img").attr("src", blobStr);
+                    },
+                });
         },
         error : function(xhr){
             alert(xhr.status);
         }
     })
+    
     // 페이지 로드되었을시 목록 출력 END
     //#modifybtn
     $(document).on('click', '#modifybtn',function(){
@@ -82,7 +100,7 @@ $(()=>{
 
         
  });
-  //--첨부파일이 변경되었을때 할일 START--
+  //—첨부파일이 변경되었을때 할일 START—
   let $divShow = $('div.show')
   $('div.form>form>input[type=file]').change((e) => {
       $(e.target.files).each((index, imgFileObj) => {
