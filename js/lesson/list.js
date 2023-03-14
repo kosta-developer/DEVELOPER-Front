@@ -85,7 +85,7 @@ function dataList(list) {
             success: function (result) {
                 console.log(result);
                 let blobStr = URL.createObjectURL(result);
-                $copy.find("a>img").attr("src", blobStr);
+                $copy.find("img.lessonImg").attr("src", blobStr);
             },
         });
         //=================[이미지 다운로드 END]==================
