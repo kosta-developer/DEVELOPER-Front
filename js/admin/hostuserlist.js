@@ -33,22 +33,6 @@ $(() => {
                 location.href = frontURL + 'admin/hostuserdetail.html?hostId='+hostId
             })
 
-
-            // $(document).on('click','span.host-hostId', (e)=>{
-                
-            //     $(jsonObj).each((index)=>{
-            //     let $hostId = jsonObj[index].hostId
-                
-            //     console.log('객체형태로..'+$hostId)
-            //     // $parent.append
-            //     })
-
-            // // let hostId = $(e.target).parents('div.list-of-host').find('span#hostId').text();
-
-            // // console.log('호스트아이디는'+hostId)
-            // })
-            // location.href = frontURL + 'admin/host/detail/'+hostId
-            
         },
         error: function (xhr) {
             alert(xhr.status)
