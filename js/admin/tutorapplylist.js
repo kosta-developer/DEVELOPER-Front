@@ -32,7 +32,8 @@ $(() => {
 
         },
         error: function (xhr) {
-            alert(xhr.status)
+            alert('미승인 튜터가 존재하지 않습니다')
+            location.href = frontURL +'admin/main.html'
         }
     })
     //=================[튜터 미승인 목록 출력 END]==================

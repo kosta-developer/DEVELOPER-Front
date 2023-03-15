@@ -27,7 +27,8 @@ $(() => {
 
         },
         error: function (xhr) {
-            alert(xhr.status)
+            alert('미승인 호스트가 존재하지 않습니다')
+            location.href = frontURL +'admin/main.html'
         }
     })
     //=================[호스트 미승인 목록 출력 END]==================

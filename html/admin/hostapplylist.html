@@ -2,20 +2,20 @@
 <html>
 
 <head>
-    <meta charset='UTF-8'>
-    <!--<link rel='stylesheet' href='../css/basic.css'>-->
-    <link rel='stylesheet' href='/css/admin/hostapplylist.css'>
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
-    <!-- 관리자도 베이직 처리는..생각해보자 -->
-    <script src='/js/basic.js'></script>
-    <script src='/js/admin/hostapplylist.js'></script>
+    <meta charset="UTF-8">
+    <!--<link rel="stylesheet" href="../css/basic.css">-->
+    <link rel="stylesheet" href="/css/admin//hostapplylist.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/basic.js"></script>
+    <script src="/js/admin/hostapplylist.js"></script>
 </head>
+<title>관리자페이지</title>
 
 <body>
-    <div id='apply-list-host-wrap'>
-        <div id='nav-wrap'>
-            <div class='nav-container'>
-                <img id='logo' src='/images/logo.png'>
+    <div id="apply-list-host-wrap">
+        <div id="nav-wrap">
+            <div class="nav-container">
+                <img id="logo" src="/images/logo.png">
                 <nav>
                     <ul>
                         <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
@@ -33,11 +33,10 @@
                 </nav>
             </div>
         </div>
-
-        <div id='content-wrap'>
-            <div class='hostpage-body-wrap'>
-                <div class='side-container'>
-                    <div class='menu'>
+        <div id="content-wrap">
+            <div class="userpage-body-wrap">
+                <div class="side-container">
+                    <div class="menu">
                         <div>회원관리</div>
                         <ul>
                             <li><a href="/html/admin/memberlist.html">일반 회원</a></li>
@@ -46,19 +45,23 @@
                         <div>승인관리</div>
                         <ul>
                             <li><a href="/html/admin/hostapplylist.html">호스트 승인</a></li>
-                            <li><a href="/html/admin/tutorapplylist.html">튜터 승인</a></li>   
+                            <li><a href="/html/admin/tutorapplylist.html">튜터 승인</a></li>
                         </ul>
-                        <div><a href="/html/admin/studyroomlist.html">스터디카페 관리</a></div>
-                        <div><a href="/html/admin/lessonlist.html">수업 관리</a></div>
+                        <ul>
+                            <li><a href="/html/admin/studyroomlist.html">스터디카페 관리</a></li>
+                            <li> <a href="/html/admin/lessonlist.html">수업 관리</a></li>
+                        </ul>
                     </div>
                 </div>
+                <div class="content-container">
 
-                <div class='content-container'>
-                    <!--나중에 호스트id 받아오는 걸로-->
-                    <div class='top-title' style='margin-bottom: 15px;'>관리자 ID님, 반갑습니다 ></div>
-                    <div class='detail-content-box'>
-                        <div class='sub-title'>호스트 승인대기 목록 </div>
+                    <div class="top-title">
+                        <span id="showLoginId">관리자</span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
+                    </div>
+                    <div id="host-box">
+                        <div class="info-title">미승인 호스트 목록</div>
                         <hr>
+
                         <div class="sell-title">
                             <b id='b-hostId'>아이디</b>
                             <b id='b-hostEmail'>이메일</b>
@@ -68,30 +71,27 @@
 
                         <div class="apply-list-host">
 
+
                             <!-- 원본 -->
                             <div class="apply-list-host-origin">
-                                <hr class="list-sell-line">
-                                
+
                                 <span id='host-hostId' class='host-data'></span>
                                 <span id='host-email' class='host-data'></span>
                                 <span id='host-tel' class='host-data'></span>
-                                <span id='ready-btn' class='host-data'>
+                                <span id='apply-btn'>
                                     <input type="button" id="hostOk" class="applybtn" value="승인">
                                     <input type="button" id="hostReject" class="applybtn" value="승인거절">
                                 </span>
-
+                                <hr class="list-sell-line">
                             </div>
-
                         </div>
                         <hr>
-
-                        <!-- 추가될수록..세로길이는 내가 별도로 계속 지정해주긴해야되는데..우선..이상태로..-->
                     </div>
                 </div>
             </div>
         </div>
-        <div id='footer-wrap'>
-            <div class='footer-container'>ⓒ 2023 이거맞조. All Rights Reserved.</div>
+        <div id="footer-wrap">
+            <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
         </div>
     </div>
 </body>
