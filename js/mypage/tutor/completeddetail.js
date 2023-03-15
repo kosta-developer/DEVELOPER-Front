@@ -57,7 +57,7 @@ $(()=>{
                         success: function (result) {
                             console.log(result);
                             let blobStr = URL.createObjectURL(result);
-                            $copy_endclassimg.find("div.imgPath>img").attr("src", blobStr);
+                            $copy_endclassimg.find("#endclass>#endclassimg>div.imgPath>img").attr("src", blobStr);
                         },
                     });
                     let $copy_endclasslist = $origin_endclasslist.clone();

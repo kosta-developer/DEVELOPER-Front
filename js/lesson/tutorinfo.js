@@ -89,12 +89,13 @@ $(() => {
                 //=================[이미지 다운로드 END]==================
 
                 console.log(lessonName)
-            
+                console.log(lessonSeq)
+                console.log('------------------')
+
                 $copy.find('div.lessonSeq').html(lessonSeq);
                 $copy.find('div.lessonName').html("<h3>" + lessonName + "</h3>");
                 $copy.find('div.location').html(location);
                 $copy.find('div.price').html(price);
-                console.log("----");
                 $parent.append($copy);
             })
             $origin.hide();
@@ -106,5 +107,16 @@ $(() => {
     });
     //=== 튜터 상세 내용 보여주기 END ===
 
-
 });
+
+//=== 수업 이미지/이름누르면 해당 페이지로 이동 START ===
+$("div.tutorLesson").on('click', 'div.lessonName', (e) => {
+    let lessonSeq = $(e.target).parents('div.tutorLesson').find('div.lessonSeq').html();
+    console.log(lessonSeq)
+    location.href = frontURL + 'lesson/detail.html?' + lessonSeq;
+});
+$("div.tutorLesson").on('click', 'img.lImgPath', (e) => {
+    let lessonSeq = $(e.target).parents('div.tutorLesson').find('img.lImgPath').html();
+    location.href = frontURL + 'lesson/detail.html?' + lessonSeq;
+});
+        //=== 수업 이미지/이름누르면 해당 페이지로 이동 END ===

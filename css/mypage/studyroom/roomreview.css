@@ -1,50 +1,471 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
-*{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFEFE;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+
 #user-index-wrap {width: 100%; height: auto; font-size: 15px; }
-#user-index-wrap>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
-#user-index-wrap>#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
-#user-index-wrap>#footer-wrap{width: 100%; border: 1px solid rgb(187, 187, 187); text-align:center;}
-#user-index-wrap>#content-wrap>.userpage-body-wrap{margin:0 auto; width: 1000px; height: 1200px;  border: 1px solid rgb(187, 187, 187);}
+#user-index-wrap>#nav-wrap{width: 100%;}
+#user-index-wrap>#content-wrap{width: 100%; height:auto; }
+
+#user-index-wrap>#content-wrap>.userpage-body-wrap{margin:0 auto; width: 1000px; height: 1200px;  }
 /*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
  width: 100%는 기본값이기 때문에 없어도 된다 */
 
- #user-index-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91; } 
  
- #user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container { overflow: auto; float: right; width: 78%; height: 1000px; margin: 0 auto; border: 1px solid #62ff19; margin: 18px 13px 13px 13px;}
- #user-index-wrap>#footer-wrap>.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
+#index-wrap {width: 100%; height: 1500px; color: #000000; font-size: 15px; }
+#banner-wrap{width: 100%; }
+#content-wrap{width: 100%; height:auto; }
+#footer-wrap{
+    width: 100%; 
+    height: 100px; 
+    line-height: 100px; 
+    margin: 0 auto; 
+    text-align:center; 
+    background-color: #303740; 
+    color:#fff;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    }
+#devBanner{width: 1000px; height: 300px;}
 
- #user-index-wrap>#nav-wrap>.nav-container>nav{
-    width: 200px;
+#content-wrap>.content-container>div.lessonlist{ width:100%; height:800px;}
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+ width: 100%는 기본값이기 때문에 없어도 된다 */
+
+.nav-container {width:1000px; height: 100px; line-height: 60px; margin: 0 auto;} 
+.banner-container {width: 1000px; height: 300px; line-height: 300px; margin: 0 auto;  }
+.content-container {width: 1000px; margin: 0 auto; }
+.footer-container{width: 100%; height: 100px; line-height: 100px; margin: 0 auto; }
+#footer-wrap > div.footer-container{
+    background-color: #303740; 
+}
+
+.nav-container>nav{
+    /* width: 600px; */
     /* display: inline-block; */
     float: right;
 }
 
-#user-index-wrap>#nav-wrap>.nav-container>img{
+.nav-container>img{
     height: 30px;
     float: left;
-    margin-top: 13px;
-    margin-left: 10px;
+    margin-top: 33px;
+    margin-left: 20px;
 }
 
-#user-index-wrap>#nav-wrap>.nav-container>nav>ul{
+.nav-container>nav>ul{
     /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
     list-style-type: none;
     padding-left: 0px;
-    
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 17px;
 }
 
-#user-index-wrap>#nav-wrap>.nav-container>nav>ul>li{
+.nav-container>nav>ul>li{
    /* width: 100px; */
     display: inline-block;
     margin-left:15px;
 }
 
-#user-index-wrap>#nav-wrap>.nav-container>nav>ul>li:hover{
-    background-color: #2C2A29;
-    color: #fff
+/*  클릭 안 한 메뉴 */
+.nav-container>nav>ul>li>a:link{
+    text-decoration: none;
+    color: black;
+    margin-top: 50px;
 }
 
+/*  클릭 한 메뉴 */
+.nav-container>nav>ul>li>a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-container>nav>ul>li>a:hover{
+    color:  #00C471;
+    font-weight: bold;
+}
+
+.nav-container>nav>ul>li:hover{
+    color:  #00C471;
+    font-weight: bold;
+}
+
+/* -----------------index 전용 css START ----------------------*/
+
+.banner-container {position: relative; width: 1000px; height: 300px; margin:0 auto; padding:0; overflow: hidden;}
+.banner-container ul {position: absolute; margin: 0px; padding:0; list-style: none; }
+.banner-container ul li {float: left; width: 1000px; height: 300px; margin:0; padding:0;}
+
+.main-title{
+    font-size: 17px;    
+    padding: 10px 10px 0px 10px;
+    margin: 20px 10px 0px 10px;
+    font-weight: 800;
+    width:300px;
+    height: 30px;
+    
+}
+
+.lessonlistorigin{
+    float:left;
+    /* display: inline-block; */
+    margin-right: 20px; 
+    margin-bottom: 10px;
+}
+
+.lessonSeq{
+    display: none;
+}
+
+.postSeq{
+    display: none;
+}
+
+div.lessonImage>img.lessonImg{
+    width: 300px;
+    height: 200px;
+}
+
+#mainCommunityImg{
+    width:220px;
+    height:100px;
+    float: right;
+}
+
+#index-wrap>#content-wrap>.content-container>div.lessonlist {
+    width: 98%;
+    height: 530px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.communityList{
+    margin-left: 20px;
+}
+
+.postContent{
+    width: 450px; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display:inline-block;
+}
+
+.postTitle{
+    width:450px; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display:inline-block;
+    font-size: 17px;
+    font-weight:800;
+    margin-top:10px;
+    margin-bottom: 2px;
+}
+
+.mainCommunityLine {
+    border-top:1px solid #00C471;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    
+}
+
+.communityListOrigin{
+    width: 450px;
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 12px;
+    margin-bottom: 25px;
+    font-size: 12pt;
+    line-height: 25px;
+}
+
+.postRecommend{
+    margin-left: 120px;
+    color:#858A8D;
+}
+
+.postCnt{
+    margin-left: 20px;
+    color:#858A8D;
+}
+
+.lessonName{
+    font-weight: 800;
+    width:300px; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display:inline-block;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.lessonPrice{
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: -5px;
+    margin-bottom: 7px;
+}
+.content-container {  float: right; width: 78%; height: 1000px; margin: 0 auto; margin: -618px 13px 13px 13px;
+    overflow: auto
+ }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#user-reviewRequired-box{
+    width:730px;
+    height:auto;
+    background-color: rgb(248, 246, 239);
+    border-radius: 10px;
+    margin: 30px 25px 30px 25px;
+    padding-bottom: 30px;
+}
+#review-box{
+    width:440px;
+    height:auto;
+    background-color: rgb(250, 249, 248);
+    border-radius: 10px;
+    margin: 5px 0px 0px 10px;
+    padding-bottom: 20px; 
+}
+
+div.review{
+    text-align: left;
+}
+div.reviewTextBox{
+    top: 10%;
+    transform: translateY(-20%);
+    margin-left: 4px;
+} 
+#reviewTextBox{
+    width: 430px;
+    height: auto;
+    text-align: center;
+    resize: none;
+    margin-left: 10px;
+    
+}  
+#user-reviewDetail-box{
+    width:460px;
+    height:auto;
+    background-color: rgb(168, 167, 163);
+    border-radius: 10px;
+    margin: 1px 25px 30px 120px;
+    padding-bottom: auto;
+}
+
+.info-title{
+    background-color: rgb(248, 246, 239);
+    font-weight: 700;
+    padding: 20px ;
+}
+.info-title2{
+    font-weight: 700;
+    padding: 10px ;
+}
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#user-review-box{
+    width:730px;
+    height:auto;
+    background-color: rgb(248, 246, 239);
+    border-radius: 10px;
+    margin: 30px 25px 60px 25px;
+    padding-bottom: 30px;
+}
+
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#studycafe-infomation-box>.imgbox{
+    float: left;
+    background-color: #8fd9c3;
+    width: 220px;
+    height: 220px;
+    margin: 15px 0px 0px 25px 
+}
+
+#user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#studycafe-infomation-box>.textbox{
+    float: right;
+    background-color: #c39d91;
+    width: 450px;
+    height: 220px;
+    margin: 15px 25px 0px 0px
+}
+
+#table-head{
+    margin-top: 5px;
+    margin-left: 20px;
+}
+#table-body1{
+    width: 670px;
+    margin-top: 5px;
+    margin-left: 2%;
+}
+#table-body2 {
+    width: 650px;
+    margin-top: 5px;
+    margin-left: 40px;
+}
+.view{
+    width: 200px;
+    text-align: center;
+}
+.sName{
+    width: 800px;
+    text-align: center;
+}
+.rName{
+    width: 450px;
+        text-align: center;
+}
+.sName2{
+    width: 400px;
+    text-align: center;
+}
+.cdate{
+    width: 320px;
+        text-align: center;
+}
+.star{
+    width: 400px;
+    text-align: left;
+}
+.rName2{
+    width: 230px;
+    text-align: center;
+}
+.usingDate2{
+    width: 230px;
+    text-align: center;
+}
+.time{
+    width: 230px;
+    text-align: center;
+}
+
+#reviewbtn{
+       appearance: none;
+        text-align: center;
+        text-decoration: none;
+        box-sizing: border-box;
+        height: 22px;
+        -webkit-tap-highlight-color: transparent;
+        display: inline-block;
+        width: 80px;
+        height: 30px;
+        position: relative;
+        line-height: 1;
+        font-size: 16px;
+        user-select: none;
+        cursor: pointer;
+        border: 1px solid transparent;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        background-color: #00C471;
+        border-radius: 8px;
+  
+}
+.write{
+    
+    width: 130px;
+    text-align: right;
+}
+th{
+    width: 120px;
+    height: 40px;
+}
+td{
+    margin: auto;
+    text-align: left;
+    width: 100px;
+    height: 30px;
+}
+hr{
+    
+    height: 0px;
+}
+
+.contentbox{
+    margin: auto;
+}
+.info-title2{
+    background-color: rgb(248, 246, 239);
+    display: none;
+}
+.sNamequery{
+    display: none;
+}
+.rNamequery{
+    display: none;
+}
+.seqQuery{
+    display: none;
+}
+/* .viewBtn:checked ~ #reviewTextBox{display: block;
+} */
+#reviewTextBox {
+    display: none;
+    width: 710px;
+    
+}
+
+#viewBtn{
+     appearance: none;
+        text-align: center;
+        text-decoration: none;
+        box-sizing: border-box;
+        height: 22px;
+        -webkit-tap-highlight-color: transparent;
+        display: inline-block;
+        width: 80px;
+        height: 30px;
+        position: relative;
+        line-height: 1;
+        font-size: 16px;
+        user-select: none;
+        cursor: pointer;
+        border: 1px solid transparent;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        background-color: #00C471;
+        border-radius: 8px;
+    
+}
+.studycafe{
+    width: 200px;
+}
+.resdate{
+    width: 105px;
+}
+.restime{
+    width: 130px;
+}
+.review-content1{
+    margin-bottom: 0px;
+}
+div.top-title {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+span#showLoginId {
+    font-weight: 800;
+    color: #00C471;
+}
+/* 사이드바 css */
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
 * {
@@ -105,201 +526,4 @@ a {
     margin-left: 15px;
     font-size: 16px;
     list-style-type: none;
-}
-
-#user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#user-reviewRequired-box{
-    width:730px;
-    height:auto;
-    background-color: rgb(248, 246, 239);
-    border-radius: 10px;
-    margin: 30px 25px 30px 25px;
-    padding-bottom: 30px;
-}
-#review-box{
-    width:440px;
-    height:auto;
-    background-color: rgb(250, 249, 248);
-    border-radius: 10px;
-    margin: 5px 0px 0px 10px;
-    padding-bottom: 20px; 
-}
-
-div.review{
-    text-align: left;
-}
-div.reviewTextBox{
-    top: 10%;
-    transform: translateY(-20%);
-    margin-left: 4px;
-} 
-#reviewTextBox{
-    width: 430px;
-    height: auto;
-    text-align: center;
-    resize: none;
-    margin-left: 10px;
-    
-}  
-#user-reviewDetail-box{
-    width:460px;
-    height:auto;
-    background-color: rgb(168, 167, 163);
-    border-radius: 10px;
-    margin: 1px 25px 30px 120px;
-    padding-bottom: auto;
-}
-
-.info-title{
-    font-weight: 700;
-    padding: 20px ;
-}
-.info-title2{
-    font-weight: 700;
-    padding: 10px ;
-}
-#user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#user-review-box{
-    width:730px;
-    height:auto;
-    background-color: rgb(248, 246, 239);
-    border-radius: 10px;
-    margin: 30px 25px 60px 25px;
-    padding-bottom: 30px;
-}
-
-#user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#studycafe-infomation-box>.imgbox{
-    float: left;
-    background-color: #8fd9c3;
-    width: 220px;
-    height: 220px;
-    margin: 15px 0px 0px 25px 
-}
-
-#user-index-wrap>#content-wrap>.userpage-body-wrap>.content-container>#studycafe-infomation-box>.textbox{
-    float: right;
-    background-color: #c39d91;
-    width: 450px;
-    height: 220px;
-    margin: 15px 25px 0px 0px
-}
-
-#table-head{
-    margin-top: 5px;
-    margin-left: 50px;
-}
-#table-body1{
-    width: 600px;
-    margin-top: 5px;
-    margin-left: 6%;
-}
-#table-body2 {
-    width: 650px;
-    margin-top: 5px;
-    margin-left: 7%;
-}
-.view{
-    width: 200px;
-    text-align: center;
-}
-.sName{
-    width: 600px;
-    text-align: center;
-}
-.rName{
-    width: 350px;
-        text-align: center;
-}
-.sName2{
-    width: 400px;
-    text-align: center;
-}
-.cdate{
-    width: 320px;
-        text-align: center;
-}
-.star{
-    width: 400px;
-    text-align: left;
-}
-.rName2{
-    width: 230px;
-    text-align: center;
-}
-.usingDate2{
-    width: 180px;
-    text-align: center;
-}
-.time{
-    width: 230px;
-    text-align: center;
-}
-.reviewbtn{
-    width: 100px;
-    margin-left: 400px;
-}
-.write{
-    
-    width: 130px;
-    text-align: right;
-}
-th{
-    width: 120px;
-    height: 40px;
-}
-td{
-    margin: auto;
-    text-align: left;
-    width: 100px;
-    height: 30px;
-}
-hr{
-    
-    height: 0px;
-}
-
-.contentbox{
-    margin: auto;
-}
-.info-title2{
-    display: none;
-}
-.sNamequery{
-    display: none;
-}
-.rNamequery{
-    display: none;
-}
-.seqQuery{
-    display: none;
-}
-/* .viewBtn:checked ~ #reviewTextBox{display: block;
-} */
-#reviewTextBox {
-    display: none;
-    width: 710px;
-    
-}
-#viewBtn{
-    width: 70px;
-    float: right;
-    margin-top: 30px;
-    margin-right: 10px;
-    margin-bottom: 5px;
-}
-.studycafe{
-    width: 200px;
-}
-.resdate{
-    width: 105px;
-}
-.restime{
-    width: 130px;
-}
-div.top-title {
-    margin-left: 25px;
-    margin-bottom: 15px;
-}
-
-span#showLoginId {
-    font-weight: 800;
-    color: #00C471;
 }

@@ -32,14 +32,14 @@ $(() => {
                 if (index == 0) {
                     boardData += "<div class='boarddetaillist-container'>";
                     boardData += "<div class='title'>" + item.title + "</div>";
-                    boardData += "<div class='content'>" + item.content + "</div>";
-                    boardData += "<div class='imgPath'><img /></div>";
-                    boardData += "<div class='info'>";
                     boardData += "<div class='subinfo1'>";
                     boardData += "<span> 작성자 : " + item.usersNameDTO.nickname + "</span>";
                     boardData += "<div class='userId' style='display:none'>"+item.usersNameDTO.userId+"</div>";
                     boardData += "<span> 작성일 : " + item.cdate + "</span>";
                     boardData += "</div>";
+                    boardData += "<div class='content'>" + item.content + "</div>";
+                    boardData += "<div class='imgPath'><img /></div>";
+                    boardData += "<div class='info'>";
                     boardData += "<div class='subinfo2'>";
                     boardData += "<span><i class='fa-regular fa-eye'></i> " + item.cnt + "</span>";
                     boardData += "<span><i class='fa-solid fa-heart'></i> " + item.recommend + "</span> ";
@@ -125,18 +125,44 @@ $(() => {
     // 수정버튼 클릭시 END 
     
     //삭제버튼 클릭시 START
-    $('#delbtn').click(() => {
-        $.ajax({
-            url: backURL + 'board/' + $('input[name=postSeq]').val(),
-            method: 'delete',
-            success: function () {
-                location.href = frontURL + 'board/boardlist.html';
-                alert('삭제가 완료되었습니다.')
-            },
-            error: function (xhr) {
-                alert(xhr.status);
-            }
-        })
+    // $('#delbtn').click(() => {
+    //     $.ajax({
+    //         url: backURL + 'board/' + $('input[name=postSeq]').val(),
+    //         method: 'delete',
+    //         success: function () {
+    //             location.href = frontURL + 'board/boardlist.html';
+    //             alert('삭제가 완료되었습니다.')
+    //         },
+    //         error: function (xhr) {
+    //             alert(xhr.status);
+    //         }
+    //     })
+    // })
+    
+    function confirmModal() {
+        let confirm = window.confirm("정말 삭제하시겠습니까?");
+
+        if (confirm == true) {
+            //확인 버튼 클릭 시 이벤트
+            $.ajax({
+                url: backURL + 'board/' + $('input[name=postSeq]').val(),
+                method: 'delete',
+                success: function () {
+                    location.href = frontURL + 'board/boardlist.html';
+                    alert('삭제가 완료되었습니다.')
+                },
+                error: function (xhr) {
+                    alert(xhr.status);
+                }
+            })
+        } else if (confirm == false) {
+            self.opener = self;
+            window.close;
+        }
+    }
+
+    $('button#delbtn').click((e) => {
+        confirmModal()
     })
     // 삭제버튼 클릭시 END 
 

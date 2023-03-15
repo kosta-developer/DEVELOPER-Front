@@ -1,20 +1,23 @@
-@charset "UTF-8";
-/* Google web font CDN*/
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
-
+* {
+    margin: 0;
+    padding: 0;
+    /* background-color: #FFFEFE; */
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
 *{
     box-sizing: border-box; /*전체에 박스사이징*/
     outline: none; /*focus 했을때 테두리 나오게 */
 }
 
 body{
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size:14px;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size:20px;
     background-color: #f5f6f7;
     line-height: 1.5em; /*브라우저에 따른 상대단위*/
     color : #222;
-    margin: 0;
+    margin: 0px;
 }
 
 .member{
@@ -25,7 +28,7 @@ body{
 .member>div>.signup{
     margin-top: 150px;
     margin-left: 23%;
-    width: 25%;
+    width: 20%;
     float: left;
     font-size: large;
     height: 300px;
@@ -34,27 +37,68 @@ body{
 }
 
 #method{
-    margin-top: 60px;
+    margin-top: 80px;
     font-size: 40px;
     text-align: center;
 }
 
 #joinus{
-    margin-top: 70px;
-    font-size: 28px;
+    margin-top: 40px;
+    font-size: 24px;
     text-align: center;
 }
 
 .member>div>.hostSignup{
-    margin-top: 150px;
-    margin-right: 23%;
-    width: 25%;
+    margin-top: 40px;
+    margin-right: 30%;
+    /* width: 20%; */
     float: right;
+    appearance: none;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 240px;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    width: 320px;
+    position: relative;
+    line-height: 1;
     font-size: 20px;
-    height: 300px;
-    color: black;
-    border-color: blue;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #00C471;
+    border-radius: 8px;
+    
 }
+
+.member>div>.signup {
+    margin-top: 40px;
+    margin-left: 30%;
+    float: left;
+    appearance: none;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 240px;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    width: 320px;
+    position: relative;
+    line-height: 1;
+    font-size: 20px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #00C471;
+    border-radius: 8px;
+}
+
+
 
 #hosticon{
     margin-top: 20px;
@@ -62,6 +106,34 @@ body{
     color: rgb(73, 129, 90);
 }
 
-#hostGo{
+/* #hostGo{
     margin-top: 30px;
+} */
+
+#info{
+    text-align: center;
+    margin-top: 380px;
+    font-size: 30px;
+}
+
+#logo{
+    width: 450px;
+    height: 80px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+#mainlogo{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ment3{
+    margin-top: 80px;
+    margin-left: 31%;
+    font-size: 19px;
 }
