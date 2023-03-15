@@ -1,136 +1,165 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
+* {
+    margin: 0 0;
+    padding: 0;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
-
-*{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
 #apply-list-host-wrap {width: 100%; height: auto; font-size: 15px; }
-#apply-list-host-wrap>#nav-wrap{width: 100%;border: 1px solid rgb(187, 187, 187);}
-#apply-list-host-wrap>#content-wrap{width: 100%; height:auto; border: 1px solid rgb(187, 187, 187);}
-#apply-list-host-wrap>#footer-wrap{width: 100%; border: 1px solid rgb(187, 187, 187); text-align:center;}
-#apply-list-host-wrap>#content-wrap>.hostpage-body-wrap{margin:0 auto; width: 1000px; height: 600px;  border: 1px solid rgb(187, 187, 187);}
+#apply-list-host-wrap>#nav-wrap{width: 100%;}
+#apply-list-host-wrap>#content-wrap{width: 100%; height:auto; }
+#footer-wrap{
+    width: 100%; 
+    height: 100px; 
+    line-height: 100px; 
+    margin: 0 auto; 
+    text-align:center; 
+    background-color: #303740; 
+    color:#fff;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    }
+#apply-list-host-wrap>#content-wrap>.userpage-body-wrap{margin:0 auto; width: 1000px; height: 720px;}
 /*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
 width: 100%는 기본값이기 때문에 없어도 된다 */
 
 
-#apply-list-host-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto; border: 1px solid #c39d91; } 
-#apply-list-host-wrap>#content-wrap>.hostpage-body-wrap>.side-container {float: left; width: 19%; height: auto; margin: 0 auto; border: 1px solid #fc487b;} 
-#apply-list-host-wrap>#content-wrap>.hostpage-body-wrap>.content-container {float: right; width: 78%; height: auto; margin: 0 auto; border: 1px solid #62ff19; margin: 18px 13px 13px 13px;}
-#apply-list-host-wrap>#footer-wrap>.footer-container{width: 1000px; height: 100px; line-height: 100px; margin: 0 auto;  background-color: #c39d91;}
+#apply-list-host-wrap>#nav-wrap>.nav-container {width:1000px; height: 100px; line-height: 60px;margin: 0 auto;  } 
+#apply-list-host-wrap>#content-wrap>.userpage-body-wrap>.side-container {float: left; width: 19%; height: 310px; margin: 0 auto; background-color: #f9f9f9;} 
+#apply-list-host-wrap>#content-wrap>.userpage-body-wrap>.content-container {float: right; width: 78%; height: auto; margin: 0 auto; margin: 18px 13px 13px 13px;}
 
-#apply-list-host-wrap>#nav-wrap>.nav-container>nav{
-    width: 310px;
-    /* display: inline-block; */
+
+.nav-container>nav{
     float: right;
 }
 
-#apply-list-host-wrap>#nav-wrap>.nav-container>img{
+.nav-container>img{
     height: 30px;
     float: left;
-    margin-top: 13px;
-    margin-left: 10px;
+    margin-top: 33px;
+    margin-left: 20px;
 }
-
-#apply-list-host-wrap>#nav-wrap>.nav-container>nav>ul{
+.nav-container>nav>ul{
     /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
     list-style-type: none;
     padding-left: 0px;
-    
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 17px;
 }
 
-#apply-list-host-wrap>#nav-wrap>.nav-container>nav>ul>li{
-   /* width: 100px; */
+.nav-container>nav>ul>li{
     display: inline-block;
     margin-left:15px;
 }
 
-#apply-list-host-wrap>#nav-wrap>.nav-container>nav>ul>li:hover{
-    background-color: #80d8b4;
-    color: #fff
+/*  클릭 안 한 메뉴 */
+.nav-container>nav>ul>li>a:link{
+    text-decoration: none;
+    color: black;
+    margin-top: 50px;
 }
 
-#apply-list-host-wrap>#nav-wrap>.nav-container>nav>ul>li>a{
+/*  클릭 한 메뉴 */
+.nav-container>nav>ul>li>a:visited{
     text-decoration: none;
     color: black;
 }
 
-#apply-list-host-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu{
+.nav-container>nav>ul>li>a:hover{
+    color:  #00C471;
+    font-weight: bold;
+}
+
+.nav-container>nav>ul>li:hover{
+    color:  #00C471;
+    font-weight: bold;
+}
+
+
+span#showLoginId{
+    font-weight: 800;
+    color:  #00C471;
+}
+
+
+
+#apply-list-host-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu{
     display: inline-block;
     margin-left: 20px;
 }
 
-#apply-list-host-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>div{
+#apply-list-host-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>div{
     font-size: 16px;
     margin-top: 20px;
     font-weight: 700;
 }
 
-#apply-list-host-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul{
+#apply-list-host-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul{
     list-style-type: none;
 }
 
-#apply-list-host-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li{
+#apply-list-host-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul>li{
     margin-top: 13px;
     margin-left: 20px;
     font-size: 14px;
 }
 
 
-#apply-list-host-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li:hover{
-    background-color: #80d8b4;
+#apply-list-host-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul>li:hover{
     font-weight: 700;
     font-size: 15px;
-    color: #fff
+    color: #00C471;
+
 }
 
-#apply-list-host-wrap>#content-wrap>.hostpage-body-wrap>.side-container>.menu>ul>li>a{
+#apply-list-host-wrap>#content-wrap>.userpage-body-wrap>.side-container>.menu>ul>li>a{
     text-decoration: none;
     color: rgb(88, 88, 88);
 }
 
-#content-wrap > div > div.content-container > div.detail-content-box{
+div.info-title{
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+#content-wrap > div.userpage-body-wrap > div.content-container > div#host-box{
     text-align: center;
     width: 100%;
     height: auto;
 }
 
-#apply-list-host-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>.sub-title{
-    font-weight: 700;
-    text-align: center;
-    margin: 20px 0px 20px 0px;
-}
 
-
-
-#apply-list-host-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>.sell-title{
+#apply-list-host-wrap>#content-wrap>.userpage-body-wrap>.content-container>div#host-box>.sell-title{
     background-color: #e9e9e9;
     padding-bottom: 20px;
     padding-top: 20px;
 }
 
-#apply-list-host-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>div.apply-list-host{
+
+#host-box > div.apply-list-host{
     overflow:scroll;
     overflow-x:hidden;
-    height: 400px;
+    height:250px;
 }
-
-
-#apply-list-host-wrap>#content-wrap>.hostpage-body-wrap>.content-container>.detail-content-box>div.apply-list-host>.apply-list-host-origin{
-    height: 50px;
-}
-
 
 b#b-hostId{
     width:130px;
     display:inline-block;
     text-align: center;
     margin-right: 3px;
+    margin-left: 30px;
 }
 
 .apply-list-host>.apply-list-host-origin>#host-hostId{
  width: 130px;
  display:inline-block; 
  text-align: center;
- margin-top: 15px;
 }
 
 b#b-hostEmail{
@@ -144,7 +173,6 @@ b#b-hostEmail{
  width: 200px;
  display:inline-block; 
  text-align: center;
- margin-top: 15px;
 }
 
 b#b-tel{
@@ -158,7 +186,6 @@ b#b-tel{
     width: 190px;
     display:inline-block; 
     text-align: center;
-    margin-top: 15px;
 }
 
 b#b-ready{
@@ -168,23 +195,67 @@ b#b-ready{
     margin-right: 35px;
 }
 
-.apply-list-host>.apply-list-host-origin>#reday-btn{
-    width: 148px;
-    display:inline-block; 
-    text-align: center;
-}
 
 hr.list-sell-line{
    border-style: dashed;
    border-color: #bbbbbb;
 }
 
-input.applybtn{
-    width: 75px;
-    height: 26px;
-    border-radius: 4px;
-    text-align: center;
-    border: 1.5px solid;
-    background-color: #cef6bf;
+
+
+input#hostOk{
+    border-width: 1px;
     margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    appearance: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 27px;
+    -webkit-tap-highlight-color: transparent;
+    width:60px;
+    position: relative;
+    line-height: 1;
+    font-size: 15px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #00C471;
+    border-radius: 8px;
+}
+
+
+input#hostReject{
+
+    margin-right:20px;
+    border-width: 1px;
+    text-align: center;
+    appearance: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 27px;
+    -webkit-tap-highlight-color: transparent;
+    width: 60px;
+    position: relative;
+    line-height: 1;
+    font-size: 4;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: #00C471;
+    background-color: white;
+    border: 1.5px solid #00C471;
+    border-radius: 8px;
+
+}
+
+.apply-list-host>.apply-list-host-origin>span.ready-btn{
+    width: 170px;
+    height: 30px;
+    display:inline-block; 
+    text-align: center;
+    margin-top: 15px;
 }

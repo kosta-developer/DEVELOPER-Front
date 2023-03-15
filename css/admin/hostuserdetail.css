@@ -176,7 +176,6 @@ a {text-decoration: none;color: black;}
 } 
 
 .content-container>.hostinfo>div{
-    background-color: #F9F9F9;
     margin-top: 15px;
     width: 95%;
     float: right;
@@ -194,6 +193,7 @@ a {text-decoration: none;color: black;}
 }
 
 
+
 div.top-title{
     margin-left: 25px;
     margin-bottom: 15px;
@@ -203,3 +203,50 @@ span#showLoginId{
     font-weight: 800;
     color:  #00C471;
 }
+
+.hostinfo {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  #hostDetail {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .host_id,
+  .email,
+  .name,
+  .num,
+  .tel,
+  .ready {
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-weight: normal;
+  }
+  
+  .host_id::before {
+    font-weight: bold;
+  }
+  
+  .email::before {
+    font-weight: bold;
+  }
+  
+  .name::before {
+    font-weight: bold;
+  }
+  
+  .num::before {
+    font-weight: bold;
+  }
+  
+  .tel::before {
+    font-weight: bold;
+  }
+  
+  .ready::before {
+    font-weight: bold;
+  }
+  

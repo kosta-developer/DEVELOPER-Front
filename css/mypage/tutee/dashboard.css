@@ -93,6 +93,8 @@ div.content-container > div.container > div.menu>div{
 }
 
 div.content-container > div.container > div.menu>ul{
+    text-decoration: none;
+    margin-bottom: 30px;
     list-style-type: none;
 }
 
@@ -100,22 +102,53 @@ div.content-container > div.container > div.menu>ul>li{
     margin-top: 13px;
     margin-left: 20px;
     font-size: 14px;
+    text-decoration: none;
+    list-style-type: none;
+    color: #000000;
 }
 
 div.content-container > div.container > div.menu>ul>li:hover{
-    background-color: #80d8b4;
+    color: #00C471;
     font-weight: 700;
     font-size: 15px;
-    color: #fff
 }
 
-div.content-container > div.container > div.menu>ul>li>a{
+a {
     text-decoration: none;
+    color: black;
 }
 
 body > div.content-container > div > div.menu > div.main-menu{
     text-decoration: none;
+    list-style-type: none;
 }
+
+body > div.content-container > div > div.menu > ul:nth-child(4) > li:nth-child(1) > ul{
+    list-style-type: none;
+}
+
+body > div.content-container > div > div.menu > ul:nth-child(4) > li:nth-child(1) > ul > li{
+    margin-bottom: 10px;
+    margin-top: 8px;
+}
+
+body > div.content-container > div > div.menu > ul:nth-child(4) > li:nth-child(2) > ul{
+    list-style-type: none;
+}
+
+body > div.content-container > div > div.menu > ul:nth-child(4) > li:nth-child(2) > ul > li{
+    margin-bottom: 10px;
+    margin-top: 8px;
+}
+
+body > div.content-container > div > div.menu > ul:nth-child(8) > li:nth-child(1) > ul{
+    list-style-type: none;
+}
+
+body > div.content-container > div > div.menu > ul:nth-child(8) > li:nth-child(1) > ul > li{
+    margin-bottom: 10px;
+}
+
 
 /*=================== 메인 영역 ===================*/
  div.content-container > div > div.main{
@@ -155,33 +188,35 @@ a.dash:hover{
     color: #00C471;
 }
 
-.dash-box > #applyWaitList{
+
+
+#applyWait{
     height: 120px;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     background-color: #F9F9F9;
 }
 
-.dash-box > #notYetList{
+#notYet{
     height: 120px;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     background-color: #F9F9F9;
 }
 
-.dash-box > #rejectList{
+#reject{
     height: 120px;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     background-color: #F9F9F9;
 }
 
-.dash-box > #proceedingList{
+#proceed{
     height: 120px;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     background-color: #F9F9F9;
 }
 
-.dash-box > #lastList{
+#last{
     height: 120px;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     background-color: #F9F9F9;
 }
 

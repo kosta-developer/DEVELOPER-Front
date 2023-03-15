@@ -149,7 +149,7 @@ $(document).on('click', 'img.lessonImg', (e) => {
 
 //================[게시글영역 클릭 시 START]==================-
 $(document).on('click', 'div.communityListOrigin', (e) => {
-    let postSeq = $(e.target).parents('div.communityList').find('div.postSeq').eq(1).text();
+    let postSeq = $(e.target).parents('div.communityList').find('div.postSeq').eq(0).text();
     console.log(postSeq)
     location.href = frontURL + 'board/boarddetail.html?postSeq=' + postSeq
 })

@@ -5,10 +5,10 @@ $(()=>{
         let menu = $(e.target).attr('class')
         switch (menu) {
             case 'signup':
-                location.href='./userCheckEmail.html'
+                location.href='./usercheckemail.html'
                 break;
             case 'hostSignup':
-                location.href='./hostCheckEmail.html'
+                location.href='./hostcheckemail.html'
                 break;
         }
         return false

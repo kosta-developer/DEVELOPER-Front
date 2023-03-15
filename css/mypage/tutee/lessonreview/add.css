@@ -122,7 +122,43 @@ div.content-container > div.container > div.menu>ul>li:hover{
 
 div.content-container > div.container > div.menu>ul>li>a{
     text-decoration: none;
-    color: rgb(88, 88, 88);
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body > div.content-container > div > div.menu > div.main-menu{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body > div.content-container > div > div.menu > ul > li> ul{
+    list-style-type: none;
+}
+
+body > div.content-container > div > div.menu > ul > li > ul > li{
+    margin-bottom: 10px;
+    margin-top: 8px;
+}
+
+body > div.content-container > div > div.menu > ul:nth-child(4) > li:nth-child(2) > ul{
+    list-style-type: none;
+}
+
+body > div.content-container > div > div.menu > ul:nth-child(4) > li:nth-child(2) > ul > li{
+    margin-bottom: 10px;
+    margin-top: 8px;
+}
+
+body > div.content-container > div > div.menu > ul:nth-child(8) > li:nth-child(1) > ul{
+    list-style-type: none;
+}
+
+body > div.content-container > div > div.menu > ul:nth-child(8) > li:nth-child(1) > ul > li{
+    margin-bottom: 10px;
 }
 
 /*=================== 메인 영역 ===================*/
