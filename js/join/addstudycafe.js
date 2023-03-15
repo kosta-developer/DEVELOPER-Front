@@ -1,6 +1,8 @@
 $(() => {
     hostCheckIntervalLogined()
-
+    let queryParams = new URLSearchParams(window.location.search);
+    let hostId;
+    hostId = queryParams.get('hostId');
 
     //=================[textarea 글자수세기 START]==================
     $('#info').keyup(function (e) {
@@ -62,7 +64,9 @@ $(() => {
         let extraAddr = $('input#sample6_extraAddress').val(); // 참고항목 변수
         let detailAddr = $('input#sample6_detailAddress').val(); //상세주소 변수
         let sumaddr = addr + extraAddr + ' ' + detailAddr
-
+        console.log('호스트 아이디는'+hostId)
+        
+        formData.append("hostId", hostId)
         formData.append("addr", sumaddr);
 
         const fileInput = document.querySelector('input#cafeFile');

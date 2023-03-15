@@ -101,10 +101,11 @@ $(() => {
                 data : JSON.stringify(data),
                 
                 success:function(){
+                    let hostIdValue = data.hostId;
                     console.log(data);
                     alert('회원가입이 완료되었습니다!');
                     // window.location.href = '';
-                    location.href = frontURL+'index.html'
+                    location.href = frontURL+'join/addstudycafe.html?hostId='+hostId;
                 },
                 error: function(response) {
                     alert('회원가입 실패!');

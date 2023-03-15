@@ -8,7 +8,7 @@ $(()=>{
                 location.href='./usercheckemail.html'
                 break;
             case 'hostSignup':
-                location.href='./hostcheckmail.html'
+                location.href='./hostcheckemail.html'
                 break;
         }
         return false
